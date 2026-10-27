@@ -1,7 +1,0 @@
-/* Editorial: papel claro, títulos serifados, filetes finos. Bom para marca de serviço, consultoria e conteúdo. */
-#raiz { --peso-titulo: 700; background: var(--papel); color: #1b1812; }
-#seda { opacity: .18; mix-blend-mode: multiply; }
-.display { font-family: Georgia, "Times New Roman", serif; letter-spacing: -0.015em; }
-.acento { color: var(--destaque); }
-.vidro-f { backdrop-filter: none; -webkit-backdrop-filter: none; background: #fffdf8; color: #1b1812; border-radius: 6px; box-shadow: 0 1px 0 rgba(0,0,0,.12), 0 30px 60px -30px rgba(0,0,0,.35); }
-.rotulo-f { color: #6a6458; }

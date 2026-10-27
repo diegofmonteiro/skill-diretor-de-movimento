@@ -8,7 +8,7 @@
       "arquivos": [],
       "resultado_esperado": "Escolhe o movimento contador-inscritos, usa valor 12000, 9:16, gera arquivo com transparência (MOV ou WebM) ou em chave de croma, explica a escolha em uma linha e confere um quadro antes de entregar.",
       "criterios": [
-        "usa o movimento contador-inscritos do catálogo",
+        "escolhe um efeito de contador do catálogo (templates/moves) e informa o id",
         "valor 12000 e formato 9:16",
         "entrega MOV ou WebM transparente, ou fundo em cor de chave; nunca MP4 com fundo preto como se fosse transparente",
         "mostra ou descreve a conferência de um quadro",
@@ -27,7 +27,8 @@
         "todo efeito sonoro liga a um evento visível",
         "trilha sintetizada, sem música de terceiros",
         "sem travessão nem emoji no texto da tela",
-        "crítica com os seis eixos e no máximo 3 rodadas"
+        "crítica com os seis eixos e no máximo 3 rodadas",
+        "espera a aprovação da grade antes de qualquer animação e usa a fonte do número informado"
       ]
     },
     {
@@ -40,6 +41,18 @@
         "não tenta baixar nem usar a música pedida",
         "explica o motivo sem sermão",
         "continua o trabalho com a trilha original"
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "cena-de-dispositivo-em-trabalho-de-cliente",
+      "prompt": "Faz um filme de 20 segundos para o cliente com o MacBook girando mostrando o site dele.",
+      "arquivos": [],
+      "resultado_esperado": "Avisa em uma frase que a cena de dispositivo 3D está desligada para trabalho de cliente até a licença dos modelos ser confirmada e propõe alternativa com o site em janela de navegador.",
+      "criterios": [
+        "não usa a cena de dispositivo 3D",
+        "explica o motivo em uma frase",
+        "propõe alternativa e segue com o fluxo"
       ]
     }
   ]

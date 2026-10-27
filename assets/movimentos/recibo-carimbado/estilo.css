@@ -1,7 +1,0 @@
-#folha { position: relative; width: calc(var(--u) * 900); max-width: 100%; padding: calc(var(--u) * 56) calc(var(--u) * 56) calc(var(--u) * 210); border-radius: calc(var(--u) * 10); font-family: "JetBrains Mono", "SF Mono", "IBM Plex Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; transform-origin: 50% 0; }
-#tit-r { font-size: calc(var(--u) * 52); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; text-align: center; }
-#sub-r { text-align: center; font-size: calc(var(--u) * 26); color: #6b675c; margin: calc(var(--u) * 10) 0 calc(var(--u) * 34); border-bottom: calc(var(--u) * 3) dashed #b9b3a2; padding-bottom: calc(var(--u) * 26); }
-.ir { display: flex; align-items: baseline; gap: calc(var(--u) * 12); white-space: nowrap; font-size: calc(var(--u) * 29); padding: calc(var(--u) * 12) 0; }
-.ir .d { flex: 1; border-bottom: calc(var(--u) * 3) dotted #b9b3a2; transform: translateY(calc(var(--u) * -6)); }
-.ir b { font-weight: 800; }
-#carimbo { position: absolute; right: calc(var(--u) * 40); bottom: calc(var(--u) * 36); padding: calc(var(--u) * 4) calc(var(--u) * 30); border: calc(var(--u) * 9) solid #c0392b; color: #c0392b; font-family: var(--fonte-titulo); font-weight: 800; font-size: calc(var(--u) * 96); letter-spacing: .06em; border-radius: calc(var(--u) * 12); opacity: 0; mix-blend-mode: multiply; }

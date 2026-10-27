@@ -1,8 +1,0 @@
-#pontos { position: absolute; inset: 0; }
-.pt { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: calc(var(--u) * 100); gap: calc(var(--u) * 30); }
-.e-retrato .pt { padding: calc(var(--u) * 80); }
-.pt .n { font-family: var(--fonte-titulo); font-weight: 800; font-size: calc(var(--u) * 560); line-height: .85; color: transparent; -webkit-text-stroke: calc(var(--u) * 5) var(--destaque); letter-spacing: -0.03em; }
-.pt .t { font-family: var(--fonte-titulo); font-weight: 800; font-size: calc(var(--u) * 140); line-height: 1; white-space: nowrap; }
-.pt .d { font-size: calc(var(--u) * 44); color: color-mix(in srgb, var(--tinta) 72%, transparent); max-width: calc(var(--u) * 900); line-height: 1.25; }
-.e-paisagem .pt { flex-direction: row; align-items: center; gap: calc(var(--u) * 80); }
-.e-paisagem .pt .bloco { min-width: 0; }

@@ -1,9 +1,0 @@
-#painel { position: relative; overflow: hidden; max-width: 100%; padding: calc(var(--u) * 54) calc(var(--u) * 78) calc(var(--u) * 46);
-  border-radius: calc(var(--u) * 46); text-align: center; transform-style: preserve-3d; }
-#num { font-size: calc(var(--u) * 250); color: var(--tinta); font-variant-numeric: tabular-nums; white-space: nowrap; }
-#trilho { height: calc(var(--u) * 10); margin: calc(var(--u) * 26) auto calc(var(--u) * 22); width: 70%; border-radius: 99px; background: rgba(255,255,255,.14); overflow: hidden; }
-#barra { display: block; height: 100%; width: 100%; background: var(--destaque); border-radius: inherit; transform-origin: 0 50%; transform: scaleX(0); }
-#rot { font-size: calc(var(--u) * 40); color: color-mix(in srgb, var(--tinta) 78%, transparent); }
-#brilho { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: screen; opacity: 0;
-  background: linear-gradient(105deg, transparent 38%, rgba(255,255,255,.34) 50%, transparent 62%); transform: translateX(-120%); }
-.e-chave #brilho { display: none; }

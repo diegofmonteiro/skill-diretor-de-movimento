@@ -1,4 +1,0 @@
-#painel { width: calc(var(--u) * 920); max-width: 100%; padding: calc(var(--u) * 44) calc(var(--u) * 50) calc(var(--u) * 40); border-radius: calc(var(--u) * 42); }
-#rot { font-size: calc(var(--u) * 34); }
-#num { font-size: calc(var(--u) * 150); margin: calc(var(--u) * 4) 0 calc(var(--u) * 12); font-variant-numeric: tabular-nums; white-space: nowrap; min-height: 1em; }
-#graf { width: 100%; height: calc(var(--u) * 360); overflow: visible; display: block; }

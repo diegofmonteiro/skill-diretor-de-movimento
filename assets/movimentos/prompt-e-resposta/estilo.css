@@ -1,7 +1,0 @@
-#bloco { width: calc(var(--u) * 900); max-width: 100%; display: flex; flex-direction: column; gap: calc(var(--u) * 28); }
-#entrada { position: relative; display: flex; align-items: center; min-height: calc(var(--u) * 128); padding: calc(var(--u) * 22) calc(var(--u) * 100) calc(var(--u) * 22) calc(var(--u) * 40); border-radius: calc(var(--u) * 70); font-size: calc(var(--u) * 40); font-weight: 600; }
-#cursor { width: calc(var(--u) * 4); height: calc(var(--u) * 46); background: var(--destaque); margin-left: calc(var(--u) * 6); flex: none; }
-#enviar { position: absolute; right: calc(var(--u) * 20); top: 50%; width: calc(var(--u) * 86); height: calc(var(--u) * 86); margin-top: calc(var(--u) * -43); border-radius: 50%; background: var(--destaque); display: grid; place-items: center; }
-#enviar svg { width: 56%; height: 56%; fill: none; stroke: var(--fundo); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
-#resp { padding: calc(var(--u) * 40) calc(var(--u) * 46); border-radius: calc(var(--u) * 40); }
-#resp-t { font-size: calc(var(--u) * 42); line-height: 1.32; font-weight: 500; }

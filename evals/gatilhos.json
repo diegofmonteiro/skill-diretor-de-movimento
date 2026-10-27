@@ -70,5 +70,29 @@
   {
     "frase": "Resume essa reunião em tópicos",
     "deve_disparar": false
+  },
+  {
+    "frase": "Cria um efeito de recibo carimbado como pago para sobrepor no meu vídeo",
+    "deve_disparar": true
+  },
+  {
+    "frase": "Quero uma abertura de canal animada no YouTube com a logo",
+    "deve_disparar": true
+  },
+  {
+    "frase": "Copia o estilo deste vídeo de referência para a minha marca",
+    "deve_disparar": true
+  },
+  {
+    "frase": "Mostra a galeria de efeitos",
+    "deve_disparar": true
+  },
+  {
+    "frase": "Gera uma locução com voz para narrar meu vídeo",
+    "deve_disparar": false
+  },
+  {
+    "frase": "Cria um site de lançamento com animação",
+    "deve_disparar": false
   }
 ]

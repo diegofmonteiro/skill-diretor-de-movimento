@@ -1,9 +1,0 @@
-#duplo { position: relative; width: calc(var(--u) * 940); max-width: 100%; height: calc(var(--u) * 520); border-radius: calc(var(--u) * 44); overflow: hidden; }
-#a, #d { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; padding: calc(var(--u) * 60); border-radius: calc(var(--u) * 44); }
-#a { filter: saturate(.4); }
-#a .f { color: color-mix(in srgb, var(--tinta) 58%, transparent); }
-#d { background: var(--destaque); color: var(--fundo); clip-path: inset(0 100% 0 0); }
-.r { font-size: calc(var(--u) * 32); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; opacity: .75; }
-.f { margin-top: calc(var(--u) * 18); font-family: var(--fonte-titulo); font-weight: 800; font-size: calc(var(--u) * 84); line-height: 1.04; }
-#div { position: absolute; top: 0; bottom: 0; left: 0; width: calc(var(--u) * 8); background: #fff; box-shadow: 0 0 calc(var(--u) * 30) rgba(255,255,255,.7); transform: translateX(-50%); }
-.e-chave #div { box-shadow: none; }

@@ -1,0 +1,14 @@
+{
+  "scripts/lint-md.mjs": {
+    "execucao-dinamica": "Falso positivo: é RegExp.exec numa expressão regular, não execução de código."
+  },
+  "templates/hyperframes/gsap.min.js": {
+    "*": "Biblioteca GSAP 3.14.2 minificada, copiada do pacote oficial do npm; o padrão detectado é interno dela."
+  },
+  "templates/themes/glass/theme.css": {
+    "*": "CSS com ruído SVG embutido; sem código executável."
+  },
+  "templates/themes/studio/theme.css": {
+    "*": "CSS com ruído SVG embutido; sem código executável."
+  }
+}

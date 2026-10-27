@@ -1,7 +1,0 @@
-#grade { position: relative; width: calc(var(--u) * 940); max-width: 100%; }
-.lh { position: absolute; left: 0; right: 0; height: calc(var(--u) * 128); display: flex; align-items: center; gap: calc(var(--u) * 24); }
-.lh .nm { flex: none; width: calc(var(--u) * 250); font-size: calc(var(--u) * 38); font-weight: 700; text-align: right; }
-.lh .tr { position: relative; flex: 1; height: calc(var(--u) * 76); border-radius: calc(var(--u) * 22); background: rgba(255,255,255,.08); overflow: hidden; }
-.lh .br { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; border-radius: inherit; transform-origin: 0 50%; transform: scaleX(0); background: color-mix(in srgb, var(--tinta) 38%, var(--superficie)); }
-.lh.dest .br { background: var(--destaque); }
-.lh .vl { position: absolute; right: calc(var(--u) * 22); top: 50%; transform: translateY(-50%); font-size: calc(var(--u) * 40); font-weight: 800; font-variant-numeric: tabular-nums; color: var(--tinta); text-shadow: 0 0 calc(var(--u) * 10) rgba(0,0,0,.5); }

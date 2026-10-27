@@ -1,51 +1,26 @@
 # Backlog
 
-O que ainda não foi construído. A biblioteca nasceu com 22 movimentos e um motor completo; o resto cresce por demanda.
+O que ainda falta fazer, em ordem de prioridade.
 
-## Movimentos a criar
+## Antes de oferecer a clientes
 
-Prioridade alta (aparecem em quase todo vídeo de marca):
+1. **Regenerar as prévias.** Os `preview.mp4` dos 266 efeitos e o `gallery.jpg` foram gravados com a marca de exemplo antiga (fotos e telas de uma pessoa real). Rodar `node scripts/gallery.mjs` com a marca de exemplo neutra (`templates/demo-brand`) e conferir o resultado. Leva cerca de 30 segundos por efeito num computador de 2 núcleos; fazer em lotes.
+2. **Licença dos modelos 3D de dispositivo** (bloco `vfx-iphone-device`). Confirmar a licença; até lá, não usar a cena de dispositivo em trabalho de cliente.
+3. **Embutir three.js e o decodificador Draco** (hoje carregados de um CDN na cena de dispositivo e no `prop-render.mjs`), como foi feito com o GSAP.
+4. **Recorte de fotos fora do Mac.** O `cutout.mjs` usa o reconhecimento de imagem da Apple. Para o servidor, escolher uma alternativa (serviço de remoção de fundo ou o cliente enviar o PNG recortado) e registrar no `modulo-laravel/06-integracoes.md`.
+5. **Testar no servidor ARM** (instância Oracle): Chromium do sistema, `MD_WORKERS`, tempo e memória por render.
 
-- Terço inferior (nome e cargo)
-- Chamada para ação com botão e seta
-- Contagem regressiva
-- Selo de "novo" e de oferta
-- Linha do tempo de etapas
-- Mapa de calor e pizza animada
-- Cartão de depoimento (com texto real, nunca inventado)
-- Barra de progresso de upload e de instalação
+## Traduções
 
-Prioridade média:
+- 9 arquivos `RECIPE.md` dos temas e `THEME.md`/`STYLE.md` do tema estúdio (ainda em inglês).
+- `templates/moves/CATALOG.md` e `catalog/*.md`: são gerados pelo `gallery.mjs` a partir do `move.json`. Para traduzi-los, traduzir antes os campos `name`, `oneLiner` e `say` dos 266 `move.json`.
+- Mensagens dos scripts (em inglês de propósito, para o código continuar compatível com a base).
 
-- Troca de moeda e preço riscado
-- Mensagem de chat (conversa em bolhas)
-- E-mail chegando
-- Cartão de crédito virando
-- Cronograma semanal
-- Pergunta e resposta (FAQ)
-- Mapa com ponto marcado
+## Novos efeitos e temas
 
-## Capacidades
+- Usar `scripts/add-reference.mjs` (ver `references/themes.md`). Copiar a gramática, nunca o conteúdo.
+- Pedidos frequentes de clientes a transformar em efeito: terça inferior (nome e cargo), chamada para ação, contagem regressiva, selo de oferta, depoimento com texto real.
 
-- **Dispositivo em 3D** (celular e notebook girando com a tela real dentro).
-- **Busca de imagens e ícones** em bancos livres, com registro da licença de cada arquivo.
-- **Mais temas**: neon, tátil (papel recortado), tipográfico puro.
-- **Voz e legenda sincronizadas** a uma narração enviada pela pessoa (transcrição local com carimbo de tempo por palavra).
-- **Importar edição existente** (EDL ou XML) para animar sobre o corte da pessoa.
-- **Capturar telas do produto** automaticamente por roteiro de cliques.
-- **Variações** de um filme em 4 formatos com um só roteiro.
+## Módulo do aplicativo
 
-## Qualidade
-
-- Prévias em vídeo curto (não só imagem) no catálogo.
-- Teste automático de contraste por marca.
-- Medida de tempo de render por quadro para avisar antes de começar um render longo.
-
-## Como usar esta lista
-
-Antes de começar um item, descreva a situação de uso em uma frase (`10-novos-movimentos.md`, passo 2). Item sem situação de uso clara não entra.
-
-## Defeitos conhecidos
-
-- `destaque-na-tela`: em alguns recortes o rótulo ao lado do anel pode ser cortado pela borda da janela; conferir em imagem ao usar e ajustar a variável de foco.
-- `negocio-fechado`: o carimbo passa da borda do cartão durante a batida; é intencional, mas confira em 1:1.
+- Construir o módulo seguindo `modulo-laravel/07-plano-de-construcao.md`.

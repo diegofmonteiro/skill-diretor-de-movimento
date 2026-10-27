@@ -1,6 +1,0 @@
-{"titulo":"Filme de exemplo","bpm":120,"compassos":8,"batidasPorCompasso":4,"cauda":0.8,"clima":"impulsionado","tom":"La menor",
-"assinatura":"o carimbo da marca na queda",
-"marcas":{"queda":"compasso4"},
-"secoes":[{"nome":"abertura","de":"compasso0","ate":"compasso2","energia":0.4},{"nome":"subida","de":"compasso2","ate":"compasso4","energia":0.7,"subida":true},{"nome":"queda","de":"compasso4","ate":"B32","energia":0.95,"queda":true}],
-"cenas":[{"id":"abertura","de":"B0","ate":"compasso2","tela":"a promessa em uma frase","movimento":"palavras saem do desfoque","som":"tique"},{"id":"prova","de":"compasso2","ate":"compasso4","tela":"o número que prova","movimento":"contagem até o valor","som":"subida"},{"id":"marca","de":"compasso4","ate":"B32+0.8","tela":"a marca e o convite","movimento":"carimbo e brilho","som":"impacto"}],
-"efeitos":[{"tipo":"tique","em":"B4","evento":"a primeira palavra entra"},{"tipo":"impacto","em":"queda","evento":"a marca carimba"},{"tipo":"brilho","em":"queda+0.5","evento":"brilho no logo"}]}

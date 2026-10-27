@@ -1,122 +1,117 @@
 # Diretor de Movimento
 
-Skill que cria vídeos curtos de motion graphics com a marca da empresa: efeitos prontos para encaixar em qualquer edição e filmes completos com trilha original, sem editor de vídeo.
+Skill que cria vídeos de motion graphics com a marca da empresa: filmes de 10 a 30 segundos e 266 efeitos prontos para encaixar em qualquer edição, com trilha original, tudo renderizado na própria máquina.
 
-Repositório `skill-diretor-de-movimento` · skill `diretor-de-movimento` · versão 0.1.0
+Repositório `skill-diretor-de-movimento` · skill `diretor-de-movimento` · versão 0.2.0 · uso interno da Conex Prime
 
 ## Do que se trata
 
-O agente de IA escreve a animação em HTML e CSS, com as cores, a fonte e o logo da empresa, renderiza quadro a quadro num navegador sem interface e entrega o arquivo de vídeo. Dois caminhos:
+Você entrega um link ou um pedido de uma linha. O agente de IA captura a logo, as cores, as fontes e as telas reais do produto da marca, planeja cada cena numa grade de batidas para você aprovar, sintetiza uma trilha e sons originais, renderiza o vídeo quadro a quadro, dá nota ao próprio resultado em seis eixos e corrige o que ficar abaixo de 8, em até três rodadas.
 
-- **Movimentos:** efeitos de 2 a 6 segundos (contador de inscritos, post curtido, terminal, gráfico, recibo, lista numerada, destaque na tela e outros). Saem como B-roll em MP4 ou como sobreposição transparente (MOV, WebM, GIF, sequência de PNGs) para CapCut, Premiere e DaVinci.
-- **Filmes:** vídeo inteiro, com cenas cortadas na batida de uma trilha original sintetizada, crítica em rodadas antes da entrega e registro do que foi feito.
+Dois caminhos:
 
-Instruções completas para o agente: [SKILL.md](SKILL.md). Manual para pessoas: [docs/manual.md](docs/manual.md).
+- **Filme inteiro:** lançamento, demonstração animada de interface, abertura de canal ou explicativo, de 10 a 30 segundos.
+- **Efeitos para um vídeo que você gravou:** cortes de B-roll e sobreposições transparentes (MOV, WebM, GIF, MP4 sobre fundo verde) para Premiere, Final Cut, DaVinci e CapCut.
+
+Sem contas, sem chaves de API, sem música de banco, sem nada enviado para fora da máquina.
+
+Instruções para o agente: [SKILL.md](SKILL.md). Manual para pessoas: [docs/manual.md](docs/manual.md).
+
+## O que vem dentro
+
+- **266 efeitos** em 10 categorias: dados (35), negócios (30), papel (29), redes sociais (28), criador de conteúdo (27), produtividade (27), explicação (26), IA (23), sistema (22) e programação (19). O catálogo está em `templates/moves/CATALOG.md` e as prévias em `gallery.html`.
+- **9 temas** de filme inteiro: vidro, pasta de vidro, estúdio, interface de produto, construção de logo, monocromático, impresso retrô, marionete e colagem.
+- **Cena de dispositivo em 3D** (MacBook e iPhone com a tela real da marca). Fica desligada para trabalho de cliente até a licença dos modelos ser conferida (ver `LICENCAS-DE-TERCEIROS.md`).
+- **Captura de marca**, **busca de imagens livres de direitos**, **crítica automática**, **trilha sintetizada** e **verificação de regras** antes do render.
+- **Módulo do aplicativo**: o caderno `modulo-laravel/` descreve como transformar a skill em módulo do aplicativo da Conex Prime.
 
 ## Estrutura
 
 ```
 skill-diretor-de-movimento/
-├── SKILL.md              instruções da skill (lidas pelo agente)
-├── README.md             este arquivo
-├── CHANGELOG.md          histórico de versões
-├── NOTICE.md             créditos de terceiros (GSAP)
-├── BACKLOG.md            o que ainda falta construir
-├── references/           11 guias lidos só quando o SKILL.md manda
-├── scripts/              programas em Node, sem dependências
-├── assets/
-│   ├── motor/            motor dos movimentos e dos filmes
-│   ├── movimentos/       a biblioteca de movimentos
-│   ├── temas/            vidro, estúdio, editorial
-│   ├── marca-exemplo/    marca fictícia para demonstração
-│   └── filme/            grade de exemplo
-├── catalogo/             prévias e CATALOGO.md (gerados)
-├── docs/manual.md        manual completo (fora da skill)
-├── evals/                testes de resultado e de gatilho (fora da skill)
-└── modulo-laravel/       caderno para virar módulo do aplicativo (fora da skill)
+├── SKILL.md                 instruções da skill (lidas pelo agente)
+├── README.md                este arquivo
+├── CHANGELOG.md             histórico de versões
+├── BACKLOG.md               o que ainda falta
+├── LICENCAS-DE-TERCEIROS.md avisos de licença obrigatórios
+├── references/              guias lidos só quando o SKILL.md manda
+├── scripts/                 programas em Node, sem dependências
+├── templates/
+│   ├── moves/               os 266 efeitos (+ CATALOG.md e catalog/)
+│   ├── themes/              os 9 temas, cada um com a sua receita
+│   ├── hyperframes/         motor do filme (md.js, GSAP embutido)
+│   ├── demo-brand/          marca fictícia de exemplo
+│   └── remotion/            auxiliares do plano B
+├── gallery.html             galeria de prévias (para abrir no navegador)
+├── docs/manual.md           manual completo (fora da skill)
+├── evals/                   testes de resultado e de gatilho (fora da skill)
+└── modulo-laravel/          caderno para virar módulo do aplicativo (fora da skill)
 ```
 
-`docs/`, `evals/` e `modulo-laravel/` não fazem parte da skill e ficam fora do pacote `.skill`.
+`docs/`, `evals/` e `modulo-laravel/` não fazem parte da skill que o agente lê.
 
 ## Requisitos
 
 | O quê | Versão | Como obter |
 |---|---|---|
-| Node | 22 ou mais novo | https://nodejs.org |
+| Node.js | 22 ou mais novo | https://nodejs.org |
 | FFmpeg e FFprobe | qualquer recente | Mac: `brew install ffmpeg`; Windows: `winget install ffmpeg`; Linux: `apt install ffmpeg` |
-| Google Chrome (ou Chromium) | qualquer recente | https://www.google.com/chrome/ |
-| GSAP 3.14.2 | baixado uma vez | `node scripts/verificar-ambiente.mjs --corrigir` |
+| HyperFrames | 0.8.188 (baixado sozinho pelo `npx`) | `node scripts/check-setup.mjs --fix` |
+| Chrome para o render | baixado pelo HyperFrames | `node scripts/check-setup.mjs --fix` |
+| yt-dlp | opcional | só para baixar um vídeo de referência de um link |
 
-Para conferir tudo: `node scripts/verificar-ambiente.mjs`. Para provar que a skill funciona no seu computador: `node scripts/autoteste.mjs` (cerca de um minuto).
+**Computador ARM (por exemplo a instância Oracle Ampere):** o HyperFrames não baixa o Chrome nessa arquitetura. Instale o Chromium do sistema (`sudo apt-get install -y chromium-browser`) e aponte para ele: `export HYPERFRAMES_BROWSER_PATH=$(which chromium-browser)`.
+
+Para conferir tudo: `node scripts/check-setup.mjs`. Na primeira vez, `--fix` baixa o HyperFrames (para a pasta temporária do `npx`, sem instalar nada no sistema) e o Chrome dele.
 
 ## Como instalar
 
 O repositório se chama `skill-diretor-de-movimento`, mas a pasta instalada precisa se chamar `diretor-de-movimento`, igual ao campo `name` do `SKILL.md`. Não mude o nome do arquivo `SKILL.md`.
 
-**Pelo pacote `.skill`** (Claude e apps compatíveis): baixe `diretor-de-movimento.skill` da release e envie na área de Skills das configurações do app.
-
-**Pela pasta** (Claude Code, Hermes e agentes que leem skills do disco):
+**Pela pasta** (Claude Code, Hermes e agentes que leem skills do disco), clonando já com o nome certo:
 
 ```bash
-rsync -a --exclude docs --exclude modulo-laravel --exclude evals --exclude .git skill-diretor-de-movimento/ ~/.claude/skills/diretor-de-movimento/
+git clone https://github.com/diegofmonteiro/skill-diretor-de-movimento.git ~/.claude/skills/diretor-de-movimento
+node ~/.claude/skills/diretor-de-movimento/scripts/check-setup.mjs --fix
 ```
 
-**IAs sem suporte a skills** (ChatGPT, Gemini): cole o conteúdo do `SKILL.md` nas instruções personalizadas e deixe a pasta `scripts/` acessível ao agente que executa comandos. Sem acesso a comandos a skill não renderiza vídeo.
+O repositório é privado: o `git` pede o seu login do GitHub na primeira vez (o passo a passo está em `docs/manual.md`). Para outro agente, troque `~/.claude/skills/` pela pasta de skills dele.
 
-Depois de instalar, rode uma vez `node scripts/verificar-ambiente.mjs --corrigir` dentro da pasta instalada.
-
-Antes de instalar, confira o hash do pacote (ver "Segurança").
+A skill pesa cerca de 120 MB (as prévias em vídeo dos efeitos são a maior parte), então o jeito recomendado é pela pasta, não por pacote `.skill` enviado pelo aplicativo.
 
 ## Como usar
 
-Peça ao agente em linguagem natural. Exemplos:
+Peça ao agente, por exemplo:
 
-- "Faz um contador de inscritos chegando a 12 mil, em vertical, com fundo transparente para eu colocar no CapCut."
-- "Cria um vídeo de 15 segundos de lançamento do nosso plano anual, em 9:16, com trilha."
-- "Preciso de um B-roll de terminal rodando um comando para o meu vídeo sobre automação."
-- "Captura a marca do nosso site e monta um filme de apresentação."
+> Faça um vídeo de lançamento de 20 segundos para https://exemplo.com.br, em 9:16, com ritmo forte.
 
-Pela linha de comando, sem agente:
+Ele faz até cinco perguntas curtas, mostra a grade de batidas (cada cena, seu tempo, o que aparece, o movimento e o som) e **espera a sua aprovação** antes de animar qualquer coisa. Depois renderiza, mostra as notas da crítica a cada rodada e entrega:
 
-```bash
-node scripts/renderizar-movimento.mjs --listar
-node scripts/renderizar-movimento.mjs --movimento contador-inscritos --aspecto 9:16 --variaveis '{"valor":12000,"meta":12000}' --saida contador.mp4
-node scripts/renderizar-movimento.mjs --movimento contador-inscritos --fundo nenhum --formato mov --saida contador.mov
+```
+~/diretor-de-movimento/projects/<slug>/
+  out/<slug>.mp4      o filme
+  out/LOG.md          tempo total, tempo de render, custo de API, notas por rodada
+  beatgrid.md         o plano que você aprovou
+  brand/brand.md      a marca como foi capturada (reaproveitada na próxima vez)
+  film/index.html     a composição do HyperFrames, editável
 ```
 
-Pasta de trabalho (marcas, projetos, GSAP): `~/diretor-de-movimento`, ou a que `DIRETOR_DE_MOVIMENTO_HOME` indicar.
+Para ajustar à mão, abra `film/` com `npx hyperframes preview`.
 
 ## Como atualizar
 
-1. Edite os arquivos e registre a mudança no `CHANGELOG.md`, subindo a versão em `metadata.version` do `SKILL.md` (correção `0.1.1`, novidade compatível `0.2.0`, mudança que quebra formato ou comportamento muda o primeiro número).
-2. Rode `node scripts/autoteste.mjs` e, se mexeu em movimento, `node scripts/galeria.mjs` para regenerar o catálogo.
-3. Gere o pacote e o hash novos.
-4. Publique a release `vX.Y.Z` com o pacote, o hash na descrição e o manual em PDF e `.docx`.
-5. Reinstale no agente (envie o pacote novo ou rode o `rsync` de novo).
-
-## Como testar
-
-- Funcionamento completo: `node scripts/autoteste.mjs`.
-- Validação de formato da skill: `validar_skill.py` da fábrica de habilidades, apontado para esta pasta.
-- Prompts de teste de resultado: `evals/evals.json`.
-- Teste de gatilho: `evals/gatilhos.json`.
-
-## Segurança
-
-- **Rede:** só na verificação do ambiente (baixa o GSAP do registro público do npm, uma vez) e na captura de marca (abre o site indicado e baixa imagens dele). O resto roda sem internet.
-- **Scripts:** em Node, sem dependências externas, sem perguntas interativas, com `--ajuda` e códigos de saída documentados. Gravam só na pasta do projeto, na pasta de trabalho e onde `--saida` indicar.
-- **Navegador:** sem interface, com perfil temporário apagado ao final, carregando só arquivos da pasta do projeto.
-- **Conteúdo externo:** o que vem de sites capturados ou arquivos enviados é tratado como dado, nunca como instrução.
-- **Som:** a trilha é sintetizada em código; não há música nem amostras de terceiros.
-
-Hash do pacote, na descrição de cada release:
-
 ```bash
-shasum -a 256 diretor-de-movimento.skill
+cd ~/.claude/skills/diretor-de-movimento
+git pull
+node scripts/check-setup.mjs
 ```
 
-Se o hash não bater com o registrado para aquela versão, não instale.
+Antes de atualizar, leia o `CHANGELOG.md`. Para acrescentar um efeito ou tema novo, veja a seção "Como acrescentar" do `docs/manual.md`.
 
-## Créditos
+## Privacidade
 
-A animação usa o GSAP, biblioteca de terceiros; veja [NOTICE.md](NOTICE.md). Projeto privado da Conex Prime.
+O HyperFrames roda sempre com a telemetria desligada, sem instalar skills próprias e com as chaves de visão em nuvem removidas do ambiente. Defina `MD_ALLOW_CLOUD=1` só se quiser os recursos pagos dele.
+
+## Licenças
+
+A trilha e os efeitos sonoros são sintetizados do zero a cada filme. O GSAP vem embutido em `templates/hyperframes/gsap.min.js`. As fontes, os modelos e as bibliotecas de terceiros têm os seus avisos em [LICENCAS-DE-TERCEIROS.md](LICENCAS-DE-TERCEIROS.md). Logos, fontes e telas de uma marca pertencem a ela: a skill os captura para fazer o filme dessa marca, não para redistribuir.
