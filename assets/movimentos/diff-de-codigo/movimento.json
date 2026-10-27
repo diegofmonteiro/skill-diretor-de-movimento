@@ -1,0 +1,48 @@
+{
+  "id": "diff-de-codigo",
+  "nome": "Diferença de código",
+  "umaLinha": "um arquivo em que as linhas antigas ficam riscadas em vermelho e as novas entram em verde",
+  "categoria": "dev",
+  "tipo": "efeito",
+  "usos": [
+    "cobertura",
+    "sobreposicao"
+  ],
+  "estilos": [
+    "vidro"
+  ],
+  "formatos": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "duracao": 4.2,
+  "alfa": true,
+  "quando_usar": "quando a pessoa explica uma correção ou melhoria pequena (\"troquei isso por isto\"): as linhas novas entram na hora em que ela diz o que mudou",
+  "variaveis": [
+    {
+      "id": "arquivo",
+      "tipo": "string",
+      "rotulo": "Nome do arquivo",
+      "padrao": "frete.js"
+    },
+    {
+      "id": "removidas",
+      "tipo": "string",
+      "rotulo": "Linhas removidas, separadas por barra vertical",
+      "padrao": "const total = soma(a, b)|return total"
+    },
+    {
+      "id": "adicionadas",
+      "tipo": "string",
+      "rotulo": "Linhas adicionadas, separadas por barra vertical",
+      "padrao": "const total = soma(a, b) + frete(cep)|return arredondar(total)"
+    },
+    {
+      "id": "posicao",
+      "tipo": "string",
+      "rotulo": "topo, centro ou base (vazio: topo em sobreposição, centro em cobertura)",
+      "padrao": ""
+    }
+  ]
+}

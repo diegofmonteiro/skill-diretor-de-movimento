@@ -1,0 +1,48 @@
+{
+  "id": "terminal-comando",
+  "nome": "Terminal com comando",
+  "umaLinha": "uma janela de terminal em que o comando é digitado, a saída aparece linha a linha e a última confirma o resultado",
+  "categoria": "dev",
+  "tipo": "efeito",
+  "usos": [
+    "cobertura",
+    "sobreposicao"
+  ],
+  "estilos": [
+    "vidro"
+  ],
+  "formatos": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "duracao": 4.4,
+  "alfa": true,
+  "quando_usar": "quando a pessoa fala de rodar algo, instalar, publicar ou testar (\"rodei o comando e deu certo\"): digite no ritmo da fala",
+  "variaveis": [
+    {
+      "id": "comando",
+      "tipo": "string",
+      "rotulo": "O comando digitado",
+      "padrao": "npm run build"
+    },
+    {
+      "id": "saida",
+      "tipo": "string",
+      "rotulo": "Linhas de saída, separadas por barra vertical",
+      "padrao": "compilando 48 arquivos|otimizando imagens|gerando páginas"
+    },
+    {
+      "id": "resultado",
+      "tipo": "string",
+      "rotulo": "Linha final de sucesso (vazio: nenhuma)",
+      "padrao": "pronto em 2,4 s"
+    },
+    {
+      "id": "posicao",
+      "tipo": "string",
+      "rotulo": "topo, centro ou base (vazio: topo em sobreposição, centro em cobertura)",
+      "padrao": ""
+    }
+  ]
+}

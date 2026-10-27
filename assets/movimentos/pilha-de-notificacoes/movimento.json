@@ -1,0 +1,48 @@
+{
+  "id": "pilha-de-notificacoes",
+  "nome": "Pilha de notificações",
+  "umaLinha": "notificações de celular que descem uma a uma, empurrando as anteriores para baixo",
+  "categoria": "sistema",
+  "tipo": "efeito",
+  "usos": [
+    "cobertura",
+    "sobreposicao"
+  ],
+  "estilos": [
+    "vidro"
+  ],
+  "formatos": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "duracao": 4.2,
+  "alfa": true,
+  "quando_usar": "quando a pessoa fala de avisos que chegam sozinhos (\"toda venda me avisa na hora, todo cliente novo também\"): uma notificação por frase",
+  "variaveis": [
+    {
+      "id": "titulos",
+      "tipo": "string",
+      "rotulo": "Títulos das 3 notificações, separados por barra vertical",
+      "padrao": "Novo pedido|Pagamento aprovado|Cliente respondeu"
+    },
+    {
+      "id": "mensagens",
+      "tipo": "string",
+      "rotulo": "Mensagens das 3 notificações, separadas por barra vertical",
+      "padrao": "Pedido recebido pelo site|Confirmação enviada ao cliente|Pergunta sobre o prazo de entrega"
+    },
+    {
+      "id": "quando",
+      "tipo": "string",
+      "rotulo": "Texto de tempo",
+      "padrao": "agora"
+    },
+    {
+      "id": "posicao",
+      "tipo": "string",
+      "rotulo": "topo, centro ou base (vazio: topo em sobreposição, centro em cobertura)",
+      "padrao": ""
+    }
+  ]
+}

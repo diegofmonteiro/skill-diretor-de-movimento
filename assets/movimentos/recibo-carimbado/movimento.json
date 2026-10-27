@@ -1,0 +1,54 @@
+{
+  "id": "recibo-carimbado",
+  "nome": "Recibo carimbado",
+  "umaLinha": "um recibo de papel que recebe as linhas uma a uma e leva um carimbo de pago",
+  "categoria": "papel",
+  "tipo": "efeito",
+  "usos": [
+    "cobertura",
+    "sobreposicao"
+  ],
+  "estilos": [
+    "papel"
+  ],
+  "formatos": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "duracao": 4.2,
+  "alfa": true,
+  "quando_usar": "quando a pessoa fala de pagamento confirmado, comprovante ou conta quitada (\"está pago, está resolvido\"): o carimbo cai na palavra",
+  "variaveis": [
+    {
+      "id": "titulo_recibo",
+      "tipo": "string",
+      "rotulo": "Título do documento",
+      "padrao": "Recibo"
+    },
+    {
+      "id": "itens",
+      "tipo": "string",
+      "rotulo": "Descrições das linhas, separadas por barra vertical",
+      "padrao": "Mensalidade do serviço|Taxa de configuração"
+    },
+    {
+      "id": "valores",
+      "tipo": "string",
+      "rotulo": "Valor de cada linha, separados por barra vertical (reais e com fonte)",
+      "padrao": "R$ 1.500,00|R$ 500,00"
+    },
+    {
+      "id": "carimbo",
+      "tipo": "string",
+      "rotulo": "Texto do carimbo",
+      "padrao": "PAGO"
+    },
+    {
+      "id": "posicao",
+      "tipo": "string",
+      "rotulo": "topo, centro ou base (vazio: topo em sobreposição, centro em cobertura)",
+      "padrao": ""
+    }
+  ]
+}

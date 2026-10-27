@@ -1,0 +1,54 @@
+{
+  "id": "evento-de-agenda",
+  "nome": "Evento de agenda",
+  "umaLinha": "um cartão de calendário com o dia em destaque, o título e o horário, que termina com um sininho avisando",
+  "categoria": "produtividade",
+  "tipo": "efeito",
+  "usos": [
+    "cobertura",
+    "sobreposicao"
+  ],
+  "estilos": [
+    "vidro"
+  ],
+  "formatos": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "duracao": 3.6,
+  "alfa": true,
+  "quando_usar": "quando a pessoa marca uma data ou convida para um evento (\"quinta, às 19 horas, ao vivo\"): o cartão entra na hora em que ela diz o dia",
+  "variaveis": [
+    {
+      "id": "dia",
+      "tipo": "string",
+      "rotulo": "Dia do mês",
+      "padrao": "12"
+    },
+    {
+      "id": "mes",
+      "tipo": "string",
+      "rotulo": "Mês abreviado, em maiúsculas",
+      "padrao": "NOV"
+    },
+    {
+      "id": "titulo",
+      "tipo": "string",
+      "rotulo": "Nome do evento",
+      "padrao": "Aula ao vivo"
+    },
+    {
+      "id": "hora",
+      "tipo": "string",
+      "rotulo": "Horário",
+      "padrao": "19h00"
+    },
+    {
+      "id": "posicao",
+      "tipo": "string",
+      "rotulo": "topo, centro ou base (vazio: topo em sobreposição, centro em cobertura)",
+      "padrao": ""
+    }
+  ]
+}

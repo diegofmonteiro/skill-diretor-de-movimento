@@ -1,0 +1,60 @@
+{
+  "id": "caixa-de-dialogo",
+  "nome": "Caixa de diálogo",
+  "umaLinha": "uma janela de confirmação em que o cursor atravessa a tela, clica no botão principal e a caixa vira um aviso de feito",
+  "categoria": "sistema",
+  "tipo": "efeito",
+  "usos": [
+    "cobertura",
+    "sobreposicao"
+  ],
+  "estilos": [
+    "vidro"
+  ],
+  "formatos": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "duracao": 4.4,
+  "alfa": true,
+  "quando_usar": "quando a pessoa fala de uma decisão tomada com um clique (\"é só confirmar e pronto\"): o clique acontece na palavra \"confirmar\"",
+  "variaveis": [
+    {
+      "id": "titulo",
+      "tipo": "string",
+      "rotulo": "Título da caixa",
+      "padrao": "Publicar agora?"
+    },
+    {
+      "id": "texto",
+      "tipo": "string",
+      "rotulo": "Texto da caixa",
+      "padrao": "O conteúdo será enviado para todos os canais."
+    },
+    {
+      "id": "botao_principal",
+      "tipo": "string",
+      "rotulo": "Botão principal",
+      "padrao": "Confirmar"
+    },
+    {
+      "id": "botao_secundario",
+      "tipo": "string",
+      "rotulo": "Botão secundário",
+      "padrao": "Cancelar"
+    },
+    {
+      "id": "feito",
+      "tipo": "string",
+      "rotulo": "Aviso depois do clique",
+      "padrao": "Publicado"
+    },
+    {
+      "id": "posicao",
+      "tipo": "string",
+      "rotulo": "topo, centro ou base (vazio: topo em sobreposição, centro em cobertura)",
+      "padrao": ""
+    }
+  ]
+}

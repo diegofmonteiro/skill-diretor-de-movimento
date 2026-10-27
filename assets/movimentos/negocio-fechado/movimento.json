@@ -1,0 +1,54 @@
+{
+  "id": "negocio-fechado",
+  "nome": "Negócio fechado",
+  "umaLinha": "um cartão de cliente que atravessa as três etapas do funil e termina carimbado como fechado, com o valor contado",
+  "categoria": "negocios",
+  "tipo": "efeito",
+  "usos": [
+    "cobertura",
+    "sobreposicao"
+  ],
+  "estilos": [
+    "vidro"
+  ],
+  "formatos": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "duracao": 4.8,
+  "alfa": true,
+  "quando_usar": "quando a pessoa conta uma venda ou contrato fechado (\"o cliente aprovou na mesma semana\"): o carimbo cai na palavra \"fechou\"",
+  "variaveis": [
+    {
+      "id": "cliente",
+      "tipo": "string",
+      "rotulo": "Nome do cliente ou da empresa (use um nome autorizado)",
+      "padrao": "Cliente Exemplo"
+    },
+    {
+      "id": "valor",
+      "tipo": "number",
+      "rotulo": "Valor do negócio em reais (real e com fonte)",
+      "padrao": 12000
+    },
+    {
+      "id": "etapas",
+      "tipo": "string",
+      "rotulo": "As 3 etapas, separadas por barra vertical",
+      "padrao": "Proposta|Negociação|Fechado"
+    },
+    {
+      "id": "carimbo",
+      "tipo": "string",
+      "rotulo": "Texto do carimbo",
+      "padrao": "FECHADO"
+    },
+    {
+      "id": "posicao",
+      "tipo": "string",
+      "rotulo": "topo, centro ou base (vazio: topo em sobreposição, centro em cobertura)",
+      "padrao": ""
+    }
+  ]
+}

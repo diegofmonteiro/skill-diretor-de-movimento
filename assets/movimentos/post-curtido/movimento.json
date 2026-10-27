@@ -1,0 +1,48 @@
+{
+  "id": "post-curtido",
+  "nome": "Post curtido",
+  "umaLinha": "um cartão de publicação cujo coração estoura e o contador de curtidas sobe uma",
+  "categoria": "social",
+  "tipo": "efeito",
+  "usos": [
+    "cobertura",
+    "sobreposicao"
+  ],
+  "estilos": [
+    "vidro"
+  ],
+  "formatos": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "duracao": 3.6,
+  "alfa": true,
+  "quando_usar": "quando a pessoa fala de uma publicação que funcionou ou convida a curtir (\"esse post teve mais de 12 mil curtidas\"): entre na frase e estoure o coração na palavra-chave",
+  "variaveis": [
+    {
+      "id": "texto",
+      "tipo": "string",
+      "rotulo": "Texto da publicação, uma ideia só",
+      "padrao": "Automatizar o que se repete é o primeiro passo para crescer sem contratar mais."
+    },
+    {
+      "id": "curtidas",
+      "tipo": "number",
+      "rotulo": "Curtidas reais depois do toque (use um número verdadeiro)",
+      "padrao": 12400
+    },
+    {
+      "id": "comentarios",
+      "tipo": "number",
+      "rotulo": "Comentários reais",
+      "padrao": 318
+    },
+    {
+      "id": "posicao",
+      "tipo": "string",
+      "rotulo": "topo, centro ou base (vazio: topo em sobreposição, centro em cobertura)",
+      "padrao": ""
+    }
+  ]
+}

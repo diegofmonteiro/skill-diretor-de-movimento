@@ -1,0 +1,8 @@
+#janela { width: calc(var(--u) * 960); max-width: 100%; border-radius: calc(var(--u) * 30); overflow: hidden; font-family: "JetBrains Mono", "SF Mono", "IBM Plex Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
+#cabj { padding: calc(var(--u) * 24) calc(var(--u) * 34); background: rgba(0,0,0,.28); font-size: calc(var(--u) * 28); color: var(--apagado); }
+#linhas { padding: calc(var(--u) * 18) 0 calc(var(--u) * 24); }
+.l { position: relative; display: flex; align-items: center; padding: calc(var(--u) * 12) calc(var(--u) * 34); font-size: calc(var(--u) * 33); white-space: pre; }
+.l .s { width: calc(var(--u) * 40); flex: none; font-weight: 800; }
+.l.rem { background: rgba(255,82,82,.16); color: #ff9a9a; }
+.l.rem .t { text-decoration: line-through; text-decoration-thickness: calc(var(--u) * 3); }
+.l.add { background: rgba(53,208,127,.16); color: #8ff0bd; }

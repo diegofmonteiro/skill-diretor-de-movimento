@@ -1,0 +1,8 @@
+#pilha { position: relative; width: calc(var(--u) * 900); max-width: 100%; height: calc(var(--u) * 560); }
+.nt { position: absolute; left: 0; right: 0; top: 0; display: flex; align-items: center; gap: calc(var(--u) * 24); height: calc(var(--u) * 160); padding: 0 calc(var(--u) * 34); border-radius: calc(var(--u) * 40); }
+.ic { width: calc(var(--u) * 92); height: calc(var(--u) * 92); border-radius: calc(var(--u) * 24); overflow: hidden; flex: none; background: var(--superficie); }
+.ic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.tx { min-width: 0; flex: 1; }
+.tx .t { display: flex; justify-content: space-between; font-size: calc(var(--u) * 32); font-weight: 800; }
+.tx .t span { font-weight: 500; font-size: calc(var(--u) * 26); color: var(--apagado); }
+.tx .m { margin-top: calc(var(--u) * 6); font-size: calc(var(--u) * 32); color: color-mix(in srgb, var(--tinta) 82%, transparent); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

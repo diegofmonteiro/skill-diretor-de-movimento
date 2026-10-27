@@ -1,0 +1,11 @@
+#bloco { width: calc(var(--u) * 860); max-width: 100%; display: flex; flex-direction: column; align-items: center; gap: calc(var(--u) * 26); }
+#chamada { font-size: calc(var(--u) * 44); color: var(--tinta); font-weight: 600; }
+#pilula { font-size: calc(var(--u) * 150); padding: calc(var(--u) * 14) calc(var(--u) * 62) calc(var(--u) * 20); border-radius: 999px; background: var(--destaque); color: var(--fundo);
+  box-shadow: 0 calc(var(--u) * 24) calc(var(--u) * 60) calc(var(--u) * -20) color-mix(in srgb, var(--destaque) 70%, transparent); }
+.e-chave #pilula { box-shadow: none; }
+#fila { width: 100%; display: flex; flex-direction: column; gap: calc(var(--u) * 16); margin-top: calc(var(--u) * 12); }
+.com { display: flex; align-items: center; gap: calc(var(--u) * 20); padding: calc(var(--u) * 20) calc(var(--u) * 28); border-radius: calc(var(--u) * 30); }
+.ini { width: calc(var(--u) * 60); height: calc(var(--u) * 60); border-radius: 50%; flex: none; display: grid; place-items: center; font-weight: 800; font-size: calc(var(--u) * 28); background: var(--destaque2); color: #fff; }
+.com b { font-size: calc(var(--u) * 30); margin-right: calc(var(--u) * 12); }
+.com span { font-size: calc(var(--u) * 32); }
+.com em { font-style: normal; color: var(--destaque); font-weight: 800; }

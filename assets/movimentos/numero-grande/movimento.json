@@ -1,0 +1,22 @@
+{
+  "id": "numero-grande",
+  "nome": "Número grande",
+  "umaLinha": "um painel de vidro com um número enorme que só aparece quando começa a contar, para no valor e recebe um brilho que passa uma vez",
+  "categoria": "dados",
+  "tipo": "efeito",
+  "usos": ["cobertura", "sobreposicao"],
+  "estilos": ["vidro"],
+  "formatos": ["9:16", "16:9", "1:1"],
+  "duracao": 3.4,
+  "alfa": true,
+  "quando_usar": "quando a pessoa diz um número que prova o argumento (\"já são 1.200 clientes\"): entre na palavra do número e deixe o contador parar junto com a frase",
+  "variaveis": [
+    { "id": "valor", "tipo": "number", "rotulo": "Valor final (use um número real e com fonte)", "padrao": 1200 },
+    { "id": "inicio", "tipo": "number", "rotulo": "Valor de partida do contador", "padrao": 0 },
+    { "id": "prefixo", "tipo": "string", "rotulo": "Texto antes do número (ex.: R$ )", "padrao": "" },
+    { "id": "sufixo", "tipo": "string", "rotulo": "Texto depois do número (ex.: + ou %)", "padrao": "+" },
+    { "id": "casas", "tipo": "number", "rotulo": "Casas decimais", "padrao": 0 },
+    { "id": "rotulo", "tipo": "string", "rotulo": "O que o número mede, em poucas palavras", "padrao": "clientes atendidos" },
+    { "id": "posicao", "tipo": "string", "rotulo": "topo, centro ou base (vazio: topo em sobreposição, centro em cobertura)", "padrao": "" }
+  ]
+}

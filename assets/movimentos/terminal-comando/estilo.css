@@ -1,0 +1,10 @@
+#janela { width: calc(var(--u) * 940); max-width: 100%; border-radius: calc(var(--u) * 30); overflow: hidden; font-family: "JetBrains Mono", "SF Mono", "IBM Plex Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace; }
+#barra-j { display: flex; align-items: center; gap: calc(var(--u) * 12); padding: calc(var(--u) * 22) calc(var(--u) * 28); background: rgba(0,0,0,.28); }
+#barra-j i { width: calc(var(--u) * 18); height: calc(var(--u) * 18); border-radius: 50%; background: rgba(255,255,255,.28); }
+#titj { margin-left: calc(var(--u) * 18); font-size: calc(var(--u) * 26); color: var(--apagado); }
+#corpo-t { padding: calc(var(--u) * 34) calc(var(--u) * 38) calc(var(--u) * 42); font-size: calc(var(--u) * 38); line-height: 1.55; min-height: calc(var(--u) * 340); }
+.lin { display: flex; align-items: center; white-space: pre; }
+.pr { color: var(--destaque); margin-right: calc(var(--u) * 20); font-weight: 800; }
+#cur { width: calc(var(--u) * 20); height: calc(var(--u) * 40); background: var(--tinta); margin-left: calc(var(--u) * 4); opacity: .85; }
+#saida div { color: color-mix(in srgb, var(--tinta) 66%, transparent); white-space: pre; }
+#saida div.ok-l { color: #35d07f; font-weight: 700; }

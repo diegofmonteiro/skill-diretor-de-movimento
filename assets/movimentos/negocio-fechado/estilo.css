@@ -1,0 +1,10 @@
+#funil { position: relative; width: calc(var(--u) * 960); max-width: 100%; }
+#cols { display: flex; gap: calc(var(--u) * 16); }
+.col { flex: 1; height: calc(var(--u) * 440); border-radius: calc(var(--u) * 28); border: calc(var(--u) * 3) dashed rgba(255,255,255,.22); padding: calc(var(--u) * 20); font-size: calc(var(--u) * 30); font-weight: 700; color: var(--apagado); text-align: center; }
+.e-alfa .col { background: color-mix(in srgb, var(--superficie) 70%, transparent); }
+.col.fim { border-color: #35d07f; color: #35d07f; }
+#cartao { position: absolute; left: 0; top: calc(var(--u) * 110); width: calc(var(--u) * 296); padding: calc(var(--u) * 24); border-radius: calc(var(--u) * 24); }
+#cli { font-size: calc(var(--u) * 30); font-weight: 700; }
+#val { margin-top: calc(var(--u) * 10); font-size: calc(var(--u) * 52); white-space: nowrap; }
+#carimbo { position: absolute; right: calc(var(--u) * 6); bottom: calc(var(--u) * 40); padding: calc(var(--u) * 6) calc(var(--u) * 26); border: calc(var(--u) * 8) double #35d07f; color: #35d07f; font-family: var(--fonte-titulo); font-weight: 800; font-size: calc(var(--u) * 64); letter-spacing: .06em; border-radius: calc(var(--u) * 12); transform: rotate(-9deg); opacity: 0; background: color-mix(in srgb, var(--fundo) 85%, transparent); }
+.e-alfa:not(.e-chave) #carimbo { background: color-mix(in srgb, var(--fundo) 80%, transparent); }

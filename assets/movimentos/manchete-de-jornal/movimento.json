@@ -1,0 +1,55 @@
+{
+  "id": "manchete-de-jornal",
+  "nome": "Manchete de jornal",
+  "umaLinha": "um recorte de jornal cuja manchete é escrita e tem um trecho marcado com marca-texto",
+  "categoria": "papel",
+  "tipo": "efeito",
+  "usos": [
+    "cobertura",
+    "sobreposicao"
+  ],
+  "estilos": [
+    "editorial",
+    "papel"
+  ],
+  "formatos": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "duracao": 4.0,
+  "alfa": true,
+  "quando_usar": "quando a pessoa cita uma notícia, uma frase de imprensa ou algo que saiu sobre o assunto (\"saiu até no jornal\"): só use manchete que existe de verdade",
+  "variaveis": [
+    {
+      "id": "veiculo",
+      "tipo": "string",
+      "rotulo": "Nome do jornal ou do veículo (real)",
+      "padrao": "Jornal da Cidade"
+    },
+    {
+      "id": "texto_manchete",
+      "tipo": "string",
+      "rotulo": "A manchete real, curta",
+      "padrao": "Pequenas empresas dobram as vendas com automação"
+    },
+    {
+      "id": "marcar",
+      "tipo": "string",
+      "rotulo": "Trecho exato da manchete que leva o marca-texto",
+      "padrao": "dobram as vendas"
+    },
+    {
+      "id": "data_texto",
+      "tipo": "string",
+      "rotulo": "Data impressa no recorte",
+      "padrao": "terça-feira"
+    },
+    {
+      "id": "posicao",
+      "tipo": "string",
+      "rotulo": "topo, centro ou base (vazio: topo em sobreposição, centro em cobertura)",
+      "padrao": ""
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "cartao-de-plano",
+  "nome": "Cartões de plano",
+  "umaLinha": "três planos lado a lado em que o do meio sobe, ganha o selo de mais escolhido e os outros recuam",
+  "categoria": "negocios",
+  "tipo": "efeito",
+  "usos": [
+    "cobertura",
+    "sobreposicao"
+  ],
+  "estilos": [
+    "vidro"
+  ],
+  "formatos": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "duracao": 4.4,
+  "alfa": true,
+  "quando_usar": "quando a pessoa apresenta opções de contratação e indica a recomendada (\"a maioria escolhe o do meio\"): o destaque sobe na palavra da recomendação",
+  "variaveis": [
+    {
+      "id": "planos",
+      "tipo": "string",
+      "rotulo": "Nomes dos 3 planos, separados por barra vertical",
+      "padrao": "Início|Equipe|Empresa"
+    },
+    {
+      "id": "precos",
+      "tipo": "string",
+      "rotulo": "Preços dos 3 planos, separados por barra vertical (valores de exemplo: troque pelos reais)",
+      "padrao": "R$ 97|R$ 297|R$ 697"
+    },
+    {
+      "id": "periodo",
+      "tipo": "string",
+      "rotulo": "Período do preço",
+      "padrao": "/mês"
+    },
+    {
+      "id": "linhas",
+      "tipo": "string",
+      "rotulo": "Uma frase curta por plano, separadas por barra vertical",
+      "padrao": "Para começar|Para crescer|Para escalar"
+    },
+    {
+      "id": "destaque_plano",
+      "tipo": "number",
+      "rotulo": "Plano recomendado, de 1 a 3",
+      "padrao": 2
+    },
+    {
+      "id": "selo",
+      "tipo": "string",
+      "rotulo": "Texto do selo do recomendado",
+      "padrao": "Mais escolhido"
+    },
+    {
+      "id": "posicao",
+      "tipo": "string",
+      "rotulo": "topo, centro ou base (vazio: topo em sobreposição, centro em cobertura)",
+      "padrao": ""
+    }
+  ]
+}

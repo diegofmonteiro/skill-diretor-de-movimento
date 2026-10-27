@@ -1,0 +1,54 @@
+{
+  "id": "corrida-de-barras",
+  "nome": "Corrida de barras",
+  "umaLinha": "barras horizontais que crescem juntas, se reordenam pelo valor e deixam o destaque da marca no topo",
+  "categoria": "dados",
+  "tipo": "efeito",
+  "usos": [
+    "cobertura",
+    "sobreposicao"
+  ],
+  "estilos": [
+    "vidro"
+  ],
+  "formatos": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "duracao": 4.8,
+  "alfa": true,
+  "quando_usar": "quando a pessoa compara opções por um número (\"manual, planilha e automação: veja a diferença\"): as barras crescem enquanto ela compara",
+  "variaveis": [
+    {
+      "id": "rotulos",
+      "tipo": "string",
+      "rotulo": "De 3 a 5 rótulos, separados por vírgula",
+      "padrao": "Manual,Planilhas,Automação"
+    },
+    {
+      "id": "valores",
+      "tipo": "string",
+      "rotulo": "Um valor real por rótulo, separados por vírgula",
+      "padrao": "14,31,72"
+    },
+    {
+      "id": "unidade",
+      "tipo": "string",
+      "rotulo": "Unidade depois do valor",
+      "padrao": " h"
+    },
+    {
+      "id": "destaque_item",
+      "tipo": "number",
+      "rotulo": "Qual item recebe a cor de destaque, de 1 em diante (0: nenhum)",
+      "padrao": 3
+    },
+    {
+      "id": "posicao",
+      "tipo": "string",
+      "rotulo": "topo, centro ou base (vazio: topo em sobreposição, centro em cobertura)",
+      "padrao": ""
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+#cartao { position: relative; display: flex; align-items: center; gap: calc(var(--u) * 46); width: calc(var(--u) * 900); max-width: 100%; padding: calc(var(--u) * 40) calc(var(--u) * 50) calc(var(--u) * 40) calc(var(--u) * 40); border-radius: calc(var(--u) * 44); }
+#data { flex: none; width: calc(var(--u) * 230); border-radius: calc(var(--u) * 28); overflow: hidden; text-align: center; background: var(--tinta); color: var(--fundo); transform-origin: 50% 0; }
+#mes { background: var(--destaque); color: var(--fundo); font-size: calc(var(--u) * 40); padding: calc(var(--u) * 14) 0; letter-spacing: .06em; }
+#dia { font-size: calc(var(--u) * 150); padding: calc(var(--u) * 6) 0 calc(var(--u) * 22); }
+#info { min-width: 0; flex: 1; }
+#evt { font-size: calc(var(--u) * 58); font-weight: 800; line-height: 1.1; }
+#hr { display: flex; align-items: center; gap: calc(var(--u) * 14); margin-top: calc(var(--u) * 20); font-size: calc(var(--u) * 44); color: var(--tinta); }
+#hr svg { width: calc(var(--u) * 46); height: calc(var(--u) * 46); fill: none; stroke: var(--destaque); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+#sino { position: absolute; right: calc(var(--u) * 34); top: calc(var(--u) * 26); width: calc(var(--u) * 54); height: calc(var(--u) * 54); fill: none; stroke: var(--destaque); stroke-width: 1.8; stroke-linejoin: round; stroke-linecap: round; transform-origin: 50% 10%; opacity: 0; }

@@ -1,0 +1,48 @@
+{
+  "id": "grafico-de-linha",
+  "nome": "Gráfico de linha",
+  "umaLinha": "uma linha que se desenha ponto a ponto sob um número que acompanha o último ponto",
+  "categoria": "dados",
+  "tipo": "efeito",
+  "usos": [
+    "cobertura",
+    "sobreposicao"
+  ],
+  "estilos": [
+    "vidro"
+  ],
+  "formatos": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "duracao": 4.6,
+  "alfa": true,
+  "quando_usar": "quando a pessoa fala de crescimento ao longo do tempo (\"em seis meses, as visitas quadruplicaram\"): a linha chega ao fim quando ela diz o resultado",
+  "variaveis": [
+    {
+      "id": "pontos",
+      "tipo": "string",
+      "rotulo": "Série de valores reais, separados por vírgula (de 5 a 12)",
+      "padrao": "10,14,13,22,30,41,58"
+    },
+    {
+      "id": "rotulo",
+      "tipo": "string",
+      "rotulo": "O que a linha mostra",
+      "padrao": "Visitas por semana"
+    },
+    {
+      "id": "unidade",
+      "tipo": "string",
+      "rotulo": "Texto depois do número final",
+      "padrao": ""
+    },
+    {
+      "id": "posicao",
+      "tipo": "string",
+      "rotulo": "topo, centro ou base (vazio: topo em sobreposição, centro em cobertura)",
+      "padrao": ""
+    }
+  ]
+}

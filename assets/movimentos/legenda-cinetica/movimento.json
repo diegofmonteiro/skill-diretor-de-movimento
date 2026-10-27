@@ -1,0 +1,48 @@
+{
+  "id": "legenda-cinetica",
+  "nome": "Legenda cinética",
+  "umaLinha": "a frase entra palavra por palavra e a palavra que importa ganha a cor de destaque e um pequeno impulso",
+  "categoria": "criador",
+  "tipo": "efeito",
+  "usos": [
+    "sobreposicao",
+    "cobertura"
+  ],
+  "estilos": [
+    "editorial"
+  ],
+  "formatos": [
+    "9:16",
+    "16:9",
+    "1:1"
+  ],
+  "duracao": 3.2,
+  "alfa": true,
+  "quando_usar": "quando a frase falada precisa de ênfase visual numa palavra só (\"isso muda TUDO\"): ajuste o tempo para a palavra de destaque coincidir com a fala",
+  "variaveis": [
+    {
+      "id": "frase",
+      "tipo": "string",
+      "rotulo": "A frase, de 3 a 9 palavras",
+      "padrao": "Isso muda tudo no seu dia a dia"
+    },
+    {
+      "id": "destaque_palavras",
+      "tipo": "string",
+      "rotulo": "Palavras da frase que recebem a cor de destaque, separadas por vírgula",
+      "padrao": "tudo"
+    },
+    {
+      "id": "ritmo",
+      "tipo": "number",
+      "rotulo": "Segundos entre uma palavra e a próxima",
+      "padrao": 0.24
+    },
+    {
+      "id": "posicao",
+      "tipo": "string",
+      "rotulo": "topo, centro ou base (vazio: base em sobreposição, centro em cobertura)",
+      "padrao": ""
+    }
+  ]
+}

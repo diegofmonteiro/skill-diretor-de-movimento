@@ -1,0 +1,5 @@
+#frase { width: calc(var(--u) * 940); max-width: 100%; text-align: center; font-size: calc(var(--u) * 104); line-height: 1.08; text-transform: none;
+  text-shadow: 0 calc(var(--u) * 6) calc(var(--u) * 30) rgba(0,0,0,.45); }
+.e-retrato #frase { font-size: calc(var(--u) * 118); }
+#frase .p { margin: 0 calc(var(--u) * 7); }
+.e-chave #frase { text-shadow: none; -webkit-text-stroke: calc(var(--u) * 2) rgba(0,0,0,.6); paint-order: stroke fill; }
