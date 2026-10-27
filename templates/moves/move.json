@@ -1,5 +1,5 @@
-{ "id": "issue-close", "name": "Glass issue closed by a commit", "oneLiner": "an issue card on glass with its comment: a commit lands on the timeline, its closes #42 reference lights up, the rail runs green into a check node and the status pill flips from Open to Closed as the icon turns green",
-  "category": "dev", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
-  "tags": ["issue", "bug", "fix", "commit", "closed", "git", "developer", "ticket", "resolved", "ai coding", "agent", "dark"],
-  "formats": ["9:16", "16:9", "1:1"], "duration": 5.0, "alpha": true,
-  "say": "when the speaker says a bug or a request got fixed ('someone reported it on Monday and the agent closed it by lunch', 'that issue is closed'): the commit lands on 'fixed it', the pill flips on 'closed'" }
+{ "id": "pros-cons", "name": "Pros and cons", "oneLiner": "two glass cards stand up off a lit floor, a green check badge over the pros and a red cross over the cons; rows land alternately with each mark drawn and the counts ticking, then the winning card steps forward in its colour while the other falls back",
+  "category": "explain", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
+  "tags": ["pros", "cons", "tradeoffs", "decision", "upsides", "downsides", "review", "honest", "worth it", "list", "premium", "dark"],
+  "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": true,
+  "say": "when the speaker weighs something up ('the good: it saves hours... the catch: a day to set up'): one row per point as it is said, the winning side steps forward on the verdict ('still worth it'). winner auto picks the longer list; set none for a neutral list" }

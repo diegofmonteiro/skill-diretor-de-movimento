@@ -1,4 +1,3 @@
-{ "sources": [
-  { "file": "assets/paper.jpg", "from": "ambientCG Paper001 (scanned white paper); the invoice sheet", "license": "CC0", "page": "https://ambientcg.com/view?id=Paper001" },
-  { "file": "assets/leather.jpg", "from": "ambientCG Leather032 (scanned black leather), resized; the desk pad", "license": "CC0", "page": "https://ambientcg.com/view?id=Leather032" }
-] }
+{"sources":[
+ {"file":"assets/vase-plain.png","from":"render of a Poly Haven vase model (polyhaven.com), cut out","license":"CC0"},
+ {"file":"assets/vase-brass.png","from":"render of a Poly Haven vase model (polyhaven.com), cut out","license":"CC0"}]}

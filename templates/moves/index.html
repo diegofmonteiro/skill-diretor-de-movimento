@@ -1,14 +1,10 @@
 <!doctype html>
 <html lang="en" data-composition-variables='[
-  {"id":"title","type":"string","label":"Issue title","default":"Upload fails on large files"},
-  {"id":"number","type":"string","label":"Issue number","default":"42"},
-  {"id":"label","type":"string","label":"Label chip","default":"bug"},
-  {"id":"comment","type":"string","label":"The comment on the issue","default":"Breaks on anything over 2 GB"},
-  {"id":"commit","type":"string","label":"Commit message that fixes it","default":"Stream uploads in chunks"},
-  {"id":"hash","type":"string","label":"Commit hash","default":"a3f9c2e"},
-  {"id":"verb","type":"string","label":"Word before the issue number","default":"closes"},
-  {"id":"closed","type":"string","label":"Status after it closes","default":"Closed"},
-  {"id":"note","type":"string","label":"Closing line in the timeline","default":"Closed as completed"}
+  {"id":"pros","type":"string","label":"The pros, comma separated, 1 to 4 short labels","default":"Saves hours,Never sleeps,Costs pennies"},
+  {"id":"cons","type":"string","label":"The cons, comma separated, 1 to 4 short labels","default":"A day to set up,Needs checking"},
+  {"id":"prosTitle","type":"string","label":"Left column title","default":"Pros"},
+  {"id":"consTitle","type":"string","label":"Right column title","default":"Cons"},
+  {"id":"winner","type":"string","label":"The side that wins at the end: auto (the longer list), pros, cons or none","default":"auto"}
 ]'>
 <head>
 <meta charset="UTF-8" />
@@ -17,119 +13,68 @@
 <link rel="stylesheet" href="assets/brand-fonts.css" />
 <style>
   html, body { margin: 0; width: {{W}}px; height: {{H}}px; overflow: hidden; background: var(--ground, #0E0D12); }
-  #root { position: relative; width: {{W}}px; height: {{H}}px; overflow: hidden; font-family: var(--font-body);
-    --al: color-mix(in srgb, var(--accent) 52%, #fff); --mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
-    --ok: #2BD67B; --okl: #8BF0B8; --amb: #F5B83D; --del: #FF6B6B; }
+  #root { position: relative; width: {{W}}px; height: {{H}}px; overflow: hidden; font-family: var(--font-body); --ok: #2BD67B; --bad: #FF5A5F; }
   #ground { position: absolute; inset: 0; background: var(--ground); overflow: hidden; }
   #ground i { position: absolute; border-radius: 50%; filter: blur(calc(var(--u) * 150)); }
-  #ground .l1 { width: 70%; height: 46%; left: 40%; top: -4%; background: color-mix(in srgb, var(--accent) 40%, transparent); }
-  #ground .l2 { width: 75%; height: 50%; left: -34%; top: 58%; background: color-mix(in srgb, var(--accent2) 26%, transparent); }
+  #ground .l1 { width: 70%; height: 46%; left: 36%; top: 0%; background: color-mix(in srgb, var(--accent) 36%, transparent); }
+  #ground .l2 { width: 75%; height: 50%; left: -32%; top: 58%; background: color-mix(in srgb, var(--accent2) 26%, transparent); }
+  #ground .lw { width: 60%; height: 44%; opacity: 0; }
   #vig { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(120% 90% at 50% 45%, transparent 55%, rgba(0,0,0,.45)); }
   #grain { position: absolute; inset: 0; opacity: .45; mix-blend-mode: overlay; pointer-events: none;
     background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='1' seed='8'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 0.5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E"); }
-  .is-alpha #ground, .is-alpha #grain, .is-alpha #vig, .is-alpha #base { display: none; }
-  #stage { position: absolute; inset: 0; perspective: 2200px; perspective-origin: 50% 42%; }
+  .is-alpha #ground, .is-alpha #grain, .is-alpha #vig, .is-alpha #floor, .is-alpha #base, .is-alpha .rf { display: none; }
+
+  #stage { position: absolute; inset: 0; perspective: calc(var(--u) * 2200); }
   #rig { position: absolute; inset: 0; transform-style: preserve-3d; }
-  #base { position: absolute; height: calc(var(--u) * 3); border-radius: 2px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.5) 12%, rgba(255,255,255,.5) 88%, transparent); box-shadow: 0 0 calc(var(--u) * 18) rgba(255,255,255,.3); }
-  #wrap { position: absolute; }
-  #win { position: absolute; inset: 0; box-sizing: border-box; overflow: hidden; border-radius: calc(var(--s) * 38);
-    background: linear-gradient(170deg, rgba(255,255,255,.14), rgba(255,255,255,.04) 60%, rgba(255,255,255,.07));
-    -webkit-backdrop-filter: blur(24px) saturate(160%); backdrop-filter: blur(24px) saturate(160%);
-    box-shadow: inset 0 calc(var(--s) * 2) 0 rgba(255,255,255,.5), inset 0 0 0 calc(var(--s) * 1.5) rgba(255,255,255,.14),
-      0 calc(var(--s) * 40) calc(var(--s) * 90) calc(var(--s) * -24) rgba(0,0,0,.7); }
-  .is-alpha #win { background: linear-gradient(170deg, color-mix(in srgb, var(--surface) 80%, white 10%), color-mix(in srgb, var(--surface) 94%, transparent)); }
-  .is-key #win { background: linear-gradient(170deg, color-mix(in srgb, var(--surface) 88%, white 12%), var(--surface)); -webkit-backdrop-filter: none; backdrop-filter: none;
-    box-shadow: inset 0 calc(var(--s) * 2) 0 rgba(255,255,255,.5), inset 0 0 0 calc(var(--s) * 1.5) rgba(255,255,255,.14); }
-  #win::after { content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 30;
-    background: linear-gradient(115deg, transparent calc(var(--sheen, -60%) - 14%), rgba(255,255,255,.22) var(--sheen, -60%), transparent calc(var(--sheen, -60%) + 14%)); mix-blend-mode: screen; }
-  .ab { position: absolute; box-sizing: border-box; }
-  #glow { position: absolute; border-radius: calc(var(--s) * 30); box-shadow: 0 0 calc(var(--s) * 60) calc(var(--s) * 6) rgba(43,214,123,.55); opacity: 0; }
-  .is-key #glow { display: none; }
-  #cur { position: absolute; left: 0; top: 0; z-index: 40; filter: drop-shadow(0 calc(var(--u) * 6) calc(var(--u) * 10) rgba(0,0,0,.5)); opacity: 0; }
-  #cur svg { width: 100%; height: 100%; display: block; }
+  #floor { position: absolute; left: -60%; right: -60%; height: 50%; background: linear-gradient(180deg, rgba(255,255,255,.05), transparent 55%); -webkit-mask: linear-gradient(90deg, transparent, #000 30%, #000 70%, transparent); mask: linear-gradient(90deg, transparent, #000 30%, #000 70%, transparent); }
+  #base { position: absolute; height: calc(var(--u) * 3); border-radius: 2px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.5) 10%, rgba(255,255,255,.5) 90%, transparent); box-shadow: 0 0 calc(var(--u) * 18) rgba(255,255,255,.3); }
+  .rf { position: absolute; filter: blur(calc(var(--u) * 6)); background: linear-gradient(180deg, rgba(255,255,255,.13), rgba(255,255,255,.04) 45%, transparent 85%); }
+  .rf b { position: absolute; left: 0; right: 0; top: 0; height: 100%; border-radius: inherit; opacity: 0; background: linear-gradient(180deg, var(--tone-a), transparent 80%); }
 
-  #ico { border-radius: calc(var(--s) * 20); }
-  #ico .st { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; border-radius: inherit; }
-  #ico .st svg { width: 58%; height: 58%; }
-  #ico .o { background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 40%, transparent), color-mix(in srgb, var(--accent) 14%, transparent));
-    box-shadow: inset 0 calc(var(--s) * 1.5) 0 rgba(255,255,255,.35), inset 0 0 0 calc(var(--s) * 1.5) color-mix(in srgb, var(--accent) 50%, transparent); }
-  #ico .c { background: linear-gradient(180deg, var(--okl), var(--ok) 60%); box-shadow: inset 0 calc(var(--s) * 1.5) 0 rgba(255,255,255,.6), 0 calc(var(--s) * 8) calc(var(--s) * 26) rgba(43,214,123,.45); opacity: 0; }
-  .is-key #ico .c { box-shadow: inset 0 calc(var(--s) * 1.5) 0 rgba(255,255,255,.6); }
-  #ttl { font-weight: 750; font-size: calc(var(--s) * 44); line-height: 1.1; color: var(--ink); white-space: nowrap; letter-spacing: -0.01em; }
-  #num { font-weight: 500; color: color-mix(in srgb, var(--ink) 48%, transparent); white-space: nowrap; font-size: calc(var(--s) * 40); }
-  #pill { perspective: 600px; }
-  #pill .in { position: absolute; inset: 0; transform-style: preserve-3d; }
-  #pill .f { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: calc(var(--s) * 10); border-radius: 99px; backface-visibility: hidden; font-weight: 700; font-size: calc(var(--s) * 32); white-space: nowrap; }
-  #pill .f svg { width: calc(var(--s) * 30); height: calc(var(--s) * 30); flex: none; }
-  #pill .op { color: var(--ink); background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 calc(var(--s) * 2) rgba(255,255,255,.28); }
-  #pill .cl { color: #04150B; background: linear-gradient(180deg, var(--okl), var(--ok) 60%); box-shadow: inset 0 calc(var(--s) * 1.5) 0 rgba(255,255,255,.6), 0 calc(var(--s) * 8) calc(var(--s) * 26) rgba(43,214,123,.45); visibility: hidden; }
-  .is-key #pill .cl { box-shadow: inset 0 calc(var(--s) * 1.5) 0 rgba(255,255,255,.6); }
-  .is-key #pill .op { background: color-mix(in srgb, var(--surface) 80%, white); }
-  #lab { display: flex; align-items: center; padding: 0 calc(var(--s) * 20); border-radius: 99px; font-weight: 650; font-size: calc(var(--s) * 30); white-space: nowrap;
-    color: var(--al); background: color-mix(in srgb, var(--accent) 20%, transparent); box-shadow: inset 0 0 0 calc(var(--s) * 1.5) color-mix(in srgb, var(--accent) 45%, transparent); }
-  .is-key #lab { background: color-mix(in srgb, var(--accent) 22%, var(--surface)); }
-  #hr { background: rgba(255,255,255,.1); }
+  .col { position: absolute; transform-style: preserve-3d; }
+  .card { position: absolute; inset: 0; box-sizing: border-box;
+    background: linear-gradient(160deg, rgba(255,255,255,.15), rgba(255,255,255,.045) 60%, rgba(255,255,255,.03));
+    -webkit-backdrop-filter: blur(24px) saturate(150%); backdrop-filter: blur(24px) saturate(150%);
+    box-shadow: inset 0 calc(var(--u) * 2) 0 rgba(255,255,255,.42), inset 0 0 0 calc(var(--u) * 1.5) rgba(255,255,255,.1), 0 calc(var(--u) * 40) calc(var(--u) * 70) calc(var(--u) * -26) rgba(0,0,0,.75); }
+  .is-alpha .card { background: linear-gradient(160deg, color-mix(in srgb, var(--surface) 88%, white 12%), color-mix(in srgb, var(--surface) 96%, transparent)); }
+  .card::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; mix-blend-mode: screen;
+    background: linear-gradient(112deg, transparent calc(var(--sheen, -50%) - 16%), rgba(255,255,255,.28) var(--sheen, -50%), transparent calc(var(--sheen, -50%) + 16%)); }
+  .card .tw { position: absolute; inset: 0; border-radius: inherit; opacity: 0; pointer-events: none;
+    background: radial-gradient(100% 60% at 50% 0%, var(--tone-a), transparent 75%); box-shadow: inset 0 0 0 calc(var(--u) * 3) var(--tone); }
+  .halo { position: absolute; inset: calc(var(--u) * -10); opacity: 0; pointer-events: none; box-shadow: 0 0 calc(var(--u) * 80) calc(var(--u) * 6) var(--tone-a); }
+  .pro { --tone: #2BD67B; --tone-a: rgba(43,214,123,.4); --tone-t: rgba(43,214,123,.16); }
+  .con { --tone: #FF5A5F; --tone-a: rgba(255,90,95,.4); --tone-t: rgba(255,90,95,.16); }
 
-  /* timeline */
-  #rail { border-radius: 99px; background: rgba(255,255,255,.16); transform-origin: 50% 0; }
-  #railg { border-radius: 99px; background: linear-gradient(180deg, rgba(43,214,123,.2), var(--ok)); transform-origin: 50% 0; }
-  #av { border-radius: 50%; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,.1); box-shadow: inset 0 0 0 calc(var(--s) * 1.5) rgba(255,255,255,.2); }
-  .is-key #av { background: color-mix(in srgb, var(--surface) 80%, white); }
-  #av svg { width: 56%; height: 56%; }
-  #bub { display: flex; align-items: center; padding: 0 calc(var(--s) * 28); border-radius: calc(var(--s) * 24); background: rgba(0,0,0,.24); box-shadow: inset 0 0 0 calc(var(--s) * 1.5) rgba(255,255,255,.09);
-    font-size: calc(var(--s) * 36); color: color-mix(in srgb, var(--ink) 86%, transparent); white-space: nowrap; }
-  .is-key #bub { background: color-mix(in srgb, var(--surface) 70%, black); }
-  .nd { border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-  .nd svg { width: 62%; height: 62%; overflow: visible; }
-  #ndb { background: color-mix(in srgb, var(--surface) 70%, #333); box-shadow: inset 0 0 0 calc(var(--s) * 2) rgba(255,255,255,.3), 0 0 0 calc(var(--s) * 8) color-mix(in srgb, var(--surface) 60%, transparent); }
-  .is-alpha #ndb, .is-key #ndb { box-shadow: inset 0 0 0 calc(var(--s) * 2) rgba(255,255,255,.3); }
-  #ndc { background: linear-gradient(180deg, var(--okl), var(--ok) 60%); box-shadow: inset 0 calc(var(--s) * 1.5) 0 rgba(255,255,255,.6); }
-  #ring { border-radius: 50%; border: calc(var(--s) * 3) solid var(--ok); opacity: 0; }
-  .is-key #ring { display: none; }
-  #msg { display: flex; align-items: center; font-weight: 700; font-size: calc(var(--s) * 40); color: var(--ink); white-space: nowrap; }
-  #refs { display: flex; align-items: center; gap: calc(var(--s) * 14); }
-  .ch { position: relative; display: flex; align-items: center; height: 100%; padding: 0 calc(var(--s) * 18); border-radius: calc(var(--s) * 14); font-family: var(--mono); font-weight: 600; font-size: calc(var(--s) * 32); white-space: pre; overflow: hidden; }
-  #hash { color: color-mix(in srgb, var(--ink) 80%, transparent); background: rgba(255,255,255,.08); box-shadow: inset 0 0 0 calc(var(--s) * 1.5) rgba(255,255,255,.18); }
-  .is-key #hash { background: color-mix(in srgb, var(--surface) 82%, white); }
-  #ref { color: color-mix(in srgb, var(--ink) 62%, transparent); box-shadow: inset 0 0 0 calc(var(--s) * 1.5) rgba(255,255,255,.12); }
-  #ref .hl { position: absolute; inset: 0; background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 55%, transparent), color-mix(in srgb, var(--accent) 35%, transparent)); transform-origin: 0 50%; transform: scaleX(0); }
-  #ref .t { position: relative; }
-  #ref .t b { font-weight: 700; color: var(--ink); }
-  #note { display: flex; align-items: center; font-weight: 700; font-size: calc(var(--s) * 38); color: var(--okl); white-space: nowrap; }
+  .hd { position: absolute; display: flex; align-items: center; white-space: nowrap; }
+  .badge { position: relative; flex: none; border-radius: 50%; display: grid; place-items: center;
+    background: radial-gradient(70% 70% at 36% 30%, color-mix(in srgb, var(--tone) 55%, white), var(--tone) 60%, color-mix(in srgb, var(--tone) 70%, black));
+    box-shadow: inset 0 calc(var(--u) * 2) 0 rgba(255,255,255,.6), 0 0 calc(var(--u) * 30) var(--tone-a); }
+  .badge svg { width: 54%; height: 54%; fill: none; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; }
+  .ht { font-family: var(--font-display); color: var(--ink); line-height: 1; letter-spacing: -0.015em; }
+  .ct { font-weight: 800; line-height: 1; color: color-mix(in srgb, var(--ink) 50%, transparent); margin-left: auto; font-variant-numeric: tabular-nums; }
+  .sep { position: absolute; height: calc(var(--u) * 2); background: linear-gradient(90deg, rgba(255,255,255,.22), rgba(255,255,255,.04)); }
+
+  .row { position: absolute; box-sizing: border-box; display: flex; align-items: center;
+    background: rgba(255,255,255,.05); box-shadow: inset 0 calc(var(--u) * 1.5) 0 rgba(255,255,255,.12), inset 0 0 0 calc(var(--u) * 1.2) rgba(255,255,255,.06); }
+  .mk { position: relative; flex: none; border-radius: 50%; display: grid; place-items: center; background: var(--tone-t); box-shadow: inset 0 0 0 calc(var(--u) * 2) var(--tone-a); }
+  .mk svg { width: 56%; height: 56%; fill: none; stroke: var(--tone); stroke-linecap: round; stroke-linejoin: round; overflow: visible; }
+  .rl { font-weight: 700; color: var(--ink); line-height: 1.12; letter-spacing: -0.005em; }
+  .ring { position: absolute; opacity: 0; border-radius: 50%; border: calc(var(--u) * 3) solid var(--tone); pointer-events: none; }
+
+  .is-key .card { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--surface); }
+  .is-key .row { background: color-mix(in srgb, var(--surface) 90%, white); }
+  .is-key .halo, .is-key .ring { display: none; }
+  .is-key .badge { box-shadow: inset 0 calc(var(--u) * 2) 0 rgba(255,255,255,.6); }
+  .is-key .ct { color: color-mix(in srgb, var(--ink) 50%, var(--surface)); }
+  .is-key .mk { background: color-mix(in srgb, var(--tone) 16%, var(--surface)); }
 </style>
 </head>
 <body>
 <div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="{{W}}" data-height="{{H}}" data-fps="30">
-  <div id="ground"><i class="l1"></i><i class="l2"></i></div>
+  <div id="ground"><i class="l1"></i><i class="l2"></i><i class="lw"></i></div>
   <div id="stage"><div id="rig">
-    <div id="base"></div>
-    <div id="wrap">
-      <div id="glow"></div>
-      <div id="win">
-        <div id="ico" class="ab">
-          <div class="st o"><svg viewBox="0 0 24 24" fill="none" stroke="var(--al)" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.6" fill="var(--al)" stroke="none"/></svg></div>
-          <div class="st c"><svg viewBox="0 0 24 24" fill="none" stroke="#04150B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.3l2.8 2.8L16.2 9.6"/></svg></div>
-        </div>
-        <div id="ttl" class="ab"></div>
-        <div id="num" class="ab"></div>
-        <div id="pill" class="ab"><div class="in">
-          <div class="f op"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="8.6"/><circle cx="12" cy="12" r="2.4" fill="currentColor" stroke="none"/></svg><span class="t0">Open</span></div>
-          <div class="f cl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.6"/><path d="M8.2 12.3l2.6 2.6 5-5.2"/></svg><span class="t1"></span></div>
-        </div></div>
-        <div id="lab" class="ab"></div>
-        <div id="hr" class="ab"></div>
-        <div id="rail" class="ab"></div>
-        <div id="railg" class="ab"></div>
-        <div id="av" class="ab"><svg viewBox="0 0 24 24" fill="color-mix(in srgb, var(--ink) 60%, transparent)"><circle cx="12" cy="8.6" r="4.2"/><path d="M3.8 21c.8-4.4 4.2-6.6 8.2-6.6s7.4 2.2 8.2 6.6z"/></svg></div>
-        <div id="bub" class="ab"></div>
-        <div id="ndb" class="ab nd"><svg viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M1.5 12h6.5M16 12h6.5"/></svg></div>
-        <div id="msg" class="ab"></div>
-        <div id="refs" class="ab"><div id="hash" class="ch"></div><div id="ref" class="ch"><i class="hl"></i><span class="t"></span></div></div>
-        <div id="ring" class="ab"></div>
-        <div id="ndc" class="ab nd"><svg viewBox="0 0 24 24" fill="none" stroke="#04150B" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5.5 12.5l4.2 4.2L18.5 7.6" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/></svg></div>
-        <div id="note" class="ab"></div>
-      </div>
-    </div>
+    <div id="floor"></div><div id="refls"></div><div id="base"></div>
+    <div id="cols"></div>
   </div></div>
   <div id="vig"></div>
   <div id="grain"></div>
@@ -137,117 +82,151 @@
 <script src="assets/move.js"></script>
 <script>
   const { v, tl, u, W, H, safe } = MV;
-  const root = document.getElementById("root");
-  const D = +root.dataset.duration, $ = (q) => document.querySelector(q), $$ = (q) => [...document.querySelectorAll(q)];
-  const P = MV.portrait, SQ = W === H, A = MV.alpha;
+  const root = document.getElementById("root"), $ = (s) => document.querySelector(s);
+  const D = +root.dataset.duration, KEY = root.classList.contains("is-key");
+  const P = MV.portrait, SQ = W === H;
+  const list = (x) => (Array.isArray(x) ? x : String(x || "").split(",")).map((s) => String(s).trim()).filter((s) => s.length);
+  const brand = v.brandName || "";
+  const sides = [
+    { cls: "pro", title: v.prosTitle || "Pros", items: list(v.pros).map((s) => s.split("{brand}").join(brand)).slice(0, 4) },
+    { cls: "con", title: v.consTitle || "Cons", items: list(v.cons).map((s) => s.split("{brand}").join(brand)).slice(0, 4) },
+  ];
+  sides.forEach((s, k) => { if (!s.items.length) s.items = [k ? "A downside" : "An upside"]; });
+  const wv = String(v.winner || "auto").toLowerCase();
+  const WIN = wv === "pros" ? 0 : wv === "cons" ? 1 : wv === "none" ? -1 : sides[0].items.length === sides[1].items.length ? -1 : sides[0].items.length > sides[1].items.length ? 0 : 1;
+  const CHECK = '<path d="M5.5 12.6l4.2 4.2 8.8-9.4"/>', CROSS = '<path d="M7 7l10 10M17 7 7 17"/>';
 
-  // ---- zone and scale (an 820-wide design space)
-  let cL, cR, zT, zB;
-  if (P) { cL = safe.left; cR = W - safe.right; zT = safe.top; zB = H - safe.bottom; }
-  else if (A && !SQ) { cL = W * 0.5; cR = W * 0.95; zT = H * 0.08; zB = H * 0.92; }
-  else if (SQ) { cL = 90 * u; cR = W - 90 * u; zT = 60 * u; zB = H - 60 * u; }
-  else { cL = W * 0.25; cR = W * 0.75; zT = H * 0.07; zB = H * 0.9; }
-  const DW = 820, pad = 40, inner = DW - pad * 2;
-  const HY = 36, HH = 76, MY = HY + HH + 24, MH = 56, HRY = MY + MH + 26;
-  const AY = HRY + 28, AH = 96;                       // the comment
-  const BY = AY + AH + 40, BH = 130;                  // the commit
-  const CY = BY + BH + 34, CH = 64;                   // closed
-  const DH = CY + CH + pad;
-  const s = Math.min((cR - cL) / DW, (zB - zT) / DH, P ? 1.08 : 1.25);
-  root.style.setProperty("--s", s + "px");
-  const cw = DW * s, ch = DH * s;
-  cL = cL + ((cR - cL) - cw) / 2;
-  const cT = A && P ? zT : zT + (zB - zT - ch) / 2;
-  Object.assign($("#wrap").style, { left: cL + "px", top: cT + "px", width: cw + "px", height: ch + "px" });
-  Object.assign($("#base").style, { left: cL - 40 * u + "px", width: cw + 80 * u + "px", top: cT + ch + 34 * u + "px" });
-  const S = (n) => n * s + "px", box = (el, x, y, w, h) => { Object.assign(el.style, { left: S(x), top: S(y) }); if (w != null) el.style.width = S(w); if (h != null) el.style.height = S(h); };
-  const num = String(v.number || "").replace(/^#/, "");
+  // ---- layout: two columns side by side, rows as tall as two lines of label
+  const NR = Math.max(sides[0].items.length, sides[1].items.length);
+  let X0, X1, Y0, Y1;
+  if (P) { X0 = safe.left; X1 = W - safe.right; Y0 = safe.top + 20 * u; Y1 = H - safe.bottom - 60 * u; }
+  else if (SQ) { X0 = 64 * u; X1 = W - 64 * u; Y0 = 70 * u; Y1 = H - 150 * u; }
+  else { X0 = W * 0.13; X1 = W * 0.87; Y0 = H * 0.09; Y1 = H * 0.8; }
+  // tall frames stack the two cards (full-width rows read in one line); wide and square frames sit them side by side
+  const STACK = P;
+  const GAP = (STACK ? 30 : SQ ? 26 : 40) * u, CW = STACK ? X1 - X0 : (X1 - X0 - GAP) / 2;
+  const PAD = (STACK ? 22 : SQ ? 24 : 30) * u, HDH = (STACK ? 120 : SQ ? 124 : 150) * u, RG = (STACK ? 14 : 18) * u;
+  const LF = (STACK ? 44 : SQ ? 40 : 48) * u;
+  const n0 = sides[0].items.length, n1 = sides[1].items.length;
+  const cardH = (n, rh) => HDH + PAD + n * rh + (n - 1) * RG + PAD;
+  const RH = STACK ? Math.min(104 * u, (Y1 - Y0 - GAP - 2 * (HDH + 2 * PAD) - RG * (n0 + n1 - 2)) / (n0 + n1))
+                   : Math.min((SQ ? 132 : 130) * u, (Y1 - Y0 - HDH - PAD * 2 - RG * (NR - 1)) / NR);
+  const CHs = STACK ? [cardH(n0, RH), cardH(n1, RH)] : [cardH(NR, RH), cardH(NR, RH)];
+  const TOT = STACK ? CHs[0] + GAP + CHs[1] : CHs[0];
+  const cy0 = Y0 + (Y1 - Y0 - TOT) / 2;
+  const CHt = TOT;
+  const floorY = cy0 + TOT + 6 * u;
+  $("#floor").style.top = floorY + "px";
+  Object.assign($("#base").style, { left: X0 - 60 * u + "px", width: X1 - X0 + 120 * u + "px", top: floorY - 1.5 * u + "px" });
+  const RAD = 36 * u;
+  const cols = $("#cols"), COLS = [];
+  sides.forEach((s, k) => {
+    const x = STACK ? X0 : X0 + k * (CW + GAP), y = STACK ? cy0 + (k ? CHs[0] + GAP : 0) : cy0, ch = CHs[k];
+    const col = document.createElement("div"); col.className = "col " + s.cls; cols.appendChild(col);
+    Object.assign(col.style, { left: x + "px", top: y + "px", width: CW + "px", height: ch + "px" });
+    col.innerHTML = `<div class="halo"></div><div class="card"><div class="tw"></div></div>`;
+    for (const e of col.querySelectorAll(".halo,.card,.tw")) e.style.borderRadius = RAD + "px";
+    const card = col.querySelector(".card");
+    // header: badge, title, count
+    const hd = document.createElement("div"); hd.className = "hd"; card.appendChild(hd);
+    const BD = HDH - 2 * PAD + 8 * u;
+    hd.innerHTML = `<div class="badge"><svg viewBox="0 0 24 24">${k ? CROSS : CHECK}</svg></div><div class="ht"></div><div class="ct"></div>`;
+    const badge = hd.querySelector(".badge"), ht = hd.querySelector(".ht"), ct = hd.querySelector(".ct");
+    Object.assign(badge.style, { width: BD + "px", height: BD + "px", marginRight: 20 * u + "px" });
+    badge.querySelector("svg").style.strokeWidth = 3;
+    ht.textContent = s.title; ht.style.fontSize = (STACK ? 58 : SQ ? 58 : 68) * u + "px";
+    ct.textContent = String(s.items.length); ct.style.fontSize = (P ? 44 : 46) * u + "px";
+    Object.assign(hd.style, { left: PAD + "px", top: PAD - 4 * u + "px", width: CW - 2 * PAD + "px", height: BD + "px" });
+    MV.fitText(ht, CW - 2 * PAD - BD - 20 * u - 80 * u, 26);
+    const sep = document.createElement("div"); sep.className = "sep"; card.appendChild(sep);
+    Object.assign(sep.style, { left: PAD + "px", width: CW - 2 * PAD + "px", top: HDH - 2 * u + "px" });
+    // rows
+    const MK = Math.min(RH - 26 * u, (SQ ? 76 : 84) * u);
+    const rows = s.items.map((lab, j) => {
+      const r = document.createElement("div"); r.className = "row"; card.appendChild(r);
+      Object.assign(r.style, { left: PAD + "px", top: HDH + PAD + j * (RH + RG) + "px", width: CW - 2 * PAD + "px", height: RH + "px", borderRadius: Math.min(26 * u, RH * 0.3) + "px", padding: `0 ${22 * u}px 0 ${18 * u}px` });
+      r.innerHTML = `<div class="mk"><svg viewBox="0 0 24 24"><path/></svg></div><div class="rl"></div><div class="ring"></div>`;
+      const mk = r.querySelector(".mk"), rl = r.querySelector(".rl"), path = mk.querySelector("path"), ring = r.querySelector(".ring");
+      Object.assign(mk.style, { width: MK + "px", height: MK + "px", marginRight: 20 * u + "px" });
+      Object.assign(ring.style, { width: MK + "px", height: MK + "px", left: 18 * u + "px", top: (RH - MK) / 2 + "px" });
+      path.setAttribute("d", k ? "M7 7l10 10M17 7 7 17" : "M5.5 12.6l4.2 4.2 8.8-9.4"); path.style.strokeWidth = 3.2;
+      rl.textContent = lab; rl.style.fontSize = LF + "px";
+      // up to two lines; a long label shrinks until it fits
+      const room = CW - 2 * PAD - 40 * u - MK - 20 * u;
+      rl.style.width = room + "px";
+      let fs = LF; const lines = 1;
+      if (lines === 1) { rl.style.width = "auto"; MV.fitText(rl, room, 22); }
+      else while ((rl.scrollHeight > fs * 1.12 * 2 + 2 || rl.scrollWidth > room + 1) && fs > 22) { fs -= 2; rl.style.fontSize = fs + "px"; }
+      const L = path.getTotalLength(); path.style.strokeDasharray = L; path.style.strokeDashoffset = L;
+      return { r, mk, rl, path, L, ring };
+    });
+    // reflection: the card as a shape
+    const rf = document.createElement("div"); rf.className = "rf " + s.cls; $("#refls").appendChild(rf);
+    if (STACK && !k) rf.style.display = "none";
+    Object.assign(rf.style, { left: x + "px", top: floorY + 8 * u + "px", width: CW + "px", height: ch * (STACK ? 0.7 : 0.45) + "px", borderRadius: `${RAD * 0.4}px ${RAD * 0.4}px ${RAD}px ${RAD}px` });
+    rf.innerHTML = "<b></b>";
+    COLS.push({ k, x, col, card, hd, badge, ht, ct, rows, rf });
+  });
 
-  // ---- header
-  box($("#ico"), pad, HY, HH, HH);
-  const ttl = $("#ttl"); ttl.textContent = v.title || "";
-  const nm = $("#num"); nm.textContent = num ? "#" + num : "";
-  const numW = num ? nm.getBoundingClientRect().width / s : 0;
-  MV.fitText(ttl, (inner - HH - 22 - (numW ? numW + 16 : 0)) * s, 22 * s);
-  const tr = ttl.getBoundingClientRect();
-  box(ttl, pad + HH + 22, HY + (HH - tr.height / s) / 2);
-  box(nm, pad + HH + 22 + tr.width / s + 16, HY + (HH - nm.getBoundingClientRect().height / s) / 2);
-  // status pill and label
-  $(".t1").textContent = v.closed || "";
-  const pw = Math.max(...$$("#pill .f").map((f) => { f.style.inset = "auto"; const w = f.getBoundingClientRect().width / s; f.style.inset = ""; return w; })) + 52;
-  box($("#pill"), pad, MY, pw, MH);
-  const lab = $("#lab"); lab.textContent = v.label || ""; if (!v.label) lab.style.display = "none";
-  lab.style.height = S(MH); MV.fitText(lab, (inner - pw - 20 - 40) * s, 20 * s);
-  box(lab, pad + pw + 16, MY);
-  box($("#hr"), pad, HRY, inner, 1.5);
-
-  // ---- timeline
-  const RX = pad + 32;                                   // the rail runs down the avatar column
-  box($("#av"), pad, AY + (AH - 64) / 2, 64, 64);
-  const bub = $("#bub"); bub.textContent = v.comment || ""; box(bub, pad + 88, AY, inner - 88, AH);
-  MV.fitText(bub, (inner - 88 - 60) * s, 22 * s);
-  const NB = 56; box($("#ndb"), RX - NB / 2, BY + 4, NB, NB);
-  const msg = $("#msg"); msg.textContent = v.commit || ""; box(msg, pad + 88, BY, null, 64);
-  MV.fitText(msg, (inner - 88) * s, 22 * s);
-  const refs = $("#refs"); box(refs, pad + 88, BY + 74, inner - 88, 54);
-  $("#hash").textContent = String(v.hash || "").slice(0, 10);
-  $("#ref .t").innerHTML = ""; const rt = $("#ref .t");
-  rt.appendChild(document.createTextNode((v.verb ? v.verb + " " : ""))); const b = document.createElement("b"); b.textContent = num ? "#" + num : ""; rt.appendChild(b);
-  if (!v.hash) $("#hash").style.display = "none";
-  const NC = 56; box($("#ndc"), RX - NC / 2, CY + (CH - NC) / 2, NC, NC); box($("#ring"), RX - NC / 2, CY + (CH - NC) / 2, NC, NC);
-  const note = $("#note"); note.textContent = v.note || ""; box(note, pad + 88, CY, null, CH); MV.fitText(note, (inner - 88) * s, 22 * s);
-  // the rail: grey from the avatar to the commit, then green to the closed node
-  const r0 = AY + (AH + 64) / 2 + 8, r1 = BY + 4, r2 = CY + (CH - NC) / 2;
-  box($("#rail"), RX - 2, r0, 4, r1 - r0 + NB / 2);
-  box($("#railg"), RX - 2, r1 + NB, 4, r2 - r1 - NB);
-  gsap.set(["#rail", "#railg"], { scaleY: 0 });
-
-  // ---- timing
-  const TB = 1.2, TH = TB + 0.62, TC = TH + 0.6, TF = TC + 0.18;
-  gsap.set("#rig", { transformOrigin: `${cL + cw / 2}px ${cT + ch / 2}px` });
-  tl.fromTo("#rig", { rotationY: 12, rotationX: 9, scale: 0.94, y: 24 * u }, { rotationY: P ? -6 : -7, rotationX: 3, scale: 1, y: 0, duration: D, ease: "sine.inOut" }, 0);
+  // ---- the camera
+  const cx = (X0 + X1) / 2, cy = cy0 + CHt / 2;
+  gsap.set("#rig", { transformOrigin: `${cx}px ${cy}px` });
+  gsap.set("#stage", { perspectiveOrigin: `${cx}px ${cy}px` });
+  tl.fromTo("#rig", { rotationY: 11, rotationX: 10, scale: 0.94 }, { rotationY: -7, rotationX: 3, scale: 1, duration: D, ease: "sine.inOut" }, 0);
   tl.fromTo("#ground .l1", { x: 0, y: 0 }, { x: -W * 0.12, y: H * 0.05, duration: D, ease: "sine.inOut" }, 0);
-  tl.fromTo("#ground .l2", { x: 0, y: 0 }, { x: W * 0.14, y: -H * 0.04, duration: D, ease: "sine.inOut" }, 0);
-  // in
-  tl.fromTo("#wrap", { rotationX: 28, y: 90 * u, scale: 0.9 }, { rotationX: 0, y: 0, scale: 1, duration: 0.95, ease: "expo.out" }, 0.02);
-  tl.fromTo("#wrap", { opacity: 0, filter: "blur(14px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.45, ease: "power3.out" }, 0.02);
-  tl.fromTo("#base", { scaleX: 0.2, opacity: 0 }, { scaleX: 1, opacity: 1, duration: 0.8, ease: "expo.out" }, 0.05);
-  tl.fromTo("#ico", { scale: 0.4, rotation: -25, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 0.6, ease: "back.out(2.2)" }, 0.18);
-  tl.fromTo(["#ttl", "#num"], { opacity: 0, x: -24 * s }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out", stagger: 0.06 }, 0.24);
-  tl.fromTo(["#pill", "#lab"], { opacity: 0, y: 14 * s }, { opacity: 1, y: 0, duration: 0.45, ease: "expo.out", stagger: 0.06 }, 0.34);
-  tl.fromTo("#hr", { scaleX: 0, transformOrigin: "0 50%" }, { scaleX: 1, duration: 0.6, ease: "expo.out" }, 0.4);
-  tl.fromTo("#av", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2.4)" }, 0.48);
-  tl.fromTo("#bub", { opacity: 0, x: -24 * s }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, 0.54);
-  // the commit lands on the timeline
-  tl.to("#rail", { scaleY: 1, duration: 0.45, ease: "power2.inOut" }, TB - 0.3);
-  tl.fromTo("#ndb", { opacity: 0, scale: 0.3 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2.8)" }, TB);
-  tl.fromTo("#msg", { opacity: 0, x: 40 * s }, { opacity: 1, x: 0, duration: 0.55, ease: "expo.out" }, TB + 0.06);
-  tl.fromTo("#hash", { opacity: 0, x: 30 * s }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, TB + 0.16);
-  tl.fromTo("#ref", { opacity: 0, x: 30 * s }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, TB + 0.24);
-  tl.fromTo("#hash", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.35, ease: MV.st(0.35), immediateRender: false }, TB + 0.16);
-  // the reference lights: the issue number gets linked
-  tl.to("#ref .hl", { scaleX: 1, duration: 0.4, ease: "expo.out" }, TH);
-  tl.to("#ref", { color: "var(--ink)", duration: 0.25, ease: "power2.out" }, TH);
-  tl.fromTo("#ref", { scale: 1 }, { scale: 1.08, duration: 0.1, ease: "power2.out", yoyo: true, repeat: 1, immediateRender: false, transformOrigin: "0% 50%" }, TH);
-  tl.fromTo("#num", { color: "color-mix(in srgb, var(--ink) 48%, transparent)" }, { color: "var(--al)", duration: 0.25, ease: "power2.out", immediateRender: false }, TH + 0.05);
-  // closed: the rail runs green, the node lands, the pill and the icon turn
-  tl.to("#railg", { scaleY: 1, duration: 0.36, ease: "power2.in" }, TC - 0.36);
-  tl.fromTo("#ndc", { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(3)" }, TC);
-  tl.to("#ndc path", { attr: { "stroke-dashoffset": 0 }, duration: 0.3, ease: "power2.out" }, TC + 0.1);
-  tl.fromTo("#ring", { scale: 0.8, opacity: 1 }, { scale: 2.6, opacity: 0, duration: 0.8, ease: "expo.out", immediateRender: false }, TC + 0.02);
-  tl.fromTo("#note", { opacity: 0, x: -20 * s }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, TC + 0.08);
-  tl.to("#pill .in", { rotationX: 90, duration: 0.14, ease: "power2.in" }, TF - 0.12);
-  tl.set("#pill .op", { visibility: "hidden" }, TF + 0.02); tl.set("#pill .cl", { visibility: "visible" }, TF + 0.02);
-  tl.fromTo("#pill .in", { rotationX: -90 }, { rotationX: 0, duration: 0.55, ease: "back.out(2)", immediateRender: false }, TF + 0.02);
-  tl.fromTo("#pill", { scale: 1 }, { scale: 1.14, duration: 0.1, ease: "power2.out", immediateRender: false }, TF); tl.to("#pill", { scale: 1, duration: 0.5, ease: "back.out(3)" }, TF + 0.1);
-  tl.to("#ico .o", { opacity: 0, scale: 0.6, duration: 0.18, ease: "power2.in" }, TF);
-  tl.fromTo("#ico .c", { opacity: 0, scale: 0.5, rotation: -40 }, { opacity: 1, scale: 1, rotation: 0, duration: 0.55, ease: "back.out(2.6)", immediateRender: false }, TF + 0.06);
-  box($("#glow"), pad, MY, pw, MH);
-  tl.fromTo("#glow", { opacity: 0 }, { opacity: 0.9, duration: 0.12, ease: "power2.out" }, TF + 0.02); tl.to("#glow", { opacity: 0.35, duration: 0.9, ease: "power2.out" }, TF + 0.14);
-  tl.to("#stage", { scale: 1.015, duration: 0.07, ease: "power2.out" }, TF); tl.to("#stage", { scale: 1, duration: 0.5, ease: "expo.out" }, TF + 0.07);
-  tl.fromTo("#win", { "--sheen": "-60%" }, { "--sheen": "160%", duration: 0.9, ease: "power2.inOut" }, TF + 0.08);
+  tl.fromTo("#ground .l2", { x: 0 }, { x: W * 0.14, duration: D, ease: "sine.inOut" }, 0);
 
-  if (A) tl.to("#stage", { opacity: 0, y: -50 * u, filter: "blur(14px)", duration: 0.38, ease: "power3.in" }, D - 0.42);
+  // ---- 1. two cards stand up off the floor, the badges pop
+  tl.fromTo("#base", { scaleX: 0.3, opacity: 0 }, { scaleX: 1, opacity: 1, duration: 0.7, ease: "expo.out" }, 0.02);
+  COLS.forEach((c, k) => {
+    const at = 0.04 + k * 0.1;
+    tl.fromTo(c.col, { rotationX: -75, transformOrigin: "50% 100%" }, { rotationX: 0, duration: 0.95, ease: "expo.out" }, at);
+    tl.fromTo(c.col, { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power2.out" }, at);
+    tl.fromTo(c.rf, { opacity: 0 }, { opacity: 1, duration: 0.6, ease: "power2.out" }, at + 0.25);
+    tl.fromTo(c.badge, { scale: 0, rotation: -90 }, { scale: 1, rotation: 0, duration: 0.6, ease: "back.out(2.6)" }, at + 0.32);
+    tl.fromTo(c.ht, { opacity: 0, x: -16 * u }, { opacity: 1, x: 0, duration: 0.5, ease: "expo.out" }, at + 0.4);
+    tl.fromTo(c.ct, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power2.out" }, at + 0.5);
+    tl.set(c.ct, { textContent: "0" }, 0);
+  });
+
+  // ---- 2. rows land alternately, a check or a cross is drawn on each, the count ticks
+  const R0 = 0.78, RS = Math.min(0.24, 1.5 / (sides[0].items.length + sides[1].items.length));
+  const seq = []; for (let j = 0; j < NR; j++) for (let k = 0; k < 2; k++) if (COLS[k].rows[j]) seq.push([k, j]);
+  let last = R0;
+  seq.forEach(([k, j], n) => {
+    const c = COLS[k], r = c.rows[j], at = R0 + n * RS, dir = STACK ? (n % 2 ? 1 : -1) : k ? 1 : -1;
+    tl.fromTo(r.r, { x: dir * 60 * u, opacity: 0, rotationY: dir * -30 }, { x: 0, opacity: 1, rotationY: 0, duration: 0.6, ease: "expo.out" }, at);
+    tl.fromTo(r.mk, { scale: 0.3 }, { scale: 1, duration: 0.5, ease: "back.out(2.8)" }, at + 0.08);
+    tl.to(r.path, { strokeDashoffset: 0, duration: 0.26, ease: "power2.out" }, at + 0.16);
+    tl.fromTo(r.ring, { scale: 1, opacity: 0.8 }, { scale: 1.7, opacity: 0, duration: 0.6, ease: "expo.out", immediateRender: false }, at + 0.3);
+    tl.set(c.ct, { textContent: String(j + 1) }, at + 0.3);
+    tl.fromTo(c.ct, { scale: 1 }, { scale: 1.3, duration: 0.08, ease: "power2.out", immediateRender: false }, at + 0.3);
+    tl.to(c.ct, { scale: 1, duration: 0.4, ease: "back.out(3)" }, at + 0.38);
+    last = at + 0.4;
+  });
+
+  // ---- 3. the verdict: the winning card steps forward in its colour, the other falls back
+  if (WIN >= 0) {
+    const M = last + 0.35, A = COLS[WIN], B = COLS[1 - WIN];
+    A.col.style.zIndex = 3;
+    tl.to(A.col, { z: 60, y: -16 * u, scale: STACK ? 1.03 : 1.04, duration: 0.8, ease: "back.out(1.7)" }, M);
+    tl.to(A.card.querySelector(".tw"), { opacity: 1, duration: 0.3, ease: "power2.out" }, M);
+    tl.to(A.col.querySelector(".halo"), { opacity: KEY ? 0 : 1, duration: 0.5, ease: "power2.out" }, M);
+    tl.to(A.rf.querySelector("b"), { opacity: 1, duration: 0.5, ease: "power2.out" }, M);
+    tl.fromTo(A.badge, { scale: 1 }, { scale: 1.25, duration: 0.1, ease: "power2.out", immediateRender: false }, M + 0.04);
+    tl.to(A.badge, { scale: 1, duration: 0.6, ease: "back.out(3)" }, M + 0.14);
+    tl.fromTo(A.card, { "--sheen": "-50%" }, { "--sheen": "150%", duration: 0.9, ease: "power2.inOut" }, M + 0.15);
+    const lw = $("#ground .lw"); lw.style.background = WIN ? "rgba(255,90,95,.35)" : "rgba(43,214,123,.3)";
+    Object.assign(lw.style, { left: A.x + CW / 2 - W * 0.3 + "px", top: (STACK ? parseFloat(A.col.style.top) + CHs[WIN] / 2 : cy) - H * 0.22 + "px" });
+    tl.to(lw, { opacity: 1, duration: 0.8, ease: "power2.out" }, M);
+    A.rows.forEach((r, j) => tl.fromTo(r.ring, { scale: 1, opacity: 0.8 }, { scale: 1.8, opacity: 0, duration: 0.6, ease: "expo.out", immediateRender: false }, M + 0.1 + j * 0.06));
+    tl.to([B.col, B.rf], MV.alpha ? { filter: "brightness(0.55)", z: -40, duration: 0.7, ease: "power2.inOut" } : { opacity: 0.5, z: -40, duration: 0.7, ease: "power2.inOut" }, M);
+    tl.to("#stage", { scale: 1.02, duration: 0.07, ease: "power2.out" }, M + 0.04); tl.to("#stage", { scale: 1, duration: 0.6, ease: "expo.out" }, M + 0.11);
+  } else {
+    COLS.forEach((c, k) => tl.fromTo(c.card, { "--sheen": "-50%" }, { "--sheen": "150%", duration: 0.9, ease: "power2.inOut" }, last + 0.3 + k * 0.1));
+  }
+
+  if (MV.alpha) tl.to("#stage", { opacity: 0, y: -50 * u, filter: "blur(14px)", duration: 0.38, ease: "power3.in" }, D - 0.42);
   MV.done();
 </script>
 </body>
