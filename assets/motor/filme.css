@@ -1,0 +1,36 @@
+/* Base visual dos filmes. As cores e fontes vêm de ativos/marca.css (escrito por filme-init). */
+html, body { margin: 0; overflow: hidden; background: var(--fundo, #0f1020); }
+#raiz { position: relative; overflow: hidden; color: var(--tinta); font-family: var(--fonte-corpo); background: var(--fundo); }
+#raiz * { box-sizing: border-box; }
+
+#seda { position: absolute; inset: 0; width: 100%; height: 100%; }
+.granulado-f { position: absolute; inset: 0; opacity: .32; mix-blend-mode: overlay; pointer-events: none; z-index: 50;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.05' numOctaves='1' seed='9'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E"); }
+
+/* Cada cena ocupa o quadro; a câmera (.rig) se move dentro dela. */
+.cena { position: absolute; inset: 0; visibility: hidden; perspective: 1600px; }
+.rig { position: absolute; inset: 0; transform-style: preserve-3d; }
+
+/* Texto: toda linha é .linha-texto, com id, entrada e saída. */
+.linha-texto { position: absolute; margin: 0; white-space: nowrap; }
+.display { font-family: var(--fonte-titulo); font-weight: var(--peso-titulo, 800); line-height: 1; letter-spacing: -0.02em; }
+.corpo { font-size: 44px; line-height: 1.25; }
+.acento { color: var(--destaque); }
+.rotulo-f { font-size: 30px; color: color-mix(in srgb, var(--tinta) 66%, transparent); }
+
+/* Vidro fosco sobre a seda. Em marca clara use .claro. */
+.vidro-f { background: linear-gradient(160deg, rgba(255,255,255,.17), rgba(255,255,255,.05) 58%, rgba(255,255,255,.035));
+  backdrop-filter: blur(22px) saturate(160%); -webkit-backdrop-filter: blur(22px) saturate(160%);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.42), inset 0 0 0 1.5px rgba(255,255,255,.11), 0 40px 90px -30px rgba(0,0,0,.6), 0 0 90px -30px color-mix(in srgb, var(--destaque) 35%, transparent);
+  border-radius: 36px; }
+.vidro-f.claro { background: linear-gradient(160deg, rgba(255,255,255,.7), rgba(255,255,255,.4)); color: #16151c; }
+
+/* Captura real do produto, em janela. Use object-view-box para recortar sem cortar texto. */
+.janela-f { position: absolute; overflow: hidden; border-radius: 22px; background: var(--superficie); box-shadow: 0 50px 110px -34px rgba(0,0,0,.7), inset 0 0 0 1.5px rgba(255,255,255,.12); }
+.janela-f img, .janela-f video { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+.recorte { position: absolute; display: block; }
+
+.brilho-f { position: absolute; inset: 0; opacity: 0; pointer-events: none; mix-blend-mode: screen; border-radius: inherit;
+  background: linear-gradient(105deg, transparent 38%, rgba(255,255,255,.34) 50%, transparent 62%); }
+.cursor-f { position: absolute; left: 0; top: 0; width: 64px; height: 64px; opacity: 0; z-index: 40; fill: #fff; stroke: #111; stroke-width: 1.2; stroke-linejoin: round; filter: drop-shadow(0 6px 8px rgba(0,0,0,.4)); }
+.logo-f { object-fit: contain; display: block; position: absolute; }

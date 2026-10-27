@@ -1,0 +1,74 @@
+[
+  {
+    "frase": "Faz um contador de inscritos chegando a 20 mil em vertical",
+    "deve_disparar": true
+  },
+  {
+    "frase": "Preciso de um efeito de post curtido com fundo transparente para o meu vídeo",
+    "deve_disparar": true
+  },
+  {
+    "frase": "Cria um vídeo de 15 segundos de lançamento do meu produto com a minha marca",
+    "deve_disparar": true
+  },
+  {
+    "frase": "Quero um B-roll de terminal rodando um comando para o vídeo sobre automação",
+    "deve_disparar": true
+  },
+  {
+    "frase": "Monta uma vinheta animada de abertura com o logo da empresa",
+    "deve_disparar": true
+  },
+  {
+    "frase": "Faz um overlay de legenda animada para o CapCut",
+    "deve_disparar": true
+  },
+  {
+    "frase": "Preciso de um anúncio animado em motion graphics para o Instagram",
+    "deve_disparar": true
+  },
+  {
+    "frase": "Captura a marca do nosso site e faz um filme de apresentação",
+    "deve_disparar": true
+  },
+  {
+    "frase": "Cria um gráfico de barras animado crescendo para eu usar no reels",
+    "deve_disparar": true
+  },
+  {
+    "frase": "Edita meu vídeo gravado: corta os silêncios e coloca legendas da minha fala",
+    "deve_disparar": false
+  },
+  {
+    "frase": "Faz um logotipo novo para a minha empresa",
+    "deve_disparar": false
+  },
+  {
+    "frase": "Escreve o roteiro falado do meu vídeo de lançamento",
+    "deve_disparar": false
+  },
+  {
+    "frase": "Transcreve esse áudio da reunião",
+    "deve_disparar": false
+  },
+  {
+    "frase": "Cria uma apresentação de slides sobre resultados do trimestre",
+    "deve_disparar": false
+  },
+  {
+    "frase": "Gera uma imagem de um gato astronauta",
+    "deve_disparar": false
+  },
+  {
+    "frase": "Baixa uma música sem direitos autorais para meu vídeo",
+    "deve_disparar": false
+  },
+  {
+    "frase": "Faz um site de uma página para a minha empresa",
+    "deve_disparar": false
+  },
+  {
+    "frase": "Resume essa reunião em tópicos",
+    "deve_disparar": false
+  }
+]

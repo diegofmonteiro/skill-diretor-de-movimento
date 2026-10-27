@@ -1,0 +1,28 @@
+{
+  "nome": "Marca Exemplo",
+  "dominio": "marcaexemplo.com.br",
+  "slogan": "Menos tarefa manual, mais resultado",
+  "titulo": "Menos tarefa manual, mais resultado",
+  "usuario": "@marcaexemplo",
+  "cores": {
+    "fundo": "#0F1020",
+    "tinta": "#F5F3EE",
+    "destaque": "#FF5C39",
+    "destaque2": "#6C5CE7",
+    "superficie": "#1B1C33",
+    "apagado": "#9A98AE",
+    "papel": "#F4EFE4"
+  },
+  "fontes": {
+    "titulo": { "familia": "Archivo Black", "arquivos": [] },
+    "corpo": { "familia": "Inter", "arquivos": [] }
+  },
+  "logo": "logo.svg",
+  "simbolo": "simbolo.svg",
+  "telas": ["tela-1.svg", "tela-2.svg"],
+  "pessoas": [],
+  "numeros": [
+    { "valor": 1200, "rotulo": "clientes atendidos" },
+    { "valor": 48, "rotulo": "horas economizadas por mês" }
+  ]
+}

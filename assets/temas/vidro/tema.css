@@ -1,0 +1,3 @@
+/* Vidro: seda de luz ao fundo, painéis de vidro fosco, texto grande e limpo. Bom para produto digital e IA. */
+#raiz { --peso-titulo: 800; }
+.display { letter-spacing: -0.02em; }

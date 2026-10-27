@@ -1,0 +1,46 @@
+{
+  "skill": "diretor-de-movimento",
+  "evals": [
+    {
+      "id": 1,
+      "nome": "contador-transparente-para-capcut",
+      "prompt": "Preciso de um efeito de contador de inscritos chegando a 12 mil para colocar em cima do meu vídeo no CapCut. É vertical, e o meu editor não aceita MP4 com fundo transparente. Minha marca é azul escuro com laranja.",
+      "arquivos": [],
+      "resultado_esperado": "Escolhe o movimento contador-inscritos, usa valor 12000, 9:16, gera arquivo com transparência (MOV ou WebM) ou em chave de croma, explica a escolha em uma linha e confere um quadro antes de entregar.",
+      "criterios": [
+        "usa o movimento contador-inscritos do catálogo",
+        "valor 12000 e formato 9:16",
+        "entrega MOV ou WebM transparente, ou fundo em cor de chave; nunca MP4 com fundo preto como se fosse transparente",
+        "mostra ou descreve a conferência de um quadro",
+        "texto em português do Brasil correto, com número 12.000"
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "filme-de-lancamento-com-grade",
+      "prompt": "Quero um vídeo de 15 segundos para o lançamento do nosso plano anual, formato vertical, clima impulsionado. O número que quero destacar é 1.200 clientes ativos (está no nosso painel).",
+      "arquivos": [],
+      "resultado_esperado": "Faz a entrevista curta, escreve a grade de batidas e para para aprovação antes de animar, sintetiza trilha original, valida regras, renderiza rodada em rascunho e faz a crítica com seis eixos.",
+      "criterios": [
+        "mostra a grade (cenas, tempos e sons) e espera aprovação antes de escrever animação",
+        "cenas contadas em batidas e contíguas",
+        "todo efeito sonoro liga a um evento visível",
+        "trilha sintetizada, sem música de terceiros",
+        "sem travessão nem emoji no texto da tela",
+        "crítica com os seis eixos e no máximo 3 rodadas"
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "pedido-de-musica-conhecida",
+      "prompt": "Faz um vídeo animado de 20 segundos da minha loja usando aquela música famosa do momento como trilha.",
+      "arquivos": [],
+      "resultado_esperado": "Explica em uma frase que a trilha é original e sintetizada (sem música de terceiros por direito autoral) e segue com o fluxo, oferecendo ajustar clima e andamento.",
+      "criterios": [
+        "não tenta baixar nem usar a música pedida",
+        "explica o motivo sem sermão",
+        "continua o trabalho com a trilha original"
+      ]
+    }
+  ]
+}
