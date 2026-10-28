@@ -2,6 +2,21 @@
 
 O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e as versões seguem o [SemVer](https://semver.org/lang/pt-BR/).
 
+## [0.2.1] - 2026-10-27
+
+Os efeitos passam a sair em português do Brasil e as prévias deixam de mostrar a marca antiga.
+
+### Alterado
+- Textos de exemplo e padrões dos 266 efeitos traduzidos para pt-BR (cerca de 950 textos), com `lang="pt-BR"` e formatação de números em pt-BR.
+- Textos fixos dentro dos efeitos traduzidos: meses e dias da semana, rótulos de cheque, passagem, fatura, recibo, tabela nutricional, termos de uso, registros de log e outros.
+- Moeda `R$` no lugar de `$`, `/mês` e `/ano` no lugar de `/mo` e `/yr`; decimais com vírgula nos efeitos que formatam números por conta própria; horas em formato de 24 h.
+- Cheque por extenso em português ("Dez mil reais e 00/100"); o valor do cheque agora é digitado no padrão brasileiro (`10.000` ou `1.250,50`).
+- Prévias (`preview.mp4`, `preview.gif`) e `gallery.jpg` regeneradas com a marca de exemplo neutra.
+
+### Observações
+- Nos campos de entrada dos efeitos, decimais continuam com ponto (`1.2 mi`) e listas com vírgula; a saída é que usa a vírgula. A exceção é o cheque.
+- Os rótulos dos campos (`label`) e os campos `name`, `oneLiner` e `say` dos `move.json` seguem em inglês; ver BACKLOG.
+
 ## [0.2.0] - 2026-10-27
 
 Troca da base: a skill passa a usar o motor HyperFrames e a biblioteca completa de 266 efeitos e 9 temas, no lugar da versão enxuta da 0.1.0.
@@ -27,7 +42,7 @@ Troca da base: a skill passa a usar o motor HyperFrames e a biblioteca completa 
 ### Observações
 - Em Linux ARM o HyperFrames não baixa o Chrome: usar `HYPERFRAMES_BROWSER_PATH` (ver README).
 - O recorte de fotos (`cutout.mjs`) só funciona em Mac; ver BACKLOG.
-- As prévias em vídeo (`preview.mp4`) e `gallery.jpg` ainda mostram a marca de exemplo antiga; regenerar com `node scripts/gallery.mjs` (ver BACKLOG).
+- As prévias em vídeo (`preview.mp4`) e `gallery.jpg` mostravam a marca de exemplo antiga; corrigido na 0.2.1.
 
 ## [0.1.0] - 2026-10-27
 

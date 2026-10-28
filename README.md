@@ -2,7 +2,7 @@
 
 Skill que cria vídeos de motion graphics com a marca da empresa: filmes de 10 a 30 segundos e 266 efeitos prontos para encaixar em qualquer edição, com trilha original, tudo renderizado na própria máquina.
 
-Repositório `skill-diretor-de-movimento` · skill `diretor-de-movimento` · versão 0.2.0 · uso interno da Conex Prime
+Repositório `skill-diretor-de-movimento` · skill `diretor-de-movimento` · versão 0.2.1 · uso interno da Conex Prime
 
 ## Do que se trata
 

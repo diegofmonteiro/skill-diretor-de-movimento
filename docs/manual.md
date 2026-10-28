@@ -1,6 +1,6 @@
 # Manual completo do Diretor de Movimento
 
-Versão 0.2.0 · Conex Prime · uso interno
+Versão 0.2.1 · Conex Prime · uso interno
 
 ## Sumário
 
@@ -264,6 +264,8 @@ O índice curto está em `templates/moves/CATALOG.md` e cada categoria em `templ
 
 Alguns efeitos têm variáveis (texto, número, cor): o agente as preenche com `--vars '{...}'`.
 
+**Idioma e números.** Os textos de exemplo e os padrões dos efeitos estão em português do Brasil, com `R$`, meses e dias em português e horas em 24 h. Ao preencher os campos, siga este padrão: listas separadas por vírgula (ou `|`, conforme o rótulo do campo) e decimais com ponto (`1.2 mi`); o efeito imprime o número com vírgula (`1,2 mi`) e milhar com ponto (`12.400`). A exceção é o cheque (`big-cheque`), que recebe o valor já no padrão brasileiro (`10.000` ou `1.250,50`). Os rótulos dos campos, que só aparecem a quem edita o efeito, ainda estão em inglês (`BACKLOG.md`).
+
 ## 15. Como pedir bem
 
 Modelos:
@@ -374,14 +376,14 @@ Resumo para repositório de 1155 arquivos e ~118 MB (o envio pelo navegador limi
 ```bash
 git init -b main
 git add .
-git commit -m "Diretor de Movimento 0.2.0"
+git commit -m "Diretor de Movimento 0.2.1"
 git remote add origin https://github.com/diegofmonteiro/skill-diretor-de-movimento.git
 git push -u origin main
 ```
 
 3. Login: use `gh auth login` (https://cli.github.com) ou um token pessoal em https://github.com/settings/tokens como senha.
 4. Limite de 100 MB por arquivo: nenhum arquivo da skill chega perto; confira com `find . -size +50M`.
-5. Release: em Releases, "Draft a new release", tag `v0.2.0`, anexando o manual em PDF e em `.docx`.
+5. Release: em Releases, "Draft a new release", tag `v0.2.1`, anexando o manual em PDF e em `.docx`.
 6. Para o Google Docs: envie o `.docx` ao Google Drive, clique com o botão direito e "Abrir com > Google Docs".
 
 ## 23. Glossário
@@ -417,7 +419,6 @@ diretor-de-movimento/
 
 ## 25. Limitações e o que vem depois
 
-- As prévias em vídeo ainda mostram a marca de exemplo antiga; precisam ser regeneradas (`BACKLOG.md`).
 - Licença dos modelos 3D de dispositivo a confirmar.
 - three.js e Draco ainda vêm de CDN na cena de dispositivo.
 - Recorte de fotos só em Mac por enquanto.

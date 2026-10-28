@@ -2,7 +2,7 @@
 name: diretor-de-movimento
 description: "Cria vídeos de motion graphics com a marca do cliente: filmes de 10 a 30 segundos (lançamento, demonstração animada de interface, abertura de canal, explicativo) e efeitos avulsos (B-roll, sobreposições transparentes, transições, terça inferior, contadores) para vídeos gravados, tudo renderizado localmente com o HyperFrames. Use quando pedirem vídeo promocional, de lançamento, de produto, motion graphic, demonstração animada, abertura, teaser ou explicativo de um produto, site ou marca; quando derem um link e pedirem um vídeo dele; quando quiserem B-roll, sobreposições ou gráficos para um vídeo gravado; ou disserem 'configurar o diretor de movimento'. Captura logo, cores, fontes e telas reais da marca, mostra uma galeria para escolher, planeja cada cena para aprovação, sintetiza trilha original, renderiza, critica e corrige. Não serve para cortar vídeo filmado."
 metadata:
-  version: 0.2.0
+  version: 0.2.1
 ---
 
 # diretor-de-movimento

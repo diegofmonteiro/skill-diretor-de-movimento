@@ -2,8 +2,8 @@
   "name": "Marca Exemplo",
   "domain": "exemplo.com.br",
   "handle": "@marcaexemplo",
-  "tagline": "AI tools I build, and how to run them yourself.",
-  "headline": "You can't copy a video.",
+  "tagline": "Ferramentas de IA que eu crio, e como você mesmo pode usá-las.",
+  "headline": "Você não pode copiar um vídeo.",
   "colors": {
     "ground": "#050404",
     "ink": "#FAFAFA",
@@ -23,17 +23,17 @@
     {
       "value": 120,
       "suffix": "+",
-      "label": "AI tools tested"
+      "label": "ferramentas de IA testadas"
     },
     {
       "value": 4.9,
       "decimals": 1,
-      "label": "rating"
+      "label": "nota"
     },
     {
       "value": 30,
       "suffix": "%",
-      "label": "faster edits"
+      "label": "edições mais rápidas"
     }
   ],
   "screens": [
@@ -52,463 +52,463 @@
       "creator": "@marcaexemplo"
     },
     "chat-thread": {
-      "m1": "Did you see the new agent video?",
-      "m2": "It built the whole workflow",
-      "m3": "Wait, by itself??",
-      "m4": "Every single step"
+      "m1": "Você viu o novo vídeo do agente?",
+      "m2": "Ele montou o fluxo inteiro",
+      "m3": "Peraí, sozinho??",
+      "m4": "Cada passo"
     },
     "checklist": {
-      "title": "Before you hit publish",
-      "items": "Script written,B-roll built,Captions synced,Thumbnail tested"
+      "title": "Antes de publicar",
+      "items": "Roteiro escrito,B-roll pronto,Legendas sincronizadas,Miniatura testada"
     },
     "email-open": {
-      "subject": "Your free prompt pack is here",
-      "line1": "Every prompt from the video, ready to copy.",
-      "line2": "Setup steps, tools and the exact settings inside.",
-      "phrase": "Setup steps, tools and the exact settings"
+      "subject": "Seu pacote de prompts gratuito chegou",
+      "line1": "Todos os prompts do vídeo, prontos para copiar.",
+      "line2": "Passo a passo, ferramentas e as configurações exatas aí dentro.",
+      "phrase": "Passo a passo, ferramentas e as configurações exatas"
     },
     "price-tag": {
-      "plan": "Pro plan",
-      "features": "Every prompt|Every template|Cancel anytime"
+      "plan": "Plano Pro",
+      "features": "Todos os prompts|Todos os modelos|Cancele quando quiser"
     },
     "search-results": {
-      "query": "how to run a team of AI agents"
+      "query": "como montar uma equipe de agentes de IA"
     },
     "review-stars": {
-      "category": "Education",
-      "quote": "The only AI channel where I actually build the thing after.",
-      "reviewer": "Priya S."
+      "category": "Educação",
+      "quote": "O único canal de IA em que eu realmente coloco a mão na massa depois.",
+      "reviewer": "Paula S."
     },
     "video-tile": {
-      "title": "I let AI agents run my channel for 30 days"
+      "title": "Deixei agentes de IA tocarem meu canal por 30 dias"
     },
     "dossier-card": {
-      "name": "The research agent",
-      "role": "Finds every source",
-      "fact1": "Reads 200 pages a minute",
-      "fact2": "Cites every claim",
-      "fact3": "Never sleeps"
+      "name": "O agente de pesquisa",
+      "role": "Encontra todas as fontes",
+      "fact1": "Lê 200 páginas por minuto",
+      "fact2": "Cita cada afirmação",
+      "fact3": "Nunca dorme"
     },
     "bar-race": {
-      "labels": "Editing by hand,Templates,A freelancer,{brand}",
+      "labels": "Edição manual,Modelos prontos,Um freelancer,{brand}",
       "values": "14,23,31,72"
     },
     "leaderboard": {
-      "labels": "Editing by hand,Templates,A freelancer,An agency,{brand}"
+      "labels": "Edição manual,Modelos prontos,Um freelancer,Uma agência,{brand}"
     },
     "ask-bar": {
-      "query": "Turn this video into a blog post"
+      "query": "Transforme este vídeo em um artigo"
     },
     "screen-showcase": {
       "screen": "assets/brand/screen-2.png",
       "rect": "9.5,20,46,19",
-      "pins": "36,57,Free weekly letter"
+      "pins": "36,57,Newsletter semanal gratuita"
     },
     "dock-bounce": {
       "name": "Marca Exemplo"
     },
     "spotlight-search": {
       "query": "Marca Exemplo",
-      "kind": "AI tools"
+      "kind": "Ferramentas de IA"
     },
     "incoming-call": {
       "caller": "Marca Exemplo",
-      "sub": "Your next client"
+      "sub": "Seu próximo cliente"
     },
     "phone-feed": {
       "likes": 12840
     },
     "device-callouts": {
-      "f1": "Paste a link",
-      "f2": "Watch it build",
-      "f3": "Post in one tap"
+      "f1": "Cole um link",
+      "f2": "Veja ser criado",
+      "f3": "Publique com um toque"
     },
     "circle-scribble": {
-      "label": "That's me"
+      "label": "Sou eu"
     },
     "magnifier-loupe": {
-      "label": "ai agents"
+      "label": "agentes de ia"
     },
     "spotlight-dim": {
-      "label": "Latest video"
+      "label": "Último vídeo"
     },
     "spreadsheet-fill": {
-      "title": "Channel revenue",
-      "rows": "YouTube:4200,Newsletter:2900,Courses:6100,Sponsors:3800"
+      "title": "Receita do canal",
+      "rows": "YouTube:4200,Newsletter:2900,Cursos:6100,Patrocínios:3800"
     },
     "kanban-move": {
-      "board": "Video pipeline",
-      "card": "Edit the agents video",
-      "todo": "Write the next script",
-      "done": "Film the intro"
+      "board": "Funil de vídeos",
+      "card": "Editar o vídeo dos agentes",
+      "todo": "Escrever o próximo roteiro",
+      "done": "Gravar a abertura"
     },
     "code-diff": {
       "file": "agent.js"
     },
     "payment-success": {
-      "item": "Prompt pack",
+      "item": "Pacote de prompts",
       "amount": "29.00"
     },
     "file-upload": {
-      "title": "Drop your transcript",
+      "title": "Solte sua transcrição",
       "file": "transcript.pdf"
     },
     "progress-bar": {
-      "milestones": "Script,Filmed,Edited,Published"
+      "milestones": "Roteiro,Gravado,Editado,Publicado"
     },
     "gauge-needle": {
-      "label": "Burnout",
+      "label": "Esgotamento",
       "value": 92
     },
     "unit-dots": {
       "count": 37,
-      "label": "out of 100 creators"
+      "label": "de cada 100 criadores"
     },
     "contribution-heatmap": {
       "total": 1284,
-      "label": "commits this year"
+      "label": "commits neste ano"
     },
     "stacked-bars": {
-      "labels": "Month 1,Month 2,Month 3,Month 4",
-      "series": "Ideas,Scripts,Videos"
+      "labels": "Mês 1,Mês 2,Mês 3,Mês 4",
+      "series": "Ideias,Roteiros,Vídeos"
     },
     "index-card-flip": {
-      "question": "Which AI tool do I use daily?",
+      "question": "Qual ferramenta de IA eu uso todo dia?",
       "answer": "Claude Code"
     },
     "notebook-scribble": {
-      "lines": "Edit a video in one prompt;1. Drop the Drive link;2. Pick the look;3. Approve the cut",
-      "circle": "one"
+      "lines": "Edite um vídeo com um prompt;1. Cole o link do Drive;2. Escolha o visual;3. Aprove o corte",
+      "circle": "prompt"
     },
     "envelope-letter": {
-      "line": "You can't copy a video.",
-      "underline": "copy a video"
+      "line": "Você não pode copiar um vídeo.",
+      "underline": "copiar um vídeo"
     },
     "boarding-pass": {
-      "from": "IDEA",
-      "to": "UPLOAD",
-      "stamp": "Shipped"
+      "from": "IDEIA",
+      "to": "PUBLICAR",
+      "stamp": "Enviado"
     },
     "dm-inbox": {
-      "title": "DMs",
-      "n1": "Priya S.",
-      "p1": "How do I set up the agent?",
-      "detail": "Watched the video twice already."
+      "title": "Mensagens",
+      "n1": "Paula S.",
+      "p1": "Como eu configuro o agente?",
+      "detail": "Já assisti ao vídeo duas vezes."
     },
     "ai-stream": {
-      "prompt": "Turn this video into a blog post",
-      "reply": "Here is a script that pulls the transcript and drafts the post:"
+      "prompt": "Transforme este vídeo em um artigo",
+      "reply": "Aqui está um roteiro que puxa a transcrição e escreve o rascunho do artigo:"
     },
     "voice-memo": {
-      "transcript": "I record one voice note and the agent turns it into five posts.",
-      "phrase": "five posts"
+      "transcript": "Eu gravo uma nota de voz e o agente transforma em cinco posts.",
+      "phrase": "cinco posts"
     },
     "slack-message": {
       "channel": "youtube",
       "sender": "Marca Exemplo",
-      "message": "New video just went live, go break it!",
+      "message": "Vídeo novo no ar, vai lá quebrar!",
       "counts": "48,31,22,15",
       "replies": "23"
     },
     "doc-page": {
-      "docName": "Video plan",
-      "title": "Next video",
-      "b1": "Hook in the first 5 seconds",
-      "b2": "Show the agent building it",
-      "b3": "Free prompt pack in the description",
+      "docName": "Plano do vídeo",
+      "title": "Próximo vídeo",
+      "b1": "Gancho nos primeiros 5 segundos",
+      "b2": "Mostrar o agente montando",
+      "b3": "Pacote de prompts grátis na descrição",
       "pick": "2"
     },
     "share-sheet": {
-      "title": "Every prompt from the video",
-      "done": "Sent"
+      "title": "Todos os prompts do vídeo",
+      "done": "Enviado"
     },
     "tabs-multiply": {
-      "tabs": "Docs,Inbox,Analytics,Notes,Drafts,Search",
+      "tabs": "Documentos,Entrada,Análises,Notas,Rascunhos,Busca",
       "url": "exemplo.com.br"
     },
     "calendar-week": {
-      "hero": "Film day",
-      "events": "Calls,Script,Edit,Record,Plan,Gym"
+      "hero": "Dia de gravação",
+      "events": "Reuniões,Roteiro,Edição,Gravação,Planejamento,Academia"
     },
     "timer-stopwatch": {
       "total": "02:41.08",
-      "laps": "Script,Edit,Upload"
+      "laps": "Roteiro,Edição,Envio"
     },
     "battery-charge": {
       "from": 12,
-      "label": "Recharging",
-      "done": "Back at 100"
+      "label": "Recarregando",
+      "done": "De volta aos 100"
     },
     "document-scroll": {
-      "title": "Terms of Service",
-      "section": "Your content",
-      "line": "You grant us a worldwide licence to use your content.",
+      "title": "Termos de Uso",
+      "section": "Seu conteúdo",
+      "line": "Você nos concede uma licença mundial para usar o seu conteúdo.",
       "page": 14,
       "pages": 38
     },
     "testimonial-wall": {
-      "quote": "The only AI channel where I actually build the thing after.",
-      "name": "Priya S.",
-      "role": "Verified viewer"
+      "quote": "O único canal de IA em que eu realmente coloco a mão na massa depois.",
+      "name": "Paula S.",
+      "role": "Espectadora verificada"
     },
     "tweet-thread": {
-      "t1": "You can't copy a video.",
-      "t2": "So every one I make becomes a full write-up.",
-      "t3": "Prompts, code and tools inside. Free."
+      "t1": "Você não pode copiar um vídeo.",
+      "t2": "Então cada um que eu faço vira um artigo completo.",
+      "t3": "Prompts, código e ferramentas dentro. De graça."
     },
     "newsletter-card": {
-      "title": "The Letter",
-      "desc": "Every video as a full write-up. Free.",
-      "cta": "Get the letter",
-      "done": "You're in",
+      "title": "A Newsletter",
+      "desc": "Cada vídeo como um artigo completo. Grátis.",
+      "cta": "Quero a newsletter",
+      "done": "Você está dentro",
       "readers": 12400
     },
     "milestone-plaque": {
       "count": 100000,
-      "label": "subscribers",
+      "label": "inscritos",
       "emblem": "mark"
     },
     "kpi-tiles": {
-      "labels": "Subscribers,Views,Watch hours,Revenue",
-      "values": "12400,1.2M,48K,$9.8K",
+      "labels": "Inscritos,Visualizações,Horas assistidas,Receita",
+      "values": "12400,1.2 mi,48 mil,R$ 9.8 mil",
       "deltas": "+18%,+32%,+21%,+40%",
       "glyphs": "user,video,chart,cart",
       "hero": 2
     },
     "mind-map": {
-      "centre": "One video",
-      "branches": "Shorts,Newsletter,Article,Podcast,Thread,Resource page"
+      "centre": "Um vídeo",
+      "branches": "Shorts,Newsletter,Artigo,Podcast,Thread,Página de recursos"
     },
     "pros-cons": {
-      "pros": "Builds while I sleep,Costs pennies,Never forgets",
-      "cons": "A day to set up"
+      "pros": "Trabalha enquanto eu durmo,Custa centavos,Nunca esquece",
+      "cons": "Um dia para configurar"
     },
     "step-tracker": {
-      "steps": "Idea,Script,Film,Edit,Post",
+      "steps": "Ideia,Roteiro,Gravação,Edição,Publicação",
       "current": 3
     },
     "stamp-approve": {
-      "title": "New video plan",
-      "fields": "Topic:AI agents,Owner:{brand},Film:Friday,Edit:By agent"
+      "title": "Plano do novo vídeo",
+      "fields": "Tema:Agentes de IA,Responsável:{brand},Gravação:Sexta,Edição:Pelo agente"
     },
     "book-highlight": {
-      "line": "You can't copy a video.",
-      "note": "the whole point",
-      "chapter": "Chapter one"
+      "line": "Você não pode copiar um vídeo.",
+      "note": "o ponto principal",
+      "chapter": "Capítulo um"
     },
     "paper-map-pin": {
-      "start": "Day one",
-      "place": "100k subs"
+      "start": "Dia um",
+      "place": "100 mil inscritos"
     },
     "certificate": {
-      "kind": "of completion",
-      "reason": "for building an AI agent team"
+      "kind": "de conclusão",
+      "reason": "por montar uma equipe de agentes de IA"
     },
     "odd-one-out-highlight": {
-      "label": "Template",
-      "oddLabel": "Your voice",
+      "label": "Modelo",
+      "oddLabel": "A sua voz",
       "tone": "accent"
     },
     "card-grid-fill": {
-      "unit": "videos",
+      "unit": "vídeos",
       "total": 300
     },
     "locked-list-reveal": {
-      "items": "Find the pocket,Steal the format,Script the hook,The thumbnail test,Publish",
+      "items": "Achar a brecha,Roubar o formato,Roteirizar o gancho,O teste da miniatura,Publicar",
       "locked": 4
     },
     "step-bracket-label": {
-      "steps": "Build,Film,Ship",
-      "group": "The system"
+      "steps": "Criar,Gravar,Publicar",
+      "group": "O sistema"
     },
     "icon-trays": {
-      "titleA": "Chat apps",
-      "itemsA": "Chat,Search,Docs",
-      "titleB": "My agents",
-      "itemsB": "Inbox,Calendar,Research"
+      "titleA": "Apps de conversa",
+      "itemsA": "Conversa,Busca,Documentos",
+      "titleB": "Meus agentes",
+      "itemsB": "Entrada,Agenda,Pesquisa"
     },
     "cursor-click-screenshot": {
-      "label": "Free weekly letter"
+      "label": "Newsletter semanal gratuita"
     },
     "ui-metric-ring-link": {
-      "title": "Every video, written up",
-      "sub": "Prompts and code inside"
+      "title": "Cada vídeo, escrito",
+      "sub": "Prompts e código dentro"
     },
     "panel-lift-out": {
-      "label": "One email per video"
+      "label": "Um e-mail por vídeo"
     },
     "file-attach-flow": {
       "app": "Marca Exemplo",
       "file": "transcript.pdf",
       "size": "1.1 MB",
-      "dest": "Memory",
-      "shelf": "prompts.md,script.txt"
+      "dest": "Memória",
+      "shelf": "prompts.md,roteiro.txt"
     },
     "evidence-doc-stack": {
-      "pages": "Script|B-roll list|Edit notes|Results",
-      "highlight": "Edited in one prompt"
+      "pages": "Roteiro|Lista de B-roll|Notas de edição|Resultados",
+      "highlight": "Editado com um prompt"
     },
     "corner-ledger": {
-      "a": "Edit it yourself|Hours per video|Full control",
-      "b": "Let the agent edit|One prompt|Same look every time",
+      "a": "Edite você mesmo|Horas por vídeo|Controle total",
+      "b": "Deixe o agente editar|Um prompt|Mesmo visual sempre",
       "pick": "b"
     },
     "location-pin-chip": {
-      "place": "The studio",
-      "sub": "Day one"
+      "place": "O estúdio",
+      "sub": "Dia um"
     },
     "lead-magnet-cover": {
-      "title": "Claude Code Prompt Pack",
-      "label": "Free prompt pack",
-      "cta": "Link in bio",
-      "badge": "Free"
+      "title": "Pacote de Prompts do Claude Code",
+      "label": "Pacote de prompts grátis",
+      "cta": "Link na bio",
+      "badge": "Grátis"
     },
     "growing-coin-row": {
-      "values": "$0,$100,$1K,$10K",
-      "labels": "Free tool,First client,Agency,Product"
+      "values": "R$ 0,R$ 100,R$ 1 mil,R$ 10 mil",
+      "labels": "Ferramenta grátis,Primeiro cliente,Agência,Produto"
     },
     "tier-pyramid": {
-      "values": "$0,$29,$299,$2,999",
-      "labels": "Free,Course,Community,Done for you"
+      "values": "R$ 0,R$ 29,R$ 299,R$ 2999",
+      "labels": "Grátis,Curso,Comunidade,Feito para você"
     },
     "money-flow-path": {
-      "nodes": "Client,You,AI tools",
-      "flows": "Pays $2k,$40/mo in tools",
-      "back": "You keep 98%",
+      "nodes": "Cliente,Você,Ferramentas de IA",
+      "flows": "Paga R$ 2 mil,R$ 40/mês em ferramentas",
+      "back": "Você fica com 98%",
       "backFrom": 2,
       "backTo": 1
     },
     "product-ladder-row": {
       "labels": "ChatGPT,Claude,Claude Code,Agents",
-      "values": "$0,$20,$100,$200",
+      "values": "R$ 0,R$ 20,R$ 100,R$ 200",
       "glyphs": "chat,spark,code,bolt"
     },
     "iceberg-reveal": {
-      "topLabel": "The prompt",
-      "topValue": "1 line",
-      "bottomLabel": "The system behind it",
-      "bottomValue": "40 hours"
+      "topLabel": "O prompt",
+      "topValue": "1 linha",
+      "bottomLabel": "O sistema por trás",
+      "bottomValue": "40 horas"
     },
     "focus-ring-hop": {
       "stops": "9.4,21,44.6,18.4;9.4,51.3,31.4,8.2;57.3,24.7,33.2,33.2",
-      "labels": "The hook,The offer,The proof"
+      "labels": "O gancho,A oferta,A prova"
     },
     "finder-window": {
-      "folders": "Archive,Clients,Ideas,Scripts,Videos,Thumbnails",
-      "target": "Scripts",
-      "files": "hook.md,outline.md,b-roll.txt",
-      "label": "What the agent reads"
+      "folders": "Arquivo,Clientes,Ideias,Roteiros,Vídeos,Miniaturas",
+      "target": "Roteiros",
+      "files": "gancho.md,estrutura.md,b-roll.txt",
+      "label": "O que o agente lê"
     },
     "screen-time-report": {
       "minutes": 360,
-      "per": "on my phone, every day",
-      "apps": "Feed:150,Clips:120,Chat:45"
+      "per": "no meu celular, todo dia",
+      "apps": "Feed:150,Clipes:120,Conversas:45"
     },
     "post-revenue-chip": {
-      "text": "Posted the template on Monday. By Friday it had paid for my whole setup.",
-      "phrase": "it had paid for my whole setup",
+      "text": "Postei o modelo na segunda. Na sexta ele já tinha pago toda a minha estrutura.",
+      "phrase": "já tinha pago toda a minha estrutura",
       "amount": 1240,
       "change": "+38%"
     },
     "chip-stamp-over-doc": {
       "count": 100,
-      "label": "creators"
+      "label": "criadores"
     },
     "card-fan-pick": {
-      "label": "Kept this one",
+      "label": "Fico com esta",
       "tone": "green"
     },
     "chain-links": {
-      "labels": "Topic,Packaging,Hook,Editing"
+      "labels": "Tema,Embalagem,Gancho,Edição"
     },
     "icon-grid-stamp": {
-      "labels": "Photo editor,Video editor,Design,Captions,Scheduler,Analytics"
+      "labels": "Editor de fotos,Editor de vídeo,Design,Legendas,Agendador,Análises"
     },
     "bracket-sum": {
-      "labels": "YouTube ads,Sponsors,Courses",
+      "labels": "Anúncios no YouTube,Patrocínios,Cursos",
       "values": "4200,3800,6100",
-      "suffix": "/mo"
+      "suffix": "/mês"
     },
     "follower-ticker-chip": {
       "from": 12000,
       "to": 100000,
-      "unit": "subscribers",
-      "start": "Day 1",
-      "end": "Day 90"
+      "unit": "inscritos",
+      "start": "Dia 1",
+      "end": "Dia 90"
     },
     "coupon-code-badge": {
       "amount": "30%",
-      "detail": "first 3 months",
+      "detail": "nos 3 primeiros meses",
       "code": "CODE30"
     },
     "live-notes-panel": {
-      "title": "Why we buy the hype",
-      "notes": "Lots of people talk about it|People we trust use it|We see it everywhere"
+      "title": "Por que caímos no hype",
+      "notes": "Muita gente fala disso|Pessoas em quem confiamos usam|Vemos isso em todo lugar"
     },
     "glass-whiteboard-write": {
-      "title": "My content system",
-      "lines": "Film once|Cut ten clips|Post everywhere",
-      "circle": "once"
+      "title": "Meu sistema de conteúdo",
+      "lines": "Grave uma vez|Corte dez clipes|Poste em todo lugar",
+      "circle": "uma vez"
     },
     "rate-dial-knob": {
-      "label": "Temperature",
+      "label": "Temperatura",
       "from": 0.2,
       "to": 0.9,
       "min": 0,
       "max": 1,
       "unit": "",
-      "effects": "+Creativity,-Accuracy,+Surprises"
+      "effects": "+Criatividade,-Precisão,+Surpresas"
     },
     "bond-coupon-drip": {
-      "title": "Evergreen video",
-      "rate": "1 upload",
-      "periods": "Month 1,Month 2,Month 3,Month 4",
-      "totalLabel": "From one upload"
+      "title": "Vídeo perene",
+      "rate": "1 envio",
+      "periods": "Mês 1,Mês 2,Mês 3,Mês 4",
+      "totalLabel": "De um único envio"
     },
     "object-outline-fill": {
-      "parts": "Laptop,AI tools,Hosting",
+      "parts": "Notebook,Ferramentas de IA,Hospedagem",
       "shares": "55,35,10",
-      "amounts": "$1,400|$900|$250",
-      "total": "$2,550",
-      "totalLabel": "Full setup"
+      "amounts": "R$ 1,400|R$ 900|R$ 250",
+      "total": "R$ 2,550",
+      "totalLabel": "Estrutura completa"
     },
     "product-halo": {
-      "kicker": "Take something as simple as",
-      "name": "one good idea",
-      "value": "$29",
-      "valueLabel": "one prompt pack"
+      "kicker": "Pegue algo tão simples quanto",
+      "name": "uma boa ideia",
+      "value": "R$ 29",
+      "valueLabel": "um pacote de prompts"
     },
     "product-tile-price": {
-      "name1": "Same vase",
-      "price1": "$3",
-      "name2": "Same vase, a brand",
-      "price2": "$35"
+      "name1": "O mesmo vaso",
+      "price1": "R$ 3",
+      "name2": "O mesmo vaso, de grife",
+      "price2": "R$ 35"
     },
     "photo-mosaic": {
-      "label": "Built from 300 videos"
+      "label": "Feito a partir de 300 vídeos"
     },
     "day-counter": {
       "day": 100,
-      "caption": "of posting daily"
+      "caption": "de posts diários"
     },
     "podcast-player": {
-      "episode": "How I run 10 AI agents",
-      "chapters": "Intro,The setup,The results,Questions"
+      "episode": "Como eu tenho 10 agentes de IA",
+      "chapters": "Introdução,A estrutura,Os resultados,Perguntas"
     },
     "search-autocomplete": {
-      "query": "how to automate",
-      "suggestions": "how to automate my inbox,how to automate youtube videos,how to automate with ai agents,how to automate excel reports",
+      "query": "como automatizar",
+      "suggestions": "como automatizar minha caixa de entrada,como automatizar vídeos do youtube,como automatizar com agentes de ia,como automatizar relatórios do excel",
       "pick": 3
     },
     "product-cutout-drop": {
-      "labels": "Camera,Headphones,Mic,Keyboard",
-      "heroTag": "Main pick"
+      "labels": "Câmera,Fones,Microfone,Teclado",
+      "heroTag": "Escolha principal"
     },
     "label-box-callout": {
-      "title": "Terms of Service",
-      "lines": "You keep ownership of your content|You grant us a worldwide licence to use it|We may change these terms at any time",
+      "title": "Termos de Uso",
+      "lines": "Você mantém a propriedade do seu conteúdo|Você nos concede uma licença mundial para usá-lo|Podemos alterar estes termos a qualquer momento",
       "pick": 2,
-      "note": "Wait, what?"
+      "note": "Peraí, como assim?"
     },
     "profile-stats-header": {
       "followersFrom": 9874,
@@ -517,114 +517,114 @@
       "following": 186
     },
     "top-band-insert": {
-      "labels": "Video,Write-up,Archive,Letter",
+      "labels": "Vídeo,Artigo,Arquivo,Newsletter",
       "beat": 1.15
     },
     "exploded-ui": {
       "screen": "assets/brand/screen-2.png",
-      "layers": "0,0,100,7.4,Navigation;9.5,21,44,17.5,Headline;9.5,52,30.5,7,Sign-up;57.7,25,32.3,32.7,Latest video"
+      "layers": "0,0,100,7.4,Navegação;9.5,21,44,17.5,Título;9.5,52,30.5,7,Cadastro;57.7,25,32.3,32.7,Último vídeo"
     },
     "dashboard-assembly": {
-      "title": "Channel",
-      "labels": "Subscribers,Views,Newsletter",
-      "values": "12,400,1.2M,9.8K",
+      "title": "Canal",
+      "labels": "Inscritos,Visualizações,Newsletter",
+      "values": "12400,1.2 mi,9.8 mil",
       "deltas": "+18%,+32%,+21%",
       "glyphs": "user,video,mail",
-      "chart": "Revenue|$9.8K|+40%",
-      "list": "Top videos"
+      "chart": "Receita|R$ 9.8 mil|+40%",
+      "list": "Vídeos mais vistos"
     },
     "parallax-photo": {
-      "word": "Builder",
-      "sub": "AI tools, built on camera"
+      "word": "Criador",
+      "sub": "Ferramentas de IA, feitas na câmera"
     },
     "film-strip": {
       "pick": 2,
-      "label": "The video that changed it"
+      "label": "O vídeo que mudou tudo"
     },
     "video-timeline": {
-      "title": "Agents video",
-      "clips": "Hook,Demo,Outro",
-      "broll": "Screen rec",
-      "removed": "Retakes"
+      "title": "Vídeo dos agentes",
+      "clips": "Gancho,Demonstração,Encerramento",
+      "broll": "Gravação de tela",
+      "removed": "Refilmagens"
     },
     "transcript-highlight": {
-      "title": "Agents video transcript",
-      "lines": "I tried every AI editor out there.|Most of them still needed me.|Then I wrote one prompt for the whole edit.|It cut, captioned and built the graphics.|The first draft came back in minutes.|You can't copy a video, but you can copy the system.|So I packed the prompts into a free pack.",
+      "title": "Transcrição do vídeo dos agentes",
+      "lines": "Eu testei todos os editores de IA que existem.|A maioria ainda precisava de mim.|Aí escrevi um prompt para a edição inteira.|Ele cortou, legendou e criou os gráficos.|O primeiro rascunho voltou em minutos.|Você não pode copiar um vídeo, mas pode copiar o sistema.|Então juntei os prompts num pacote gratuito.",
       "pick": 6,
       "at": "8:12",
       "length": 12
     },
     "captions-burn": {
-      "text": "One prompt edits the whole video",
-      "big": "whole",
+      "text": "Um prompt edita o vídeo inteiro",
+      "big": "inteiro",
       "time": "0:05"
     },
     "extension-popup": {
       "url": "youtube.com/watch",
-      "desc": "Works on any video you open",
-      "action": "Turn this into a post",
-      "working": "Reading the transcript",
-      "done": "Done",
-      "result": "Draft saved to your notes"
+      "desc": "Funciona em qualquer vídeo que você abrir",
+      "action": "Transformar em post",
+      "working": "Lendo a transcrição",
+      "done": "Pronto",
+      "result": "Rascunho salvo nas suas notas"
     },
     "prompt-template-copy": {
-      "title": "Edit prompt",
-      "template": "Edit my {video} into a {style} cut with {extras}, and keep every pause under a quarter second.",
-      "values": "raw footage|tight 10 minute|captions and b-roll"
+      "title": "Prompt de edição",
+      "template": "Edite meu {video} em um corte {style} com {extras}, e mantenha toda pausa abaixo de um quarto de segundo.",
+      "values": "material bruto|de 10 minutos, enxuto|legendas e b-roll"
     },
     "crm-deal-card": {
-      "board": "Brand deals",
-      "company": "New sponsor",
+      "board": "Parcerias de marca",
+      "company": "Novo patrocinador",
       "value": 12000,
       "before": 36000
     },
     "order-tracker": {
-      "title": "Studio mic",
-      "sub": "Order #2048"
+      "title": "Microfone de estúdio",
+      "sub": "Pedido nº 2048"
     },
     "invoice-paid": {
-      "client": "Your client",
-      "items": "Video edit: 900; Thumbnail: 300; Captions: 200"
+      "client": "Seu cliente",
+      "items": "Edição de vídeo: 900; Miniatura: 300; Legendas: 200"
     },
     "subscription-renew": {
-      "plan": "Pro plan"
+      "plan": "Plano Pro"
     },
     "form-signup": {
-      "heading": "Join the letter",
-      "cta": "Get the letter"
+      "heading": "Entre para a newsletter",
+      "cta": "Quero a newsletter"
     },
     "permission-dialog": {
-      "resource": "Your calendar",
+      "resource": "Sua agenda",
       "glyph": "calendar",
-      "detail": "To read and add events"
+      "detail": "Para ler e adicionar eventos"
     },
     "two-factor-sms": {
       "code": "482913",
-      "title": "Enter the code",
-      "done": "Verified"
+      "title": "Digite o código",
+      "done": "Verificado"
     },
     "skeleton-load": {
       "screen": 2
     },
     "toast-undo": {
-      "title": "Recent",
-      "items": "Video script,Thumbnail ideas,B-roll list,Sponsor notes",
-      "metas": "Edited today,Edited yesterday,Edited Monday,Edited last week",
+      "title": "Recentes",
+      "items": "Roteiro do vídeo,Ideias de miniatura,Lista de B-roll,Notas de patrocínio",
+      "metas": "Editado hoje,Editado ontem,Editado na segunda,Editado na semana passada",
       "pick": 2
     },
     "version-history": {
-      "titles": "Final cut notes,Second pass,First draft,Outline,Notes",
+      "titles": "Notas do corte final,Segunda revisão,Primeiro rascunho,Estrutura,Notas",
       "pick": 3
     },
     "pr-merge": {
-      "title": "Add AI reply drafts",
+      "title": "Adicionar rascunhos de resposta por IA",
       "branch": "ai-replies",
-      "checks": "Build,Tests,Review"
+      "checks": "Build,Testes,Revisão"
     },
     "api-call": {
       "endpoint": "/v1/write",
       "body": "video:agents-101",
-      "fields": "title:Agents 101|chapters:6|article:ready|clips:10"
+      "fields": "title:Agentes 101|chapters:6|article:pronto|clips:10"
     },
     "error-to-fix": {
       "file": "upload.js",
@@ -632,7 +632,7 @@
       "message": "video is undefined"
     },
     "ai-image-grid": {
-      "prompt": "Thumbnail for my next video",
+      "prompt": "Miniatura do meu próximo vídeo",
       "pick": 2
     },
     "git-graph": {
@@ -640,110 +640,110 @@
       "tag": "v1.0"
     },
     "gantt-bars": {
-      "tasks": "Research,Script,Film,Edit,Upload",
+      "tasks": "Pesquisa,Roteiro,Gravação,Edição,Envio",
       "hero": 4
     },
     "line-cross": {
-      "nameA": "Editing by hand",
+      "nameA": "Edição manual",
       "nameB": "{brand}",
-      "unit": "Week"
+      "unit": "Semana"
     },
     "scatter-quadrant": {
-      "xAxis": "Speed",
-      "yAxis": "Quality",
-      "zone": "Fast and good"
+      "xAxis": "Velocidade",
+      "yAxis": "Qualidade",
+      "zone": "Rápido e bom"
     },
     "podium-rank": {
-      "labels": "{brand},A freelancer,Templates",
+      "labels": "{brand},Um freelancer,Modelos prontos",
       "values": "94,71,62"
     },
     "compare-table": {
-      "columns": "By hand,Templates,{brand}",
-      "rows": "Done in minutes,Your own style,No learning curve,Runs while you sleep"
+      "columns": "Manual,Modelos prontos,{brand}",
+      "rows": "Pronto em minutos,Seu próprio estilo,Sem curva de aprendizado,Roda enquanto você dorme"
     },
     "live-chat": {
-      "title": "Live chat",
-      "watching": "1.2K watching",
-      "donor": "Priya S.",
-      "amount": "$20.00",
-      "paid": "Built my first agent because of you"
+      "title": "Chat ao vivo",
+      "watching": "1,2 mil assistindo",
+      "donor": "Paula S.",
+      "amount": "R$ 20.00",
+      "paid": "Montei meu primeiro agente por causa de você"
     },
     "community-poll": {
-      "question": "Which AI tool should I test next?",
-      "options": "Agent builders|Voice tools|Video editors|Coding assistants",
+      "question": "Qual ferramenta de IA devo testar a seguir?",
+      "options": "Criadores de agentes|Ferramentas de voz|Editores de vídeo|Assistentes de código",
       "percents": "48,21,18,13",
       "votes": 8640
     },
     "content-calendar": {
-      "month": "October",
-      "types": "Video|Reel|Letter",
-      "countLabel": "planned"
+      "month": "Outubro",
+      "types": "Vídeo|Reel|Newsletter",
+      "countLabel": "planejados"
     },
     "playlist-queue": {
-      "titles": "How I set up my AI agents|Run it yourself in ten minutes|The tools I test every week|Build your first agent|Automate your whole week",
+      "titles": "Como eu configuro meus agentes de IA|Faça você mesmo em dez minutos|As ferramentas que eu testo toda semana|Crie seu primeiro agente|Automatize sua semana inteira",
       "runtimes": "15:49|12:15|14:25|19:43|11:07",
-      "upNext": "Up next"
+      "upNext": "A seguir"
     },
     "channel-analytics": {
-      "videos": "Can AI agents run a channel?|AI tools worth using daily|The prompt pack, explained"
+      "videos": "Agentes de IA conseguem tocar um canal?|Ferramentas de IA que valem o uso diário|O pacote de prompts, explicado"
     },
     "video-publish": {
-      "title": "Can AI agents edit a whole video?"
+      "title": "Agentes de IA conseguem editar um vídeo inteiro?"
     },
     "retention-graph": {
-      "dipLabel": "Skipped",
-      "spikeLabel": "Replayed"
+      "dipLabel": "Pulado",
+      "spikeLabel": "Revisto"
     },
     "subscribe-button": {
-      "title": "What happens when AI agents run a channel"
+      "title": "O que acontece quando agentes de IA tocam um canal"
     },
     "chapter-scrub": {
-      "title": "How to run a team of AI agents",
-      "chapters": "Intro|The agents|The prompts|The results"
+      "title": "Como montar uma equipe de agentes de IA",
+      "chapters": "Introdução|Os agentes|Os prompts|Os resultados"
     },
     "table-filter": {
-      "title": "Video ideas",
-      "cols": "Idea,Status,Length",
-      "rows": "AI agents|Filmed|12 min;Prompt library|Idea|8 min;Claude Code|Filmed|15 min;Thumbnails|Draft|10 min;Automations|Filmed|9 min;Inbox zero|Draft|6 min",
-      "match": "Filmed",
-      "unit": "ideas"
+      "title": "Ideias de vídeo",
+      "cols": "Ideia,Situação,Duração",
+      "rows": "Agentes de IA|Gravado|12 min;Biblioteca de prompts|Ideia|8 min;Claude Code|Gravado|15 min;Miniaturas|Rascunho|10 min;Automações|Gravado|9 min;Caixa de entrada zerada|Rascunho|6 min",
+      "match": "Gravado",
+      "unit": "ideias"
     },
     "doc-comments": {
-      "docName": "Video script",
-      "title": "The agents video",
-      "body": "Most people never let an agent touch their real work. What happens if one gets the whole edit for a week? Here is what it got right.",
-      "mark1": "the whole edit",
+      "docName": "Roteiro do vídeo",
+      "title": "O vídeo dos agentes",
+      "body": "A maioria das pessoas nunca deixa um agente tocar no trabalho de verdade. O que acontece se um cuidar da edição inteira por uma semana? Veja o que ele acertou.",
+      "mark1": "edição inteira",
       "who1": "Editor",
-      "c1": "Make this the hook",
-      "mark2": "what it got right",
-      "c2": "Show the cut here"
+      "c1": "Faça disso o gancho",
+      "mark2": "o que ele acertou",
+      "c2": "Mostre o corte aqui"
     },
     "video-call-grid": {
-      "title": "Script review",
-      "names": "Maya Cole,Jon Reyes,Ines Park"
+      "title": "Revisão do roteiro",
+      "names": "Maya Costa,João Reis,Inês Prado"
     },
     "meeting-notes": {
-      "title": "Call summary",
-      "meeting": "Video planning",
-      "d1": "Film the agents video next",
-      "d2": "Checklist goes in the description",
-      "a1": "Write the hook|{brand}",
-      "a2": "Build the b-roll list|Maya",
-      "a3": "Draft the thumbnail|Jon"
+      "title": "Resumo da reunião",
+      "meeting": "Planejamento de vídeos",
+      "d1": "Gravar o vídeo dos agentes em seguida",
+      "d2": "A lista de passos vai na descrição",
+      "a1": "Escrever o gancho|{brand}",
+      "a2": "Montar a lista de B-roll|Maya",
+      "a3": "Rascunhar a miniatura|João"
     },
     "email-send": {
-      "to": "Maya Cole",
-      "subject": "The checklist",
-      "body": "Hi Maya, here is every step from the video, ready to copy. The setup notes are inside too. Enjoy"
+      "to": "Maya Costa",
+      "subject": "A lista de passos",
+      "body": "Oi Maya, aqui está cada passo do vídeo, pronto para copiar. As notas de configuração também estão aí dentro. Aproveite"
     },
     "story-frame": {
-      "question": "Should I film the full setup?",
-      "optionA": "All of it",
-      "optionB": "The prompts",
+      "question": "Devo gravar a configuração completa?",
+      "optionA": "Tudo",
+      "optionB": "Os prompts",
       "split": 81
     },
     "reel-insights": {
-      "title": "Reel insights",
+      "title": "Resultados do reel",
       "plays": 284000,
       "likes": 21400,
       "comments": 1260,
@@ -753,60 +753,60 @@
       "gain": "+48%"
     },
     "profile-grid": {
-      "pinLabel": "Pinned"
+      "pinLabel": "Fixado"
     },
     "link-in-bio": {
-      "links": "Latest video,Free checklist,The letter,Work with me",
+      "links": "Último vídeo,Lista grátis,A newsletter,Trabalhe comigo",
       "glyphs": "play,doc,mail,case",
       "pick": 2,
       "clicks": 2481,
-      "clickWord": "clicks"
+      "clickWord": "cliques"
     },
     "app-badge": {
       "name": "Marca Exemplo",
       "count": 99
     },
     "post-reactions": {
-      "text": "You can't copy a video.",
+      "text": "Você não pode copiar um vídeo.",
       "time": "1h"
     },
     "trending-list": {
-      "category": "Trending in AI",
-      "topics": "AI agents,Claude Code,Prompt packs,Automation"
+      "category": "Em alta em IA",
+      "topics": "Agentes de IA,Claude Code,Pacotes de prompts,Automação"
     },
     "quote-post": {
       "origName": "Alex Rivera",
       "origHandle": "@alexrivera",
-      "origText": "What is one AI tool you could not work without?",
-      "text": "One prompt that edits the whole video."
+      "origText": "Qual ferramenta de IA você não conseguiria ficar sem?",
+      "text": "Um prompt que edita o vídeo inteiro."
     },
     "collab-invite": {
       "partner": "Jordan Lee",
-      "sub": "One video, both your channels"
+      "sub": "Um vídeo, os dois canais"
     },
     "story-rings": {
-      "line": "New video is live",
+      "line": "Vídeo novo no ar",
       "time": "1h"
     },
     "deploy-live": {
       "project": "site-exemplo",
-      "env": "Production",
-      "steps": "Build,Test,Deploy",
+      "env": "Produção",
+      "steps": "Build,Testes,Publicação",
       "times": "21s,8s,4s",
       "screen": 2
     },
     "status-page": {
-      "services": "Website,Newsletter,API,Downloads",
+      "services": "Site,Newsletter,API,Downloads",
       "hit": 3,
-      "issue": "Partial outage",
-      "fixed": "All systems operational"
+      "issue": "Queda parcial",
+      "fixed": "Todos os sistemas funcionando"
     },
     "issue-close": {
-      "title": "Captions drift on long videos",
+      "title": "Legendas descompassadas em vídeos longos",
       "number": "42",
       "label": "bug",
-      "comment": "Off by a second after minute 10",
-      "commit": "Resync captions every chunk",
+      "comment": "Um segundo fora depois do minuto 10",
+      "commit": "Ressincronizar as legendas a cada trecho",
       "hash": "a3f9c2e"
     },
     "review-suggestion": {
@@ -815,104 +815,104 @@
       "line": "  const words = transcribe(clip);",
       "fix": "  const words = await transcribe(clip);",
       "after": "  return words;|}",
-      "reviewer": "Review agent"
+      "reviewer": "Agente de revisão"
     },
     "sql-query": {},
     "model-picker": {
-      "models": "Swift,Balanced,Deep,Vision",
+      "models": "Ágil,Equilibrado,Profundo,Visão",
       "current": 2,
       "pick": 3,
-      "placeholder": "Ask anything",
-      "prefix": "Message"
+      "placeholder": "Pergunte qualquer coisa",
+      "prefix": "Mensagem"
     },
     "tool-call-trace": {
-      "task": "Find my best posts and draft a recap",
+      "task": "Encontrar meus melhores posts e redigir um resumo",
       "tools": "search_posts|read_comments|draft_recap",
-      "inputs": "range: last 30 days|posts: top 3|tone: short and direct",
-      "results": "24 posts found|180 comments read|recap drafted, 412 words",
-      "answer": "Recap drafted from the top 3 posts and ready to review."
+      "inputs": "período: últimos 30 dias|posts: top 3|tom: curto e direto",
+      "results": "24 posts encontrados|180 comentários lidos|resumo redigido, 412 palavras",
+      "answer": "Resumo redigido a partir dos 3 melhores posts e pronto para revisão."
     },
     "knowledge-base": {
-      "title": "Knowledge base",
-      "files": "scripts.pdf,notes.md,faq.docx",
+      "title": "Base de conhecimento",
+      "files": "roteiros.pdf,notas.md,perguntas.docx",
       "total": 128,
-      "unit": "chunks"
+      "unit": "trechos"
     },
     "voice-agent": {
-      "agentName": "Voice agent",
-      "line1": "Can I move my booking to Friday?",
-      "line2": "Done. Friday at 3pm is yours.",
-      "action": "Booking moved",
-      "detail": "Fri, 3:00 PM"
+      "agentName": "Agente de voz",
+      "line1": "Posso mudar minha reserva para sexta?",
+      "line2": "Pronto. Sexta às 15h é sua.",
+      "action": "Reserva alterada",
+      "detail": "Sex, 15:00"
     },
     "automation-rule": {
-      "title": "New lead flow",
-      "trigger": "A form is submitted",
-      "action1": "Add a row to the sheet",
-      "action2": "Send the welcome email",
+      "title": "Fluxo de novo lead",
+      "trigger": "Um formulário é enviado",
+      "action1": "Adicionar uma linha na planilha",
+      "action2": "Enviar o e-mail de boas-vindas",
       "runs": 1246,
       "fires": 3
     },
     "agent-approval": {
-      "name": "Inbox agent",
-      "steps": "Read new comments|Drafted the replies",
-      "action": "Post 12 replies",
-      "target": "On your latest video",
-      "after": "Log what it sent"
+      "name": "Agente de entrada",
+      "steps": "Leu os novos comentários|Redigiu as respostas",
+      "action": "Publicar 12 respostas",
+      "target": "No seu último vídeo",
+      "after": "Registrar o que enviou"
     },
     "cited-answer": {
-      "query": "Do AI agents save real time?",
-      "answer": "Most of the gain comes from repeat tasks [1]. Agents work best with a clear brief [2]. Review still matters [3].",
-      "srcTitle": "Where agents actually help",
-      "quote": "A clear brief cut the back and forth in half."
+      "query": "Agentes de IA economizam tempo de verdade?",
+      "answer": "A maior parte do ganho vem de tarefas repetidas [1]. Agentes funcionam melhor com um briefing claro [2]. A revisão continua importando [3].",
+      "srcTitle": "Onde os agentes realmente ajudam",
+      "quote": "Um briefing claro reduziu pela metade as idas e vindas."
     },
     "eval-runs": {
-      "title": "Agent replies",
-      "cases": "Answers the question|Keeps it short|Uses a real source|No made up numbers|Stays on topic|Asks when unsure"
+      "title": "Respostas do agente",
+      "cases": "Responde a pergunta|Mantém curto|Usa uma fonte real|Sem números inventados|Fica no assunto|Pergunta quando tem dúvida"
     },
     "ai-memory": {
-      "said": "Plan my edits for the weekend from now on",
-      "reply": "Noted. I will plan edits for the weekend.",
-      "memory": "Edits on weekends"
+      "said": "Planeje minhas edições do fim de semana daqui em diante",
+      "reply": "Anotado. Vou planejar as edições do fim de semana.",
+      "memory": "Edições nos fins de semana"
     },
     "connector-toggle": {
-      "title": "Agent tools",
-      "names": "Mail|Calendar|Files|Team chat|Notes",
+      "title": "Ferramentas do agente",
+      "names": "E-mail|Agenda|Arquivos|Chat da equipe|Notas",
       "glyphs": "mail,calendar,files,chat,notes",
       "flip": "1,1,1,1,1"
     },
     "inbox-zero": {
-      "senders": "Sponsor team,Editor,Community,Weekly digest,Calendar",
-      "subjects": "Draft for next week,Cut two is ready,Top comments this week,Five tools worth a look,Invite: filming day",
-      "empty": "Inbox zero",
-      "sub": "Handled by the agent"
+      "senders": "Equipe de patrocínio,Editor,Comunidade,Resumo semanal,Agenda",
+      "subjects": "Rascunho da próxima semana,O corte dois está pronto,Principais comentários da semana,Cinco ferramentas para conhecer,Convite: dia de gravação",
+      "empty": "Caixa de entrada zerada",
+      "sub": "Resolvido pelo agente"
     },
     "priority-sort": {
-      "title": "This week",
-      "tasks": "Reply to comments,Edit the intro,Film the main video,Test thumbnails,Draft the newsletter",
+      "title": "Esta semana",
+      "tasks": "Responder comentários,Editar a abertura,Gravar o vídeo principal,Testar miniaturas,Rascunhar a newsletter",
       "prios": "3,2,1,2,3",
-      "sort": "Priority"
+      "sort": "Prioridade"
     },
     "focus-mode": {
-      "lines": "New comment on your video,3 new messages,Your order has shipped,Meeting in 5 minutes,You were mentioned,Flash sale ends tonight",
-      "mode": "Filming"
+      "lines": "Novo comentário no seu vídeo,3 mensagens novas,Seu pedido foi enviado,Reunião em 5 minutos,Você foi mencionado,Promoção relâmpago termina hoje",
+      "mode": "Gravação"
     },
     "cloud-sync": {
-      "title": "Video project",
-      "files": "script.md,a-roll.mov,b-roll.mp4,thumbnail.png,captions.srt",
+      "title": "Projeto de vídeo",
+      "files": "roteiro.md,a-roll.mov,b-roll.mp4,miniatura.png,legendas.srt",
       "sizes": "14 KB,8.2 GB,3.4 GB,2.1 MB,22 KB",
-      "synced": "Backed up"
+      "synced": "Backup feito"
     },
     "calendar-reschedule": {
-      "stays": "Filming block",
-      "moves": "Sponsor call",
+      "stays": "Bloco de gravação",
+      "moves": "Reunião com patrocinador",
       "at": 11,
       "to": 15,
-      "clear": "Moved"
+      "clear": "Movido"
     },
     "log-filter": {
       "query": "level:error",
-      "errors": "Payment webhook timed out|Upload failed: 413|Render worker crashed",
+      "errors": "O webhook de pagamento expirou|Falha no envio: 413|O processo de render travou",
       "pick": 1,
       "detail": "at webhooks.js:88"
     },
@@ -920,264 +920,264 @@
       "files": "index.html,app.js,styles.css,hero.jpg,tracker.js,api/feed",
       "before": 4.8,
       "after": 0.9,
-      "label": "Page load"
+      "label": "Carregamento da página"
     },
     "app-store-listing": {
-      "sub": "AI tools, built on camera",
-      "category": "Education"
+      "sub": "Ferramentas de IA, feitas na câmera",
+      "category": "Educação"
     },
     "domain-search": {
-      "price": "$12",
-      "alts": "co:$18,io:taken"
+      "price": "R$ 12",
+      "alts": "co:R$ 18,io:indisponível"
     },
     "rollout-slider": {
-      "feature": "AI reply drafts",
+      "feature": "Rascunhos de resposta por IA",
       "steps": "1,10,100",
-      "total": 48000,
-      "unit": "users"
+      "total": "48000",
+      "unit": "usuários"
     },
     "pricing-toggle": {
-      "plans": "Starter,Pro,Studio",
-      "notes": "1 channel,3 channels,Unlimited channels",
+      "plans": "Básico,Pro,Estúdio",
+      "notes": "1 canal,3 canais,Canais ilimitados",
       "monthly": "19,49,99",
       "yearly": "15,39,79"
     },
     "cart-checkout": {
-      "title": "Your cart",
-      "items": "Studio mic: 129; Light panel: 89; Cable kit: 24",
-      "order": "Order #2048"
+      "title": "Seu carrinho",
+      "items": "Microfone de estúdio: 129; Painel de luz: 89; Kit de cabos: 24",
+      "order": "Pedido nº 2048"
     },
     "cohort-grid": {
-      "title": "Viewers who came back",
-      "caption": "Percent returning, by week",
-      "cohorts": "Wk 1,Wk 2,Wk 3,Wk 4,Wk 5,Wk 6",
+      "title": "Espectadores que voltaram",
+      "caption": "Porcentagem de retorno, por semana",
+      "cohorts": "Sem 1,Sem 2,Sem 3,Sem 4,Sem 5,Sem 6",
       "hero": 3,
-      "heroLabel": "After the new intro"
+      "heroLabel": "Depois da nova abertura"
     },
     "contract-sign": {
-      "title": "Brand Partnership",
-      "party": "Your sponsor",
-      "word": "Signed"
+      "title": "Parceria de Marca",
+      "party": "Seu patrocinador",
+      "word": "Assinado"
     },
     "receipt-scan": {
-      "merchant": "Camera Corner",
-      "items": "SD card: 24.00; Lens cloth: 6.50; Tripod plate: 18.00",
-      "category": "Gear"
+      "merchant": "Casa da Câmera",
+      "items": "Cartão SD: 24.00; Pano de lente: 6.50; Base do tripé: 18.00",
+      "category": "Equipamento"
     },
     "job-post": {
-      "role": "Video editor",
-      "chips": "Remote,Part time",
+      "role": "Editor de vídeo",
+      "chips": "Remoto,Meio período",
       "count": 412,
-      "today": "+57 today"
+      "today": "+57 hoje"
     },
     "org-chart": {
-      "leadRole": "Creator",
-      "teams": "Scripts,Edit,Research",
+      "leadRole": "Criador",
+      "teams": "Roteiros,Edição,Pesquisa",
       "under": 2,
-      "hire": "Research agent",
-      "hireTag": "Just joined"
+      "hire": "Agente de pesquisa",
+      "hireTag": "Acabou de entrar"
     },
     "booking-slots": {
-      "meeting": "Strategy call",
+      "meeting": "Reunião de estratégia",
       "mins": "45 min"
     },
     "affiliate-stats": {
-      "title": "Partner program"
+      "title": "Programa de parceiros"
     },
     "waitlist-spot": {
-      "product": "The next build",
-      "kicker": "Beta access",
+      "product": "A próxima versão",
+      "kicker": "Acesso beta",
       "from": 2400,
       "to": 18
     },
     "magazine-cover": {
-      "masthead": "Makers",
-      "edition": "The builder issue",
-      "sub": "How the work gets made",
-      "lines": "Agents that do the work|Inside the workflow|The new playbook"
+      "masthead": "Criadores",
+      "edition": "A edição dos construtores",
+      "sub": "Como o trabalho acontece",
+      "lines": "Agentes que fazem o trabalho|Por dentro do fluxo|O novo manual"
     },
     "big-cheque": {
-      "amount": "10,000",
-      "memo": "First brand deal",
-      "issuer": "Your sponsor"
+      "amount": "10.000",
+      "memo": "Primeiro contrato de marca",
+      "issuer": "Seu patrocinador"
     },
     "report-cover": {
-      "kicker": "Channel report",
-      "title": "What to test next",
+      "kicker": "Relatório do canal",
+      "title": "O que testar a seguir",
       "values": "12,18,26,41,64",
-      "finding": "Key question",
+      "finding": "Pergunta-chave",
       "value": 3,
       "prefix": "",
       "suffix": "x",
-      "line": "is the watch time to aim for"
+      "line": "é o tempo de exibição a buscar"
     },
     "book-stack": {
-      "titles": "Quiet Systems|Notes on Making|The Patient Builder|Small Daily Wins",
-      "title": "Make the Thing",
-      "blurb": "A field guide"
+      "titles": "Sistemas Silenciosos|Notas sobre Criar|O Construtor Paciente|Pequenas Vitórias Diárias",
+      "title": "Faça a Coisa",
+      "blurb": "Um guia de campo"
     },
     "facts-label": {
-      "title": "Video Facts",
-      "serving": "1 video",
-      "bigLabel": "Minutes",
+      "title": "Informações do Vídeo",
+      "serving": "1 vídeo",
+      "bigLabel": "Minutos",
       "bigValue": 12,
-      "items": "Hooks:3:100%|Steps:5:100%|Prompts:4:80%|Demos:6:90%",
-      "last": "Fluff:0g:0%"
+      "items": "Ganchos:3:100%|Passos:5:100%|Prompts:4:80%|Demos:6:90%",
+      "last": "Enrolação:0g:0%"
     },
     "newspaper-front": {
-      "story2": "The prompts, the tools, the setup",
-      "story3": "What to try first"
+      "story2": "Os prompts, as ferramentas, a configuração",
+      "story3": "O que testar primeiro"
     },
     "blueprint": {
-      "project": "My content system",
-      "title": "Front elevation"
+      "project": "Meu sistema de conteúdo",
+      "title": "Fachada frontal"
     },
     "report-card": {
-      "rows": "Hook:A,Pacing:A-,Thumbnail:B+,Payoff:A",
+      "rows": "Gancho:A,Ritmo:A-,Miniatura:B+,Desfecho:A",
       "final": "A",
-      "heading": "Video report card",
-      "term": "This week"
+      "heading": "Boletim do vídeo",
+      "term": "Esta semana"
     },
     "typewriter": {
-      "line": "It starts with one sentence.",
-      "pre": "Script, draft one"
+      "line": "Tudo começa com uma frase.",
+      "pre": "Roteiro, primeiro rascunho"
     },
     "distribution-curve": {
       "percent": 3,
       "lead": "Top",
-      "sub": "where the outliers live",
-      "mid": "Average"
+      "sub": "onde ficam os destaques",
+      "mid": "Média"
     },
     "waterfall-chart": {},
     "dot-map": {},
     "slope-chart": {
-      "labels": "Editing by hand,Templates,A freelancer,{brand}",
+      "labels": "Edição manual,Modelos prontos,Um freelancer,{brand}",
       "before": "32,48,40,22",
       "after": "36,55,31,88",
-      "thenLabel": "Day one",
-      "nowLabel": "Day 90"
+      "thenLabel": "Dia um",
+      "nowLabel": "Dia 90"
     },
     "radar-chart": {
-      "axes": "Speed,Quality,Cost,Reach,Ease",
-      "nameA": "Editing by hand",
+      "axes": "Velocidade,Qualidade,Custo,Alcance,Facilidade",
+      "nameA": "Edição manual",
       "nameB": "{brand}"
     },
     "window-tile": {
-      "apps": "Notes,Inbox,Analytics,Chat,Scripts",
+      "apps": "Notas,Entrada,Análises,Chat,Roteiros",
       "pick": 5,
       "screen": 2
     },
     "lock-screen": {
       "time": "7:30",
-      "date": "Monday 9 June",
-      "line1": "Your video is live",
-      "line2": "New comment on your post",
-      "line3": "You have 3 new messages",
+      "date": "Segunda-feira, 9 de junho",
+      "line1": "Seu vídeo está no ar",
+      "line2": "Novo comentário no seu post",
+      "line3": "Você tem 3 mensagens novas",
       "photo": 1
     },
     "control-toggles": {
-      "modes": "Personal,Sleep,Editing,Film day",
-      "sub": "On"
+      "modes": "Pessoal,Sono,Edição,Dia de gravação",
+      "sub": "Ativo"
     },
     "storage-bar": {
-      "cats": "Raw footage,Exports,Apps,Downloads,System",
+      "cats": "Material bruto,Exportações,Apps,Downloads,Sistema",
       "before": "118,44,30,36,19",
       "after": "20,30,30,4,19"
     },
     "software-update": {
       "version": "2.0",
-      "notes": "Better hooks|Faster edits|Fewer retakes"
+      "notes": "Ganchos melhores|Edições mais rápidas|Menos refilmagens"
     },
     "treemap": {
-      "title": "Where a video's hours go",
-      "labels": "Editing,Filming,Scripting,Ideas,Posting",
+      "title": "Para onde vão as horas de um vídeo",
+      "labels": "Edição,Gravação,Roteiro,Ideias,Publicação",
       "values": "46,21,15,11,7"
     },
     "venn-overlap": {
-      "labels": "What you know,What you enjoy,What people need",
-      "sweet": "Your channel"
+      "labels": "O que você sabe,O que você gosta,O que as pessoas precisam",
+      "sweet": "O seu canal"
     },
     "bubble-pack": {
-      "labels": "Search,Suggested,Shorts,External,Playlists,Other"
+      "labels": "Busca,Sugeridos,Shorts,Externo,Playlists,Outros"
     },
     "sparkline-list": {
-      "title": "Live views",
-      "labels": "Shorts,Podcast,Newsletter,Long videos"
+      "title": "Visualizações ao vivo",
+      "labels": "Shorts,Podcast,Newsletter,Vídeos longos"
     },
     "time-zoom": {
-      "label": "The moment it started"
+      "label": "O momento em que começou"
     },
     "add-to-cart": {
-      "product": "Studio headphones",
-      "variant": "Matte white",
+      "product": "Fones de estúdio",
+      "variant": "Branco fosco",
       "price": "129",
       "count": "1"
     },
     "stock-left": {
-      "product": "Brass vase",
+      "product": "Vaso de latão",
       "units": "12",
-      "hot": "Selling fast"
+      "hot": "Vendendo rápido"
     },
     "price-drop-alert": {
-      "product": "Studio headphones",
+      "product": "Fones de estúdio",
       "was": "129",
       "now": "89",
-      "alertTitle": "Price drop"
+      "alertTitle": "Preço caiu"
     },
     "cancel-flow": {
-      "plan": "Pro plan",
-      "price": "$19 / month",
-      "offer": "50% off",
-      "offerSub": "for your next 3 months"
+      "plan": "Plano Pro",
+      "price": "R$ 19 / mês",
+      "offer": "50% de desconto",
+      "offerSub": "nos próximos 3 meses"
     },
     "rating-prompt": {
-      "title": "Enjoying the letter?",
-      "sub": "Tap a star to rate it",
-      "thanks": "Thanks for rating"
+      "title": "Gostando da newsletter?",
+      "sub": "Toque em uma estrela para avaliar",
+      "thanks": "Obrigado pela avaliação"
     },
     "teleprompter": {
-      "title": "Agents video",
-      "lines": "You can't copy a video|But you can copy the system|Here is the whole setup|One prompt edits the whole thing|Then it builds the graphics|Links are below"
+      "title": "Vídeo dos agentes",
+      "lines": "Você não pode copiar um vídeo|Mas pode copiar o sistema|Aqui está a configuração toda|Um prompt edita tudo|Depois ele cria os gráficos|Os links estão abaixo"
     },
     "media-bin": {
-      "title": "Agents video",
-      "clips": "Hook,Talking head,Screen rec,Desk,Walk,Outro",
+      "title": "Vídeo dos agentes",
+      "clips": "Gancho,Plano médio,Gravação de tela,Mesa,Caminhada,Encerramento",
       "pick": 3
     },
     "color-grade": {
-      "title": "Agents video",
-      "look": "Warm"
+      "title": "Vídeo dos agentes",
+      "look": "Quente"
     },
     "audio-mixer": {
-      "title": "Agents video",
-      "channels": "Voice,Music,SFX,Room,Master"
+      "title": "Vídeo dos agentes",
+      "channels": "Voz,Música,Efeitos,Ambiente,Master"
     },
     "render-queue": {
-      "title": "Agents video",
-      "items": "Full video,Short one,Short two,Short three",
-      "specs": "4K MP4,1080x1920,1080x1920,1080x1920",
-      "done": "Ready to post"
+      "title": "Vídeo dos agentes",
+      "items": "Vídeo completo,Curto um,Curto dois,Curto três",
+      "specs": "MP4 4K,1080x1920,1080x1920,1080x1920",
+      "done": "Pronto para postar"
     },
     "screen-record": {
-      "label": "Walkthrough saved",
+      "label": "Gravação salva",
       "seconds": 18
     },
     "keycap-shortcut": {
       "keys": "Ctrl,Shift,R",
-      "action": "Rewrite in my voice"
+      "action": "Reescrever com a minha voz"
     },
     "clipboard-history": {
-      "items": "Hook: you cannot copy a video|exemplo.com.br|Film the demo first",
+      "items": "Gancho: você não pode copiar um vídeo|exemplo.com.br|Gravar a demonstração primeiro",
       "pick": 1,
-      "doc": "Video script"
+      "doc": "Roteiro do vídeo"
     },
     "context-menu": {
-      "file": "raw-take.mp4",
-      "action": "Cut the dead air",
-      "result": "Edit ready"
+      "file": "take-bruto.mp4",
+      "action": "Cortar o silêncio",
+      "result": "Edição pronta"
     },
     "app-switcher": {
-      "apps": "Notes,Mail,Calendar,Music",
+      "apps": "Notas,E-mail,Agenda,Música",
       "shot": 2
     }
   }
