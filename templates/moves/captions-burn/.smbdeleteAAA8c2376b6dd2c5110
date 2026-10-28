@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR" data-composition-variables='[
+  {"id":"text","type":"string","label":"What is said, captioned word by word","default":"Captions make people watch twice as long"},
+  {"id":"big","type":"string","label":"The one word that lands big (must be in the text)","default":"twice"},
+  {"id":"time","type":"string","label":"Timecode when it ends (m:ss)","default":"0:06"}
+]'>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width={{W}}, height={{H}}" />
+<script src="assets/gsap.min.js"></script>
+<link rel="stylesheet" href="assets/brand-fonts.css" />
+<style>
+  html, body { margin: 0; width: {{W}}px; height: {{H}}px; overflow: hidden; background: var(--ground, #0E0D12); }
+  #root { position: relative; width: {{W}}px; height: {{H}}px; overflow: hidden; font-family: var(--font-body);
+    --al: color-mix(in srgb, var(--accent) 55%, #fff); }
+  #ground { position: absolute; inset: 0; background: var(--ground); overflow: hidden; }
+  #ground i { position: absolute; border-radius: 50%; filter: blur(calc(var(--u) * 150)); }
+  #ground .l1 { width: 72%; height: 44%; left: 40%; top: 2%; background: color-mix(in srgb, var(--accent) 38%, transparent); }
+  #ground .l2 { width: 74%; height: 48%; left: -30%; top: 58%; background: color-mix(in srgb, var(--accent2) 24%, transparent); }
+  #vig { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(120% 90% at 50% 45%, transparent 55%, rgba(0,0,0,.45)); }
+  #grain { position: absolute; inset: 0; opacity: .45; mix-blend-mode: overlay; pointer-events: none;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='1' seed='8'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .5 0 0 0 0 .5 0 0 0 0.5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E"); }
+  .is-alpha #ground, .is-alpha #grain, .is-alpha #vig, .is-alpha #base { display: none; }
+
+  #stage { position: absolute; inset: 0; perspective: 2200px; perspective-origin: 50% 42%; }
+  #rig { position: absolute; inset: 0; transform-style: preserve-3d; }
+  #base { position: absolute; height: calc(var(--u) * 3); border-radius: 2px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.5) 12%, rgba(255,255,255,.5) 88%, transparent); box-shadow: 0 0 calc(var(--u) * 18) rgba(255,255,255,.3); }
+  #wrap { position: absolute; }
+  #card { position: absolute; inset: 0; box-sizing: border-box; overflow: hidden; border-radius: calc(var(--s) * 48);
+    background: linear-gradient(170deg, rgba(255,255,255,.15), rgba(255,255,255,.04) 60%, rgba(255,255,255,.08));
+    -webkit-backdrop-filter: blur(24px) saturate(160%); backdrop-filter: blur(24px) saturate(160%);
+    box-shadow: inset 0 calc(var(--s) * 2) 0 rgba(255,255,255,.5), inset 0 0 0 calc(var(--s) * 1.5) rgba(255,255,255,.14),
+      0 calc(var(--s) * 40) calc(var(--s) * 90) calc(var(--s) * -24) rgba(0,0,0,.7); }
+  .is-alpha #card { background: linear-gradient(170deg, color-mix(in srgb, var(--surface) 80%, white 12%), color-mix(in srgb, var(--surface) 94%, transparent)); }
+  .is-key #card { background: linear-gradient(170deg, color-mix(in srgb, var(--surface) 86%, white 14%), var(--surface)); -webkit-backdrop-filter: none; backdrop-filter: none;
+    box-shadow: inset 0 calc(var(--s) * 2) 0 rgba(255,255,255,.5), inset 0 0 0 calc(var(--s) * 1.5) rgba(255,255,255,.14); }
+  #card::after { content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 30; mix-blend-mode: screen;
+    background: linear-gradient(115deg, transparent calc(var(--sheen, -60%) - 14%), rgba(255,255,255,.24) var(--sheen, -60%), transparent calc(var(--sheen, -60%) + 14%)); }
+
+  .ab { position: absolute; box-sizing: border-box; }
+  #trk { border-radius: calc(var(--s) * 30); background: rgba(0,0,0,.28); box-shadow: inset 0 0 0 calc(var(--s) * 1.5) rgba(255,255,255,.1); }
+  .is-key #trk { background: color-mix(in srgb, var(--surface) 70%, black); }
+  #pl { border-radius: 50%; background: #fff; display: grid; place-items: center; box-shadow: 0 calc(var(--s) * 8) calc(var(--s) * 20) calc(var(--s) * -6) rgba(0,0,0,.6); }
+  #pl svg { width: 46%; height: 46%; margin-left: 6%; }
+  #tc { font-family: var(--font-display); font-size: calc(var(--s) * 36); color: var(--ink); white-space: nowrap; line-height: 1; font-variant-numeric: tabular-nums; }
+  #wv { overflow: visible; }
+  #wv .b { position: absolute; border-radius: calc(var(--s) * 4); }
+  #dim .b { background: rgba(255,255,255,.2); }
+  #lit { position: absolute; inset: 0; }
+  #lit .b { background: linear-gradient(180deg, #fff, color-mix(in srgb, var(--ink) 70%, var(--accent))); }
+  #ph { position: absolute; width: calc(var(--s) * 4); border-radius: calc(var(--s) * 2); background: var(--accent); box-shadow: 0 0 calc(var(--s) * 16) var(--accent); }
+  .is-key #ph { box-shadow: none; }
+  #cap { overflow: visible; }
+  .ch { position: absolute; z-index: 2; left: 0; right: 0; text-align: center; white-space: nowrap; font-family: var(--font-display); color: #fff; line-height: 1.15; }
+  .ch .w { position: relative; z-index: 2; padding: 0 0.12em; text-shadow: 0 calc(var(--s) * 5) calc(var(--s) * 16) rgba(0,0,0,.55); }
+  .ch.bg .w { text-shadow: 0 calc(var(--s) * 8) calc(var(--s) * 30) rgba(0,0,0,.6); }
+  .ch .sm { color: color-mix(in srgb, var(--ink) 80%, transparent); }
+  #pill { position: absolute; z-index: 1; border-radius: calc(var(--s) * 18); opacity: 0;
+    background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 85%, #fff 15%), var(--accent));
+    box-shadow: inset 0 calc(var(--s) * 2) 0 rgba(255,255,255,.35), 0 calc(var(--s) * 10) calc(var(--s) * 34) calc(var(--s) * -6) color-mix(in srgb, var(--accent) 80%, transparent); }
+  .is-key #pill { box-shadow: inset 0 calc(var(--s) * 2) 0 rgba(255,255,255,.35); }
+  #rg { border-radius: calc(var(--s) * 30); border: calc(var(--s) * 5) solid var(--al); opacity: 0; z-index: 0; }
+  .is-key #rg { display: none; }
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="{{DUR}}" data-width="{{W}}" data-height="{{H}}" data-fps="30">
+  <div id="ground"><i class="l1"></i><i class="l2"></i></div>
+  <div id="stage"><div id="rig">
+    <div id="base"></div>
+    <div id="wrap"><div id="card">
+      <div id="trk" class="ab"></div>
+      <div id="pl" class="ab"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z" fill="#111" stroke="#111" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+      <div id="wv" class="ab"><div id="dim"></div><div id="lit"></div><i id="ph"><
