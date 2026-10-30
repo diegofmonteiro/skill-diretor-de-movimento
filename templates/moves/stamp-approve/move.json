@@ -1,5 +1,5 @@
-{ "id": "stamp-approve", "name": "Stamp approve", "oneLiner": "a real hardboard clipboard with a typed form slides onto a walnut desk on twos, a wooden rubber stamp comes down out of the lens, slams, and lifts away to leave a green APPROVED imprint pressed into the paper",
+{ "id": "stamp-approve", "name": "Carimbo de aprovado", "oneLiner": "uma prancheta de madeira prensada de verdade com um formulário datilografado desliza sobre uma mesa de nogueira de dois em dois quadros, um carimbo de borracha com cabo de madeira desce da lente, bate e se ergue deixando uma marca verde de APROVADO impressa no papel",
   "category": "paper", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["paper"], "from": "new",
   "tags": ["approved", "yes", "signed off", "green light", "accepted", "verified", "passed", "stamp", "form", "clipboard", "paper", "on twos"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 3.6, "alpha": true,
-  "say": "when the speaker says something got the yes ('and it got approved', 'that is a green light', 'verified'): the stamp slams on the word and the green imprint holds while they keep talking" }
+  "say": "quando quem fala diz que algo recebeu o sim (“e foi aprovado”, “é sinal verde”, “verificado”): o carimbo bate na palavra e a marca verde fica enquanto a pessoa continua falando" }

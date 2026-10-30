@@ -1,0 +1,31 @@
+{
+ "id": "flowchart-vertical",
+ "name": "Fluxograma vertical de decisão",
+ "oneLiner": "uma pergunta no topo se divide em duas respostas, cada uma leva a um caminho, e um cursor percorre o fluxo clicando, corrigindo um erro de digitação e fechando num ponto de partida",
+ "category": "explain",
+ "kind": "effect",
+ "uses": [
+  "broll"
+ ],
+ "looks": [
+  "studio"
+ ],
+ "from": "catalogo",
+ "tags": [
+  "diagram",
+  "flowchart",
+  "interactive",
+  "portrait"
+ ],
+ "formats": [
+  "9:16"
+ ],
+ "duration": 12,
+ "alpha": false,
+ "tema": "proprio",
+ "say": "quando quem fala explica uma decisão em etapas (“se sim, faça isto; se não sabe, comece por aquilo”): formato vertical 9:16, com cursor e correção de digitação",
+ "origem": {
+  "registro": "HyperFrames",
+  "bloco": "flowchart-vertical"
+ }
+}

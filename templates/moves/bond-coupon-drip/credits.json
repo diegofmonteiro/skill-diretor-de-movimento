@@ -1,0 +1,24 @@
+{
+ "sources": [
+  {
+   "file": "assets/paper-white.jpg",
+   "from": "ambientCG Paper001 (scanned white paper), cropped and resized; the bond certificate stock. Same file as certificate/assets/paper-white.jpg (identical SHA-256, checked)",
+   "license": "CC0",
+   "page": "https://ambientcg.com/view?id=Paper001"
+  },
+  {
+   "file": "assets/fonts/PlayfairDisplay-wght.ttf",
+   "from": "Playfair Display by Claus Eggers Sorensen, Google Fonts. Same file as certificate/assets/fonts (identical SHA-256, checked)",
+   "license": "SIL Open Font License 1.1",
+   "page": "https://fonts.google.com/specimen/Playfair+Display"
+  },
+  {
+   "file": "assets/coin.png",
+   "from": "Origem não documentada no projeto base (provavelmente renderizado ou modelado para o efeito). Não foi possível confirmar o autor.",
+   "license": "Uso liberado pelo dono da skill",
+   "licenseCode": "LIBERADO",
+   "liberadoPor": "Diego Monteiro, fundador da Conex Prime, em 28/10/2026 (ordem: liberar todas as licenças)",
+   "observacao": "Liberação é decisão do dono para o uso nos vídeos da skill. Não cria nem altera licença de terceiros; se o autor original aparecer, registrar aqui."
+  }
+ ]
+}

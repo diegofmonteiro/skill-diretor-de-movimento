@@ -18,6 +18,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { HOME, SKILL, die, duration, fmtT, readJSON, run, sheet, slugify, writeJSON } from "./lib.mjs";
+import { baixar, baixarTexto, exigirFonte } from "./net.mjs";
 
 const argv = process.argv.slice(2);
 const opt = (k, d) => (argv.includes(k) ? argv[argv.indexOf(k) + 1] : d);
@@ -34,8 +35,7 @@ fs.mkdirSync(OUT, { recursive: true });
 
 // A Pinterest pin carries its video as v1.pinimg.com/videos/...mp4 (or only an image)
 const pinterest = async (url, dir) => {
-  const res = await fetch(url, { headers: { "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15" } });
-  const page = (await res.text()).replace(/\\u002F/g, "/").replace(/\\\//g, "/");
+  const page = (await baixarTexto(url, { fonte: "referencias", cache: false, headers: { "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15" } })).replace(/\\u002F/g, "/").replace(/\\\//g, "/");
   const vids = [...new Set(page.match(/https:\/\/v1\.pinimg\.com\/videos\/[^"'\s]+?\.mp4/g) || [])];
   const rank = (u) => +(u.match(/(\d{3,4})[pP]/) || [0, 0])[1];
   const pick = vids.sort((a, b) => rank(b) - rank(a))[0];
@@ -43,11 +43,12 @@ const pinterest = async (url, dir) => {
   const target = pick || still;
   if (!target) return null;
   const file = path.join(dir, pick ? "source.mp4" : "source" + path.extname(still));
-  const r = await fetch(target);
-  if (!r.ok) return null;
-  fs.writeFileSync(file, Buffer.from(await r.arrayBuffer()));
+  fs.writeFileSync(file, await baixar(target, { fonte: "referencias", cache: false }));
   return file;
 };
+
+// links need the network (and yt-dlp); local files never do
+if (sources.some((x) => /^https?:\/\//.test(x))) { try { exigirFonte("referencias", "reference links"); } catch (e) { die(`${e.message}\nOr pass downloaded files instead of links.`); } }
 
 const refs = [];
 for (const [i, src] of sources.entries()) {

@@ -1,5 +1,5 @@
-{ "id": "dossier-card", "name": "Dossier file", "oneLiner": "a kraft file folder slides onto a leather desk, a person's photo print drops on and a steel paper clip goes over its edge, the name, role and three facts type on like a typewriter, then a brand-colour rubber stamp thumps across it",
+{ "id": "dossier-card", "name": "Pasta de dossiê", "oneLiner": "uma pasta de arquivo kraft desliza sobre uma mesa de couro, a foto impressa de uma pessoa cai e um clipe de aço passa pela sua borda, o nome, a função e três fatos são batidos como numa máquina de escrever, e então um carimbo de borracha na cor da marca bate por cima",
   "category": "paper", "kind": "effect", "uses": ["broll"], "looks": ["paper"], "from": "new",
   "tags": ["profile", "person", "introduce", "bio", "about", "file", "dossier", "case", "facts", "typewriter", "stamp", "paper clip", "paper", "on twos"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": false,
-  "say": "when the speaker introduces someone or something with a few facts ('meet the person who...', 'here is the file on'): the facts type on as they list them and the stamp lands on the verdict" }
+  "say": "quando quem fala apresenta alguém ou algo com alguns fatos (“conheça a pessoa que...”, “aqui está o dossiê de”): os fatos são batidos enquanto a pessoa os lista e o carimbo cai no veredito" }

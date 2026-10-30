@@ -1,5 +1,5 @@
-{ "id": "captions-burn", "name": "Captions burn", "oneLiner": "a glass caption track: the waveform plays under a sweeping playhead while word-by-word captions pop in sync with a pill sliding under each spoken word, then one word slams in huge with a ring and the wave spikes",
+{ "id": "captions-burn", "name": "Legendas queimadas", "oneLiner": "uma faixa de legendas em vidro: a forma de onda toca sob uma linha de reprodução que varre, enquanto legendas palavra por palavra surgem em sincronia com uma cápsula que desliza sob cada palavra falada, e então uma palavra bate enorme com um anel e a onda dispara",
   "category": "creator", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["captions", "subtitles", "words", "editing", "short form", "reels", "tiktok", "waveform", "audio", "watch time", "creator tools", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.0, "alpha": true,
-  "say": "when the speaker talks about captions, subtitles or one word that matters ('add captions and people watch twice as long', 'every word on screen'): the captions run in sync with them, the big word lands as they stress it" }
+  "say": "quando quem fala trata de legendas ou de uma palavra que importa (“ponha legendas e as pessoas assistem o dobro”, “cada palavra na tela”): as legendas correm em sincronia com a fala, a palavra grande cai quando a pessoa a enfatiza" }

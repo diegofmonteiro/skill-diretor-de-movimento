@@ -1,5 +1,5 @@
-{ "id": "meeting-notes", "name": "Glass AI meeting summary", "oneLiner": "an AI meeting summary card on glass: a light runs round the rim while decisions and action items write themselves in word by word, each task gets its owner chip, then one task box fills green, the tick draws and the line strikes through",
+{ "id": "meeting-notes", "name": "Resumo de reunião por IA em vidro", "oneLiner": "um cartão de resumo de reunião por IA em vidro: uma luz corre pela borda enquanto decisões e tarefas se escrevem palavra por palavra, cada tarefa ganha a sua cápsula de responsável, e então uma caixa de tarefa se enche de verde, a marca é desenhada e a linha é riscada",
   "category": "productivity", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["meeting", "notes", "summary", "ai", "notetaker", "action items", "tasks", "decisions", "recap", "team", "productivity", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.6, "alpha": true,
-  "say": "when the speaker says the AI took the notes or wrote the recap ('it summarised the whole call', 'and it gave everyone their tasks'): decisions and tasks write in as they talk, the green tick lands on 'done' or 'already sent'" }
+  "say": "quando quem fala diz que a IA fez as anotações ou escreveu o resumo (“ela resumiu a chamada inteira”, “e deu a cada um as suas tarefas”): decisões e tarefas se escrevem enquanto a pessoa fala, a marca verde cai em “pronto” ou “já enviou”" }

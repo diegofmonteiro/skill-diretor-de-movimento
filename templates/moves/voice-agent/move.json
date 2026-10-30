@@ -1,5 +1,5 @@
-{ "id": "voice-agent", "name": "Voice agent call", "oneLiner": "a glass call card for an AI voice agent: a live waveform talks in the caller's grey then in the brand colour as the agent answers with halos rippling off its orb, each side's words write in under it, and the action the agent took spins then completes with a green check and ring",
+{ "id": "voice-agent", "name": "Chamada de agente de voz", "oneLiner": "um cartão de chamada em vidro para um agente de voz de IA: uma forma de onda ao vivo fala no cinza de quem liga e depois na cor da marca quando o agente responde, com halos ondulando da sua esfera, as palavras de cada lado são escritas embaixo, e a ação que o agente executou gira e termina com uma marca verde e um anel",
   "category": "ai", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["ai", "voice", "voice agent", "phone", "call", "receptionist", "support", "booking", "speech", "conversation", "transcript", "automation", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.8, "alpha": true,
-  "say": "when the speaker says an AI answers the phone or talks to customers for them ('it picks up every call', 'the agent booked it while I slept'): the wave runs while the call plays out, the green check lands on what it got done" }
+  "say": "quando quem fala diz que uma IA atende o telefone ou conversa com os clientes por ela (“ele atende toda ligação”, “o agente agendou enquanto eu dormia”): a onda corre enquanto a chamada se desenrola, a marca verde cai no que foi resolvido" }

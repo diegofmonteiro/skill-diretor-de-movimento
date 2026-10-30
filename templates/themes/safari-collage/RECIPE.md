@@ -1,76 +1,48 @@
-# Safari collage: a maximal torn-paper world with a dive
+# Colagem de safári: um mundo máximo de papel rasgado com um mergulho
 
-A 12 second widescreen torn-paper collage, loud and dense. Torn strips of
-halftone red, old newspaper, orange and blue paper (each with a white
-paper rim) slide in across a real cloud sky, two acacia cut-outs, rocks and
-grass bands assemble, and a real 3D boombox drops into the middle, printed
-silver, with the brand mark glowing in its cassette window and a label on
-its tape. Meerkats pop up. The camera dives into the right speaker until
-its black fills the frame, and out of that black opens a 12-wedge
-kaleidoscope of the savanna inside a torn hexagonal frame, while a real
-1887 Muybridge eagle flaps across it. Then four torn hills pan at four
-speeds as meerkats rise one by one, and the title slams onto a torn
-newspaper peak while the eagle passes. The idea that makes it work: every
-beat is a physical verb on real photographs (slide, drop, pop, dive, open,
-flap, pan, slam), the brand lives inside a real object (the mark in the
-deck), and the dive is a match cut through the object's own geometry.
+Uma colagem de papel rasgado em tela larga de 12 segundos, barulhenta e densa. Tiras rasgadas de vermelho em meio-tom, jornal antigo, papel laranja e azul (cada uma com uma borda de papel branco) deslizam sobre um céu real de nuvens, duas acácias recortadas, rochas e faixas de capim se montam, e um rádio 3D real cai no meio, impresso em prata, com a marca da empresa brilhando na janela do cassete e um rótulo na fita. Suricatos saltam. A câmera mergulha no alto-falante da direita até o preto dele encher o quadro, e desse preto se abre um caleidoscópio de 12 cunhas da savana dentro de uma moldura hexagonal rasgada, enquanto uma águia real de Muybridge, de 1887, bate asas por ele. Depois quatro colinas rasgadas se deslocam a quatro velocidades enquanto suricatos sobem um a um, e o título bate sobre um pico de jornal rasgado enquanto a águia passa. A ideia que faz funcionar: cada batida é um verbo físico sobre fotografias reais (deslizar, cair, saltar, mergulhar, abrir, bater asas, deslocar, bater), a marca vive dentro de um objeto real (a marca no deck), e o mergulho é uma emenda por correspondência através da própria geometria do objeto.
 
-## Format, length, pace
+## Formato, duração, ritmo
 
-- 1920x1080 (16:9), 30 fps, 12.0 s. Four scenes: A 0.0-4.4 (assembly and
-  dive), B 4.2-6.8 (kaleidoscope; overlaps A by 0.2 s so the dive's black
-  hands over), C 6.8-9.6 (hills), D 9.6-12.0 (title).
-- Mixed timing: placement moves are smooth (`power3.out`, `back.out`), the
-  textures live on twos: every cut-out boils every 1/6 s and the eagle
-  flaps at 12 fps; the title lands `steps(3)`.
-- Measured beats: 0.0-0.36 ten pieces slide in 0.04 s apart, 0.25 boombox
-  drops, 0.95 the mark pops in the deck, 1.0 to 3.4 the speaker pumps every
-  0.52 s, 1.3 and 2.1 meerkats, 3.4 dive, 4.2 kaleidoscope, 4.4 eagle,
-  6.8 hills, 7.3 / 7.55 / 7.8 / 8.1 meerkats, 9.6 peak, 10.0 and 10.3
-  title words, 10.9 URL, hold to 12.0.
+- 1920x1080 (16:9), 30 fps, 12,0 s. Quatro cenas: A 0,0-4,4 (montagem e mergulho), B 4,2-6,8 (caleidoscópio; sobrepõe A em 0,2 s para o preto do mergulho passar a vez), C 6,8-9,6 (colinas), D 9,6-12,0 (título).
+- Ritmo misto: os movimentos de posicionamento são suaves (`power3.out`, `back.out`), as texturas vivem em dois quadros: cada recorte ferve a cada 1/6 s e a águia bate asas a 12 fps; o título cai em `steps(3)`.
+- Batidas medidas: 0,0-0,36 dez peças deslizam com 0,04 s de intervalo, 0,25 o rádio cai, 0,95 a marca salta no deck, 1,0 a 3,4 o alto-falante pulsa a cada 0,52 s, 1,3 e 2,1 suricatos, 3,4 mergulho, 4,2 caleidoscópio, 4,4 águia, 6,8 colinas, 7,3 / 7,55 / 7,8 / 8,1 suricatos, 9,6 pico, 10,0 e 10,3 palavras do título, 10,9 endereço, parado até 12,0.
 
-## The look in numbers
+## O visual em números
 
-| element | value |
+| elemento | valor |
 |---|---|
-| sky | CC0 cumulus photo, `cover`, `center 30%`, `saturate(1.25) brightness(1.04)`; a white halftone dot patch top-left (`radial-gradient` dots 14px, masked to fade at 135 deg) |
-| torn piece (`.tp`) | two layers: `.rim` (paper white `#FBFAF6` multiplied with a paper scan at 700px) with a jagged clip-path (jag amplitude 16px every 18px), and `.ink` inset 10px with its own jagged clip (9px every 14px), so a white torn rim shows unevenly; `drop-shadow(0 6px 6px rgba(20,14,8,.28))` |
-| ink papers | orange `#E8A13A`, red `#E2462F`, blue `#3E86C9`, each multiplied with the paper scan; halftone red (`#F7E9E4` dots 30% in 22px cells on `#E2462F`); newspaper (a public-domain front page at 900px, `grayscale(1) contrast(1.15)`); savanna photo (`saturate(1.35) hue-rotate(-12deg) brightness(1.08)`); grass photo (`saturate(1.25) brightness(1.05)`) |
-| strips in A | b1 halftone red 1600x260 at -14 deg, b2 news 1300x200 at -7 deg, b3 orange 1100x170 at -4 deg, b4 blue 1000x160 at -9 deg, g1 savanna 2040x320 at y 820, g2 grass 2040x200 at y 960 |
-| cut-outs | full colour, `drop-shadow(0 8px 8px rgba(20,14,8,.35))`; rocks greyscale `contrast(1.15)`; trees 520-560px wide, meerkats 130-360px tall-ish by depth |
-| boombox | 1100px wide at (410,230), the Poly Haven model rendered front-on, printed silver: `grayscale(1) brightness(3.1) contrast(1.02)` plus `drop-shadow(0 18px 18px rgba(0,0,0,.35))` |
-| brand in the object | mark in the left cassette window (box at 30.6%/67.6%, 14.2% x 17.4% of the boombox), 62% of the window, brand accent with `drop-shadow(0 0 14px accent at 90%)`; tape label (56.2%/76.4%, 11.8% x 5.4%) orange `#E8A13A`, brand sans 600 17px, tracking .02em, `#1d1a16` |
-| kaleidoscope | 2600px square of 12 wedges (30 deg), each a tile of savanna photo (`saturate(1.5) hue-rotate(-15deg)`), a blue 700x360 block, an orange 500x260 block at -12 deg and an acacia cut-out; alternate wedges mirrored; on black `#0b0b0b` |
-| hex frame | SVG ring, even-odd path between two jittered radii (44 and 31 of 100), hex bias `abs(cos 3a) * .08`, fill orange `#E8A13A`, stroke paper white 1.6 |
-| title | brand serif (or display) weight 800, 270px, line-height .86, tracking -0.01em, red `#E2462F` (or the brand accent if warm), `-webkit-text-stroke: 6px #FBFAF6; paint-order: stroke fill`, hard shadow `10px 10px 0 #2B57A8, 12px 12px 0 #2B57A8`; two lines centred at top 260 |
-| URL | brand sans 600 44px, `#FBFAF6` on a `#1d1a16` pill (14px 30px), centred at top 880 |
-| grain | `feTurbulence` baseFrequency 1.2, alpha .14, multiply, opacity .5 |
+| céu | foto CC0 de cúmulos, `cover`, `center 30%`, `saturate(1.25) brightness(1.04)`; uma mancha branca de pontos de meio-tom no alto à esquerda (pontos de `radial-gradient` de 14 px, mascarados para sumir a 135 graus) |
+| peça rasgada (`.tp`) | duas camadas: `.rim` (branco de papel `#FBFAF6` multiplicado com um escaneamento de papel a 700 px) com um clip-path irregular (amplitude do serrilhado 16 px a cada 18 px), e `.ink` recuado 10 px com o seu próprio recorte irregular (9 px a cada 14 px), de modo que uma borda branca rasgada aparece de forma desigual; `drop-shadow(0 6px 6px rgba(20,14,8,.28))` |
+| papéis de tinta | laranja `#E8A13A`, vermelho `#E2462F`, azul `#3E86C9`, cada um multiplicado com o escaneamento de papel; vermelho em meio-tom (pontos `#F7E9E4` a 30% em células de 22 px sobre `#E2462F`); jornal (uma primeira página de domínio público a 900 px, `grayscale(1) contrast(1.15)`); foto de savana (`saturate(1.35) hue-rotate(-12deg) brightness(1.08)`); foto de capim (`saturate(1.25) brightness(1.05)`) |
+| tiras em A | b1 vermelho em meio-tom 1600x260 a -14 graus, b2 jornal 1300x200 a -7 graus, b3 laranja 1100x170 a -4 graus, b4 azul 1000x160 a -9 graus, g1 savana 2040x320 em y 820, g2 capim 2040x200 em y 960 |
+| recortes | em cores plenas, `drop-shadow(0 8px 8px rgba(20,14,8,.35))`; rochas em tons de cinza `contrast(1.15)`; árvores com 520-560 px de largura, suricatos com 130-360 px de altura aproximada conforme a profundidade |
+| rádio | 1100 px de largura em (410,230), o modelo do Poly Haven renderizado de frente, impresso em prata: `grayscale(1) brightness(3.1) contrast(1.02)` mais `drop-shadow(0 18px 18px rgba(0,0,0,.35))` |
+| marca no objeto | marca na janela do cassete esquerdo (caixa em 30,6%/67,6%, 14,2% x 17,4% do rádio), 62% da janela, cor de destaque da marca com `drop-shadow(0 0 14px accent at 90%)`; rótulo da fita (56,2%/76,4%, 11,8% x 5,4%) laranja `#E8A13A`, fonte sem serifa da marca 600 17 px, espaçamento .02em, `#1d1a16` |
+| caleidoscópio | quadrado de 2600 px com 12 cunhas (30 graus), cada uma um ladrilho de foto de savana (`saturate(1.5) hue-rotate(-15deg)`), um bloco azul de 700x360, um bloco laranja de 500x260 a -12 graus e um recorte de acácia; cunhas alternadas espelhadas; sobre preto `#0b0b0b` |
+| moldura hexagonal | anel SVG, caminho par-ímpar entre dois raios irregulares (44 e 31 de 100), viés hexagonal `abs(cos 3a) * .08`, preenchimento laranja `#E8A13A`, contorno branco de papel 1,6 |
+| título | fonte com serifa (ou de destaque) da marca, peso 800, 270 px, entrelinha .86, espaçamento -0.01em, vermelho `#E2462F` (ou a cor de destaque da marca se for quente), `-webkit-text-stroke: 6px #FBFAF6; paint-order: stroke fill`, sombra dura `10px 10px 0 #2B57A8, 12px 12px 0 #2B57A8`; duas linhas centralizadas em top 260 |
+| endereço | fonte sem serifa da marca 600 44 px, `#FBFAF6` sobre uma cápsula `#1d1a16` (14px 30px), centralizado em top 880 |
+| granulação | `feTurbulence` baseFrequency 1.2, alfa .14, multiply, opacidade .5 |
 
-Colour rule: saturated primaries of a children's collage (orange, red,
-blue, grass green, sky blue) plus newsprint grey. The brand colour appears
-in the object (the mark), the URL and optionally the title; never as a
-paper colour, or the collage starts to look like a brand template.
+Regra de cor: primárias saturadas de colagem infantil (laranja, vermelho, azul, verde de capim, azul de céu) mais cinza de jornal. A cor da marca aparece no objeto (a marca), no endereço e opcionalmente no título; nunca como cor de papel, ou a colagem começa a parecer um modelo de marca.
 
-## Shot list
+## Lista de planos
 
-| time | on screen | what moves and how | static | transition out |
+| tempo | na tela | o que se move e como | estático | transição de saída |
 |---|---|---|---|---|
-| 0.0-1.0 | sky, 4 torn strips, 2 acacias, rocks, red boulder, savanna and grass bands | each piece from its own side (strips from -1300/+1300 x, b1 from (900,-300), trees from -700/+700, rocks from +-700 with y 200, ground bands from y 500/400) to home, 0.55 s `power3.out`, 0.04 s apart; boombox `y -800, rotation -8 to 0`, 0.7 s `back.out(1.3)` at 0.25 | sky | none |
-| 1.0-3.4 | the boombox world | mark pops in the deck `scale 0, rotation -90 to 0`, 0.5 s `back.out(2)` at 0.95, then turns 90 deg over 3 s linear; speaker cone `scale 1.06` 0.08 s `power2.out` and back 0.3 s, every 0.52 s; meerkat on the boulder `y 260, opacity 0 to 1`, 0.4 s `back.out(1.6)` at 1.3; front meerkat `y 420 to 0`, 0.45 s `back.out(1.4)` at 2.1, then sways `rotation -6` yoyo 3x 0.4 s; camera `scale 1 to 1.05` over 3.4 s linear; every cut-out boils every 1/6 s (+-1.4px, +-0.4 deg) | sky | the dive |
-| 3.4-4.25 | push into the right speaker | camera `scale 1.05 to 11`, 0.85 s `power3.in`, transform-origin on the speaker centre (measured: 1360,771) | none | the speaker's black fills the frame; scene B starts at 4.2 on black |
-| 4.2-6.8 | kaleidoscope in a torn hex frame, eagle | kaleidoscope `scale .05 to .9, rotation -60 to 40`, 2.6 s `power2.out`; hex frame `scale .1 to 1.1, rotation 30 to -20` from 4.25; eagle crosses `x 0 to 2400, y 120 to -260`, 2.4 s linear from 4.4, flapping 0-1-2-3-4-3-2-1 at 12 fps | black ground | hard cut at 6.8 |
-| 6.8-9.6 | sky, 4 torn hills (news, red, savanna, grass), an acacia, 4 meerkats | hills rise `y 300/380/460/540 to 0`, 0.6 s `power3.out`, 0.07 s apart; they pan `x 0 to -120/-200/-320/-480` over 2.8 s linear (back to front: 4 speeds), tree pans -200; meerkats rise `y 320, opacity 0 to 1`, 0.4 s `back.out(1.5)` at 7.3, 7.55, 7.8, 8.1, then drift `x -260` linear to 9.6; cut-outs boil | sky | hard cut at 9.6 |
-| 9.6-12.0 | sky, a torn newspaper peak, two torn corner strips, title, URL, eagle | peak `y 900 to 0`, 0.55 s `power3.out`; red strip top-left from x -900 (9.7), orange strip bottom-right from x +900 (9.75), 0.45 s `power3.out`; each title word `scale 1.6, rotation +-4, opacity 0` to rest, 0.22 s `steps(3)`, at 10.0 and 10.3; URL fades 0.3 s at 10.9; eagle drifts `x -500, y -120` over 2.4 s flapping; peak, strips and title boil (+-1.6px, +-0.5 deg) | sky | hold |
+| 0,0-1,0 | céu, 4 tiras rasgadas, 2 acácias, rochas, pedregulho vermelho, faixas de savana e de capim | cada peça do seu próprio lado (tiras de -1300/+1300 em x, b1 de (900,-300), árvores de -700/+700, rochas de +-700 com y 200, faixas de chão de y 500/400) até a posição final, 0,55 s `power3.out`, com 0,04 s de intervalo; rádio `y -800, rotation -8 para 0`, 0,7 s `back.out(1.3)` em 0,25 | céu | nenhuma |
+| 1,0-3,4 | o mundo do rádio | a marca salta no deck `scale 0, rotation -90 para 0`, 0,5 s `back.out(2)` em 0,95, e depois gira 90 graus em 3 s linear; o cone do alto-falante `scale 1.06` 0,08 s `power2.out` e volta em 0,3 s, a cada 0,52 s; suricato no pedregulho `y 260, opacity 0 para 1`, 0,4 s `back.out(1.6)` em 1,3; suricato da frente `y 420 para 0`, 0,45 s `back.out(1.4)` em 2,1, depois balança `rotation -6` yoyo 3x 0,4 s; câmera `scale 1 para 1.05` em 3,4 s linear; cada recorte ferve a cada 1/6 s (+-1,4 px, +-0,4 grau) | céu | o mergulho |
+| 3,4-4,25 | avanço para o alto-falante da direita | câmera `scale 1.05 para 11`, 0,85 s `power3.in`, transform-origin no centro do alto-falante (medido: 1360,771) | nenhum | o preto do alto-falante enche o quadro; a cena B começa em 4,2 sobre preto |
+| 4,2-6,8 | caleidoscópio numa moldura hexagonal rasgada, águia | caleidoscópio `scale .05 para .9, rotation -60 para 40`, 2,6 s `power2.out`; moldura hexagonal `scale .1 para 1.1, rotation 30 para -20` a partir de 4,25; a águia cruza `x 0 para 2400, y 120 para -260`, 2,4 s linear a partir de 4,4, batendo asas 0-1-2-3-4-3-2-1 a 12 fps | fundo preto | corte seco em 6,8 |
+| 6,8-9,6 | céu, 4 colinas rasgadas (jornal, vermelha, savana, capim), uma acácia, 4 suricatos | as colinas sobem `y 300/380/460/540 para 0`, 0,6 s `power3.out`, com 0,07 s de intervalo; elas se deslocam `x 0 para -120/-200/-320/-480` em 2,8 s linear (de trás para a frente: 4 velocidades), a árvore se desloca -200; os suricatos sobem `y 320, opacity 0 para 1`, 0,4 s `back.out(1.5)` em 7,3, 7,55, 7,8, 8,1, depois derivam `x -260` linear até 9,6; os recortes fervem | céu | corte seco em 9,6 |
+| 9,6-12,0 | céu, um pico de jornal rasgado, duas tiras rasgadas de canto, título, endereço, águia | pico `y 900 para 0`, 0,55 s `power3.out`; tira vermelha no alto à esquerda a partir de x -900 (9,7), tira laranja embaixo à direita a partir de x +900 (9,75), 0,45 s `power3.out`; cada palavra do título `scale 1.6, rotation +-4, opacity 0` até o repouso, 0,22 s `steps(3)`, em 10,0 e 10,3; o endereço surge em 0,3 s em 10,9; a águia deriva `x -500, y -120` em 2,4 s batendo asas; pico, tiras e título fervem (+-1,6 px, +-0,5 grau) | céu | parado |
 
-## Materials and where to get them for a new brand
+## Materiais e onde obtê-los para uma marca nova
 
-The brand's own: the mark as SVG or a clean PNG (from intake), the
-display or serif face and a sans for labels, the domain, a two-word
-headline ("Meet <name>", "Say hello", "Now playing"), and the tape label
-text (the product name plus a word that fits the object: "mix", "radio",
-"live").
+O que é da marca: a marca da empresa em SVG ou num PNG limpo (vindo da entrada de dados), a fonte de destaque ou com serifa e uma sem serifa para os rótulos, o domínio, uma manchete de duas palavras (“Conheça <nome>”, “Diga olá”, “Tocando agora”) e o texto do rótulo da fita (o nome do produto mais uma palavra que combine com o objeto: “mix”, “rádio”, “ao vivo”).
 
-Free sources, all CC0 or public domain:
+Fontes gratuitas, todas CC0 ou de domínio público:
 
 ```sh
 node scripts/find-assets.mjs --polyhaven model boombox --out <dir>
@@ -87,23 +59,11 @@ node scripts/find-assets.mjs "eagle flying" --out <dir> --title american     # M
 node scripts/find-assets.mjs --ambientcg paper --out <dir>
 ```
 
-The boombox render angle used is front-on; the exact flags were not
-recorded, judge on the render that the speakers are near-circles (the dive
-needs a round target). Then measure, on a gridded preview of the PNG, the
-boxes of: the left cassette window (mark), the tape label, and the right
-speaker centre (dive origin). Store them as percentages of the image.
+O ângulo de renderização usado para o rádio é de frente; as opções exatas não foram registradas, julgue pela renderização se os alto-falantes são quase círculos (o mergulho precisa de um alvo redondo). Depois meça, numa prévia quadriculada do PNG, as caixas de: a janela do cassete esquerdo (marca), o rótulo da fita e o centro do alto-falante da direita (origem do mergulho). Guarde-as como porcentagens da imagem.
 
-Another object for another brand: the boombox suits audio, media,
-creators and AI assistants ("a mix"). Poly Haven alternatives with a round
-dive target: `Television_01` (dive into the screen), `vintage_video_camera`
-(the lens), `vintage_pocket_watch` (the face). The dive always enters the
-object's darkest round opening.
+Outro objeto para outra marca: o rádio serve para áudio, mídia, criadores e assistentes de IA (“um mix”). Alternativas do Poly Haven com alvo de mergulho redondo: `Television_01` (mergulho na tela), `vintage_video_camera` (a lente), `vintage_pocket_watch` (o mostrador). O mergulho sempre entra na abertura redonda mais escura do objeto.
 
-Muybridge eagle frames (a real flap cycle): take one row of a plate (5
-frames of one wing beat), crop each cell inside its black border, and lift
-the bird with a threshold mask flood-filled from every border pixel, then
-keep only the largest connected component (it drops the grid lines, frame
-numbers and specks). Needs only Pillow; `--tol 170` for plates:
+Quadros da águia de Muybridge (um ciclo de bater de asas real): pegue uma fileira de uma prancha (5 quadros de uma batida de asa), recorte cada célula dentro da sua borda preta e recorte a ave com uma máscara de limiar preenchida a partir de cada pixel da borda, e então mantenha só o maior componente conectado (ele descarta as linhas da grade, os números dos quadros e as manchas). Precisa só do Pillow; `--tol 170` para pranchas:
 
 ```python
 # clean-scan: lift a drawing or a plate frame off a flat scan background.
@@ -150,17 +110,13 @@ if __name__ == "__main__":
     clean(sys.argv[1], sys.argv[2], tol, "--largest" in sys.argv)
 ```
 
-Then pad all five frames onto one canvas with the body (the darkest
-centroid) at the same point; cropped to their own bounds they differ in
-size (207 to 271px wide in the proof) and the bird jumps.
+Depois alinhe os cinco quadros numa única tela com o corpo (o centroide mais escuro) no mesmo ponto; cortados nos seus próprios limites eles diferem de tamanho (207 a 271 px de largura na prova) e a ave pula.
 
-Missing material: no CC0 meerkats in 4 poses, use any upright animal with
-several CC0 photos (prairie dog, penguin, owl). No boombox, see the
-alternatives above. Never draw an animal, a tree or a device in CSS.
+Material faltando: se não há suricatos CC0 em 4 poses, use qualquer animal em pé com várias fotos CC0 (cachorro-da-pradaria, pinguim, coruja). Se não há rádio, veja as alternativas acima. Nunca desenhe um animal, uma árvore ou um aparelho em CSS.
 
-## Mechanics
+## Mecânica
 
-Seeded random and twos:
+Aleatório com semente e dois quadros:
 
 ```js
 const tl = gsap.timeline({ paused: true });
@@ -170,8 +126,7 @@ const R = (seed) => () => { seed |= 0; seed = (seed + 0x6d2b79f5) | 0;
   r = (r + Math.imul(r ^ (r >>> 7), 61 | r)) ^ r; return ((r ^ (r >>> 14)) >>> 0) / 4294967296; };
 ```
 
-Torn-edge polygon generator (rim and ink, optional shaped top for hills and
-peaks):
+Gerador de polígono de borda rasgada (borda e tinta, topo moldado opcional para colinas e picos):
 
 ```js
 function poly(w, h, seed, amp, every, top) {
@@ -197,9 +152,7 @@ document.querySelectorAll(".tp").forEach((t, i) => {
 .tp > .ink { position:absolute; inset:10px; }
 ```
 
-Boil on twos without fighting the tweens (CSS individual transform
-properties driven by variables, so `translate`/`rotate` stack on top of
-GSAP's `transform`):
+Fervura em dois quadros sem brigar com as interpolações (propriedades individuais de transformação do CSS controladas por variáveis, de modo que `translate`/`rotate` se empilham sobre o `transform` do GSAP):
 
 ```css
 .boil { translate: var(--bx, 0px) var(--by, 0px); rotate: var(--br, 0deg); }
@@ -212,15 +165,14 @@ function boil(sel, a, b, seed, px = 1.4, rot = 0.4) {
       "--by": `${((r() - .5) * 2 * px).toFixed(2)}px`, "--br": `${((r() - .5) * 2 * rot).toFixed(2)}deg` }, t); }); }
 ```
 
-The dive into the speaker:
+O mergulho no alto-falante:
 
 ```js
 tl.fromTo("#camA", { scale: 1 }, { scale: 1.05, duration: 3.4, ease: "none", transformOrigin: "960px 600px" }, 0);
 tl.to("#camA", { scale: 11, duration: 0.85, ease: "power3.in", transformOrigin: `${SPEAKER_X}px ${SPEAKER_Y}px` }, 3.4);
 ```
 
-Kaleidoscope: 12 wedges, alternate ones mirrored, clip-paths overlapped by
-0.6% so no seam shows:
+Caleidoscópio: 12 cunhas, as alternadas espelhadas, clip-paths sobrepostos em 0,6% para nenhuma emenda aparecer:
 
 ```css
 #kal { position:absolute; left:50%; top:50%; width:2600px; height:2600px; margin:-1300px; }
@@ -236,7 +188,7 @@ for (let i = 0; i < 12; i++) { const w = document.createElement("div"); w.classN
   document.getElementById("kal").appendChild(w); }
 ```
 
-Torn hexagonal frame:
+Moldura hexagonal rasgada:
 
 ```js
 const r = R(5);
@@ -246,7 +198,7 @@ const ring = (rad, j) => { let d = ""; for (let i = 0; i <= 60; i++) { const a =
 document.getElementById("hexring").setAttribute("d", ring(44, 0.03) + ring(31, 0.04));   // fill-rule="evenodd"
 ```
 
-Frame-cycle sprite (the eagle), ping-pong on 5 frames at 12 fps:
+Sprite de ciclo de quadros (a águia), vai e volta em 5 quadros a 12 fps:
 
 ```js
 function sprite(id, a, b, frames) { const el = document.getElementById(id);
@@ -255,7 +207,7 @@ function sprite(id, a, b, frames) { const el = document.getElementById(id);
   for (let t = a; t < b; t += STEP, k++) imgs.forEach((im, n) => tl.set(im, { opacity: n === cyc[k % 8] ? 1 : 0 }, t)); }
 ```
 
-Parallax hills (4 depths, 4 speeds):
+Colinas com paralaxe (4 profundidades, 4 velocidades):
 
 ```js
 [["#h1", -120], ["#h2", -200], ["#h3", -320], ["#h4", -480]].forEach(([s, x], i) => {
@@ -263,52 +215,23 @@ Parallax hills (4 depths, 4 speeds):
   tl.fromTo(s, { y: 300 + i * 80 }, { y: 0, duration: 0.6, ease: "power3.out" }, 6.8 + i * 0.07); });
 ```
 
-## Adapting to a brand
+## Adaptar a uma marca
 
-Takes the brand: the mark in the object's window (accent colour and glow),
-the label on the object, the headline in its display or serif face, the
-URL pill, the choice of object (what the brand is: audio, video, time).
-The title may take the brand accent if it is warm and saturated;
-otherwise keep the red with the blue shadow.
+Vem da marca: a marca na janela do objeto (cor de destaque e brilho), o rótulo no objeto, a manchete na sua fonte de destaque ou com serifa, a cápsula do endereço, a escolha do objeto (o que a marca é: áudio, vídeo, tempo). O título pode assumir a cor de destaque da marca se ela for quente e saturada; senão, mantenha o vermelho com a sombra azul.
 
-Stays fixed: the sky photo, the torn rim construction, the paper palette
-(orange, red, halftone red, blue, newsprint, savanna, grass), the
-silver-printed object, the dive, the 12-wedge kaleidoscope with the
-orange hex frame, the Muybridge flap, the 4-speed hills, the boil on twos,
-the stepped title slam. The animals can change with the brand's world
-(city brand: pigeons on rooftops cut from CC0 photos), the construction
-cannot.
+Fica fixo: a foto do céu, a construção da borda rasgada, a paleta de papéis (laranja, vermelho, vermelho em meio-tom, azul, jornal, savana, capim), o objeto impresso em prata, o mergulho, o caleidoscópio de 12 cunhas com a moldura hexagonal laranja, o bater de asas de Muybridge, as colinas de 4 velocidades, a fervura em dois quadros, a batida em degraus do título. Os animais podem mudar com o mundo da marca (marca urbana: pombos em telhados recortados de fotos CC0), a construção não.
 
-## Pitfalls found while building
+## Armadilhas encontradas durante a construção
 
-- Sets made before the timeline is registered get overridden on seek: put
-  `visibility:hidden` or `opacity:0` for late things in markup and switch
-  them on with `tl.set`; build all torn clip-paths before registering.
-- A cut-out from a framed photo keeps the frame's box edge; take bodies
-  from full photos where the animal is wholly inside the image, or mask.
-- The object render is opaque: anything placed behind it is hidden. Put
-  the mark, the tape label and the speaker cone ABOVE the boombox image,
-  positioned in percentages of it.
-- The dive target must be clear: in the proof the front meerkat stands in
-  front of the right speaker, so the last frames of the dive fill with its
-  face, not the speaker's black. Move foreground cut-outs off the dive line
-  (or slide them out at 3.2) so the black really fills the frame.
-- Wedge seams: exact 30 deg clip-paths leave a hairline of black between
-  wedges on rotation; overlap them (apex 50.6%, edges 49.4% and 79.6%).
-- Muybridge cells cropped to their own bounds differ in size, so frames
-  anchored at top-left jump; register them on one canvas.
-- `.boil` uses CSS `translate`/`rotate`, not GSAP x/y, so it never fights
-  the slide-ins; do not boil with `x`/`y` on elements that also tween.
-- Text stays inside the frame and on its paper: the title at 270px is
-  about 820px wide for a 6 letter word (keep it under 1500px); run `scripts/frame-audit.mjs` and
-  check the URL pill sits on the peak, not on the sky.
+- Definições feitas antes de a linha do tempo ser registrada são sobrescritas ao buscar um ponto: ponha `visibility:hidden` ou `opacity:0` para o que entra tarde no código da página e ligue-os com `tl.set`; construa todos os clip-paths rasgados antes de registrar.
+- Um recorte de uma foto emoldurada mantém a borda da caixa da moldura; pegue os corpos de fotos inteiras em que o animal está totalmente dentro da imagem, ou mascare.
+- A renderização do objeto é opaca: tudo o que for posto atrás dela fica escondido. Ponha a marca, o rótulo da fita e o cone do alto-falante ACIMA da imagem do rádio, posicionados em porcentagens dela.
+- O alvo do mergulho precisa estar livre: na prova, o suricato da frente fica na frente do alto-falante da direita, então os últimos quadros do mergulho se enchem com o rosto dele, não com o preto do alto-falante. Tire os recortes do primeiro plano da linha do mergulho (ou deslize-os para fora em 3,2) para o preto realmente encher o quadro.
+- Emendas das cunhas: clip-paths exatos de 30 graus deixam um fio de preto entre as cunhas na rotação; sobreponha-os (ápice 50,6%, bordas 49,4% e 79,6%).
+- As células de Muybridge cortadas nos seus próprios limites têm tamanhos diferentes, então quadros ancorados no canto superior esquerdo pulam; alinhe-os numa tela só.
+- `.boil` usa `translate`/`rotate` do CSS, não x/y do GSAP, então nunca briga com as entradas deslizando; não ferva com `x`/`y` em elementos que também são interpolados.
+- O texto fica dentro do quadro e sobre o seu papel: o título a 270 px tem cerca de 820 px de largura para uma palavra de 6 letras (mantenha abaixo de 1500 px); rode `scripts/frame-audit.mjs` e confira se a cápsula do endereço está sobre o pico, não sobre o céu.
 
-## Sound
+## Som
 
-108 BPM, playful, a bouncy bed with a groove (the speaker pumps on it:
-retime the pump to 60/BPM s). whoosh on the slide-in (0.0), pop on the
-boombox (0.25), pop on the mark (0.95) and each meerkat (1.3, 2.1), whoosh
-on the dive (3.4), shimmer as the kaleidoscope opens (4.2), whoosh on the
-eagle (4.4) and the hills (6.8), a pop per meerkat (7.3, 7.55, 7.8, 8.1),
-whoosh on the peak (9.6), the one hit on the first title word (10.0), pop
-on the second (10.3), shimmer on the URL (10.9).
+108 BPM, brincalhão, uma base saltitante com groove (o alto-falante pulsa nela: ajuste o pulso para 60/BPM s). whoosh na entrada deslizando (0,0), pop no rádio (0,25), pop na marca (0,95) e em cada suricato (1,3, 2,1), whoosh no mergulho (3,4), shimmer quando o caleidoscópio abre (4,2), whoosh na águia (4,4) e nas colinas (6,8), um pop por suricato (7,3, 7,55, 7,8, 8,1), whoosh no pico (9,6), o único golpe na primeira palavra do título (10,0), pop na segunda (10,3), shimmer no endereço (10,9).

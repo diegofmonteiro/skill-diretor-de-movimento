@@ -1,5 +1,5 @@
-{ "id": "issue-close", "name": "Glass issue closed by a commit", "oneLiner": "an issue card on glass with its comment: a commit lands on the timeline, its closes #42 reference lights up, the rail runs green into a check node and the status pill flips from Open to Closed as the icon turns green",
+{ "id": "issue-close", "name": "Problema fechado por um commit em vidro", "oneLiner": "um cartão de problema em vidro com o seu comentário: um commit cai na linha do tempo, sua referência “closes #42” acende, o trilho corre verde até um nó com uma marca e a cápsula de estado vira de “Aberto” para “Fechado” enquanto o ícone fica verde",
   "category": "dev", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["issue", "bug", "fix", "commit", "closed", "git", "developer", "ticket", "resolved", "ai coding", "agent", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.0, "alpha": true,
-  "say": "when the speaker says a bug or a request got fixed ('someone reported it on Monday and the agent closed it by lunch', 'that issue is closed'): the commit lands on 'fixed it', the pill flips on 'closed'" }
+  "say": "quando quem fala diz que um defeito ou pedido foi resolvido (“alguém reportou na segunda e o agente fechou antes do almoço”, “esse problema está fechado”): o commit cai em “resolveu”, a cápsula vira em “fechado”" }

@@ -1,5 +1,5 @@
-{ "id": "mind-map", "name": "Mind map", "oneLiner": "a glass hub with a lit accent orb lands, 3 to 6 curved wires grow out of it one after another with a spark on each tip, glass glyph nodes pop where they land; then the hub fires and light runs out along every wire at once, flashing each node",
+{ "id": "mind-map", "name": "Mapa mental", "oneLiner": "um centro de vidro com uma esfera acesa na cor de destaque pousa, de 3 a 6 fios curvos crescem dele um após o outro com uma faísca em cada ponta, nós de vidro com ícones surgem onde chegam; então o centro dispara e a luz corre por todos os fios ao mesmo tempo, acendendo cada nó",
   "category": "explain", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["mind map", "map", "branches", "ideas", "repurpose", "one to many", "network", "hub", "structure", "overview", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.4, "alpha": true,
-  "say": "when the speaker turns one thing into many ('one video becomes clips, a newsletter, a blog post...'): cut in on the one thing, a branch grows per item named, the hub fires on the payoff line. Set hero to keep one branch lit" }
+  "say": "quando quem fala transforma uma coisa em muitas (“um vídeo vira cortes, uma newsletter, um artigo...”): entre na coisa única, um ramo cresce por item nomeado, o centro dispara na frase do desfecho. Defina hero para manter um ramo aceso" }

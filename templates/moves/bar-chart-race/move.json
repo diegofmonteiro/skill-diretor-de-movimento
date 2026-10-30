@@ -1,0 +1,31 @@
+{
+ "id": "bar-chart-race",
+ "name": "Corrida de barras",
+ "oneLiner": "barras ordenadas disputam o primeiro lugar período a período, trocam de posição quando uma ultrapassa a outra e o líder ganha a cor de destaque",
+ "category": "data",
+ "kind": "effect",
+ "uses": [
+  "broll"
+ ],
+ "looks": [
+  "editorial"
+ ],
+ "from": "catalogo",
+ "tags": [
+  "data",
+  "chart",
+  "statistics",
+  "ranking"
+ ],
+ "formats": [
+  "16:9"
+ ],
+ "duration": 12,
+ "alpha": false,
+ "tema": "proprio",
+ "say": "quando quem fala mostra quem liderava e quem passou quem ao longo do tempo (“em 2021 a Cobalt passou a Northwind”): informe os períodos e uma série por linha; 16:9",
+ "origem": {
+  "registro": "HyperFrames",
+  "bloco": "bar-chart-race"
+ }
+}

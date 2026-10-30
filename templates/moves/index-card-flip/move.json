@@ -1,5 +1,5 @@
-{ "id": "index-card-flip", "name": "Index card flip", "oneLiner": "a real ruled index card is tossed onto a walnut desk, a question writes itself on in ballpoint, then the card lifts and flips on twos to show the answer in a fat brand-colour marker, underlined twice",
+{ "id": "index-card-flip", "name": "Ficha que vira", "oneLiner": "uma ficha pautada de verdade é jogada sobre uma mesa de nogueira, uma pergunta se escreve a caneta, e então a ficha sobe e vira em passos de dois quadros para mostrar a resposta em marcador grosso na cor da marca, sublinhada duas vezes",
   "category": "paper", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["paper"], "from": "new",
   "tags": ["question", "answer", "flashcard", "quiz", "reveal", "faq", "study", "index card", "handwriting", "flip", "paper", "on twos"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.0, "alpha": true,
-  "say": "when the speaker asks a question and then answers it ('so what actually works? consistency'): the question writes on as they ask it and the card flips on the answer" }
+  "say": "quando quem fala faz uma pergunta e depois a responde (“e o que realmente funciona? constância”): a pergunta se escreve enquanto a pessoa a faz e a ficha vira na resposta" }

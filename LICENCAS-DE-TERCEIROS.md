@@ -39,7 +39,7 @@ O motor de render (`hyperframes`) **não faz parte** deste repositório: é baix
 - Segundo a página do projeto, a licença é Apache 2.0, "sem taxa por renderização e sem limite de uso comercial". A página não trata de oferecer o programa como serviço hospedado: leia o arquivo `LICENSE` completo antes de vender um serviço que o execute.
 - Se o HyperFrames, ou partes dele, passarem a ser copiados para dentro deste repositório, inclua o texto da Apache 2.0 e os avisos (`NOTICE`) dele neste arquivo.
 - Os blocos do catálogo dele instalados com `hyperframes add` têm licenças próprias. Confira cada um antes de usar em trabalho de cliente.
-- **Modelos 3D de celular e notebook** (bloco `vfx-iphone-device`): baixados pelo `device-init.mjs`. O original manda conferir a licença antes de uso comercial. **Pendente.** Até conferir, a cena de dispositivo não deve ser usada em trabalho de cliente.
+- **Modelos 3D de celular e notebook** (bloco `vfx-iphone-device`): baixados pelo `device-init.mjs`. O original manda conferir a licença antes de uso comercial. **Uso liberado por ordem do dono em 28/10/2026**; os mantenedores do HyperFrames não foram consultados, então a liberação é decisão do dono e não uma licença de terceiros. A logo de terceiros que vem nos modelos fica escondida por padrão.
 
 ## 3. GSAP (licença padrão da GreenSock)
 
@@ -60,9 +60,13 @@ A SIL OFL 1.1 permite uso e inclusão comercial, mas não permite vender a fonte
 
 Cada efeito que usa um material externo traz um `credits.json` com o arquivo, a origem e a licença. Os materiais registrados são, na maioria, CC0 ou domínio público (Wikimedia Commons, Poly Haven https://polyhaven.com, ambientCG https://ambientcg.com, NASA). Ao criar efeitos novos, use apenas CC0 e domínio público e registre o `credits.json` (o `find-assets.mjs` faz isso).
 
-## 6. Carregados da internet na cena de dispositivo
+## 6. three.js e Draco na cena de dispositivo
 
-A cena de dispositivo 3D carrega, na hora do render, o three.js (licença MIT, https://threejs.org) e o decodificador Draco do Google (licença Apache 2.0, https://github.com/google/draco). Nenhum dos dois está neste repositório.
+A cena de dispositivo 3D usa o three.js (licença MIT, https://threejs.org), os carregadores dele e o decodificador Draco do Google (licença Apache 2.0, https://github.com/google/draco). Nenhum deles está neste repositório.
+
+- No modo de fontes `automatico`, são carregados de endereços públicos (jsDelivr e Google) na hora do render.
+- Nos modos `travado` e `proprio`, os mesmos arquivos são baixados uma vez, guardados no cache com impressão digital (SHA-256) e copiados para a pasta `film/vendor/` do filme. Quem distribuir um filme com essa pasta, ou o cache, deve incluir os avisos de direito autoral e as licenças MIT e Apache 2.0 desses dois projetos.
+- Os modelos 3D de MacBook e iPhone são outro assunto: ver a seção 2 (bloco `vfx-iphone-device`, uso liberado pelo dono).
 
 ## 7. Marcas de clientes
 

@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="pt-BR" data-composition-variables='[
-  {"id":"title","type":"string","label":"Dashboard title in the top bar","default":"Overview"},
-  {"id":"labels","type":"string","label":"Three KPI labels, comma separated ({brand} = the brand name)","default":"Visitors,Sign-ups,Conversion"},
-  {"id":"values","type":"string","label":"Three KPI values, same order; prefix and suffix are kept","default":"24.8K,1,240,5.2%"},
-  {"id":"deltas","type":"string","label":"Change chip per KPI (+18%, -3%); empty = no chip","default":"+18%,+24%,+0.8%"},
-  {"id":"glyphs","type":"string","label":"Glyph per KPI (user, chart, target, cart, mail, bolt, video, search...); empty = guessed from the label","default":"user,bolt,target"},
-  {"id":"chart","type":"string","label":"The big chart: label|value|change","default":"Revenue|R$ 48.2K|+32%"},
-  {"id":"bars","type":"string","label":"Label over the weekly bars","default":"Esta semana"},
-  {"id":"list","type":"string","label":"Title of the list of top items (rows use the brand screens)","default":"Top pages"},
-  {"id":"live","type":"string","label":"The status pill that lights when the board is complete","default":"Ao vivo"}
+  {"id":"title","type":"string","label":"Título do painel na barra de cima","default":"Visão geral"},
+  {"id":"labels","type":"string","label":"Três rótulos de indicadores, separados por vírgula ({brand} = o nome da marca)","default":"Visitantes,Cadastros,Conversão"},
+  {"id":"values","type":"string","label":"Três valores de indicadores, na mesma ordem; prefix e suffix são mantidos","default":"24.8K,1,240,5.2%"},
+  {"id":"deltas","type":"string","label":"Cápsula de variação por indicador (+18%, -3%); vazio = sem cápsula","default":"+18%,+24%,+0.8%"},
+  {"id":"glyphs","type":"string","label":"Ícone de cada indicador (user, chart, target, cart, mail, bolt, video, search...); vazio = deduzido do rótulo","default":"user,bolt,target"},
+  {"id":"chart","type":"string","label":"O gráfico grande: rótulo|valor|variação","default":"Receita|R$ 48.2 mil|+32%"},
+  {"id":"bars","type":"string","label":"Rótulo acima das barras semanais","default":"Esta semana"},
+  {"id":"list","type":"string","label":"Título da lista dos itens do topo (as linhas usam as telas da marca)","default":"Páginas mais vistas"},
+  {"id":"live","type":"string","label":"A cápsula de estado que acende quando o painel está completo","default":"Ao vivo"}
 ]'>
 <head>
 <meta charset="UTF-8" />
@@ -113,7 +113,7 @@
   const brand = v.brandName || "";
   // "1,240" is one value: split on commas that are not between digits
   const list = (x) => String(x || "").split(/,(?!\d{3}(?:\D|$))/).map((s) => s.trim());
-  const labels = list(v.labels).map((s) => s.split("{brand}").join(brand)); while (labels.length < 3) labels.push(["Visitantes", "Sign-ups", "Conversão"][labels.length]);
+  const labels = list(v.labels).map((s) => s.split("{brand}").join(brand)); while (labels.length < 3) labels.push(["Visitantes", "Cadastros", "Conversão"][labels.length]);
   const vals = list(v.values), dels = list(v.deltas), gls = String(v.glyphs || "").split(",").map((s) => s.trim());
   const CH = String(v.chart || "").split("|").map((s) => s.trim());
   const parse = (s) => {

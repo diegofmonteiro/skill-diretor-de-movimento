@@ -1,0 +1,117 @@
+{
+  "_ajuda": "Valores padrão. Não edite este arquivo: suas escolhas ficam em fontes.json na pasta de dados (veja 'node scripts/fontes.mjs'). O modo também pode vir da variável MD_FONTES.",
+  "modo": "automatico",
+  "registro_ref": "main",
+  "registro_ref_travado": "2c3d1e07fe63d4a2d67d63a3e29d4ad73e291d8e",
+  "tempo_limite_s": 60,
+  "tentativas": 3,
+  "fontes": {
+    "polyhaven": {
+      "nome": "Poly Haven",
+      "uso": "Modelos 3D, texturas e iluminação HDRI",
+      "ativa": true,
+      "hosts": [
+        "api.polyhaven.com",
+        "polyhaven.com",
+        "dl.polyhaven.org"
+      ],
+      "licencas": [
+        "CC0"
+      ]
+    },
+    "ambientcg": {
+      "nome": "ambientCG",
+      "uso": "Texturas e materiais",
+      "ativa": true,
+      "hosts": [
+        "ambientcg.com"
+      ],
+      "licencas": [
+        "CC0"
+      ]
+    },
+    "wikimedia": {
+      "nome": "Wikimedia Commons",
+      "uso": "Fotos reais de objetos",
+      "ativa": true,
+      "hosts": [
+        "commons.wikimedia.org",
+        "upload.wikimedia.org"
+      ],
+      "licencas": [
+        "CC0",
+        "Domínio público"
+      ]
+    },
+    "openverse": {
+      "nome": "Openverse",
+      "uso": "Fotos livres, só CC0 e domínio público",
+      "ativa": true,
+      "hosts": [
+        "api.openverse.org"
+      ],
+      "licencas": [
+        "CC0",
+        "Domínio público"
+      ]
+    },
+    "bibliotecas": {
+      "nome": "three.js e Draco (cena de dispositivo 3D)",
+      "uso": "Bibliotecas que desenham o celular e o notebook em 3D",
+      "ativa": true,
+      "hosts": [
+        "cdn.jsdelivr.net",
+        "www.gstatic.com"
+      ],
+      "licencas": [
+        "MIT",
+        "Apache-2.0"
+      ]
+    },
+    "marca": {
+      "nome": "Extras da marca do cliente",
+      "uso": "Miniaturas e avatar do YouTube e ícones do Simple Icons",
+      "ativa": true,
+      "hosts": [
+        "i.ytimg.com",
+        "www.youtube.com",
+        "yt3.googleusercontent.com",
+        "yt3.ggpht.com",
+        "cdn.jsdelivr.net"
+      ],
+      "licencas": [
+        "do dono da marca",
+        "CC0"
+      ]
+    },
+    "referencias": {
+      "nome": "Referências por link",
+      "uso": "Vídeos e imagens de links que você indicar: Pinterest direto pelo script, e YouTube, Instagram, X e outros pelo yt-dlp",
+      "ativa": true,
+      "hosts": [
+        "www.pinterest.com",
+        "pin.it",
+        "v1.pinimg.com",
+        "i.pinimg.com",
+        "(o que o yt-dlp lê: YouTube, Instagram, X, Dribbble...)"
+      ],
+      "licencas": [
+        "só como referência de estilo"
+      ]
+    },
+    "catalogo": {
+      "nome": "Catálogo de efeitos do HyperFrames",
+      "uso": "Blocos, componentes e exemplos prontos para estudar e trazer como efeito novo",
+      "ativa": true,
+      "hosts": [
+        "raw.githubusercontent.com"
+      ],
+      "licencas": [
+        "Apache-2.0",
+        "MIT",
+        "OFL-1.1",
+        "Apache-2.0 (licença do repositório, não do bloco)"
+      ]
+    }
+  }
+}

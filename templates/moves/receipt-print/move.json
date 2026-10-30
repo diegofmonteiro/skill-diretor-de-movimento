@@ -1,5 +1,5 @@
-{ "id": "receipt-print", "name": "Receipt print", "oneLiner": "a thermal receipt feeds up out of a real printer's slot in short bursts on twos, line items printing as they come out, the lifted paper curling toward the lens, then the total is thumped with a brand-colour rubber stamp",
+{ "id": "receipt-print", "name": "Impressão de recibo", "oneLiner": "um recibo térmico sai da fenda de uma impressora de verdade em rajadas curtas de dois em dois quadros, com os itens sendo impressos conforme saem, o papel erguido se curvando em direção à lente, e então o total é batido com um carimbo de borracha na cor da marca",
   "category": "paper", "kind": "effect", "uses": ["broll"], "looks": ["paper"], "from": "new",
   "tags": ["receipt", "cost", "price", "money", "budget", "breakdown", "total", "list", "stamp", "thermal", "paper", "on twos"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.4, "alpha": false,
-  "say": "when the speaker adds something up ('here is what it actually costs', 'the whole stack is'): the items print as they list them and the stamp lands on the total" }
+  "say": "quando quem fala soma algo (“aqui está quanto custa de verdade”, “o pacote inteiro custa”): os itens são impressos conforme a pessoa os lista e o carimbo cai no total" }

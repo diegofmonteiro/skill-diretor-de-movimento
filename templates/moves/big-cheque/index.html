@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="pt-BR" data-composition-variables='[
-  {"id":"payee","type":"string","label":"Pay to the order of (empty: the brand name)","default":""},
-  {"id":"amount","type":"string","label":"Amount, a number","default":"10.000"},
-  {"id":"currency","type":"string","label":"Currency sign","default":"R$ "},
-  {"id":"unit","type":"string","label":"Word after the amount in words","default":"Reais"},
-  {"id":"words","type":"string","label":"Amount in words (empty: spelled out from the amount)","default":""},
-  {"id":"memo","type":"string","label":"Memo line","default":"The first big win"},
-  {"id":"issuer","type":"string","label":"Printed issuer at the top (empty: the brand name)","default":""},
-  {"id":"signer","type":"string","label":"Signature (empty: the issuer)","default":""},
-  {"id":"date","type":"string","label":"Handwritten date","default":"Hoje"},
-  {"id":"number","type":"string","label":"Cheque number","default":"Nº 0001"}
+  {"id":"payee","type":"string","label":"Pague a quem (vazio: o nome da marca)","default":""},
+  {"id":"amount","type":"string","label":"Valor, um número","default":"10.000"},
+  {"id":"currency","type":"string","label":"Símbolo da moeda","default":"R$ "},
+  {"id":"unit","type":"string","label":"Palavra depois do valor por extenso","default":"Reais"},
+  {"id":"words","type":"string","label":"Valor por extenso (vazio: escrito a partir do valor)","default":""},
+  {"id":"memo","type":"string","label":"Linha de observação","default":"A primeira grande vitória"},
+  {"id":"issuer","type":"string","label":"Emissor impresso no topo (vazio: o nome da marca)","default":""},
+  {"id":"signer","type":"string","label":"Assinatura (vazio: o emissor)","default":""},
+  {"id":"date","type":"string","label":"Data escrita à mão","default":"Hoje"},
+  {"id":"number","type":"string","label":"Número do cheque","default":"Nº 0001"}
 ]'>
 <head>
 <meta charset="UTF-8" />
@@ -112,7 +112,7 @@
   const spell = (x) => { if (!isFinite(x)) return ""; let i = Math.floor(x); const cents = Math.round((x - i) * 100); if (!i) return "Zero"; const parts = [];
     const sc = [[1e9, "bilhão", "bilhões"], [1e6, "milhão", "milhões"], [1e3, "mil", "mil"], [1, "", ""]];
     for (const [d, s1, sp] of sc) { if (i >= d) { const q = Math.floor(i / d); parts.push(d === 1e3 && q === 1 ? "mil" : w3(q) + (s1 ? " " + (q === 1 ? s1 : sp) : "")); i %= d; } }
-    let s = parts.join(" e "); s = s.charAt(0).toUpperCase() + s.slice(1); return s + " reais e " + String(cents).padStart(2, "0") + "/100"; };
+    let s = parts.join(" e "); s = s.charAt(0).toUpperCase() + s.slice(1); return s + " e " + String(cents).padStart(2, "0") + "/100"; };
   const L0 = 62, RE = BWd - 50;
   const issuer = (v.issuer || v.brandName || "").trim();
   const amtS = String(v.amount || "").trim();

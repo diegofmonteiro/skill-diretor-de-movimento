@@ -1,5 +1,5 @@
-{ "id": "dm-inbox", "name": "Glass DM inbox", "oneLiner": "an inbox on a glass pane: four direct messages land one by one at the top, each pushing the others down with an unread dot and the count badge ticking up, then a pointer taps the newest and the thread slides open with the full message",
+{ "id": "dm-inbox", "name": "Caixa de mensagens diretas em vidro", "oneLiner": "uma caixa de entrada numa lâmina de vidro: quatro mensagens diretas chegam uma a uma no topo, cada uma empurrando as outras para baixo com um ponto de não lida e o contador subindo, e então um ponteiro toca na mais nova e a conversa desliza aberta com a mensagem completa",
   "category": "social", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["dm", "inbox", "messages", "direct message", "leads", "replies", "unread", "audience", "demand", "customers", "social proof", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.4, "alpha": true,
-  "say": "when the speaker says the messages started pouring in ('my DMs blew up', 'people kept asking me how'): the rows land as they say it, the thread opens on the one they quote" }
+  "say": "quando quem fala diz que as mensagens começaram a chover (“minhas mensagens explodiram”, “as pessoas não paravam de perguntar como”): as linhas caem enquanto a pessoa fala, a conversa abre na que ela cita" }

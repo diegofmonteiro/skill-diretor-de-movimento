@@ -1,5 +1,5 @@
-{ "id": "logo-row", "name": "Logo row", "oneLiner": "two to four big glossy app tiles spring up one by one on the beat in the free side of the frame, under a small underlined title, with a soft floor reflection; equation mode builds 'A + B = result' term by term and slams the result",
+{ "id": "logo-row", "name": "Fileira de logotipos", "oneLiner": "de dois a quatro grandes blocos brilhantes de apps saltam um a um na batida, no lado livre do quadro, sob um pequeno título sublinhado, com um reflexo suave no piso; o modo equation monta “A + B = resultado” termo a termo e bate o resultado",
   "category": "explain", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass", "studio"], "from": "new",
   "tags": ["logos", "apps", "tools", "stack", "icons", "equation", "plus", "combo", "integration", "tiles", "overlay", "3d"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 3.8, "alpha": true,
-  "say": "when the speaker names the tools they use ('I use Claude, Notion and Zapier'): each tile lands on its name; mode equation when they combine them ('Claude plus YouTube equals...'), the result slams on the payoff word" }
+  "say": "quando quem fala nomeia as ferramentas que usa (“uso Claude, Notion e Zapier”): cada bloco cai no seu nome; mode equation quando as combina (“Claude mais YouTube é igual a...”), o resultado bate na palavra do desfecho" }

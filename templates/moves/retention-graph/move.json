@@ -1,5 +1,5 @@
-{ "id": "retention-graph", "name": "Glass retention graph", "oneLiner": "an audience retention card on glass: the curve draws itself with a lit area under it, a dip and a spike get timestamp chips as the line reaches them, then a playhead rides the curve from the left and snaps onto the spike, the band behind it lights and the spike chip lifts",
+{ "id": "retention-graph", "name": "Gráfico de retenção em vidro", "oneLiner": "um cartão de retenção de audiência em vidro: a curva se desenha sozinha com uma área acesa embaixo, uma queda e um pico ganham cápsulas de tempo quando a linha chega neles, e então um cursor percorre a curva a partir da esquerda e encaixa no pico, a faixa atrás acende e a cápsula do pico se levanta",
   "category": "creator", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["retention", "analytics", "audience", "watch time", "graph", "video", "creator", "youtube", "hook", "data", "chart", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.2, "alpha": true,
-  "say": "when the speaker talks about where viewers dropped off or rewatched ('everyone left at the two minute mark', 'this is the part people replayed'): the dip chip lands on 'left', the playhead snaps to the spike on 'replayed'" }
+  "say": "quando quem fala trata de onde os espectadores saíram ou reviram (“todo mundo saiu aos dois minutos”, “esta é a parte que as pessoas repetiram”): a cápsula da queda cai em “saiu”, o cursor encaixa no pico em “repetiram”" }

@@ -1,5 +1,5 @@
-{ "id": "agent-hub", "name": "Agent hub", "oneLiner": "4 to 6 glass tool tiles pop in around the brand mark, connectors draw into the hub, packets of light flow along them, then an output card drops out under the hub; mode fanout runs it the other way, one prompt out to every tool",
+{ "id": "agent-hub", "name": "Central de agentes", "oneLiner": "de 4 a 6 blocos de ferramentas em vidro surgem em volta da marca, conectores se desenham até o centro, pacotes de luz correm por eles e então um cartão de resultado cai embaixo do centro; o modo fanout faz o contrário, um pedido sai para cada ferramenta",
   "category": "ai", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["agent", "hub", "integrations", "workflow", "automation", "connect", "tools", "orchestrator", "fan out", "network", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.8, "alpha": true,
-  "say": "when the speaker says one agent pulls from all their tools (\"it reads my email, my calendar, my docs...\"): each tile pops on its word, the output card lands on the result. Fanout: \"one prompt and it posts everywhere\". layout top keeps it above the speaker's head" }
+  "say": "quando quem fala diz que um agente busca em todas as ferramentas (“ele lê meu e-mail, minha agenda, meus documentos...”): cada bloco surge na sua palavra e o cartão de resultado cai no resultado. Fanout: “um pedido e ele publica em todo lugar”. layout top mantém tudo acima da cabeça de quem fala" }

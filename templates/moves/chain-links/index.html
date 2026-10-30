@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="pt-BR" data-composition-variables='[
-  {"id":"labels","type":"string","label":"The plates, in order, comma separated (2 to 6)","default":"Idea,Script,Edit,Post"},
-  {"id":"glyphs","type":"string","label":"Glyph per plate, comma separated (spark, pen, cut, send, video, chart...; empty = guessed from each label)","default":""},
-  {"id":"weak","type":"number","label":"The link that breaks, 1-based between plate n and n+1 (0 = none: the chain pulls taut and every plate lights)","default":0},
-  {"id":"layout","type":"string","label":"9:16 only: full (a vertical chain in the safe frame) or top (a horizontal chain in the top ~40%, the speaker below)","default":"full"}
+  {"id":"labels","type":"string","label":"As placas, em ordem, separadas por vírgula (2 a 6)","default":"Ideia,Roteiro,Edição,Publicação"},
+  {"id":"glyphs","type":"string","label":"Ícone de cada placa, separados por vírgula (spark, pen, cut, send, video, chart...; vazio = deduzido de cada rótulo)","default":""},
+  {"id":"weak","type":"number","label":"O elo que quebra, contando de 1, entre a placa n e a n+1 (0 = nenhum: a corrente se estica e todas as placas acendem)","default":0},
+  {"id":"layout","type":"string","label":"Só em 9:16: full (uma corrente vertical na área segura) ou top (uma corrente horizontal nos ~40% de cima, com quem fala embaixo)","default":"full"}
 ]'>
 <head>
 <meta charset="UTF-8" />
@@ -81,7 +81,7 @@
   // lit plates take the accent; with a weak link the ones that hold are green and the broken side red
   root.style.setProperty("--pc", +v.weak >= 1 ? "#2BD67B" : v.accent || "#FF6A3D");
   const P = MV.portrait, SQ = W === H, TOP = P && String(v.layout || "").toLowerCase() === "top";
-  const L = String(v.labels || "Idea,Script,Edit,Post").split(",").map((s) => s.trim()).filter(Boolean).slice(0, 6);
+  const L = String(v.labels || "Ideia,Roteiro,Edição,Publicação").split(",").map((s) => s.trim()).filter(Boolean).slice(0, 6);
   while (L.length < 2) L.push(["Ideia", "Lançar"][L.length]);
   const N = L.length, GL = String(v.glyphs || "").split(",").map((s) => s.trim());
   const WEAK = +v.weak >= 1 && +v.weak <= N - 1 ? Math.round(+v.weak) : 0;

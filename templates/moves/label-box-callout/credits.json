@@ -1,1 +1,8 @@
-{"sources":[{"file":"assets (paper, ink mask, box)","from":"ambientCG via existing moves","license":"CC0"},{"file":"fonts","from":"Anton, Share Tech Mono (OFL), Permanent Marker (Apache 2.0)"},{"file":"printed text","from":"written for this move"}]}
+{ "sources": [
+  {"file": "assets/paper-white.jpg", "from": "ambientCG Paper001 (scanned white paper), cropped and resized. Same file as sticker-cutout/assets/paper-white.jpg (identical SHA-256, checked)", "license": "CC0", "page": "https://ambientcg.com/view?id=Paper001"},
+  {"file": "assets/inkmask.png", "from": "ambientCG Plaster003 (scanned rough plaster), turned into an ink-coverage mask. Same file as certificate/assets/inkmask.png (identical SHA-256, checked)", "license": "CC0", "page": "https://ambientcg.com/view?id=Plaster003"},
+  {"file": "assets/box.jpg", "from": "ambientCG, reused from an existing move (Per the credits of the base project: exact asset not identified)", "license": "CC0"},
+  {"file": "assets/fonts/Anton-Regular.ttf", "from": "Anton by Vernon Adams, Google Fonts. Same file as book-stack/assets/fonts (identical SHA-256, checked)", "license": "SIL Open Font License 1.1", "page": "https://fonts.google.com/specimen/Anton"},
+  {"file": "assets/fonts/ShareTechMono-Regular.ttf", "from": "Share Tech Mono by Carrois Apostrophe, Google Fonts. Same file as boarding-pass/assets/fonts (identical SHA-256, checked)", "license": "SIL Open Font License 1.1", "page": "https://fonts.google.com/specimen/Share+Tech+Mono"},
+  {"file": "assets/fonts/PermanentMarker-Regular.ttf", "from": "Permanent Marker by Font Diner, Google Fonts. Same file as sticker-cutout/assets/fonts (identical SHA-256, checked)", "license": "Apache License 2.0", "page": "https://fonts.google.com/specimen/Permanent+Marker"}
+] }

@@ -1,66 +1,40 @@
-# Studio: how these films come alive
+# Estúdio: como esses filmes ganham vida
 
-Studied frame by frame from five design-studio pieces (a Japanese retro
-poster loop, a Spotify motion concept, a Spotify glass folder, a glass orb
-logo, a monochrome asterisk reel). They differ in surface but share one way
-of thinking: **one designed object at a time, treated like a product shot,
-and the motion IS the brand's own shape language.** The logo is drawn, the
-UI is used, the object is turned in the light.
+Estudado quadro a quadro em cinco peças de estúdios de design (um loop de pôster retrô japonês, um conceito de movimento do Spotify, uma pasta de vidro do Spotify, uma logo em esfera de vidro, um reel monocromático de asteriscos). Elas diferem na superfície, mas partilham uma forma de pensar: **um objeto desenhado de cada vez, tratado como foto de produto, e o movimento É a própria linguagem de formas da marca.** A logo é desenhada, a interface é usada, o objeto é girado na luz.
 
-## Four surfaces, one grammar
+## Quatro superfícies, uma gramática
 
-| variant | look, measured |
+| variante | visual, medido |
 |---|---|
-| retro print | cream paper `#FEEAC8`, burnt orange `#A84614` / `#DD804C` sunburst in a rounded rectangle, risograph grain, thick black outline objects (an old computer with a smiley pixel screen, a stopwatch, lightning bolts, an hourglass) with a hard offset shadow, giant extruded type in the brand script (here kanji) with a 3D black side, a thin editorial frame: tiny handle top-left, issue number top-right, `Theme of the week ---- Vintage` rule at the bottom |
-| brand gradient | near-black green `#041504` to brand green `#3BB30D` / `#71DE57` and a yellow-olive `#8A8A1A` corner, soft and moving like light; floating rounded app cards tilted in 3D, a soft glowing bokeh ball, white chunky strokes; the brand's real UI (search bar, player, carousel of album cards) at large size |
-| glass object | black with a green top light band; one glass folder (frosted, 1px bright rim, inner glow), real album cards fanned inside it, a large glass cursor arrow; title in brand green with the subtitle overlapping it |
-| monochrome | light grey `#E8E8E8` with a fine dot grid, giant black asterisk blobs (soft inner shadow, 3-lobe flowers) entering from the corners, a designer cursor drawing dashed selection boxes around words, real 3D phone, pill object, gilt frame, pocket watch |
+| impressão retrô | papel creme `#FEEAC8`, raio de sol laranja queimado `#A84614` / `#DD804C` num retângulo arredondado, granulação de risografia, objetos de contorno preto grosso (um computador antigo com tela de pixels sorridente, um cronômetro, raios, uma ampulheta) com sombra deslocada dura, tipografia gigante extrudada na escrita da marca (aqui, kanji) com lateral preta em 3D, uma moldura editorial fina: usuário minúsculo no alto à esquerda, número da edição no alto à direita, e a linha `Tema da semana ---- Vintage` embaixo |
+| degradê da marca | verde quase preto `#041504` até o verde da marca `#3BB30D` / `#71DE57` e um canto verde-oliva amarelado `#8A8A1A`, suave e em movimento como luz; cartões de app arredondados flutuando e inclinados em 3D, uma bola de bokeh brilhante e suave, traços brancos grossos; a interface real da marca (barra de busca, player, carrossel de capas de álbuns) em tamanho grande |
+| objeto de vidro | preto com uma faixa de luz verde no alto; uma pasta de vidro (fosca, borda brilhante de 1 px, brilho interno), capas de álbuns reais abertas em leque dentro dela, uma grande seta de cursor de vidro; título em verde da marca com o subtítulo sobrepondo-o |
+| monocromático | cinza claro `#E8E8E8` com uma grade fina de pontos, manchas gigantes de asterisco preto (sombra interna suave, flores de 3 lóbulos) entrando pelos cantos, um cursor de designer desenhando caixas de seleção tracejadas em volta de palavras, um celular 3D real, um objeto em forma de pílula, uma moldura dourada, um relógio de bolso |
 
-## What moves, and how
+## O que se move, e como
 
-1. **The logo is built, not shown.** Dots appear one by one and slide into
-   a row, then curve into an arc that whips round into the Spotify mark; or
-   a white stroke draws across the frame, splits into three, and settles as
-   the three bars of the logo, then a green disc fades in behind. The
-   brand's own shape is the animation.
-2. **Real UI, used.** A search field grows from a dark pill, text is typed
-   letter by letter, a white ring presses the search button; a player card
-   flips in, a carousel of real cards slides, the camera crops into the
-   play button and it toggles to pause, the progress bar runs.
-3. **Objects in 3D.** Cards and folders tilt and turn (rotateY 10-30deg)
-   with depth of field; cards fly past the camera; a folder opens and cards
-   rise and fan. Everything has a soft shadow and a rim light.
-4. **Springy, never stepped.** Pops overshoot (back-out), arcs whip with
-   motion blur, a ball bounces. Lots of motion blur on fast moves.
-5. **Cursor as narrator.** A designer cursor drags a selection box around a
-   word, then the word appears inside it; a big glass cursor hovers by the
-   object; a white ring marks every click.
-6. **Shape wipes.** A giant asterisk slides across and the scene changes
-   behind it; a black diagonal band sweeps; a sunburst rotates in.
-7. **Extruded type slams.** Big 3D type with a hard black side drops in
-   from the top with overshoot; small editorial type stays perfectly still.
-8. **Lens.** A glass sphere refracts colourful shapes inside it, they
-   swirl, then resolve into the wordmark: liquid refraction, chromatic
-   fringe, a bloom rim.
+1. **A logo é construída, não mostrada.** Pontos surgem um a um e deslizam numa fileira, depois se curvam num arco que é chicoteado até a marca do Spotify; ou um traço branco se desenha pelo quadro, se divide em três e se assenta como as três barras da logo, e então um disco verde surge por trás. A própria forma da marca é a animação.
+2. **Interface real, usada.** Um campo de busca cresce de uma cápsula escura, o texto é digitado letra a letra, um anel branco aperta o botão de buscar; um cartão de player vira, um carrossel de cartões reais desliza, a câmera recorta no botão de tocar e ele alterna para pausar, a barra de progresso corre.
+3. **Objetos em 3D.** Cartões e pastas se inclinam e giram (rotateY de 10 a 30 graus) com profundidade de campo; cartões passam voando pela câmera; uma pasta se abre e os cartões sobem e se abrem em leque. Tudo tem uma sombra suave e uma luz de contorno.
+4. **Com mola, nunca em degraus.** Os saltos passam do ponto (back-out), arcos são chicoteados com desfoque de movimento, uma bola quica. Bastante desfoque de movimento nos movimentos rápidos.
+5. **O cursor como narrador.** Um cursor de designer arrasta uma caixa de seleção em volta de uma palavra e então a palavra aparece dentro dela; um grande cursor de vidro paira ao lado do objeto; um anel branco marca cada clique.
+6. **Varreduras de formas.** Um asterisco gigante desliza pelo quadro e a cena muda atrás dele; uma faixa diagonal preta varre; um raio de sol entra girando.
+7. **Batidas de tipografia extrudada.** Tipografia grande em 3D com lateral preta dura cai de cima com excesso; a tipografia editorial pequena fica perfeitamente parada.
+8. **Lente.** Uma esfera de vidro refrata formas coloridas dentro dela, elas rodopiam e então se resolvem no nome da marca: refração líquida, franja cromática, borda com brilho.
 
-Pace: one idea per 2-4s, often ONE continuous shot that keeps morphing;
-camera crops in and out of the same object rather than cutting.
+Ritmo: uma ideia a cada 2 a 4 s, muitas vezes UM plano contínuo que continua se transformando; a câmera recorta para dentro e para fora do mesmo objeto em vez de cortar.
 
-## How to think when using it
+## Como pensar ao usar
 
-Find the brand's shape language first: the logo's geometry, its UI's key
-component, its colour light. Then:
-- open by **building the logo out of its own parts**;
-- show the product by **using its real UI** at hero size (type a real
-  query, press the real button, play the real item);
-- make one **designed object** for the idea (a glass folder of their real
-  content, an orb, a retro poster object) and turn it in light;
-- narrate with the **cursor** and shape wipes.
+Encontre primeiro a linguagem de formas da marca: a geometria da logo, o componente-chave da sua interface, a luz da sua cor. Depois:
+- abra **construindo a logo com as próprias peças**;
+- mostre o produto **usando a interface real** em tamanho de herói (digite uma pergunta real, aperte o botão real, toque o item real);
+- faça um **objeto desenhado** para a ideia (uma pasta de vidro com o conteúdo real deles, uma esfera, um objeto de pôster retrô) e gire-o na luz;
+- narre com o **cursor** e varreduras de formas.
 
-## Rules
+## Regras
 
-- One hero at a time, centred, with depth of field on anything else.
-- Background is light or colour, not a picture: a moving gradient, paper
-  with grain, or a dot grid.
-- Every motion springs or arcs; nothing linear except progress bars.
-- Text is either tiny editorial or huge extruded; never medium.
+- Um herói de cada vez, centralizado, com profundidade de campo em tudo o mais.
+- O fundo é claro ou colorido, não uma foto: um degradê em movimento, papel com granulação ou uma grade de pontos.
+- Todo movimento tem mola ou arco; nada linear, exceto barras de progresso.
+- O texto é ou minúsculo e editorial ou enorme e extrudado; nunca médio.

@@ -29,13 +29,13 @@ Toda tela tem os estados vazio, carregando e erro. As ações respeitam as camad
 **Objetivo:** escolher um efeito.
 **Dados:** só o que a vitrine pode mostrar (RN-02): prévia, nome, uma linha, categoria, duração, formatos, se tem versão transparente, "quando usar".
 **Ações:** filtrar por categoria, abrir, "Usar este efeito".
-**Estados:** efeitos desligados ou sem licença conferida não aparecem (RN-19).
+**Estados:** efeitos desligados, ou que a camada 1 desligou para a equipe, não aparecem (RN-19).
 
 ## T5 — Pedir um efeito
 
 **Objetivo:** preencher e gerar um efeito.
 **Dados:** variáveis do efeito (com rótulo e valor padrão), marca, formato, fundo (cobertura ou transparente), tipo de arquivo, cor de chave opcional, **estimativa de tempo de máquina e saldo do plano**.
-**Ações:** gerar a prévia de um quadro, gerar o arquivo, baixar.
+**Ações:** gerar a prévia de um quadro, gerar o arquivo, assistir ao resultado na plataforma, **publicar** (T17). Não há botão de baixar (RN-25).
 **Validações:** RN-08, RN-09, RN-12, RN-17.
 **Estados:** fila (com posição), renderizando (com tempo decorrido), pronto, em revisão humana, falhou (com a mensagem).
 
@@ -54,7 +54,7 @@ Tela em abas que acompanha o estado do filme.
 - **Grade:** tabela de cenas (tempo, batidas, tela, movimento, som) e a de efeitos sonoros; erros do validador, se houver. Ações: editar, validar, **aprovar** conforme a política da equipe (RN-06). Mostra quem aprovou e quando.
 - **Trilha:** ouvir a trilha gerada, ver andamento e clima. Ação: gerar de novo.
 - **Rodadas:** para cada rodada, o vídeo, as folhas de quadros, as medidas e as seis notas com as correções. Ações: gerar rascunho, avaliar, gerar a versão final (RN-20).
-- **Entrega:** arquivo final, registro (`LOG.md`), pendências se entregue na rodada 3. Ações: baixar, pedir exclusão.
+- **Entrega:** vídeo final para assistir na plataforma (versão de visualização), pendências se entregue na rodada 3. Ações: **publicar** (abre a janela de publicação da T17), pedir exclusão. Sem download e sem `LOG.md` para o cliente (RN-25).
 
 **Validações:** não gerar rascunho com grade pendente; não passar de 3 rodadas (RN-10).
 
@@ -67,9 +67,9 @@ Tela em abas que acompanha o estado do filme.
 
 ## T9 — Biblioteca de entregas
 
-**Objetivo:** achar e baixar o que já foi feito.
-**Dados:** miniatura, título, formato, duração, data, marca.
-**Ações:** baixar, baixar em lote (ação governada, RN-23), pedir exclusão (RN-03).
+**Objetivo:** achar, assistir e publicar o que já foi feito.
+**Dados:** miniatura, título, formato, duração, data, marca, onde já foi publicado.
+**Ações:** assistir, publicar ou agendar (T17, RN-27), pedir exclusão (RN-03). Sem baixar, nem em lote (RN-25).
 
 ## T10 — Importar projeto da skill
 
@@ -77,11 +77,27 @@ Tela em abas que acompanha o estado do filme.
 **Dados:** envio de um arquivo compactado.
 **Ações:** importar (ação governada); mostra o que foi lido e o que falhou.
 
+## T17 — Redes sociais e publicações
+
+**Objetivo:** conectar as contas de rede social da equipe e publicar as entregas aprovadas.
+**Dados:** redes do plano (e as bloqueadas, com convite para mudar de plano), contas conectadas com estado (`connected`, `expired`, `revoked`), publicações feitas e agendadas com rede, conta, data, estado e endereço na rede, saldo de publicações do mês.
+**Ações:** conectar e desconectar conta (dono do cliente, RN-26), publicar agora ou agendar uma entrega aprovada com legenda e escolha das redes (quem tiver permissão), cancelar agendamento, tentar de novo uma falha.
+**Janela "Publicar":** entrega escolhida, redes permitidas pelo plano marcadas, legenda, agora ou data e hora, resumo do saldo.
+**Validações:** RN-26 e RN-27. Rede fora do plano aparece bloqueada; conta expirada pede reconexão.
+**Estados:** vazio ("Conecte sua primeira rede social"), publicando, publicada (com link), falhou (com a mensagem e aviso de que a Conex Prime foi avisada).
+
 ## T11 — Catálogo e recursos **[Conex Prime]**
 
-**Objetivo:** controlar o que existe e o que cada equipe pode usar.
-**Dados:** todos os efeitos e temas, estado de licença, tempo típico de render, versão da skill, recursos por equipe.
-**Ações:** sincronizar o catálogo com a skill, ligar e desligar efeito, tema ou recurso (com a licença conferida registrada, RN-19), definir plano e política de aprovação de cada equipe.
+**Objetivo:** controlar o que existe e o que cada equipe pode usar, sem limite para a Conex Prime (RN-28).
+**Dados:** todos os efeitos e temas, ligados ou não, com filtros (todos, ligados, desligados, licença pendente), estado de licença, tempo típico de render, versão da skill, recursos por equipe.
+**Ações:** sincronizar o catálogo com a skill, testar qualquer item (mesmo desligado), ligar e desligar efeito, tema ou recurso (com a licença conferida registrada, RN-19), definir plano e política de aprovação de cada equipe.
+
+## T20 — O que a skill faz **[Conex Prime]**
+
+**Objetivo:** mostrar tudo o que a skill sabe fazer, sem limites (RN-28).
+**Dados:** totais (269 efeitos, 9 temas, 3 formatos, 5 saídas, 220 efeitos com fundo transparente, 210 blocos do catálogo externo), efeitos por categoria e a tabela de capacidades com o que a equipe cliente enxerga e o que a Conex Prime enxerga.
+**Ações:** abrir uma categoria no catálogo, pedir um render de teste, criar um filme.
+**Estados:** vazio e erro como na T11 ("A skill não respondeu", com o registro).
 
 ## T12 — Pedidos de exclusão e revisões **[Conex Prime]**
 
@@ -100,3 +116,18 @@ Tela em abas que acompanha o estado do filme.
 **Objetivo:** criar efeitos e temas novos a partir de referências.
 **Dados:** referências em estudo, rascunhos, provas lado a lado, estado de aprovação.
 **Ações:** abrir uma referência (ação governada), aprovar a prova, publicar na biblioteca. Regra: copiar a gramática, nunca o conteúdo.
+
+## T18 — Configuração da skill **[Conex Prime]** (sugestão)
+
+**Objetivo:** controlar como a skill busca material de fora e o que ela pode usar.
+**Abas:** Fontes e modo de rede; Catálogo externo; Recursos liberados; Dispositivos 3D.
+**Fontes e modo de rede:** escolher `automatico`, `travado` ou `proprio`; ligar e desligar fontes de busca; adicionar fonte própria com as licenças que ela aceita (sem licença declarada, não entra).
+**Catálogo externo:** todos os blocos do catálogo de efeitos do HyperFrames, cada um com a licença e a origem dela (declarada ou do repositório) e o aviso de marca ou fonte de terceiros; ação: trazer o bloco e gravar os créditos.
+**Recursos liberados:** os efeitos com arquivos de origem não documentada, com quem liberou e quando; ação: desligar ou religar por equipe (RN-19).
+**Dispositivos 3D:** estado da cena de dispositivo, liberação registrada e logo escondida; ação: desligar ou religar por equipe.
+
+## T19 — Cliente (configuração) **[Conex Prime]** (sugestão)
+
+**Objetivo:** ver e mudar, por cliente, tudo o que vale para ele neste módulo.
+**Dados:** plano e limites, política de aprovação, redes sociais liberadas e publicações por mês (RN-26), efeitos e temas liberados, equipe, marcas, redes conectadas e uso do mês. A lista e o cadastro dos clientes ficam no núcleo.
+**Ações:** escolher o cliente, salvar a configuração. Tudo vai para o registro (RN-04).

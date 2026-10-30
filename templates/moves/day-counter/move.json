@@ -1,5 +1,5 @@
-{ "id": "day-counter", "name": "Tear-off day counter", "oneLiner": "a tear-off desk calendar of real scanned paper under a brushed-metal clamp: pages rip off one after another on twos, faster and faster, each tumbling out of frame and leaving a ragged stub, until the last page shows Day N and a marker ring is drawn around the number",
+{ "id": "day-counter", "name": "Calendário de dias destacáveis", "oneLiner": "um calendário de mesa de folhas destacáveis, de papel escaneado de verdade, sob uma presilha de metal escovado: as folhas são arrancadas uma após a outra em passos de dois quadros, cada vez mais rápido, cada uma saindo do quadro girando e deixando um canhoto irregular, até a última folha mostrar “Dia N” e um anel de marcador ser desenhado em volta do número",
   "category": "data", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["paper"], "from": "new",
   "tags": ["day", "days", "streak", "challenge", "countdown", "calendar", "time passing", "consistency", "habit", "journey", "paper", "desk", "light"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": true,
-  "say": "when the speaker names how long something took or a streak ('100 days in', 'day 30 of posting every day', 'it took me 90 days'): cut in on the number, the ring lands as they say it" }
+  "say": "quando quem fala diz quanto tempo algo levou ou uma sequência (“100 dias”, “dia 30 postando todos os dias”, “levei 90 dias”): entre no número, o anel cai enquanto a pessoa o diz" }

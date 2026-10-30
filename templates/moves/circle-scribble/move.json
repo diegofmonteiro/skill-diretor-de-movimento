@@ -1,5 +1,5 @@
-{ "id": "circle-scribble", "name": "Circle scribble", "oneLiner": "a glossy instant photo print is tossed in on twos and settles with a slow 3D drift; a red felt-tip loops around the face or object a little over one turn, the ring closing with a nudge, and a caption is handwritten in the white strip",
+{ "id": "circle-scribble", "name": "Círculo riscado", "oneLiner": "uma foto instantânea brilhante é lançada em passos de dois quadros e se assenta com um deslize lento em 3D; uma caneta vermelha dá uma volta e um pouco em torno do rosto ou objeto, o círculo se fechando com um empurrão, e uma legenda é escrita à mão na faixa branca",
   "category": "explain", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["paper", "editorial"], "from": "new",
   "tags": ["circle", "marker", "annotation", "photo", "face", "person", "who", "spot", "this guy", "handwriting", "paper", "on twos"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 3.6, "alpha": true,
-  "say": "when the speaker singles someone or something out in a photo ('this guy', 'see him on the left', 'that one'): the ring closes on the name. Set rect to the face or object in % of the image; label is the caption on the print (none for no caption)" }
+  "say": "quando quem fala destaca alguém ou algo numa foto (“este cara”, “olha ele à esquerda”, “aquele”): o círculo se fecha no nome. Defina rect com o rosto ou objeto em % da imagem; label é a legenda na foto (none para sem legenda)" }

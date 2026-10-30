@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="pt-BR" data-composition-variables='[
-  {"id":"file","type":"string","label":"File name on the tab","default":"load.js"},
-  {"id":"code","type":"string","label":"Code lines, separated by |","default":"async function load(user) {|  const res = await fetch(user.url);|  const items = res.data.items;|  return items.map(render);|}"},
-  {"id":"bug","type":"number","label":"Line number that breaks (1 = first)","default":4},
-  {"id":"fix","type":"string","label":"What that line becomes","default":"  return (items || []).map(render);"},
-  {"id":"error","type":"string","label":"Error name on the toast","default":"TypeError"},
-  {"id":"message","type":"string","label":"Error message on the toast","default":"items is undefined"},
-  {"id":"fixed","type":"string","label":"Toast title once fixed","default":"Corrigido"},
-  {"id":"fixedNote","type":"string","label":"Toast line once fixed","default":"0 erros, testes passando"}
+  {"id":"file","type":"string","label":"Nome do arquivo na aba","default":"load.js"},
+  {"id":"code","type":"string","label":"Linhas de código, separadas por |","default":"async function load(user) {|  const res = await fetch(user.url);|  const items = res.data.items;|  return items.map(render);|}"},
+  {"id":"bug","type":"number","label":"Número da linha que quebra (1 = a primeira)","default":4},
+  {"id":"fix","type":"string","label":"Em que essa linha se transforma","default":"  return (items || []).map(render);"},
+  {"id":"error","type":"string","label":"Nome do erro no aviso","default":"TypeError"},
+  {"id":"message","type":"string","label":"Mensagem de erro no aviso","default":"items is undefined"},
+  {"id":"fixed","type":"string","label":"Título do aviso depois de corrigido","default":"Corrigido"},
+  {"id":"fixedNote","type":"string","label":"Linha do aviso depois de corrigido","default":"0 erros, testes passando"}
 ]'>
 <head>
 <meta charset="UTF-8" />

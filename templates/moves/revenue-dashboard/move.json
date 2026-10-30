@@ -1,5 +1,5 @@
-{ "id": "revenue-dashboard", "name": "Revenue dashboard card", "oneLiner": "a payments dashboard card tilts in on a warm lit desk, the revenue number ticks up while a sparkline draws itself to a glowing tip, three recent payments slide in with their amounts and a growth pill stamps down beside the number",
+{ "id": "revenue-dashboard", "name": "Cartão de painel de receita", "oneLiner": "um cartão de painel de pagamentos se inclina numa mesa quente iluminada, o número da receita sobe enquanto uma linha de tendência se desenha até uma ponta brilhante, três pagamentos recentes deslizam com seus valores e uma pílula de crescimento é carimbada ao lado do número",
   "category": "data", "kind": "effect", "uses": ["broll"], "looks": ["paper", "studio"], "from": "new",
   "tags": ["revenue", "money", "sales", "mrr", "payments", "dashboard", "growth", "income", "chart", "sparkline", "proof", "numbers", "3d", "light"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.8, "alpha": false,
-  "say": "when the speaker says what it made or how fast it is growing ('we did 48k this month', 'the money started coming in'): cut in on the number, the pill stamps as they say how much it grew" }
+  "say": "quando quem fala diz quanto faturou ou quão rápido está crescendo (“faturamos 48 mil este mês”, “o dinheiro começou a entrar”): entre no número, a pílula é carimbada quando a pessoa diz quanto cresceu" }

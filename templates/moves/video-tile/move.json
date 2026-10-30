@@ -1,5 +1,5 @@
-{ "id": "video-tile", "name": "Video tile", "oneLiner": "a video tile (a thumbnail built from the brand's screen and a person cut-out, duration badge, title, channel row) pops in on glass, the view count races up, a glass play button lands with a ring on hover and a progress bar starts running along the bottom of the thumbnail",
+{ "id": "video-tile", "name": "Bloco de vídeo", "oneLiner": "um bloco de vídeo (uma miniatura feita da tela da marca e de um recorte de pessoa, selo de duração, título, linha do canal) surge no vidro, a contagem de visualizações dispara, um botão de reproduzir em vidro cai com um anel ao passar o cursor e uma barra de progresso começa a correr no pé da miniatura",
   "category": "creator", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["video", "thumbnail", "views", "content", "creator", "channel", "viral", "watch", "play", "proof", "3d", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": true,
-  "say": "when the speaker mentions a video they made or saw ('I posted a video about it', 'that video did a million views'): the play ring lands on 'video', the count settles as they say the number" }
+  "say": "quando quem fala menciona um vídeo que fez ou viu (“postei um vídeo sobre isso”, “aquele vídeo fez um milhão de visualizações”): o anel de reproduzir cai em “vídeo”, a contagem para quando a pessoa diz o número" }

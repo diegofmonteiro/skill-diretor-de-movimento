@@ -1,5 +1,5 @@
-{ "id": "kpi-tiles", "name": "KPI tiles", "oneLiner": "2 to 4 glass KPI panes fly in from their own sides and seat on a lit floor, each with a glyph tile, a number that counts up in its own format, a green or red change chip and a sparkline drawn with a riding dot; the hero pane lifts out in the accent at the end",
+{ "id": "kpi-tiles", "name": "Blocos de indicadores", "oneLiner": "de 2 a 4 painéis de indicadores de vidro voam de cada lado e se assentam num piso iluminado, cada um com um bloco de ícone, um número que conta no seu próprio formato, uma cápsula verde ou vermelha de variação e uma linha de tendência desenhada com um ponto que a acompanha; o painel principal sobe na cor de destaque no final",
   "category": "data", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["kpi", "dashboard", "metrics", "stats", "numbers", "sparkline", "growth", "results", "analytics", "data", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.4, "alpha": true,
-  "say": "when the speaker reels off results ('revenue up 32%, subscribers up 18%...'): cut in on the first number, the hero tile lifts on the one they lean on. Set hero to the metric the sentence ends on" }
+  "say": "quando quem fala despeja resultados (“receita subiu 32%, inscritos subiram 18%...”): entre no primeiro número, o bloco principal sobe naquele em que a pessoa se apoia. Defina hero com o indicador em que a frase termina" }

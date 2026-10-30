@@ -1,5 +1,5 @@
-{ "id": "book-highlight", "name": "Book highlight", "oneLiner": "a macro shot on a real paper book page curving into its gutter: a highlighter swipes the key sentence on twos, then a real ballpoint writes a note in the margin and draws an arrow up to the line",
+{ "id": "book-highlight", "name": "Trecho marcado no livro", "oneLiner": "um plano macro numa página de livro de papel de verdade curvando para a lombada: um marcador de texto risca a frase-chave em passos de dois quadros, e então uma caneta esferográfica de verdade escreve uma nota na margem e desenha uma seta até a linha",
   "category": "paper", "kind": "effect", "uses": ["broll"], "looks": ["paper"], "from": "new",
   "tags": ["book", "quote", "lesson", "principle", "read", "highlight", "margin note", "key line", "study", "paper", "on twos"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.2, "alpha": false,
-  "say": "when the speaker quotes a rule or a line worth remembering ('the one line that changed how I work'): the highlighter runs as they read it and the note lands on their comment about it" }
+  "say": "quando quem fala cita uma regra ou uma frase que vale lembrar (“a frase que mudou como eu trabalho”): o marcador corre enquanto a pessoa lê e a nota cai no comentário dela" }

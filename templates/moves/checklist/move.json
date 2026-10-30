@@ -1,5 +1,5 @@
-{ "id": "checklist", "name": "Glass checklist", "oneLiner": "3 to 5 items on a glass card tick off one by one with a drawn check in the accent and a strike through the text, a progress bar fills at the top, the last tick lands a stamp",
+{ "id": "checklist", "name": "Lista de verificação em vidro", "oneLiner": "de 3 a 5 itens num cartão de vidro são marcados um a um com uma marca desenhada na cor de destaque e um risco sobre o texto, uma barra de progresso enche no topo, a última marca faz cair um carimbo",
   "category": "productivity", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["checklist", "steps", "todo", "process", "progress", "list", "done", "complete", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": true,
-  "say": "when the speaker runs through steps or requirements and says they are all handled: one tick per step as each is named, the stamp lands on 'done' or 'that's it'" }
+  "say": "quando quem fala percorre passos ou requisitos e diz que estão todos resolvidos: uma marca por passo conforme cada um é nomeado, o carimbo cai em “pronto” ou “é isso”" }

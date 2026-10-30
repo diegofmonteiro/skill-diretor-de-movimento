@@ -1,5 +1,5 @@
-{ "id": "skeleton-load", "name": "Skeleton load", "oneLiner": "a floating glass page shows only its loading skeleton, grey blocks with a light shimmer sweeping across them, then the page resolves block by block into the brand's real screen, each block lifting out of blur, the headline block landing last with a push-in while the spinner turns into a green check",
+{ "id": "skeleton-load", "name": "Carregamento com esqueleto", "oneLiner": "uma página flutuante de vidro mostra só o seu esqueleto de carregamento, blocos cinza com um brilho leve que varre por eles, e então a página se resolve bloco a bloco na tela real da marca, cada bloco saindo do desfoque, o bloco da manchete caindo por último com um avanço enquanto o indicador de carregamento vira uma marca verde",
   "category": "system", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["loading", "skeleton", "page load", "website", "app", "screen", "reveal", "build", "generate", "it builds", "landing page", "3d", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.8, "alpha": true,
-  "say": "when the speaker says the page or app comes together ('it built the whole site', 'and the page just loads in', 'watch it fill in'): the skeleton holds on the setup, the blocks resolve as they say it built it" }
+  "say": "quando quem fala diz que a página ou o app se monta (“ele construiu o site inteiro”, “e a página simplesmente carrega”, “veja ela se preencher”): o esqueleto segura na preparação, os blocos se resolvem quando a pessoa diz que construiu" }

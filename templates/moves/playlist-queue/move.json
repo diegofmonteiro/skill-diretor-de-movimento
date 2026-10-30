@@ -1,5 +1,5 @@
-{ "id": "playlist-queue", "name": "Playlist up next", "oneLiner": "a glass player with its Up next queue: the playing video runs out, the next row lights, its thumbnail lifts out of the list and flies up into the player where it lands with a play pulse, the title swaps, the queue slides up and renumbers and a fresh progress bar starts",
+{ "id": "playlist-queue", "name": "Fila de playlist “a seguir”", "oneLiner": "um player de vidro com a sua fila “A seguir”: o vídeo que toca termina, a linha seguinte acende, a sua miniatura sai da lista e voa para o player, onde pousa com um pulso de reprodução, o título troca, a fila sobe e se renumera e uma nova barra de progresso começa",
   "category": "creator", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["playlist", "queue", "up next", "autoplay", "binge", "next video", "series", "watch time", "player", "creator", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.4, "alpha": true,
-  "say": "when the speaker talks about binge watching or a series ('this is part one of five', 'people watch one and the next one autoplays'): the video runs out under the setup, the next one flies into the player on 'next'" }
+  "say": "quando quem fala trata de maratonar ou de uma série (“esta é a parte um de cinco”, “as pessoas assistem a um e o próximo toca sozinho”): o vídeo termina durante a preparação, o próximo voa para o player em “próximo”" }

@@ -1,5 +1,5 @@
-{ "id": "git-graph", "name": "Glass commit graph", "oneLiner": "a commit history on glass: the main line draws up with its commits, then each branch forks out and merges back in its own colour with the messages sliding in beside their dots, and a version tag stamps onto the newest commit",
+{ "id": "git-graph", "name": "Gráfico de commits em vidro", "oneLiner": "um histórico de commits em vidro: a linha principal se desenha subindo com seus commits, e então cada ramo se abre e se junta de volta na sua própria cor com as mensagens deslizando ao lado dos pontos, e uma etiqueta de versão carimba no commit mais novo",
   "category": "dev", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["git", "commits", "branches", "history", "version", "release", "ship", "developer", "code", "open source", "progress", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.0, "alpha": true,
-  "say": "when the speaker talks about the work that went into a release ('weeks of commits', 'two branches, merged, and we shipped v1'): the branches draw while the speaker describes the work, the tag stamps on 'shipped' or the version name" }
+  "say": "quando quem fala trata do trabalho que foi para uma versão (“semanas de commits”, “dois ramos, juntados, e lançamos a v1”): os ramos se desenham enquanto a pessoa descreve o trabalho, a etiqueta carimba em “lançamos” ou no nome da versão" }

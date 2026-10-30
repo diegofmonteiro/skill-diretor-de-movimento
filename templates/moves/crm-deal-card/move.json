@@ -1,5 +1,5 @@
-{ "id": "crm-deal-card", "name": "CRM deal card", "oneLiner": "a sales pipeline card on a warm lit desk: a deal drops into the first stage with its value counting up, lifts and hops down the stages one by one while the other deals make room, lands in Won with a green edge, a green WON stamp thumps on and the header total adds the deal",
+{ "id": "crm-deal-card", "name": "Cartão de negócio no CRM", "oneLiner": "um cartão de funil de vendas numa mesa quente e iluminada: um negócio cai na primeira etapa com o valor contando, sobe e salta pelas etapas uma a uma enquanto os outros negócios abrem espaço, pousa em “Ganho” com uma borda verde, um carimbo verde de GANHO bate e o total do cabeçalho soma o negócio",
   "category": "business", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["studio", "paper"], "from": "new",
   "tags": ["crm", "pipeline", "deal", "sales", "won", "client", "closed", "revenue", "b2b", "agency", "funnel", "light"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.0, "alpha": true,
-  "say": "when the speaker says a deal closed or a client signed ('and they signed', 'that one turned into a 24k contract'): cut in as they name the client, the stamp lands on 'signed' or 'closed'" }
+  "say": "quando quem fala diz que fechou um negócio ou que um cliente assinou (“e eles assinaram”, “esse virou um contrato de 24 mil”): entre quando a pessoa nomeia o cliente, o carimbo cai em “assinou” ou “fechou”" }

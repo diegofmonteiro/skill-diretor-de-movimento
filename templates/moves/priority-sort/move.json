@@ -1,5 +1,5 @@
-{ "id": "priority-sort", "name": "Priority sort", "oneLiner": "a glass task list in the order things came in; Sort by priority is pressed, the most important task lifts off the list and glides up to the top while the rest shuffle into place under it, and every rank number rolls to its new position",
+{ "id": "priority-sort", "name": "Ordenação por prioridade", "oneLiner": "uma lista de tarefas de vidro na ordem em que chegaram; Ordenar por prioridade é apertado, a tarefa mais importante sai da lista e desliza até o topo enquanto as outras se rearranjam embaixo dela, e cada número de posição gira para o seu novo lugar",
   "category": "productivity", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["tasks", "to-do", "priority", "prioritise", "sort", "reorder", "focus", "what matters", "first thing", "planning", "productivity", "list", "agent", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": true,
-  "say": "when the speaker says one thing matters more than the rest ('do this one first', 'it ranks your tasks for you'): the list sorts on 'priority' and the top task lands at number one on the thing they name. Set tasks, prios (1 is highest) and the sort label" }
+  "say": "quando quem fala diz que uma coisa importa mais que as outras (“faça esta primeiro”, “ela ordena as suas tarefas”): a lista se ordena em “prioridade” e a tarefa do topo chega ao número um na coisa que a pessoa nomeia. Defina tasks, prios (1 é a mais alta) e o rótulo de ordenar" }

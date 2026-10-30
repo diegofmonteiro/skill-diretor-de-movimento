@@ -1,5 +1,5 @@
-{ "id": "scatter-quadrant", "name": "Scatter quadrant", "oneLiner": "a glass plot stands up off a lit floor with two axes and a dashed cross; a field of glass beads drops in out of the camera one by one, then the brand drops last as a lit disc into the top right quadrant, which floods with the accent while the field falls back and the camera pushes in",
+{ "id": "scatter-quadrant", "name": "Quadrante de dispersão", "oneLiner": "um gráfico de vidro se ergue de um piso iluminado com dois eixos e uma cruz tracejada; um campo de contas de vidro cai da câmera uma a uma, e então a marca cai por último como um disco aceso no quadrante superior direito, que se inunda de cor de destaque enquanto o campo recua e a câmera avança",
   "category": "data", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["scatter", "plot", "quadrant", "positioning", "market", "competitors", "standout", "two axes", "comparison", "data", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.4, "alpha": true,
-  "say": "when the speaker says everyone else trades one thing for another and the brand gets both ('they are fast or good, we are both'): cut in on the market, the brand dot lands on the word that claims the spot" }
+  "say": "quando quem fala diz que todos os outros trocam uma coisa por outra e a marca tem as duas (“eles são rápidos ou bons, nós somos os dois”): entre no mercado, o ponto da marca cai na palavra que reivindica o lugar" }

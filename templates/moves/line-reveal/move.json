@@ -1,5 +1,5 @@
-{ "id": "line-reveal", "name": "Line reveal", "oneLiner": "a glowing line draws itself left to right while the camera rides its head, then pulls back as the last point pops with its value on a glass pill",
+{ "id": "line-reveal", "name": "Linha se revelando", "oneLiner": "uma linha brilhante se desenha da esquerda para a direita enquanto a câmera acompanha a ponta, e então se afasta quando o último ponto estoura com o seu valor numa cápsula de vidro",
   "category": "data", "kind": "effect", "uses": ["broll"], "looks": ["glass"], "from": "glass",
   "tags": ["chart", "line", "trend", "growth", "data", "numbers", "camera", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.4, "alpha": false,
-  "say": "when the speaker describes growth or a trend over time: cut in on the trend, the value pops on the number word" }
+  "say": "quando quem fala descreve crescimento ou uma tendência ao longo do tempo: entre na tendência, o valor estoura na palavra do número" }

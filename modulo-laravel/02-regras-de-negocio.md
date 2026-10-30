@@ -4,19 +4,21 @@ Regras que o sistema nunca pode quebrar. Se uma tela ou decisão técnica contra
 
 Cada regra tem: a regra, o porquê e como testar.
 
+> **Regra geral do projeto (ordem do fundador):** o cliente fica na plataforma. Ele **nunca baixa** o que foi produzido; ele aprova e a plataforma **publica** direto nas redes sociais que ele conectou, conforme o plano. Vale para todo o aplicativo, não só para este módulo. Ver RN-25, RN-26 e RN-27.
+
 ## Acesso e dados
 
 ### RN-01 — Isolamento por equipe
 
-**Regra:** nenhum usuário de uma equipe vê, baixa ou altera marca, projeto, tarefa de render ou entrega de outra equipe, por nenhuma rota, inclusive o download direto de arquivo.
+**Regra:** nenhum usuário de uma equipe vê, publica ou altera marca, projeto, tarefa de render ou entrega de outra equipe, por nenhuma rota, inclusive o endereço direto de arquivo.
 
 **Por quê:** cada equipe é um cliente da Conex Prime; uma marca ou um vídeo inédito vazado é dano real.
 
-**Como testar:** usuário da equipe A tenta acessar, por todas as rotas do módulo e pelo endereço do arquivo, registros da equipe B e recebe recusa.
+**Como testar:** usuário da equipe A tenta acessar, por todas as rotas do módulo e pelo endereço do arquivo, registros da equipe B e recebe recusa, e o mesmo vale para as contas de rede social e as publicações.
 
 ### RN-02 — A inteligência nunca chega ao cliente
 
-**Regra:** nenhuma rota, resposta de API, arquivo baixável ou tela das camadas 2 e 3 devolve o conteúdo da skill: `SKILL.md`, `references/`, receitas dos temas, código ou HTML dos efeitos, regras internas. O cliente vê só a vitrine e o vídeo entregue.
+**Regra:** nenhuma rota, resposta de API, arquivo ou tela das camadas 2 e 3 devolve o conteúdo da skill: `SKILL.md`, `references/`, receitas dos temas, código ou HTML dos efeitos, regras internas. O cliente vê só a vitrine e o vídeo entregue.
 
 **Por quê:** a inteligência é o valor da Conex Prime; o cliente compra o direito de produzir vídeos, não o motor.
 
@@ -32,7 +34,7 @@ Cada regra tem: a regra, o porquê e como testar.
 
 ### RN-04 — Registro de tudo
 
-**Regra:** toda ação relevante (pedir, aprovar, reprovar, baixar, enviar arquivo, pedir exclusão, mudar plano ou recurso) grava um registro de auditoria com quem, quando, o quê, o alvo e o resultado. O registro não pode ser editado nem apagado por nenhum papel das camadas 2 e 3.
+**Regra:** toda ação relevante (pedir, aprovar, reprovar, conectar ou desconectar rede social, publicar, agendar, enviar arquivo, pedir exclusão, mudar plano ou recurso, e qualquer tentativa de baixar) grava um registro de auditoria com quem, quando, o quê, o alvo e o resultado. O registro não pode ser editado nem apagado por nenhum papel das camadas 2 e 3.
 
 **Por quê:** é a prova que a Conex Prime precisa ter a seu favor em qualquer discussão.
 
@@ -45,6 +47,42 @@ Cada regra tem: a regra, o porquê e como testar.
 **Por quê:** é a regra de acesso do aplicativo (Conex Prime → cliente → cargo).
 
 **Como testar:** desligar um recurso na camada 1 e tentar ligá-lo como dono do cliente; recusado.
+
+### RN-25 — O cliente não baixa nada
+
+**Regra:** nenhum usuário das camadas 2 e 3 baixa vídeo, prévia em qualidade de entrega, quadro, trilha, `LOG.md` ou qualquer arquivo produzido. Não existe botão, rota, resposta de API, link por e-mail ou webhook que entregue o arquivo ao cliente. O cliente assiste ao vídeo dentro da plataforma, em reprodutor com endereço temporário e de baixa resolução com marca d'água da plataforma; a versão final só sai do servidor para a rede social conectada (RN-27). A camada 1 (Conex Prime) pode baixar, para suporte e cópia de segurança, e cada download dela fica no registro.
+
+**Por quê:** o cliente compra o direito de produzir e publicar, não o arquivo. Sem esta regra ele leva o vídeo para fora e deixa de usar a plataforma. Ordem do fundador, válida para todo o aplicativo.
+
+**Limites que a regra não resolve (aceitos):** gravar a tela do reprodutor e baixar o vídeo já publicado na própria rede social não podem ser impedidos pela plataforma. A marca d'água e a baixa resolução da visualização reduzem o valor do primeiro caso. O contrato com o cliente deve dizer que o direito é de publicar pela plataforma (revisar a cláusula com advogado).
+
+**Como testar:** com usuário de equipe cliente, pedir o arquivo final por todas as rotas, pela API e pelo endereço do armazenamento; recusado e registrado. O reprodutor só recebe endereço temporário (expira em minutos) da versão de visualização. Webhooks e e-mails não contêm link para arquivo. A camada 1 consegue baixar e o log mostra quem baixou.
+
+### RN-26 — Redes sociais conectadas e plano
+
+**Regra:** o dono do cliente conecta as contas de rede social da equipe (YouTube, Instagram, Facebook, TikTok, LinkedIn etc.) por autorização oficial da própria rede (OAuth). O plano define quais redes e quantas publicações por mês a equipe pode usar. Empregado só publica nas redes que o dono liberou a ele (RN-05). As chaves de acesso ficam criptografadas e nunca aparecem em tela, API ou log; desconectar apaga a chave.
+
+**Por quê:** é a ponte que substitui o download. Se a rede não for do plano, o cliente não publica ali.
+
+**Como testar:** conectar uma conta; tentar publicar numa rede fora do plano e em conta de outra equipe; recusado. Estourar o limite mensal; recusado com mensagem clara. Conferir que a chave não aparece em nenhuma resposta.
+
+### RN-27 — Publicação aprovada, idempotente e registrada
+
+**Regra:** só se publica uma entrega aprovada (RN-06 e RN-11). A publicação é um Job que implementa o contrato de ação governada (RN-23), com o texto da legenda definido pelo cliente e conferido como dado (RN-13), pode ser imediata ou agendada, e não duplica: a mesma entrega na mesma conta com a mesma chave de pedido não é postada duas vezes. Gravam-se a rede, a conta, quem pediu, o endereço da publicação, o resultado e o erro. Se falhar, tenta de novo um número limitado de vezes e depois avisa o cliente e abre ticket; o cliente nunca recebe o arquivo como alternativa. A Conex Prime resolve (tenta de novo ou publica manualmente por ele).
+
+**Por quê:** publicar é uma ação com efeito fora da plataforma e a prova do que foi postado é da Conex Prime.
+
+**Como testar:** publicar duas vezes seguidas o mesmo pedido: uma publicação só. Simular falha da rede: tentativas limitadas, ticket aberto, nenhum arquivo entregue ao cliente. Publicar entrega não aprovada: recusado.
+
+### RN-28 — A Conex Prime não tem limites no módulo
+
+**Regra:** a camada 1 (Conex Prime) vê e usa tudo o que a skill faz, sem limite de plano, de cota mensal, de catálogo, de formato, de saída ou de redes sociais. Ela enxerga todos os efeitos e temas (ligados, desligados e com licença pendente), pode pedir prévia e render de qualquer um e não passa pela fila de admissão (RN-17) nem pelo rascunho obrigatório (RN-20). Os limites existem só para as camadas 2 e 3.
+
+**Licença (RN-19):** os itens de origem não documentada estão liberados por ordem do dono e ficam com o registro da liberação. A camada 1 pode desligar qualquer recurso para uma equipe cliente.
+
+**Por quê:** quem opera o serviço precisa testar, comparar e produzir sem esbarrar nos limites que protegem a máquina e o preço dos clientes. Ordem do fundador.
+
+**Como testar:** como camada 1, abrir "O que a skill faz" (T20) e conferir que aparecem todos os 269 efeitos e os 9 temas; pedir um render de um efeito desligado e de um de origem não documentada; funciona e fica no registro (RN-04). Como equipe cliente, o mesmo pedido é recusado (RN-05 e RN-19). A tarefa da Conex Prime continua com tempo máximo (RN-18), para não travar a fila de todos.
 
 ## Filmes e conteúdo
 
@@ -154,13 +192,13 @@ Cada regra tem: a regra, o porquê e como testar.
 
 **Como testar:** reenviar a mesma tarefa não cria segunda entrega; tarefa com tempo estourado é cancelada e a fila segue.
 
-### RN-19 — Recursos com licença pendente ficam desligados
+### RN-19 — Recursos de origem não documentada: liberados pelo dono, com registro
 
-**Regra:** a cena de dispositivo 3D e qualquer bloco ou material cuja licença não esteja confirmada ficam desligados para equipes clientes. Só a camada 1 liga um recurso, registrando a licença conferida.
+**Regra:** a cena de dispositivo 3D e os materiais de origem não documentada estão liberados por ordem do dono (28/10/2026). A liberação fica registrada no recurso (quem liberou e quando) e vale por padrão para todas as equipes. A camada 1 pode desligar um recurso para uma equipe cliente a qualquer momento, e o desligamento vale a partir do pedido seguinte.
 
-**Por quê:** uso comercial de material sem licença é risco jurídico.
+**Por quê:** a liberação é decisão do dono e não altera a licença de terceiros. O registro mostra de quem foi a decisão se alguém questionar, e a chave permite recuar sem mexer no código.
 
-**Como testar:** pedir um filme com cena de dispositivo numa equipe cliente; o item não aparece e o pedido pela API é recusado.
+**Como testar:** pedir um filme com cena de dispositivo numa equipe cliente; ele é aceito e o registro mostra a liberação. Desligar o recurso para a equipe; o item some e o pedido pela API é recusado.
 
 ### RN-20 — Rascunho antes do final
 
@@ -190,7 +228,7 @@ Cada regra tem: a regra, o porquê e como testar.
 
 ### RN-23 — Ações governadas
 
-**Regra:** as ações listadas em `06-integracoes.md` (apagar, baixar em lote, importar projeto, capturar marca de um site, ligar recurso, criar efeito novo) são Jobs que implementam o contrato de ação governada e passam pelo guard determinístico do núcleo.
+**Regra:** as ações listadas em `06-integracoes.md` (apagar, publicar numa rede social, importar projeto, capturar marca de um site, ligar recurso, criar efeito novo) são Jobs que implementam o contrato de ação governada e passam pelo guard determinístico do núcleo.
 
 **Por quê:** a decisão sobre ações sensíveis fica fora do modelo de IA e deixa registro auditável.
 

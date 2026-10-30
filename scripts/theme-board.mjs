@@ -67,8 +67,8 @@ for (const id of want) {
   // sample.html are rendered live in this brand
   if (!fs.existsSync(path.join(dir, "sample.html"))) {
     for (const pv of ["preview.jpg", "preview-9x16.jpg"]) if (fs.existsSync(path.join(dir, pv))) items.push({ src: path.join(dir, pv), label: pv.includes("9x16") ? `${meta.name}, vertical` : `${meta.name} (${meta.format || ""}): ${meta.oneLiner}` });
-    if (!fs.existsSync(path.join(dir, "preview.jpg"))) items.push({ src: path.join(SKILL, "templates", "themes", "_none.png"), label: `${meta.name}: ${meta.oneLiner} (no preview on this machine)` });
-    notes.push(`## ${meta.name} (\`${id}\`)\n\n${meta.oneLiner}\n\n- Best for: ${meta.bestFor}\n- Motion: ${meta.motion}\n- Format: ${meta.format || "any"}, ${meta.length || ""}\n- Built from: templates/themes/${id}/RECIPE.md\n`);
+    if (!fs.existsSync(path.join(dir, "preview.jpg"))) items.push({ src: path.join(SKILL, "templates", "themes", "_none.png"), label: `${meta.name}: ${meta.oneLiner} (sem amostra nesta máquina)` });
+    notes.push(`## ${meta.name} (\`${id}\`)\n\n${meta.oneLiner}\n\n- Melhor para: ${meta.bestFor}\n- Movimento: ${meta.motion}\n- Formato: ${meta.format || "qualquer"}, ${meta.length || ""}\n- Feito a partir de: templates/themes/${id}/RECIPE.md\n`);
     console.log(`  ${id.padEnd(14)} preview`);
     continue;
   }
@@ -95,13 +95,13 @@ for (const id of want) {
     }
     const strip = path.join(film, "strip.jpg");
     run("ffmpeg", ["-v", "error", "-y", "-i", path.join(film, "still-1.png"), "-i", path.join(film, "still-2.png"), "-i", path.join(film, "still-3.png"), "-filter_complex", "[0][1][2]hstack=3,scale=1800:-2", strip]);
-    items.push({ src: strip, label: `${meta.name} (live in this brand): ${meta.oneLiner}` });
+    items.push({ src: strip, label: `${meta.name} (ao vivo nesta marca): ${meta.oneLiner}` });
   } else {
     const png = path.join(film, "still-1.png");
     run(chromePath(), ["--headless", "--hide-scrollbars", "--allow-file-access-from-files", "--window-size=1920,1080", "--virtual-time-budget=4000", `--screenshot=${png}`, `file://${path.join(film, "index.html")}`]);
     items.push({ src: png, label: meta.name });
   }
-  notes.push(`## ${meta.name} (\`${id}\`)\n\n${meta.oneLiner}\n\n- Best for: ${meta.bestFor}\n- Motion: ${meta.motion}\n- Sample: themes/${id}/sample.mp4 (${((Date.now() - t) / 1000).toFixed(0)}s to render)\n`);
+  notes.push(`## ${meta.name} (\`${id}\`)\n\n${meta.oneLiner}\n\n- Melhor para: ${meta.bestFor}\n- Movimento: ${meta.motion}\n- Amostra: themes/${id}/sample.mp4 (${((Date.now() - t) / 1000).toFixed(0)}s para renderizar)\n`);
   console.log(`  ${id.padEnd(9)} ${((Date.now() - t) / 1000).toFixed(1)}s`);
 }
 const board = sheet(items, path.join(out, "board.png"), { cols: 1, cell: 1500, aspect: 4.2, title: `Themes in the brand of ${clean(b.name).split(":")[0]}` });

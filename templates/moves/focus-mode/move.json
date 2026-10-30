@@ -1,5 +1,5 @@
-{ "id": "focus-mode", "name": "Focus mode", "oneLiner": "glass notifications pile in faster and faster, a fingertip flips the Focus toggle on, the whole pile folds up silently into one small quiet pill with a count, and a late ping drops in and is swallowed by it without a sound",
+{ "id": "focus-mode", "name": "Modo foco", "oneLiner": "notificações de vidro se acumulam cada vez mais rápido, a ponta de um dedo liga a chave de Foco, toda a pilha se dobra em silêncio numa pequena cápsula quieta com uma contagem, e um aviso atrasado cai e é engolido por ela sem som",
   "category": "productivity", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["focus", "do not disturb", "notifications", "distraction", "deep work", "silence", "attention", "calm", "productivity", "phone", "mute", "toggle", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.0, "alpha": true,
-  "say": "when the speaker talks about cutting out distractions ('I turn everything off', 'no pings while I work'): the pile builds under the problem, the toggle flips on 'focus' or 'off' and the pile folds away into the quiet pill. Set lines, apps and the mode label" }
+  "say": "quando quem fala trata de cortar distrações (“desligo tudo”, “nada de avisos enquanto eu trabalho”): a pilha cresce sob o problema, a chave liga em “foco” ou “desligado” e a pilha se dobra na cápsula quieta. Defina lines, apps e o rótulo do modo" }

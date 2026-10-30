@@ -1,5 +1,5 @@
-{ "id": "inbox-zero", "name": "Inbox zero", "oneLiner": "a glass inbox card full of unread mail; the rows swipe away one by one, faster each time, each revealing a green archive backing, the count ticks down to zero and a green check empty state springs into the cleared list",
+{ "id": "inbox-zero", "name": "Caixa de entrada zerada", "oneLiner": "um cartão de caixa de entrada de vidro cheio de e-mails não lidos; as linhas são deslizadas para fora uma a uma, cada vez mais rápido, cada uma revelando um fundo verde de arquivar, a contagem desce até zero e um estado vazio com uma marca verde salta na lista limpa",
   "category": "productivity", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["email", "inbox", "mail", "archive", "inbox zero", "cleared", "productivity", "automation", "agent", "triage", "caught up", "swipe", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.8, "alpha": true,
-  "say": "when the speaker says their inbox handles itself or got cleared ('it triaged every email', 'I hit inbox zero by nine'): the rows archive under the setup and the empty state lands on 'zero' or 'done'. Set senders, subjects and the empty-state lines" }
+  "say": "quando quem fala diz que a caixa de entrada se resolve sozinha ou foi esvaziada (“ela separou todos os e-mails”, “zerei a caixa às nove”): as linhas são arquivadas durante a preparação e o estado vazio cai em “zero” ou “pronto”. Defina senders, subjects e as linhas do estado vazio" }

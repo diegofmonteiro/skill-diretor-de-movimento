@@ -1,5 +1,5 @@
-{ "id": "share-sheet", "name": "Share sheet", "oneLiner": "a glass share sheet rises over a dimmed page in slow 3D, the app tiles pop in, a fingertip glides to the brand's app and taps it, the tile squashes and springs with a ripple, a green check lands on its corner and a Shared pill drops in under the sheet",
+{ "id": "share-sheet", "name": "Folha de compartilhamento", "oneLiner": "uma folha de compartilhamento em vidro sobe sobre uma página escurecida em 3D lento, os blocos de apps surgem, um dedo desliza até o app da marca e toca nele, o bloco se achata e volta com mola e uma ondulação, uma marca verde cai no seu canto e uma cápsula de Compartilhado cai embaixo da folha",
   "category": "social", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["share", "send", "app", "tap", "phone", "mobile", "forward", "spread", "word of mouth", "referral", "viral", "save", "3d", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.2, "alpha": true,
-  "say": "when the speaker says 'people started sharing it' or 'send it to a friend': the tap lands on 'share' or 'send', the Shared pill on the payoff" }
+  "say": "quando quem fala diz “as pessoas começaram a compartilhar” ou “mande para um amigo”: o toque cai em “compartilhar” ou “mandar”, a cápsula de Compartilhado no desfecho" }

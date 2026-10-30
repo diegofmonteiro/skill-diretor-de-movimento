@@ -1,5 +1,5 @@
-{ "id": "teleprompter", "name": "Glass teleprompter", "oneLiner": "a glass teleprompter with the camera lens glowing through the mirror: the script rolls up past the red read markers, the line on the read band lights white while the rest dim, a cursor taps plus three times and the speed ticks up as the scroll quickens",
+{ "id": "teleprompter", "name": "Teleprompter em vidro", "oneLiner": "um teleprompter em vidro com a lente da câmera brilhando através do espelho: o roteiro rola para cima passando pelas marcas vermelhas de leitura, a linha na faixa de leitura acende em branco enquanto o resto escurece, um cursor toca no mais três vezes e a velocidade sobe conforme a rolagem acelera",
   "category": "creator", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["teleprompter", "script", "filming", "recording", "camera", "reading", "talking head", "creator tools", "workflow", "speed", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.0, "alpha": true,
-  "say": "when the speaker says they read from a script or a teleprompter ('I write every word first', 'the script rolls while I talk to the lens'): the lines roll while they set it up, the speed taps land if they say they speed it up" }
+  "say": "quando quem fala diz que lê de um roteiro ou teleprompter (“escrevo cada palavra antes”, “o roteiro rola enquanto falo para a lente”): as linhas rolam durante a preparação, os toques de velocidade caem se a pessoa diz que acelera" }

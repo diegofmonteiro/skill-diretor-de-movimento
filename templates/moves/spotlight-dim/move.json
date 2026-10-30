@@ -1,5 +1,5 @@
-{ "id": "spotlight-dim", "name": "Spotlight dim", "oneLiner": "a screenshot floats in a window; the lights go down, a soft follow-spot swings in from the middle and irises onto one region, a faint beam falling into it, then the lit region peels off the page as a glass card with a lit edge and a deep shadow",
+{ "id": "spotlight-dim", "name": "Foco de luz com escurecimento", "oneLiner": "uma captura de tela flutua numa janela; as luzes baixam, um refletor suave entra do meio e se fecha sobre uma região, com um feixe fraco caindo nela, e então a região iluminada se solta da página como um cartão de vidro com borda acesa e sombra profunda",
   "category": "explain", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass", "studio"], "from": "new",
   "tags": ["spotlight", "focus", "dim", "highlight", "attention", "screenshot", "this part", "region", "reveal", "glass"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 3.8, "alpha": true,
-  "say": "when the speaker says 'ignore everything else, look at this': the lights drop on 'ignore', the spot lands and the card lifts on the word that names the part. Set rect to the region in % of the image" }
+  "say": "quando quem fala diz “ignore todo o resto, olhe isto”: as luzes baixam em “ignore”, o foco pousa e o cartão se levanta na palavra que nomeia a parte. Defina rect com a região em % da imagem" }

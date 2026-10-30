@@ -1,5 +1,5 @@
-{ "id": "odd-one-out-highlight", "name": "Odd one out", "oneLiner": "a glass grid of identical tiles (same glyph, same label) builds in and a light passes over them all; then one lifts out of the grid and flips in 3D to its other face in the accent, red or green, while the crowd falls back",
+{ "id": "odd-one-out-highlight", "name": "O diferente do grupo", "oneLiner": "uma grade de vidro de blocos idênticos (mesmo ícone, mesmo rótulo) se monta e uma luz passa por todos; então um se levanta da grade e vira em 3D para a outra face na cor de destaque, vermelha ou verde, enquanto a multidão recua",
   "category": "explain", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["odd one out", "standout", "different", "unique", "one of many", "grid", "flip", "contrast", "highlight", "problem", "winner", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.2, "alpha": true,
-  "say": "when the speaker sets one thing apart from the rest (\"everyone posts the same thing... except one\", \"five steps go fine and one breaks\"): cut in on the crowd, the flip lands on the word that names the exception. tone red for the one that fails, green for the one that wins, accent for the brand" }
+  "say": "quando quem fala separa uma coisa das demais (“todo mundo posta a mesma coisa... menos um”, “cinco passos dão certo e um quebra”): entre na multidão, a virada cai na palavra que nomeia a exceção. tone red para o que falha, green para o que vence, accent para a marca" }

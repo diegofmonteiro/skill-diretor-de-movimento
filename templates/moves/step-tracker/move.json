@@ -1,5 +1,5 @@
-{ "id": "step-tracker", "name": "Step tracker", "oneLiner": "a glass stepper rail drops in with numbered nodes, the steps already done tick off in green as the groove fills behind them, then the accent runs on to the current step, it lands with a ring and (full frame) its name rises as a big title under the bar",
+{ "id": "step-tracker", "name": "Indicador de etapas", "oneLiner": "um trilho de etapas em vidro cai com nós numerados, as etapas já concluídas são marcadas em verde enquanto o sulco se enche atrás delas, e então a cor de destaque corre até a etapa atual, que chega com um anel e (em quadro cheio) o seu nome sobe como um grande título embaixo da barra",
   "category": "productivity", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["steps", "stepper", "progress", "chapter", "where we are", "process", "tutorial", "part", "roadmap", "recurring", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 3.8, "alpha": true,
-  "say": "when the speaker moves to the next stage of a process ('step two: the script'): cut it in each time with current set to that step, so the viewer always knows where they are. As an overlay it sits at the top of the frame above the speaker" }
+  "say": "quando quem fala passa à etapa seguinte de um processo (“passo dois: o roteiro”): corte-o a cada vez com current definido para essa etapa, para o espectador saber sempre onde está. Como sobreposição, fica no alto do quadro, acima de quem fala" }

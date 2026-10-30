@@ -1,0 +1,30 @@
+{
+ "id": "data-chart",
+ "name": "Gráfico de barras com linha",
+ "oneLiner": "barras de receita sobem uma a uma e uma linha de taxa de conversão desenha-se por cima, com os valores escritos em cada ponto e a fonte no rodapé",
+ "category": "data",
+ "kind": "effect",
+ "uses": [
+  "broll"
+ ],
+ "looks": [
+  "editorial"
+ ],
+ "from": "catalogo",
+ "tags": [
+  "data",
+  "chart",
+  "statistics"
+ ],
+ "formats": [
+  "16:9"
+ ],
+ "duration": 15,
+ "alpha": false,
+ "tema": "proprio",
+ "say": "quando quem fala compara duas medidas por mês (“a receita subiu e a conversão também”): troque os meses, os valores e os títulos; no formato 16:9",
+ "origem": {
+  "registro": "HyperFrames",
+  "bloco": "data-chart"
+ }
+}

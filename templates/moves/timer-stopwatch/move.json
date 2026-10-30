@@ -1,5 +1,5 @@
-{ "id": "timer-stopwatch", "name": "Stopwatch laps", "oneLiner": "a glass stopwatch dial turns toward camera, its accent hand whips round with a motion trail while the readout races, each lap press pulses the dial and drops a lap row onto the stack, then the hand brakes on a long tail and the final time stamps with a ring of light",
+{ "id": "timer-stopwatch", "name": "Voltas de cronômetro", "oneLiner": "um mostrador de cronômetro em vidro gira para a câmera, o ponteiro de destaque dispara com um rastro de movimento enquanto o visor corre, cada volta marcada faz o mostrador pulsar e solta uma linha de volta na pilha, e então o ponteiro freia numa cauda longa e o tempo final é carimbado com um anel de luz",
   "category": "productivity", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["timer", "stopwatch", "time", "speed", "fast", "minutes", "laps", "workflow", "how long", "time saved", "race", "benchmark", "3d", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": true,
-  "say": "when the speaker says how long something took ('it did it in under five minutes', 'each step took a minute'): the laps drop on each step, the time stamps on the number" }
+  "say": "quando quem fala diz quanto tempo algo levou (“ele fez em menos de cinco minutos”, “cada passo levou um minuto”): as voltas caem a cada passo, o tempo é carimbado no número" }

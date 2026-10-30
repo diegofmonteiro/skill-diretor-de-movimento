@@ -1,5 +1,5 @@
-{ "id": "video-timeline", "name": "Video timeline cut", "oneLiner": "a glass video editor: clips cut from the brand's own media drop and snap onto three tracks, the playhead scrubs with the monitor and timecode following, the blade drops through a clip with a click, the dead part lifts out and the timeline ripples shut",
+{ "id": "video-timeline", "name": "Corte na linha do tempo de vídeo", "oneLiner": "um editor de vídeo em vidro: clipes recortados da própria mídia da marca caem e encaixam em três trilhas, o cursor percorre com o monitor e o código de tempo acompanhando, a lâmina desce por um clipe com um clique, a parte morta sai e a linha do tempo se fecha",
   "category": "creator", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["video editing", "timeline", "editor", "cut", "clips", "premiere", "final cut", "creator tools", "workflow", "b-roll", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.6, "alpha": true,
-  "say": "when the speaker talks about editing or cutting their videos ('I cut every pause', 'it edits the whole thing for me', 'the dead air is gone'): the clips snap in while they set it up, the cut lands on 'cut' or 'gone'" }
+  "say": "quando quem fala trata de editar ou cortar os vídeos (“corto cada pausa”, “ele edita tudo para mim”, “o tempo morto sumiu”): os clipes encaixam enquanto a pessoa prepara, o corte cai em “corte” ou “sumiu”" }

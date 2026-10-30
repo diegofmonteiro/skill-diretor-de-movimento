@@ -1,5 +1,5 @@
-{ "id": "battery-charge", "name": "Battery charge", "oneLiner": "a big glass battery drifts in 3D, a metal plug slides into its terminal with a click and a spark, the liquid fill climbs from red through amber to green with a sheen running across it while the bolt pulses and the percent counts, then it hits 100: the battery bounces, a green ring of light pulses off it and the label flips to Fully charged",
+{ "id": "battery-charge", "name": "Bateria carregando", "oneLiner": "uma bateria grande de vidro flutua em 3D, um plugue de metal desliza para dentro do terminal com um clique e uma faísca, o líquido sobe do vermelho ao âmbar e ao verde com um brilho passando por cima enquanto o raio pulsa e a porcentagem conta, e então chega a 100: a bateria quica, um anel verde de luz pulsa a partir dela e o rótulo vira “Carga completa”",
   "category": "system", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["battery", "charge", "energy", "recharge", "power", "full", "boost", "rest", "burnout", "motivation", "100", "level up", "3d", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.2, "alpha": true,
-  "say": "when the speaker talks about energy or being recharged ('this gives me my energy back', 'it fully charges your week'): the plug clicks on the setup, 100 lands on the payoff" }
+  "say": "quando quem fala trata de energia ou de se recarregar (“isso me devolve a energia”, “carrega a sua semana por inteiro”): o plugue clica na preparação, o 100 cai no desfecho" }

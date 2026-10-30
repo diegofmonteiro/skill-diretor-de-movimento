@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="pt-BR" data-composition-variables='[
-  {"id":"text","type":"string","label":"The post line (empty: the brand headline)","default":""},
-  {"id":"name","type":"string","label":"Display name (empty: the brand name)","default":""},
-  {"id":"time","type":"string","label":"Time label","default":"1h"},
-  {"id":"countFrom","type":"number","label":"Reactions it starts from","default":1204},
-  {"id":"count","type":"number","label":"Reactions it rolls up to","default":8950},
-  {"id":"react","type":"string","label":"The reaction picked (tooltip and button)","default":"Amei"},
-  {"id":"likeLabel","type":"string","label":"Like button label","default":"Curtir"},
-  {"id":"commentLabel","type":"string","label":"Comment button label","default":"Comentar"},
-  {"id":"shareLabel","type":"string","label":"Share button label","default":"Compartilhar"},
-  {"id":"comments","type":"string","label":"Right of the count","default":"312 comentários"},
-  {"id":"media","type":"string","label":"Picture in the post: screen or none","default":"screen"}
+  {"id":"text","type":"string","label":"A frase da publicação (vazio: a manchete da marca)","default":""},
+  {"id":"name","type":"string","label":"Nome de exibição (vazio: o nome da marca)","default":""},
+  {"id":"time","type":"string","label":"Rótulo de horário","default":"1h"},
+  {"id":"countFrom","type":"number","label":"Reações em que começa","default":1204},
+  {"id":"count","type":"number","label":"Reações até as quais gira","default":8950},
+  {"id":"react","type":"string","label":"A reação escolhida (dica e botão)","default":"Amei"},
+  {"id":"likeLabel","type":"string","label":"Rótulo do botão de curtir","default":"Curtir"},
+  {"id":"commentLabel","type":"string","label":"Rótulo do botão de comentar","default":"Comentar"},
+  {"id":"shareLabel","type":"string","label":"Rótulo do botão de compartilhar","default":"Compartilhar"},
+  {"id":"comments","type":"string","label":"À direita da contagem","default":"312 comentários"},
+  {"id":"media","type":"string","label":"Imagem na publicação: screen ou none","default":"screen"}
 ]'>
 <head>
 <meta charset="UTF-8" />
@@ -70,8 +70,8 @@
   #count .sep { display: block; }
   #cm { margin-left: auto; font-size: calc(var(--s) * 36); color: color-mix(in srgb, var(--ink) 55%, transparent); white-space: nowrap; }
   .acts { position: relative; display: flex; justify-content: space-between; margin-top: calc(var(--s) * 22); padding: calc(var(--s) * 8) calc(var(--s) * 6) calc(var(--s) * 14); border-top: calc(var(--s) * 1.5) solid rgba(255,255,255,.12); }
-  .act { position: relative; display: flex; align-items: center; justify-content: center; gap: calc(var(--s) * 14); height: calc(var(--s) * 92); padding: 0 calc(var(--s) * 22); border-radius: calc(var(--s) * 24);
-    color: color-mix(in srgb, var(--ink) 72%, transparent); font-size: calc(var(--s) * 36); font-weight: 700; white-space: nowrap; }
+  .act { position: relative; display: flex; align-items: center; justify-content: center; gap: calc(var(--s) * 10); height: calc(var(--s) * 92); padding: 0 calc(var(--s) * 12); border-radius: calc(var(--s) * 24);
+    color: color-mix(in srgb, var(--ink) 72%, transparent); font-size: calc(var(--s) * 31); font-weight: 700; white-space: nowrap; }
   .act svg { width: calc(var(--s) * 46); height: calc(var(--s) * 46); flex: none; overflow: visible; }
   #like .hl { position: absolute; inset: 0; border-radius: inherit; background: rgba(255,255,255,.1); opacity: 0; }
   #like .g { position: relative; width: calc(var(--s) * 46); height: calc(var(--s) * 46); flex: none; }
@@ -176,7 +176,7 @@
   const ts = fmt(to), fs0 = fmt(from).padStart(ts.length, " "), cols = [];
   for (let i = 0; i < ts.length; i++) {
     const c = ts[i];
-    if (!/\d/.test(c)) { const sp = document.createElement("span"); sp.className = "sep"; sp.textContent = c; $("#count").appendChild(sp); if (!/\d|,/.test(fs0[i]) || fs0[i] === " ") cols.push({ fade: sp }); continue; }
+    if (!/\d/.test(c)) { const sp = document.createElement("span"); sp.className = "sep"; sp.textContent = c; $("#count").appendChild(sp); if (!/\d|[.,]/.test(fs0[i]) || fs0[i] === " ") cols.push({ fade: sp }); continue; }
     const col = document.createElement("span"); col.className = "col"; const strip = document.createElement("span"); strip.style.display = "block";
     for (let k = 0; k < 30; k++) { const d = document.createElement("i"); d.dataset.d = k % 10; strip.appendChild(d); }
     col.appendChild(strip); $("#count").appendChild(col);

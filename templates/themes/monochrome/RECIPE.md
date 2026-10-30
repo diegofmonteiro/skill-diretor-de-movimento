@@ -1,101 +1,83 @@
-# Monochrome: the designer's desk in black and grey
+# Monocromático: a mesa do designer em preto e cinza
 
-An 18 second 9:16 film that looks like a designer working on a grey canvas: a
-light grey dot grid, two giant soft black asterisks turning in the corners, a
-black cursor that drags dashed selection boxes and the words appear inside
-them, and real photographic 3D props (a megaphone, a gilt frame holding an
-engraved portrait of the founder, falling pocket watches) dropped into that
-flat world. The idea that makes it work: **everything is greyscale except the
-real objects**, so each prop (and the brand's real site on a real phone) reads
-as a precious object placed on the designer's table. The copy is one sentence
-cut into 8 short beats; each beat has one verb (box it, drop it, sweep it,
-circle it, run it, close the curtains on it).
+Um filme 9:16 de 18 segundos que parece um designer trabalhando numa tela cinza: uma grade de pontos cinza clara, dois asteriscos pretos gigantes e suaves girando nos cantos, um cursor preto que arrasta caixas de seleção tracejadas e as palavras aparecem dentro delas, e adereços 3D fotográficos reais (um megafone, uma moldura dourada com um retrato gravado do fundador, relógios de bolso caindo) soltos nesse mundo chapado. A ideia que faz funcionar: **tudo é em tons de cinza, exceto os objetos reais**, então cada adereço (e o site real da marca num celular real) é lido como um objeto precioso posto na mesa do designer. O texto é uma frase cortada em 8 batidas curtas; cada batida tem um verbo (enquadrar, soltar, varrer, circular, correr, fechar as cortinas sobre ela).
 
-## Format, length, pace
+## Formato, duração, ritmo
 
-- 1080x1920, 30 fps, 18.0s (composition `data-duration="18"`), one file, 8 scenes, one 3D sub-composition.
-- Score at 100 BPM, one bar = 2.40s; the grid was 20.2s and the film was cut to 18s, so beats do not sit on bar lines: cuts follow the copy.
-- Scene starts (s): 0, 2.4, 4.6, 7.4, 9.4, 12.6, 14.2, 16.2. Mean shot 2.25s; shortest 1.6s (the type run), longest 3.2s (the phone).
-- Scenes overlap by 0.2s (each `section` starts 0.2s before the previous one ends) so the wipe object covers the change.
-- Something moves on every beat; the blobs never stop turning (50 deg over 18s).
+- 1080x1920, 30 fps, 18,0 s (composição `data-duration="18"`), um arquivo, 8 cenas, uma subcomposição 3D.
+- Trilha a 100 BPM, um compasso = 2,40 s; a grade tinha 20,2 s e o filme foi cortado para 18 s, então as batidas não caem nas linhas dos compassos: os cortes seguem o texto.
+- Inícios das cenas (s): 0, 2,4, 4,6, 7,4, 9,4, 12,6, 14,2, 16,2. Plano médio de 2,25 s; o mais curto 1,6 s (a digitação corrida), o mais longo 3,2 s (o celular).
+- As cenas se sobrepõem em 0,2 s (cada `section` começa 0,2 s antes de a anterior terminar) para o objeto da varredura cobrir a troca.
+- Algo se move em toda batida; as manchas nunca param de girar (50 graus em 18 s).
 
-## The look in numbers
+## O visual em números
 
-**Ground (fixed, never brand-coloured)**
-- `#bg`: `radial-gradient(70% 50% at 50% 30%, #F1F1F1, #E3E3E3 70%, #D9D9D9)`, a soft top light.
-- `#dots`: `radial-gradient(circle, rgba(0,0,0,.13) 1.6px, transparent 2px) 0 0 / 30px 30px`, a 30px dot grid over the whole frame.
-- `.lgrid` (a local square grid behind a prop): `linear-gradient` lines `rgba(0,0,0,.09)` 1.5px, cell 34px, masked by `radial-gradient(closest-side, #000 45%, transparent)` so it fades out in a circle. 600x600 behind the megaphone, 800x1000 behind the phone.
-- Grain on top of everything: SVG `feTurbulence fractalNoise baseFrequency 1.1, numOctaves 1, seed 8`, alpha 0.14, layer opacity .35, `mix-blend-mode: multiply`, z-index 90.
+**Fundo (fixo, nunca na cor da marca)**
+- `#bg`: `radial-gradient(70% 50% at 50% 30%, #F1F1F1, #E3E3E3 70%, #D9D9D9)`, uma luz suave de cima.
+- `#dots`: `radial-gradient(circle, rgba(0,0,0,.13) 1.6px, transparent 2px) 0 0 / 30px 30px`, uma grade de pontos de 30 px sobre o quadro todo.
+- `.lgrid` (uma grade quadrada local atrás de um adereço): linhas de `linear-gradient` `rgba(0,0,0,.09)` de 1,5 px, célula de 34 px, mascarada por `radial-gradient(closest-side, #000 45%, transparent)` para sumir num círculo. 600x600 atrás do megafone, 800x1000 atrás do celular.
+- Granulação sobre tudo: SVG `feTurbulence fractalNoise baseFrequency 1.1, numOctaves 1, seed 8`, alfa 0,14, opacidade da camada .35, `mix-blend-mode: multiply`, z-index 90.
 
-**Palette**
-- Fixed greys: ink `#141414` / `#161616` / `#1A1A1A`, secondary `#3C3C3C`, lower-case `#2B2B2B`, muted `#555`, `#666`, `#6B6B6B`; selection box and ring `#2A2A2A`; band `#2A2A2A` with text `#F4F4F4`; curtains `#141414`.
-- Blob fill: radial gradient `#2A2A2A` (0) to `#151515` (.7) to `#0B0B0B` (1), centre at 40% 35%, hairline `rgba(255,255,255,.08)` 0.5 stroke.
-- Brand colour appears ONLY inside real material: the props' own colours (red megaphone body, brass watch, gilt frame), the brand's site on the phone, and the phone's rim light (`--rim` = the brand accent). No UI chrome, type or shape takes the accent.
+**Paleta**
+- Cinzas fixos: tinta `#141414` / `#161616` / `#1A1A1A`, secundário `#3C3C3C`, minúsculas `#2B2B2B`, apagado `#555`, `#666`, `#6B6B6B`; caixa de seleção e anel `#2A2A2A`; faixa `#2A2A2A` com texto `#F4F4F4`; cortinas `#141414`.
+- Preenchimento das manchas: degradê radial `#2A2A2A` (0) a `#151515` (.7) a `#0B0B0B` (1), centro em 40% 35%, filete `rgba(255,255,255,.08)` com traço de 0,5.
+- A cor da marca aparece SÓ dentro de material real: as cores próprias dos adereços (corpo vermelho do megafone, relógio de latão, moldura dourada), o site da marca no celular e a luz de contorno do celular (`--rim` = a cor de destaque da marca). Nenhum elemento de interface, texto ou forma assume a cor de destaque.
 
-**Type** (the brand's display face, one variable font, all weights from it)
-| role | weight | px | tracking | case | colour |
+**Tipografia** (a fonte de destaque da marca, uma fonte variável, todos os pesos dela)
+| função | peso | px | espaçamento | caixa | cor |
 |---|---|---|---|---|---|
-| thin kicker ("every founder is chasing") | 400 | 50 | +0.02em | upper | #3C3C3C |
-| fat headline | 900 | 76-128 (124 hook, 128 object caption, 120 "stop", 76 boxed lines) | -0.01em | upper | #161616 |
-| small label above an object | 800 | 52-66 | 0 | upper or as-written | #1B1B1B |
-| lower connective ("for that", "here is the", "over") | 400-600 | 44-66 | 0 | lower | #2B2B2B, #6B6B6B |
-| band text | 900 | 64 | +0.01em | upper | #F4F4F4 on #2A2A2A |
-| type run | 900 | 84 | 0, 26px word gap | upper | #1A1A1A |
-| italic aside | 400 italic | 36, line-height 1.35 | 0 | sentence | #555 |
-| sign-off: verb / noun / domain | 700 / 900 / 400 | 66 / 110 / 36 | 0 | as-written | #161616, #666 |
+| chamada fina (“todo fundador está atrás de”) | 400 | 50 | +0.02em | maiúsculas | #3C3C3C |
+| manchete grossa | 900 | 76-128 (124 gancho, 128 legenda do objeto, 120 “pare”, 76 linhas em caixas) | -0.01em | maiúsculas | #161616 |
+| rótulo pequeno acima de um objeto | 800 | 52-66 | 0 | maiúsculas ou como escrito | #1B1B1B |
+| conectivo em minúsculas (“para isso”, “aqui está a”, “sobre”) | 400-600 | 44-66 | 0 | minúsculas | #2B2B2B, #6B6B6B |
+| texto da faixa | 900 | 64 | +0.01em | maiúsculas | #F4F4F4 sobre #2A2A2A |
+| digitação corrida | 900 | 84 | 0, espaço entre palavras de 26 px | maiúsculas | #1A1A1A |
+| comentário em itálico | 400 itálico | 36, entrelinha 1,35 | 0 | frase | #555 |
+| assinatura: verbo / substantivo / domínio | 700 / 900 / 400 | 66 / 110 / 36 | 0 | como escrito | #161616, #666 |
 
-- Pairs are set off-centre and stepped: the small word sits up-left (`left:-150px` on a centred line), the big word under it shifted right (`left:+90..120px`). Never two centred lines of the same size.
-- Text is either tiny-editorial or huge; nothing in between 66 and 76px.
+- Os pares são postos fora do centro e em degraus: a palavra pequena fica no alto à esquerda (`left:-150px` numa linha centralizada), a palavra grande embaixo deslocada para a direita (`left:+90..120px`). Nunca duas linhas centralizadas do mesmo tamanho.
+- O texto é ou minúsculo e editorial ou enorme; nada entre 66 e 76 px.
 
-**Shadows and materials**
-- Props: `filter: drop-shadow(0 30px 30px rgba(0,0,0,.28))`.
-- Blobs: `drop-shadow(0 14px 18px rgba(0,0,0,.22))`.
-- Band: `box-shadow: 0 30px 60px rgba(0,0,0,.25)`; an ellipse 2200x760, `border-radius: 50%`, rotated -8 deg.
-- Selection box: `border: 3px dashed #2a2a2a`, four 16px round handles centred on the corners (offset -10px). It renders as a fine dotted line at phone size, which is the look.
-- Cursor: 46px, the classic arrow path `M10 6 L10 52 L22 41 L31 60 L39 56 L30 38 L46 38 Z` in a 64 box, fill `#111`, stroke `#fff` 3.5, round joins, `drop-shadow(0 3px 4px rgba(0,0,0,.3))`.
-- Falling watches use `filter: blur(3px)` and `blur(4px)` plus the prop shadow: depth of field on everything that is not the subject.
+**Sombras e materiais**
+- Adereços: `filter: drop-shadow(0 30px 30px rgba(0,0,0,.28))`.
+- Manchas: `drop-shadow(0 14px 18px rgba(0,0,0,.22))`.
+- Faixa: `box-shadow: 0 30px 60px rgba(0,0,0,.25)`; uma elipse de 2200x760, `border-radius: 50%`, girada -8 graus.
+- Caixa de seleção: `border: 3px dashed #2a2a2a`, quatro alças redondas de 16 px centradas nos cantos (deslocadas -10 px). Em tamanho de celular, aparece como uma linha pontilhada fina, que é o visual.
+- Cursor: 46 px, o caminho clássico de seta `M10 6 L10 52 L22 41 L31 60 L39 56 L30 38 L46 38 Z` numa caixa de 64, preenchimento `#111`, contorno `#fff` 3,5, junções redondas, `drop-shadow(0 3px 4px rgba(0,0,0,.3))`.
+- Os relógios caindo usam `filter: blur(3px)` e `blur(4px)` mais a sombra do adereço: profundidade de campo em tudo o que não é o assunto.
 
-## Shot list
+## Lista de planos
 
-| # | time (s) | on screen | what moves and how | static | out |
+| # | tempo (s) | na tela | o que se move e como | estático | saída |
 |---|---|---|---|---|---|
-| 0 | 0 to 18 | two 1100px asterisks, A top-left (`left:-520 top:-560`), B bottom-right (`left:500 top:1300`) | in from the corners: x/y +-120 and rotation +-20 to 0, 0.8s `back.out(1.2)`; then A turns to +50 deg and B to -45 deg over 18s `none` | dot grid, grain | fade to 0 in 0.3s at 12.6 |
-| 1 | 0 to 2.6 | a dashed box 880x270 at (100,800); kicker 50px and headline 124px inside it | cursor set at (900,1300) at 0.3, glides to the box's top-left corner (100,800) 0.45s `power3.inOut`; box draws from its top-left: scaleX/scaleY 0 to 1, 0.32s `power3.out` at 0.8 while the cursor drags to the bottom-right corner (980,1070) in 0.32s; kicker pops at 1.0, headline at 1.25 (pop: opacity 0, scale 0.8/0.5, blur 6px to 1/0, 0.35/0.45s `back.out(2)`); cursor leaves to (1150,1500) 0.4s `power3.in` at 1.6 | the box once drawn | **asterisk wipe**: B flies x -900, y -1500, scale 2.4 across the frame in 0.55s `power3.inOut` at 2.05, returns 0.6s `power3.out` at 2.6; A ducks out x/y -600 0.4s `power3.in` |
-| 2 | 2.4 to 4.8 | "LOOKING" 52px / "for that" 44px stepped top-left; local grid square; the megaphone prop 480px wide; "VIRAL HACK" 128px under it | words pop at 2.6 and 2.75; megaphone: scale .3 to 1, rotation -25 to 0, opacity 0 to 1, 0.6s `back.out(1.6)` at 2.7, then drifts rotation 4, y -10 over 1.8s `sine.inOut`; caption wipes on left to right: `clip-path inset(-20% 100% -20% -5%)` to `inset(-20% -5% -20% -5%)` 0.5s `power2.out` at 3.3 | local grid | dark band sweeps down over it |
-| 3 | 4.6 to 7.4 | the dark band at the top; "Here is the" 48px + "truth" 104px (lower case); the gilt frame with the engraved founder, 740px wide | band: y -900 to 0 at rotation -8, 0.55s `power3.out` at 4.45; words pop 4.75 / 4.9; frame slides in x -900 to 0, rotation -12 to 4, 0.6s `back.out(1.3)` at 4.7, settles to rotation 1 over 1.0s `sine.inOut`; at 6.0 the band rolls down to y 1700 (rotation -4) 0.6s `power3.inOut` and carries frame and words out (y 1500, rotation 10, 0.55s `power3.in`); the megaphone returns (scale .6 to 1, rotation 15 to -6, 0.5s `back.out(1.5)` at 6.35) and a dashed ring (r 270, `stroke-dasharray 10 10`) draws round it in 0.7s `power2.inOut` at 6.5; band text "NO SHORTCUTS" fades in on the band at 6.55 | dot grid | band and its text drop off the bottom, y +900 0.4s `power3.in` at 7.25 |
-| 4 | 7.4 to 9.4 | two dashed boxes 620x140 and 580x140, a fat 76px line in each | cursor in from (1000,1500) to the first box's corner 0.35s; box 1 draws at 7.75 while the cursor drags to its far corner (0.3s `power3.out`); line pops 7.9; cursor jumps to box 2 corner 0.3s at 8.25; box 2 draws at 8.55; line pops 8.7; cursor exits 9.1; asterisk A returns to its corner 0.6s `power3.out` | boxes | cut to the phone |
-| 5 | 9.4 to 12.6 | three stepped words above (66 / 46 / 66px); local grid 800x1000; a real 3D phone with the brand's site scrolling on it | the `iphone` preset of `device-init`: rises from y -4.5 showing its back, spins round to the screen, camera closes in (see Mechanics); words pop 9.9 / 10.1 / 10.3; both asterisks shrink to scale .8 over 1s | the words | hard cut |
-| 6 | 12.6 to 14.2 | one line of 84px words running right to left at y 930 (`data-bleed`) | the row slides x 900 to -620 over 1.6s `none`; each word drops in y -40 to 0, opacity 0 to 1, 0.25s `back.out(2)`, staggered 0.18s; asterisks fade out 0.3s | nothing else on screen | curtains close |
-| 7 | 14.2 to 16.4 | two black curtains 600x2000 closing at an angle; "STOP" 120px / "renting" 66px; a pocket watch 360px dropping to centre; two blurred watches falling past; an italic aside 36px | curtains x +-400 to 0, rotation 0 to -12/+12, 0.5s `power3.out` (they form a V that frames the centre); hero watch y -900 to 0, rotation -30 to 0, 0.7s `back.out(1.2)` at 14.4, then swings rotation 6 yoyo 1.2s `sine.inOut`; watch 1 (260px, blur 3) falls y -300 to 2100, rotation 0 to 140, 2.0s `power1.in`; watch 2 (420px, blur 4) y -1700 to 400, rotation 30 to 160, 2.2s `power1.in`; aside fades in 0.4s at 15.1 | curtains once closed | cut |
-| 8 | 16.2 to 18 | sign-off: verb 66px up-left, noun 110px down-right, domain 36px #666 under | pops at 16.35 / 16.55 / 16.9 (0.35 / 0.45 / 0.3s) | dot grid only, no blobs | hold to the end |
+| 0 | 0 a 18 | dois asteriscos de 1100 px, A no alto à esquerda (`left:-520 top:-560`), B embaixo à direita (`left:500 top:1300`) | entram pelos cantos: x/y +-120 e rotação +-20 a 0, 0,8 s `back.out(1.2)`; depois A gira até +50 graus e B até -45 graus em 18 s `none` | grade de pontos, granulação | somem a 0 em 0,3 s em 12,6 |
+| 1 | 0 a 2,6 | uma caixa tracejada de 880x270 em (100,800); chamada de 50 px e manchete de 124 px dentro | cursor posto em (900,1300) em 0,3, desliza até o canto superior esquerdo da caixa (100,800) em 0,45 s `power3.inOut`; a caixa se desenha do canto superior esquerdo: scaleX/scaleY 0 a 1, 0,32 s `power3.out` em 0,8 enquanto o cursor arrasta até o canto inferior direito (980,1070) em 0,32 s; a chamada salta em 1,0, a manchete em 1,25 (salto: opacity 0, scale 0,8/0,5, blur 6px a 1/0, 0,35/0,45 s `back.out(2)`); o cursor sai para (1150,1500) em 0,4 s `power3.in` em 1,6 | a caixa depois de desenhada | **varredura de asterisco**: B voa x -900, y -1500, scale 2,4 pelo quadro em 0,55 s `power3.inOut` em 2,05, volta em 0,6 s `power3.out` em 2,6; A se esquiva x/y -600 em 0,4 s `power3.in` |
+| 2 | 2,4 a 4,8 | “PROCURANDO” 52 px / “para isso” 44 px em degraus no alto à esquerda; quadrado da grade local; o adereço do megafone com 480 px de largura; “TRUQUE VIRAL” 128 px embaixo dele | as palavras saltam em 2,6 e 2,75; megafone: scale .3 a 1, rotação -25 a 0, opacity 0 a 1, 0,6 s `back.out(1.6)` em 2,7, e depois deriva rotação 4, y -10 em 1,8 s `sine.inOut`; a legenda é revelada da esquerda para a direita: `clip-path inset(-20% 100% -20% -5%)` a `inset(-20% -5% -20% -5%)` 0,5 s `power2.out` em 3,3 | grade local | a faixa escura varre para baixo por cima |
+| 3 | 4,6 a 7,4 | a faixa escura no alto; “Esta é a” 48 px + “verdade” 104 px (minúsculas); a moldura dourada com o fundador gravado, 740 px de largura | faixa: y -900 a 0 com rotação -8, 0,55 s `power3.out` em 4,45; palavras saltam 4,75 / 4,9; a moldura desliza x -900 a 0, rotação -12 a 4, 0,6 s `back.out(1.3)` em 4,7, assenta em rotação 1 em 1,0 s `sine.inOut`; em 6,0 a faixa rola para baixo até y 1700 (rotação -4) em 0,6 s `power3.inOut` e leva moldura e palavras para fora (y 1500, rotação 10, 0,55 s `power3.in`); o megafone volta (scale .6 a 1, rotação 15 a -6, 0,5 s `back.out(1.5)` em 6,35) e um anel tracejado (r 270, `stroke-dasharray 10 10`) se desenha em volta dele em 0,7 s `power2.inOut` em 6,5; o texto da faixa “SEM ATALHOS” surge na faixa em 6,55 | grade de pontos | a faixa e o seu texto caem pela base, y +900 em 0,4 s `power3.in` em 7,25 |
+| 4 | 7,4 a 9,4 | duas caixas tracejadas de 620x140 e 580x140, uma linha grossa de 76 px em cada | o cursor entra de (1000,1500) até o canto da primeira caixa em 0,35 s; a caixa 1 se desenha em 7,75 enquanto o cursor arrasta até o canto oposto (0,3 s `power3.out`); a linha salta em 7,9; o cursor pula para o canto da caixa 2 em 0,3 s em 8,25; a caixa 2 se desenha em 8,55; a linha salta em 8,7; o cursor sai em 9,1; o asterisco A volta ao seu canto em 0,6 s `power3.out` | caixas | corte para o celular |
+| 5 | 9,4 a 12,6 | três palavras em degraus acima (66 / 46 / 66 px); grade local 800x1000; um celular 3D real com o site da marca rolando nele | o preset `iphone` do `device-init`: sobe de y -4,5 mostrando as costas, gira até a tela, a câmera se aproxima (veja Mecânica); as palavras saltam 9,9 / 10,1 / 10,3; os dois asteriscos encolhem para scale .8 em 1 s | as palavras | corte seco |
+| 6 | 12,6 a 14,2 | uma linha de palavras de 84 px correndo da direita para a esquerda em y 930 (`data-bleed`) | a fileira desliza x 900 a -620 em 1,6 s `none`; cada palavra cai y -40 a 0, opacity 0 a 1, 0,25 s `back.out(2)`, defasadas em 0,18 s; os asteriscos somem em 0,3 s | mais nada na tela | as cortinas fecham |
+| 7 | 14,2 a 16,4 | duas cortinas pretas de 600x2000 fechando em ângulo; “PARE” 120 px / “de alugar” 66 px; um relógio de bolso de 360 px caindo no centro; dois relógios desfocados caindo ao lado; um comentário em itálico de 36 px | cortinas x +-400 a 0, rotação 0 a -12/+12, 0,5 s `power3.out` (formam um V que enquadra o centro); relógio principal y -900 a 0, rotação -30 a 0, 0,7 s `back.out(1.2)` em 14,4, e depois balança rotação 6 yoyo 1,2 s `sine.inOut`; relógio 1 (260 px, blur 3) cai y -300 a 2100, rotação 0 a 140, 2,0 s `power1.in`; relógio 2 (420 px, blur 4) y -1700 a 400, rotação 30 a 160, 2,2 s `power1.in`; o comentário surge em 0,4 s em 15,1 | cortinas depois de fechadas | corte |
+| 8 | 16,2 a 18 | assinatura: verbo de 66 px no alto à esquerda, substantivo de 110 px embaixo à direita, domínio de 36 px #666 embaixo | saltos em 16,35 / 16,55 / 16,9 (0,35 / 0,45 / 0,3 s) | só a grade de pontos, sem manchas | parado até o fim |
 
-## Materials, and where to get them for a new brand
+## Materiais, e onde obtê-los para uma marca nova
 
-| material | source |
+| material | fonte |
 |---|---|
-| the brand's display face | `brand-intake.mjs` captures the font files; `film-init.mjs` writes `@font-face` into `assets/brand.css` as "Brand display" (weights 100-900 from a variable file). One face does every weight. |
-| the brand's site on the phone | capture the live site at phone width: headless Chrome `--window-size=390,7000 --force-device-scale-factor=2`, full page, saved as `device/site-phone.png` (here 390 wide, scrolled to y 5250). Pick 3 stops: the hero, the proof (numbers, client marks), the testimonials. |
-| a founder portrait | the founder's own photo or a frame of their video (a YouTube still at 720p is enough), lifted with `node scripts/cutout.mjs still.png founder-cut.png`. Then engrave it (Mechanics) and composite into the frame. |
-| megaphone | `node scripts/find-assets.mjs --polyhaven model megaphone_01 --out <dir>`, rendered `node scripts/prop-render.mjs <dir>/megaphone_01/Megaphone_01_1k.gltf mega.png --hdri <dir>/studio_small_09/studio_small_09_1k.hdr --ry -35 --rx 10` for a 3/4 view, bell to the left, handle down (angles approximate: the approved render's exact flags were not recorded; render 3-4 `--ry` values and pick on a sheet). |
-| gilt frame | `--polyhaven model fancy_picture_frame_01`, rendered straight on (`--rx 0 --ry 0`), then `trim-alpha.mjs`. Its canvas holds a landscape painting: replace it in 2D (measured inner canvas on a 1122x870 render: x 92 to 1029, y 92 to about 780). The two meshes are both named `Plane.*`, so `--screen-mesh` cannot isolate the canvas: composite instead. |
-| pocket watch | `--polyhaven model vintage_pocket_watch`, two renders: face-on (`--rx 0 --ry 0`, hero, 854x1106) and tilted 3/4 (about `--ry 35 --rx -15`, falling ones; angles approximate, pick from a sheet). |
-| HDRI | `--polyhaven hdri studio_small_09` (neutral studio, keeps props greyscale-friendly). |
-| the 3D phone | `node scripts/device-init.mjs --project <dir> --preset iphone --start 9.4 --duration 3.2 --id ph --rim <brand accent> --env #2a2a2a`. Phone shell takes the accent through the rim light. |
+| a fonte de destaque da marca | o `brand-intake.mjs` captura os arquivos de fonte; o `film-init.mjs` escreve o `@font-face` em `assets/brand.css` como “Brand display” (pesos de 100 a 900 de um arquivo variável). Uma fonte faz todos os pesos. |
+| o site da marca no celular | capture o site no ar com largura de celular: Chrome sem janela `--window-size=390,7000 --force-device-scale-factor=2`, página inteira, salva como `device/site-phone.png` (aqui 390 de largura, rolada até y 5250). Escolha 3 paradas: o topo, a prova (números, marcas de clientes), os depoimentos. |
+| um retrato do fundador | a foto do próprio fundador ou um quadro do vídeo dele (uma imagem parada do YouTube em 720p basta), recortada com `node scripts/cutout.mjs still.png founder-cut.png`. Depois grave-a (Mecânica) e componha na moldura. |
+| megafone | `node scripts/find-assets.mjs --polyhaven model megaphone_01 --out <dir>`, renderizado com `node scripts/prop-render.mjs <dir>/megaphone_01/Megaphone_01_1k.gltf mega.png --hdri <dir>/studio_small_09/studio_small_09_1k.hdr --ry -35 --rx 10` para uma vista de 3/4, boca para a esquerda, cabo para baixo (ângulos aproximados: as opções exatas da renderização aprovada não foram registradas; renderize 3 ou 4 valores de `--ry` e escolha numa folha). |
+| moldura dourada | `--polyhaven model fancy_picture_frame_01`, renderizada de frente (`--rx 0 --ry 0`), depois `trim-alpha.mjs`. A tela dela traz uma paisagem: substitua em 2D (tela interna medida numa renderização de 1122x870: x 92 a 1029, y 92 a cerca de 780). As duas malhas se chamam `Plane.*`, então o `--screen-mesh` não consegue isolar a tela: componha. |
+| relógio de bolso | `--polyhaven model vintage_pocket_watch`, duas renderizações: de frente (`--rx 0 --ry 0`, o principal, 854x1106) e inclinada em 3/4 (cerca de `--ry 35 --rx -15`, os que caem; ângulos aproximados, escolha numa folha). |
+| HDRI | `--polyhaven hdri studio_small_09` (estúdio neutro, mantém os adereços compatíveis com tons de cinza). |
+| o celular 3D | `node scripts/device-init.mjs --project <dir> --preset iphone --start 9.4 --duration 3.2 --id ph --rim <cor de destaque da marca> --env #2a2a2a`. A carcaça do celular assume a cor de destaque pela luz de contorno. |
 
-Props should tell the copy's metaphor: a megaphone for "going viral", a frame
-for "the truth / the founder", clocks for "stop renting / time". Pick the
-metaphor from the brand's own sentence, then search Poly Haven
-(`find-assets.mjs --polyhaven model <id>`; the site lists ~500 CC0 models by
-category). Missing material: no Poly Haven model, try `find-assets.mjs
-"<object> isolated" --cutout --min 1400` (a real CC0 photo, lifted); no founder
-photo, put the brand's real product screenshot in the frame instead, engraved
-the same way; no font captured, use the nearest bundled grotesk at 400/800/900
-and say so in `brand.md`. Never draw a prop in CSS.
+Os adereços devem contar a metáfora do texto: um megafone para “viralizar”, uma moldura para “a verdade / o fundador”, relógios para “pare de alugar / tempo”. Escolha a metáfora a partir da frase da própria marca e depois busque no Poly Haven (`find-assets.mjs --polyhaven model <id>`; o site lista cerca de 500 modelos CC0 por categoria). Material faltando: sem modelo do Poly Haven, tente `find-assets.mjs "<objeto> isolated" --cutout --min 1400` (uma foto CC0 real, recortada); sem foto do fundador, ponha na moldura a captura real do produto da marca, gravada do mesmo modo; sem fonte capturada, use a grotesca incluída mais próxima em 400/800/900 e diga isso no `brand.md`. Nunca desenhe um adereço em CSS.
 
-## Mechanics
+## Mecânica
 
-The soft asterisk (the theme's signature shape). Petals 5 for both; `phase`
-rotates the lobes so two blobs never look identical:
+O asterisco suave (a forma-assinatura do tema). 5 pétalas nos dois; `phase` gira os lóbulos para duas manchas nunca ficarem idênticas:
 
 ```js
 function blob(id, petals, phase) {
@@ -119,7 +101,7 @@ blob("blA", 5, 0.4); blob("blB", 5, 1.2);
 svg.blob { position: absolute; overflow: visible; z-index: 40; filter: drop-shadow(0 14px 18px rgba(0,0,0,.22)); }
 ```
 
-Selection box, cursor drag and the pop:
+Caixa de seleção, arrasto do cursor e o salto:
 
 ```js
 const tl = gsap.timeline({ paused: true }), C = "#cur";
@@ -147,8 +129,7 @@ tl.to(C, { x: 1150, y: 1500, duration: 0.4, ease: "power3.in" }, 1.6); tl.set(C,
 .box i:nth-child(3) { left: -10px; bottom: -10px; } .box i:nth-child(4) { right: -10px; bottom: -10px; }
 ```
 
-The asterisk wipe (a blob swells across the frame, the scene changes under
-it, it rolls back to its corner):
+A varredura de asterisco (uma mancha cresce pelo quadro, a cena muda por baixo dela, ela volta rolando ao seu canto):
 
 ```js
 tl.to("#blB", { x: -900, y: -1500, scale: 2.4, duration: 0.55, ease: "power3.inOut" }, T);
@@ -156,7 +137,7 @@ tl.to("#blB", { x: 0, y: 0, scale: 1, duration: 0.6, ease: "power3.out" }, T + 0
 // the next section starts at T + 0.35, while the blob covers the centre
 ```
 
-The dark band and the circle drawn round an object:
+A faixa escura e o círculo desenhado em volta de um objeto:
 
 ```css
 #band { position: absolute; left: -500px; top: -400px; width: 2200px; height: 760px; border-radius: 50%;
@@ -174,14 +155,9 @@ tl.set("#ring", { opacity: 0 }, 0); tl.set("#ring", { opacity: 1 }, T3);        
 tl.fromTo(rc, { attr: { "stroke-dasharray": `0 ${RL}` } }, { attr: { "stroke-dasharray": `${RL} 0` }, duration: 0.7, ease: "power2.inOut" }, T3);
 ```
 
-Note: in the approved film the CSS `stroke-dasharray: 10 10` outranks the
-`attr` tween (a CSS rule beats an SVG presentation attribute), so the ring
-simply appears, dashed, at T3 and the tween does nothing. That reads fine. If
-you want the dashed ring to visibly draw round the object, keep the dash on
-the circle and reveal it through a mask: a second, solid circle in a `<mask>`
-whose `stroke-dashoffset` runs from `RL` to 0 over 0.7s `power2.inOut`.
+Nota: no filme aprovado, o `stroke-dasharray: 10 10` do CSS vence a interpolação de `attr` (uma regra CSS vence um atributo de apresentação do SVG), então o anel simplesmente aparece, tracejado, em T3 e a interpolação não faz nada. Isso é lido bem. Se quiser que o anel tracejado se desenhe visivelmente em volta do objeto, mantenha o tracejado no círculo e revele-o por uma máscara: um segundo círculo, sólido, numa `<mask>` cujo `stroke-dashoffset` vai de `RL` a 0 em 0,7 s `power2.inOut`.
 
-The type run:
+A digitação corrida:
 
 ```js
 tl.fromTo("#run", { x: 900 }, { x: -620, duration: 1.6, ease: "none" }, T);
@@ -191,7 +167,7 @@ document.querySelectorAll("#run span").forEach((s, i) =>
 // #run span { display:inline-block; margin-right:26px }   and mark #run data-bleed for frame-audit
 ```
 
-Curtains and falling objects:
+Cortinas e objetos caindo:
 
 ```js
 // .cur { position:absolute; top:-40px; width:600px; height:2000px; background:#141414; z-index:15 }  left:-300px / right:-300px
@@ -203,15 +179,7 @@ tl.fromTo("#fall1", { y: -300, rotation: 0 }, { y: 2100, rotation: 140, duration
 tl.fromTo("#fall2", { y: -1700, rotation: 30 }, { y: 400, rotation: 160, duration: 2.2, ease: "power1.in" }, T);
 ```
 
-The engraving (founder photo to a line-engraved plate). Run it once to bake
-`portrait.png`; it is a horizontal line screen with a 4px pitch whose line
-width grows with darkness, highlights left clean. Measured on the approved
-plate: paper `#EEEAE0`, lines 1-3px of near-black (`#0B0B0B` to `#161616`),
-gaps light grey, highlights about `#F5F5F5`, hard contrast. The original
-bake step was not kept; this function is rebuilt from those measurements, so
-compare its output with the reference plate on a zoomed crop and tune
-`contrast`, `lift` and `cut` until the face reads in three tones (clean
-highlight, fine lines, dense lines).
+A gravura (foto do fundador para uma placa gravada em linhas). Rode uma vez para gerar o `portrait.png`; é uma trama de linhas horizontais com passo de 4 px cuja espessura de linha cresce com o escuro, deixando os realces limpos. Medido na placa aprovada: papel `#EEEAE0`, linhas de 1 a 3 px de quase preto (`#0B0B0B` a `#161616`), vãos cinza claros, realces em torno de `#F5F5F5`, contraste duro. A etapa original de geração não foi guardada; esta função foi refeita a partir dessas medidas, então compare o resultado com a placa de referência num recorte ampliado e ajuste `contrast`, `lift` e `cut` até o rosto ser lido em três tons (realce limpo, linhas finas, linhas densas).
 
 ```js
 // in a page or a node canvas: img = the cut-out (alpha), out = same size
@@ -233,17 +201,9 @@ function engrave(img, { pitch = 4, contrast = 1.7, lift = 0.08, cut = 0.62 } = {
 }
 ```
 
-Then composite: fill the frame's inner canvas with `#EEEAE0`, draw the
-engraved cut-out bottom-anchored and centred in it at about 75% of the canvas
-height, draw the frame render over it (the frame's own alpha keeps the
-moulding on top). Pitch 4px at a 1122px wide plate; scale the pitch with the
-plate (pitch = plate width / 280).
+Depois componha: preencha a tela interna da moldura com `#EEEAE0`, desenhe o recorte gravado ancorado embaixo e centralizado nela com cerca de 75% da altura da tela, desenhe a renderização da moldura por cima (o próprio alfa da moldura mantém o acabamento por cima). Passo de 4 px numa placa de 1122 px de largura; escale o passo com a placa (passo = largura da placa / 280).
 
-The phone (`device-init --preset iphone`): rises from y -4.5 with its back to
-camera, `pry` spins from 0.25 to PI + 0.18 (1.1s, ease bezier .76,0,.18,1),
-camera dollies from 55% to 86% frame height; the screen HTML scrolls on eased
-stops `[[0,0],[0.12,0],[0.4,860],[0.58,860],[0.92,5250],[1,5250]]` (p, page
-y) with a cubic in-out between stops:
+O celular (`device-init --preset iphone`): sobe de y -4,5 com as costas para a câmera, `pry` gira de 0,25 a PI + 0,18 (1,1 s, curva bezier .76,0,.18,1), a câmera se aproxima de 55% a 86% da altura do quadro; o HTML da tela rola em paradas suavizadas `[[0,0],[0.12,0],[0.4,860],[0.58,860],[0.92,5250],[1,5250]]` (p, y da página) com uma cúbica de entrada e saída entre as paradas:
 
 ```js
 var PH = [[0, 0], [0.12, 0], [0.4, 860], [0.58, 860], [0.92, 5250], [1, 5250]];   // stops: hero, proof, testimonials
@@ -254,56 +214,26 @@ function scrollAt(K, p) { for (var i = 1; i < K.length; i++) if (p <= K[i][0]) {
 window.MD_SCREEN_ph = function (p) { document.getElementById("phone-page").style.transform = "translateY(" + (-Math.round(scrollAt(PH, p))) + "px)"; };
 ```
 
-Choose the stops with `find-rows.mjs` or by measuring the captured page;
-never guess them.
+Escolha as paradas com `find-rows.mjs` ou medindo a página capturada; nunca adivinhe.
 
-## Adapting to a brand
+## Adaptar a uma marca
 
-- Takes the brand: the display face (all type), the copy, the domain, the
-  founder portrait, the site on the phone, the phone's rim light (accent), and
-  the choice of props (the brand's own metaphors).
-- Stays fixed: the grey ground, the 30px dot grid, the black asterisks, the
-  `#2a2a2a` boxes, cursor, band and ring, the black curtains, the grain, every
-  ease and duration above. The accent never paints a shape or a word: a brand
-  with a loud colour still gets a grey film, and its colour lives in the real
-  material. That restraint is the theme.
-- A dark-only brand: keep the grey ground anyway; the phone and props carry it.
-- 16:9: the same grammar; asterisks 900px in opposite corners, boxes and
-  headlines centred in the middle third, the phone becomes `macbook`.
+- Vem da marca: a fonte de destaque (toda a tipografia), o texto, o domínio, o retrato do fundador, o site no celular, a luz de contorno do celular (cor de destaque) e a escolha dos adereços (as metáforas da própria marca).
+- Fica fixo: o fundo cinza, a grade de pontos de 30 px, os asteriscos pretos, as caixas, o cursor, a faixa e o anel em `#2a2a2a`, as cortinas pretas, a granulação, todas as curvas e durações acima. A cor de destaque nunca pinta uma forma ou uma palavra: uma marca com cor forte ainda recebe um filme cinza, e a cor dela vive no material real. Essa contenção é o tema.
+- Uma marca só escura: mantenha o fundo cinza do mesmo jeito; o celular e os adereços carregam o resto.
+- 16:9: a mesma gramática; asteriscos de 900 px em cantos opostos, caixas e manchetes centralizadas no terço do meio, o celular vira `macbook`.
 
-## Pitfalls found while building
+## Armadilhas encontradas durante a construção
 
-- Rings, bands and sub-composition hosts can show at frame 0: set them to
-  `opacity: 0` at time 0 on the timeline (`tl.set("#ring", {opacity:0}, 0)`)
-  and only reveal on the frame they start drawing; any `fromTo` that starts
-  later than 0 and must not affect frame 0 needs `immediateRender: false`.
-- The blob wipe must cover the change: the incoming section starts 0.2s
-  before the outgoing one ends, and the blob is scaled 2.4x at that moment.
-  Check the two frames either side of the cut on a sheet; a blob that passes
-  too high leaves the old words visible.
-- The italic aside over the curtains (shot 7) sits where the curtain edges
-  and a falling watch cross it; at 36px #555 it loses contrast. Keep any line
-  in that shot inside the V between the curtains and above y 1100, or drop it.
-- Blobs crossing words: the asterisks are z-index 40, above copy. Plan copy in
-  the middle 60% of the frame and check every 4th frame for a lobe on a letter.
-- Text inside boxes: the boxed lines must fit inside the dashed box with
-  20px+ air; run `scripts/frame-audit.mjs <dir>` (text outside its box, text on
-  text, text outside the frame). The type run is the only line allowed off
-  frame and must carry `data-bleed`.
-- Cursor path and box must share duration and ease, or the box corner and the
-  cursor tip separate mid-drag.
-- The megaphone reappears in shot 3 as a second element (`#mega2`): hide it
-  with `tl.set(..., {opacity:0})` at the section start or it shows under the
-  band.
+- Anéis, faixas e hospedeiros de subcomposição podem aparecer no quadro 0: ponha-os em `opacity: 0` no tempo 0 da linha do tempo (`tl.set("#ring", {opacity:0}, 0)`) e só revele no quadro em que começam a se desenhar; todo `fromTo` que começa depois de 0 e não pode afetar o quadro 0 precisa de `immediateRender: false`.
+- A varredura da mancha precisa cobrir a troca: a seção que entra começa 0,2 s antes de a que sai terminar, e a mancha está com escala 2,4x nesse momento. Confira os dois quadros de cada lado do corte numa folha; uma mancha que passa alta demais deixa as palavras antigas visíveis.
+- O comentário em itálico sobre as cortinas (plano 7) fica onde as bordas das cortinas e um relógio caindo o cruzam; a 36 px #555 ele perde contraste. Mantenha qualquer linha desse plano dentro do V entre as cortinas e acima de y 1100, ou tire-a.
+- Manchas cruzando palavras: os asteriscos têm z-index 40, acima do texto. Planeje o texto nos 60% do meio do quadro e confira a cada 4 quadros se um lóbulo cai sobre uma letra.
+- Texto dentro de caixas: as linhas em caixas precisam caber dentro da caixa tracejada com 20 px ou mais de folga; rode `scripts/frame-audit.mjs <dir>` (texto fora da caixa, texto sobre texto, texto fora do quadro). A digitação corrida é a única linha com permissão de sair do quadro e precisa levar `data-bleed`.
+- O caminho do cursor e a caixa precisam dividir duração e curva, ou o canto da caixa e a ponta do cursor se separam no meio do arrasto.
+- O megafone reaparece no plano 3 como um segundo elemento (`#mega2`): esconda-o com `tl.set(..., {opacity:0})` no início da seção ou ele aparece sob a faixa.
 
-## Sound
+## Som
 
-- 100 BPM, vibe `minimal`, A minor; riser into 4.8, drop at 4.8, logo cue at
-  9.6. Mix -14 LUFS.
-- UI sounds on events: whoosh on the blob entrance (0.0) and each wipe (2.05,
-  4.45 band, 6.0 band roll, 9.4 phone), click when the cursor starts each box
-  (0.8, 7.75, 8.55), pop on each headline (1.25, 2.7 megaphone, 4.9 frame,
-  10.3), shimmer as the ring draws (6.5), four ticks on the type run words
-  (12.60, 12.78, 12.96, 13.14, one per word at the 0.18s stagger), one hit when
-  the curtains close and the watch lands (14.4), a pop on the sign-off noun
-  (16.55).
+- 100 BPM, clima `minimal`, lá menor; subida de tensão até 4,8, queda em 4,8, sinal da logo em 9,6. Mixagem a -14 LUFS.
+- Sons de interface nos eventos: whoosh na entrada das manchas (0,0) e em cada varredura (2,05, 4,45 faixa, 6,0 rolagem da faixa, 9,4 celular), clique quando o cursor começa cada caixa (0,8, 7,75, 8,55), pop em cada manchete (1,25, 2,7 megafone, 4,9 moldura, 10,3), shimmer quando o anel se desenha (6,5), quatro ticks nas palavras da digitação corrida (12,60, 12,78, 12,96, 13,14, um por palavra na defasagem de 0,18 s), um golpe quando as cortinas fecham e o relógio pousa (14,4), um pop no substantivo da assinatura (16,55).

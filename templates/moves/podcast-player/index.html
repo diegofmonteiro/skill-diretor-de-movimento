@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="pt-BR" data-composition-variables='[
-  {"id":"episode","type":"string","label":"Episode title on the player","default":"The full interview"},
-  {"id":"show","type":"string","label":"Show name (empty = the brand name)","default":""},
-  {"id":"chapters","type":"string","label":"Chapter names, comma separated (3 or 4)","default":"Intro,The setup,The results,Questions"},
-  {"id":"pick","type":"number","label":"Chapter the playhead jumps to (1 = the first)","default":3},
-  {"id":"length","type":"string","label":"Episode length (m:ss or h:mm:ss)","default":"48:12"}
+  {"id":"episode","type":"string","label":"Título do episódio no player","default":"A entrevista completa"},
+  {"id":"show","type":"string","label":"Nome do programa (vazio = o nome da marca)","default":""},
+  {"id":"chapters","type":"string","label":"Nomes dos capítulos, separados por vírgula (3 ou 4)","default":"Introdução,A configuração,Os resultados,Perguntas"},
+  {"id":"pick","type":"number","label":"Capítulo para o qual o cursor salta (1 = o primeiro)","default":3},
+  {"id":"length","type":"string","label":"Duração do episódio (m:ss ou h:mm:ss)","default":"48:12"}
 ]'>
 <head>
 <meta charset="UTF-8" />
@@ -146,7 +146,7 @@
   box($("#play"), DW / 2 - PB / 2, TY, PB, PB); box($("#back"), DW / 2 - PB / 2 - 70 - SB, TY + (PB - SB) / 2, SB, SB); box($("#fwd"), DW / 2 + PB / 2 + 70, TY + (PB - SB) / 2, SB, SB);
   box($("#rg"), -4, -4, PB + 8, PB + 8); $("#rg").style.left = $("#rg").style.top = "-4px";
   // chapter chip above the target tick
-  const chip = $("#chip"); chip.querySelector("em").textContent = "Ch " + (pick + 1); chip.querySelector("span").textContent = chs[pick];
+  const chip = $("#chip"); chip.querySelector("em").textContent = "Cap. " + (pick + 1); chip.querySelector("span").textContent = chs[pick];
   MV.fitText(chip.querySelector("span"), inner * 0.7 * s, 12 * s);
   const cwid = chip.getBoundingClientRect().width / s, tx0 = marks[pick] * inner;
   box(chip, Math.max(pad - 10, Math.min(DW - pad + 10 - cwid, pad + tx0 - cwid / 2)), WY - 96);

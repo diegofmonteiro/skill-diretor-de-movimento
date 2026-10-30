@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="pt-BR" data-composition-variables='[
-  {"id":"file","type":"string","label":"File name on the tab","default":"reply.js"},
-  {"id":"before","type":"string","label":"Unchanged lines above, separated by |","default":"import { ai } from \"./ai\";||async function reply(msg) {"},
-  {"id":"removed","type":"string","label":"Lines that go out (red), separated by |","default":"  const text = draft(msg);|  return text;"},
-  {"id":"added","type":"string","label":"Lines that come in (green), separated by |","default":"  const text = await ai(msg);|  const ok = await check(text);|  return ok ? text : null;"},
-  {"id":"after","type":"string","label":"Unchanged lines below, separated by |","default":"}"},
-  {"id":"plus","type":"number","label":"Lines added on the chip","default":12},
-  {"id":"minus","type":"number","label":"Lines removed on the chip","default":4}
+  {"id":"file","type":"string","label":"Nome do arquivo na aba","default":"reply.js"},
+  {"id":"before","type":"string","label":"Linhas sem mudança acima, separadas por |","default":"import { ai } from \"./ai\";||async function reply(msg) {"},
+  {"id":"removed","type":"string","label":"Linhas que saem (vermelhas), separadas por |","default":"  const text = draft(msg);|  return text;"},
+  {"id":"added","type":"string","label":"Linhas que entram (verdes), separadas por |","default":"  const text = await ai(msg);|  const ok = await check(text);|  return ok ? text : null;"},
+  {"id":"after","type":"string","label":"Linhas sem mudança abaixo, separadas por |","default":"}"},
+  {"id":"plus","type":"number","label":"Linhas acrescentadas na cápsula","default":12},
+  {"id":"minus","type":"number","label":"Linhas removidas na cápsula","default":4}
 ]'>
 <head>
 <meta charset="UTF-8" />

@@ -16,7 +16,9 @@ flowchart LR
     F -->|Não| B
     F -->|Sim| G[Tarefa de render na fila]
     G --> H[Arquivo pronto]
-    H --> I[Download autenticado e registro]
+    H --> I[Assiste na plataforma e aprova]
+    I --> P[Publica nas redes do plano, RN-26 e RN-27]
+    P --> Q[Registro com endereço da publicação]
 ```
 
 ## Fluxo de um filme
@@ -94,6 +96,10 @@ stateDiagram-v2
 ## Estados de um efeito (`ClipStatus`)
 
 `queued` → `rendering` → `done`, ou `failed` (volta a `queued` ao tentar de novo), ou `review` (texto sinalizado, RN-09; sai para `queued` quando a Conex Prime libera).
+
+## Estados de uma publicação (`PublicationStatus`)
+
+`draft` → `scheduled` (se tiver data) → `publishing` → `published`, ou `publishing` → `failed` (tenta de novo até o limite; depois fica `failed` e abre ticket para a Conex Prime), ou `scheduled` → `cancelled`.
 
 ## Estados de um pedido de exclusão (`DeletionStatus`)
 

@@ -1,5 +1,5 @@
-{ "id": "waitlist-spot", "name": "Waitlist spot", "oneLiner": "a white waitlist confirmation card lands on a warm lit desk: your spot number set huge on rolling odometer digits counts down as the queue of people ahead files into a green gate and your marker slides up the line, then the number lands, turns green and a Moving up chip stamps on",
+{ "id": "waitlist-spot", "name": "Posição em lista de espera", "oneLiner": "um cartão branco de confirmação de lista de espera cai numa mesa quente iluminada: a sua posição, enorme em dígitos de hodômetro girando, desce enquanto a fila de pessoas à frente entra num portão verde e o seu marcador sobe pela fila, e então o número para, fica verde e uma cápsula de Subindo é carimbada",
   "category": "business", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["studio", "paper"], "from": "new",
   "tags": ["waitlist", "queue", "launch", "early access", "demand", "position", "line", "beta", "odometer", "countdown", "light"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.8, "alpha": true,
-  "say": "when the speaker talks about a waitlist or a queue ('thousands joined the waitlist', 'you move up every time someone gets in', 'I was number 1,284 in line'): cut in on 'waitlist', the number lands on the spot they name" }
+  "say": "quando quem fala trata de uma lista de espera ou fila (“milhares entraram na lista de espera”, “você sobe toda vez que alguém entra”, “eu era o 1.284 da fila”): entre em “lista de espera”, o número para na posição que a pessoa nomeia" }

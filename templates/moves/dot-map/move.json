@@ -1,5 +1,5 @@
-{ "id": "dot-map", "name": "Dot map", "oneLiner": "a dot-matrix world sweeps in grey on a pane of dark glass, then region by region the dots light outward from each centre as a frosted chip counts its number up, and one region turns the accent and pulses outward twice while its chip lifts and the camera leans in",
+{ "id": "dot-map", "name": "Mapa de pontos", "oneLiner": "um mundo de pontos varre em cinza sobre um painel de vidro escuro, e então região a região os pontos acendem para fora a partir de cada centro enquanto uma cápsula fosca conta o seu número, e uma região fica na cor de destaque e pulsa duas vezes para fora enquanto a sua cápsula sobe e a câmera se inclina",
   "category": "data", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["world map", "dot map", "global", "regions", "audience", "where people are", "countries", "reach", "worldwide", "data", "numbers", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.8, "alpha": true,
-  "say": "when the speaker says where people are or how far something reached ('most of you watch from North America', 'it spread to every continent'): cut in on the reach, the lead region pulses on the word that names it" }
+  "say": "quando quem fala diz onde as pessoas estão ou até onde algo chegou (“a maioria de vocês assiste da América do Norte”, “espalhou-se por todos os continentes”): entre no alcance, a região principal pulsa na palavra que a nomeia" }

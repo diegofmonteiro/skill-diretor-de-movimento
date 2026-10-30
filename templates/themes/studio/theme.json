@@ -1,9 +1,9 @@
 {
   "id": "studio",
-  "name": "Studio",
-  "oneLiner": "design-studio motion: one glass hero object on a glowing brand-colour ground, sunburst, blobs, a designer's cursor and selection boxes",
-  "bestFor": "product and app launches, brands with one strong colour, logo reveals, anything that should feel crafted and premium but playful",
-  "motion": "springy pops (back.out), strokes drawing on, a turning sunburst, one hero object that opens to show the real screens",
+  "name": "Estúdio",
+  "oneLiner": "movimento de estúdio de design: um objeto-herói de vidro sobre um fundo brilhante na cor da marca, raio de sol, manchas, um cursor de designer e caixas de seleção",
+  "bestFor": "lançamentos de produtos e apps, marcas com uma cor forte, revelações de logo, tudo o que deve parecer bem-feito e premium, mas brincalhão",
+  "motion": "saltos com mola (back.out), traços se desenhando, um raio de sol girando, um objeto-herói que se abre para mostrar as telas reais",
   "ground": "colour",
   "stills": [
     1.3,
@@ -16,10 +16,10 @@
       100,
       120
     ],
-    "ui": "a soft pop on each spring, a click with the cursor, glass shimmer on the sheen"
+    "ui": "um pop suave a cada mola, um clique com o cursor, shimmer de vidro no brilho"
   },
-  "format": "16:9 (9:16 with the same objects at 60% width)",
-  "length": "5.4s sample; 15-25s as a film",
+  "format": "16:9 (9:16 com os mesmos objetos a 60% da largura)",
+  "length": "amostra de 5,4 s; de 15 a 25 s como filme",
   "recipe": "RECIPE.md",
   "preview": "preview.jpg"
 }

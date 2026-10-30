@@ -1,5 +1,5 @@
-{ "id": "connector-toggle", "name": "Connector toggles", "oneLiner": "a glass connectors panel of generic app glyphs (mail, calendar, files, chat, tasks): a pointer runs down the list flipping switches green one by one, each glyph wakes from grey as the count ticks, then the count pill lands green with a check and a sheen",
+{ "id": "connector-toggle", "name": "Chaves de conectores", "oneLiner": "um painel de conectores em vidro com ícones genéricos de apps (e-mail, agenda, arquivos, chat, tarefas): um ponteiro desce a lista virando as chaves para o verde uma a uma, cada ícone acorda do cinza enquanto a contagem sobe, e então a cápsula de contagem cai verde com uma marca e um brilho",
   "category": "ai", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["ai", "connectors", "integrations", "connect", "tools", "apps", "settings", "toggle", "switch", "agent access", "mcp", "setup", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": true,
-  "say": "when the speaker says they plugged their tools into the AI ('I connected my mail, my calendar, my files...', 'flip these on and it can see everything'): each switch flips on a named tool, the count lands on the payoff" }
+  "say": "quando quem fala diz que ligou suas ferramentas à IA (“conectei meu e-mail, minha agenda, meus arquivos...”, “ligue estas e ela enxerga tudo”): cada chave vira numa ferramenta nomeada, a contagem cai no desfecho" }

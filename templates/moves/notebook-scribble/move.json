@@ -1,5 +1,5 @@
-{ "id": "notebook-scribble", "name": "Notebook scribble", "oneLiner": "close on a real yellow legal pad on a leather blotter: a real ballpoint writes a short list on the rules, its tip riding the ink on twos, then loops one word in a brand-colour circle and lifts away",
+{ "id": "notebook-scribble", "name": "Rabisco no caderno", "oneLiner": "plano fechado de um bloco amarelo de verdade sobre uma base de couro: uma caneta esferográfica real escreve uma lista curta de regras, com a ponta acompanhando a tinta de dois em dois quadros, e então faz um círculo na cor da marca em volta de uma palavra e sai de cena",
   "category": "paper", "kind": "effect", "uses": ["broll"], "looks": ["paper"], "from": "new",
   "tags": ["notes", "list", "plan", "steps", "handwriting", "notebook", "legal pad", "pen", "circle", "emphasis", "paper", "on twos"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": false,
-  "say": "when the speaker lays out a plan or a short list and leans on one word ('three steps, and you film it once'): the lines write on as they list them and the circle lands on the word they stress" }
+  "say": "quando quem fala expõe um plano ou uma lista curta e se apoia numa palavra (“três passos, e você grava uma vez só”): as linhas são escritas conforme a pessoa as enumera e o círculo cai na palavra que ela destaca" }

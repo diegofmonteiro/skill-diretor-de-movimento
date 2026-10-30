@@ -1,5 +1,5 @@
-{ "id": "ai-stream", "name": "Glass AI reply stream", "oneLiner": "an assistant chat on a glass pane: the question lands, three dots think, the answer streams in word chunks behind a glowing caret, a code block unfolds and types itself line by line, then a pointer hits Copy and it turns into a green check",
+{ "id": "ai-stream", "name": "Resposta de IA em vidro", "oneLiner": "um chat de assistente numa lâmina de vidro: a pergunta chega, três pontos pensam, a resposta flui em blocos de palavras atrás de um cursor brilhante, um bloco de código se abre e se escreve linha a linha, e então um ponteiro aperta “Copiar” e ele vira uma marca verde",
   "category": "ai", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["ai", "chatbot", "assistant", "prompt", "answer", "streaming", "code", "llm", "copy", "generate", "automation", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.6, "alpha": true,
-  "say": "when the speaker says they asked the AI and it just wrote it ('I asked it for the function', 'it spat out the code'): the question lands on 'asked', the copy check on 'and that's it'" }
+  "say": "quando quem fala diz que perguntou à IA e ela simplesmente escreveu (“pedi a função a ela”, “ela cuspiu o código”): a pergunta chega em “pedi”, a marca de cópia em “e pronto”" }

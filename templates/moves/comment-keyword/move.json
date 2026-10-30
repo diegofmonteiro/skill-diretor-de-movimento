@@ -1,5 +1,5 @@
-{ "id": "comment-keyword", "name": "Comment keyword to DM", "oneLiner": "a glass comment box springs in, the keyword types in caps letter by letter, send is pressed with a ring and a paper plane flies off, then a DM pops back from the creator carrying a link card to the resource",
+{ "id": "comment-keyword", "name": "Palavra-chave no comentário até a mensagem", "oneLiner": "uma caixa de comentário de vidro surge com mola, a palavra-chave é digitada em maiúsculas letra a letra, enviar é apertado com um anel e um aviãozinho de papel sai voando, e então uma mensagem direta volta do criador com um cartão de link para o material",
   "category": "social", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["cta", "comment", "keyword", "dm", "message", "link", "lead magnet", "funnel", "call to action", "typing", "3d", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.8, "alpha": true,
-  "say": "on the call to action, 'comment GUIDE and I'll send it to you': the keyword types as they say it, the DM with the link lands on 'send it to you'" }
+  "say": "na chamada para ação, “comente GUIA que eu envio para você”: a palavra-chave é digitada enquanto a pessoa diz, a mensagem com o link cai em “envio para você”" }

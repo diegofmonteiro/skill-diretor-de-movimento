@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="pt-BR" data-composition-variables='[
-  {"id":"name","type":"string","label":"Display name (empty: the brand name)","default":""},
-  {"id":"bio","type":"string","label":"Bio line (empty: the brand tagline)","default":""},
-  {"id":"followersFrom","type":"number","label":"Followers it starts on","default":9874},
-  {"id":"followers","type":"number","label":"Followers it rolls to","default":10312},
-  {"id":"posts","type":"number","label":"Posts","default":412},
-  {"id":"following","type":"number","label":"Following","default":186},
-  {"id":"labels","type":"string","label":"The three stat labels, comma separated (posts, followers, following)","default":"Posts,Seguidores,Seguindo"}
+  {"id":"name","type":"string","label":"Nome de exibição (vazio: o nome da marca)","default":""},
+  {"id":"bio","type":"string","label":"Linha da biografia (vazio: o slogan da marca)","default":""},
+  {"id":"followersFrom","type":"number","label":"Seguidores em que começa","default":9874},
+  {"id":"followers","type":"number","label":"Seguidores até os quais gira","default":10312},
+  {"id":"posts","type":"number","label":"Publicações","default":412},
+  {"id":"following","type":"number","label":"Seguindo","default":186},
+  {"id":"labels","type":"string","label":"Os três rótulos dos números, separados por vírgula (publicações, seguidores, seguindo)","default":"Posts,Seguidores,Seguindo"}
 ]'>
 <head>
 <meta charset="UTF-8" />
@@ -140,14 +140,15 @@
   if (!WIDE) { st.style.borderTop = `${1.5 * u}px solid rgba(20,16,30,.08)`; st.style.paddingTop = 20 * k + "px"; }
 
   // ---- the odometer: one column per character of the new count; digits spin from the old value
-  const n1 = $("#n1"), sTo = fmt(to), sFrom = fmt(from).padStart(sTo.length, " ");
+  const fmtOd = (n) => Math.round(n).toLocaleString("en-US"); // the columns below treat "," as the separator column; it is drawn as "." (pt-BR)
+  const n1 = $("#n1"), sTo = fmtOd(to), sFrom = fmtOd(from).padStart(sTo.length, " ");
   // each column is as wide as this font's widest digit, so neighbours never touch
-  let DW = 0; { const t = document.createElement("span"); n1.appendChild(t); for (let q = 0; q < 10; q++) { t.textContent = String(q); DW = Math.max(DW, t.getBoundingClientRect().width); } t.textContent = ","; var CMW = t.getBoundingClientRect().width; t.remove(); }
+  let DW = 0; { const t = document.createElement("span"); n1.appendChild(t); for (let q = 0; q < 10; q++) { t.textContent = String(q); DW = Math.max(DW, t.getBoundingClientRect().width); } t.textContent = "."; var CMW = t.getBoundingClientRect().width; t.remove(); }
   const cols = [];
   for (let i = 0; i < sTo.length; i++) {
     const c = sTo[i], f = sFrom[i];
     const od = document.createElement("span"); od.className = "od" + (c === "," ? " cm" : "");
-    if (c === ",") { od.style.width = CMW + 2 * k + "px"; od.textContent = ","; od.style.opacity = f === "," ? 1 : 0; n1.appendChild(od); cols.push({ comma: true, od, show: f !== "," }); continue; }
+    if (c === ",") { od.style.width = CMW + 2 * k + "px"; od.textContent = "."; od.style.opacity = f === "," ? 1 : 0; n1.appendChild(od); cols.push({ comma: true, od, show: f !== "," }); continue; }
     const strip = document.createElement("span"); strip.className = "strip";
     const spins = sTo.length - 1 - i;                     // the units spin most, like a real counter
     const a = f === " " ? -1 : +f, b = +c, turns = Math.min(3, Math.floor(spins / 2)) + (i === sTo.length - 1 ? 2 : 1);

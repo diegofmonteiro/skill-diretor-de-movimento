@@ -1,5 +1,5 @@
-{ "id": "step-bracket-label", "name": "Step bracket label", "oneLiner": "2 to 5 glass step cards (glyph tile, label, number) stack in one per beat; a glowing accent bracket then draws around them and a pill naming the whole group springs onto it, and the steps light up together",
+{ "id": "step-bracket-label", "name": "Colchete de etapas com rótulo", "oneLiner": "de 2 a 5 cartões de etapas de vidro (bloco de ícone, rótulo, número) se empilham um por batida; um colchete brilhante na cor de destaque se desenha em volta deles e uma cápsula que nomeia o grupo todo salta sobre ele, e as etapas acendem juntas",
   "category": "explain", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["steps", "system", "framework", "group", "bracket", "process", "method", "stack", "recap", "name it", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.2, "alpha": true,
-  "say": "when the speaker lists a few steps and then names them as one thing (\"post, track, improve: that's the whole system\"): cut in on the first step; the pill lands on the name. Good as a recap near the end of a video" }
+  "say": "quando quem fala lista algumas etapas e depois as nomeia como uma coisa só (“postar, acompanhar, melhorar: esse é o sistema todo”): entre na primeira etapa; a cápsula cai no nome. Bom como resumo perto do fim de um vídeo" }

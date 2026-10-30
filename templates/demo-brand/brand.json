@@ -177,8 +177,8 @@
       "answer": "Claude Code"
     },
     "notebook-scribble": {
-      "lines": "Edite um vídeo com um prompt;1. Cole o link do Drive;2. Escolha o visual;3. Aprove o corte",
-      "circle": "prompt"
+      "lines": "Edite vídeo num só prompt;1. Cole o link do Drive;2. Escolha o visual;3. Aprove o corte",
+      "circle": "só"
     },
     "envelope-letter": {
       "line": "Você não pode copiar um vídeo.",
@@ -223,7 +223,7 @@
       "done": "Enviado"
     },
     "tabs-multiply": {
-      "tabs": "Documentos,Entrada,Análises,Notas,Rascunhos,Busca",
+      "tabs": "Docs,E-mail,Análises,Notas,Esboços,Busca",
       "url": "exemplo.com.br"
     },
     "calendar-week": {
@@ -280,7 +280,7 @@
       "branches": "Shorts,Newsletter,Artigo,Podcast,Thread,Página de recursos"
     },
     "pros-cons": {
-      "pros": "Trabalha enquanto eu durmo,Custa centavos,Nunca esquece",
+      "pros": "Roda enquanto durmo,Custa centavos,Nunca esquece",
       "cons": "Um dia para configurar"
     },
     "step-tracker": {
@@ -364,8 +364,8 @@
       "badge": "Grátis"
     },
     "growing-coin-row": {
-      "values": "R$ 0,R$ 100,R$ 1 mil,R$ 10 mil",
-      "labels": "Ferramenta grátis,Primeiro cliente,Agência,Produto"
+      "values": "R$ 0,R$ 100,R$ 1k,R$ 10k",
+      "labels": "Grátis,Primeiro cliente,Agência,Produto"
     },
     "tier-pyramid": {
       "values": "R$ 0,R$ 29,R$ 299,R$ 2999",
@@ -506,7 +506,7 @@
     },
     "label-box-callout": {
       "title": "Termos de Uso",
-      "lines": "Você mantém a propriedade do seu conteúdo|Você nos concede uma licença mundial para usá-lo|Podemos alterar estes termos a qualquer momento",
+      "lines": "O conteúdo continua sendo seu|Você nos dá licença mundial de uso|Podemos mudar os termos a qualquer hora",
       "pick": 2,
       "note": "Peraí, como assim?"
     },
@@ -544,7 +544,7 @@
     "video-timeline": {
       "title": "Vídeo dos agentes",
       "clips": "Gancho,Demonstração,Encerramento",
-      "broll": "Gravação de tela",
+      "broll": "Captura",
       "removed": "Refilmagens"
     },
     "transcript-highlight": {
@@ -654,11 +654,11 @@
       "zone": "Rápido e bom"
     },
     "podium-rank": {
-      "labels": "{brand},Um freelancer,Modelos prontos",
+      "labels": "{brand},Freelancer,Modelos",
       "values": "94,71,62"
     },
     "compare-table": {
-      "columns": "Manual,Modelos prontos,{brand}",
+      "columns": "Manual,Modelos,{brand}",
       "rows": "Pronto em minutos,Seu próprio estilo,Sem curva de aprendizado,Roda enquanto você dorme"
     },
     "live-chat": {
@@ -685,7 +685,7 @@
       "upNext": "A seguir"
     },
     "channel-analytics": {
-      "videos": "Agentes de IA conseguem tocar um canal?|Ferramentas de IA que valem o uso diário|O pacote de prompts, explicado"
+      "videos": "IA pode tocar um canal?|IA que vale usar todo dia|O pacote de prompts, explicado"
     },
     "video-publish": {
       "title": "Agentes de IA conseguem editar um vídeo inteiro?"
@@ -904,7 +904,7 @@
       "synced": "Backup feito"
     },
     "calendar-reschedule": {
-      "stays": "Bloco de gravação",
+      "stays": "Gravação",
       "moves": "Reunião com patrocinador",
       "at": 11,
       "to": 15,
@@ -1063,7 +1063,7 @@
       "nameB": "{brand}"
     },
     "window-tile": {
-      "apps": "Notas,Entrada,Análises,Chat,Roteiros",
+      "apps": "Notas,E-mail,Análises,Chat,Roteiros",
       "pick": 5,
       "screen": 2
     },

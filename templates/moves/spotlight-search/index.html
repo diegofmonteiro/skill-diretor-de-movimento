@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="pt-BR" data-composition-variables='[
-  {"id":"query","type":"string","label":"What gets typed (empty: the brand name)","default":""},
-  {"id":"name","type":"string","label":"Name on the top hit (empty: the brand name)","default":""},
-  {"id":"kind","type":"string","label":"Label under the top hit","default":"App"},
-  {"id":"hint","type":"string","label":"Placeholder in the empty bar","default":"Buscar"}
+  {"id":"query","type":"string","label":"O que é digitado (vazio: o nome da marca)","default":""},
+  {"id":"name","type":"string","label":"Nome no primeiro resultado (vazio: o nome da marca)","default":""},
+  {"id":"kind","type":"string","label":"Rótulo embaixo do primeiro resultado","default":"App"},
+  {"id":"hint","type":"string","label":"Texto de exemplo na barra vazia","default":"Buscar"}
 ]'>
 <head>
 <meta charset="UTF-8" />
@@ -122,7 +122,7 @@
   const rowsDef = [
     { brand: true, t1: name, t2: v.kind || "" },
     { g: "globe", c: "#2CA6C9", t1: query, t2: "Buscar na web" },
-    { g: "doc", c: "#4C6FE0", t1: query + " notes", t2: "Documento" },
+    { g: "doc", c: "#4C6FE0", t1: query + " notas", t2: "Documento" },
     { g: "folder", c: "#6B7385", t1: query, t2: "Pasta" },
   ];
   const rows = rowsDef.map((r, i) => {
