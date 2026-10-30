@@ -1,5 +1,5 @@
-{ "id": "calendar-week", "name": "Calendar week", "oneLiner": "a glass week view turns in slow 3D, event blocks drop into their days and snap on springs faster and faster until the week is full, then one big accent block is held above Wednesday, slams into its slot, nudges its neighbours and catches a sheen",
+{ "id": "calendar-week", "name": "Semana na agenda", "oneLiner": "uma visão de semana em vidro gira em 3D lento, blocos de evento caem nos dias e se prendem como molas cada vez mais rápido até a semana ficar cheia, então um bloco grande na cor de destaque é segurado acima da quarta-feira, bate no seu horário, empurra os vizinhos e pega um brilho",
   "category": "productivity", "kind": "effect", "uses": ["broll"], "looks": ["glass"], "from": "new",
   "tags": ["calendar", "week", "schedule", "busy", "time", "planning", "routine", "productivity", "block", "deep work", "time back", "meetings", "3d", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": false,
-  "say": "when the speaker describes their week or a routine ('my week looks like this', 'I block three hours for it'): the week fills under the setup, the big block slams in on the thing they protect" }
+  "say": "quando quem fala descreve a sua semana ou rotina (“minha semana é assim”, “reservo três horas para isso”): a semana se enche durante a preparação, o bloco grande bate naquilo que a pessoa protege" }

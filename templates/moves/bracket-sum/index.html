@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="pt-BR" data-composition-variables='[
-  {"id":"labels","type":"string","label":"The sources, comma separated (2 to 4)","default":"Ads,Sponsors,Products"},
-  {"id":"values","type":"string","label":"Their values, comma separated numbers in the same order","default":"1200,3400,5600"},
-  {"id":"glyphs","type":"string","label":"Glyph per tile, comma separated (video, chart, cart, mail, user...; empty = guessed from each label)","default":""},
-  {"id":"prefix","type":"string","label":"Before every number (a currency sign, or empty)","default":"R$ "},
-  {"id":"suffix","type":"string","label":"After every number (/mo, %, K, or empty)","default":""},
-  {"id":"totalLabel","type":"string","label":"The small label on the total pill (empty = none)","default":"Total"},
-  {"id":"layout","type":"string","label":"9:16 only: full (the whole safe frame) or top (the top ~45%, the speaker below)","default":"full"}
+  {"id":"labels","type":"string","label":"As fontes, separadas por vírgula (2 a 4)","default":"Anúncios,Patrocínios,Produtos"},
+  {"id":"values","type":"string","label":"Seus valores, números separados por vírgula na mesma ordem","default":"1200,3400,5600"},
+  {"id":"glyphs","type":"string","label":"Ícone de cada bloco, separados por vírgula (video, chart, cart, mail, user...; vazio = deduzido de cada rótulo)","default":""},
+  {"id":"prefix","type":"string","label":"Antes de cada número (um símbolo de moeda, ou vazio)","default":"R$ "},
+  {"id":"suffix","type":"string","label":"Depois de cada número (/mês, %, mil, ou vazio)","default":""},
+  {"id":"totalLabel","type":"string","label":"O pequeno rótulo na cápsula do total (vazio = nenhum)","default":"Total"},
+  {"id":"layout","type":"string","label":"Só em 9:16: full (toda a área segura) ou top (os ~45% de cima, com quem fala embaixo)","default":"full"}
 ]'>
 <head>
 <meta charset="UTF-8" />
@@ -74,7 +74,7 @@
   const { v, tl, u, W, H, safe } = MV;
   const root = document.getElementById("root"), D = +root.dataset.duration, KEY = root.classList.contains("is-key");
   const P = MV.portrait, SQ = W === H, TOP = P && String(v.layout || "").toLowerCase() === "top";
-  const L = String(v.labels || "Ads,Sponsors,Products").split(",").map((s) => s.trim()).filter(Boolean).slice(0, 4);
+  const L = String(v.labels || "Anúncios,Patrocínios,Produtos").split(",").map((s) => s.trim()).filter(Boolean).slice(0, 4);
   while (L.length < 2) L.push(["Fonte", "Outros"][L.length]);
   const N = L.length;
   const VS = String(v.values || "").split(",").map((s) => parseFloat(s.replace(/[^\d.\-]/g, "")));

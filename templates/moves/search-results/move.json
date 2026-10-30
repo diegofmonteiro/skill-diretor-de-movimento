@@ -1,5 +1,5 @@
-{ "id": "search-results", "name": "Search results lift", "oneLiner": "a query types into a clean search pill, enter is pressed, three results unfold on a paper card and the brand's result (its mark, name, domain and tagline) gets ringed in the accent and lifts toward camera while the others fall back",
+{ "id": "search-results", "name": "Resultado de busca em destaque", "oneLiner": "uma consulta é digitada numa cápsula de busca limpa, o Enter é apertado, três resultados se abrem num cartão de papel e o resultado da marca (símbolo, nome, domínio e slogan) é circulado na cor de destaque e avança em direção à câmera enquanto os outros recuam",
   "category": "productivity", "kind": "effect", "uses": ["broll"], "looks": ["paper"], "from": "new",
   "tags": ["search", "google it", "results", "ranking", "seo", "number one", "discover", "found", "query", "typing", "3d", "light"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.2, "alpha": false,
-  "say": "when the speaker says 'if you search for...', 'we rank first for...' or 'people find us by typing...': the query types under the words, the brand result lifts as they name it" }
+  "say": "quando quem fala diz “se você buscar por...”, “somos os primeiros em...” ou “as pessoas nos encontram digitando...”: a consulta é digitada sob as palavras, o resultado da marca avança quando a pessoa o nomeia" }

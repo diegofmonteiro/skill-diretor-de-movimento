@@ -1,5 +1,5 @@
-{ "id": "iceberg-reveal", "name": "Iceberg reveal", "oneLiner": "a faceted 3D ice body breaks the surface showing only its small lit tip and its label; then the murk under the waterline clears top down, light shafts fall, the camera pulls back in log space and the huge hidden mass is revealed with its number landing underneath",
+{ "id": "iceberg-reveal", "name": "Revelação do iceberg", "oneLiner": "um corpo de gelo facetado em 3D rompe a superfície mostrando só a pequena ponta iluminada e o seu rótulo; então a turbidez abaixo da linha d’água clareia de cima para baixo, feixes de luz caem, a câmera se afasta em escala logarítmica e a enorme massa escondida é revelada com o seu número caindo embaixo",
   "category": "explain", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["studio", "glass"], "from": "new",
   "tags": ["iceberg", "hidden", "cost", "total cost", "behind the scenes", "surface", "reveal", "below the surface", "money", "explainer", "3d", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.8, "alpha": true,
-  "say": "when the speaker says what people see is only the tip ('you see the $20 a month, you don't see the $4,800 it really costs'): cut in on the visible part, the mass is revealed on 'but underneath' and the number lands on the real figure" }
+  "say": "quando quem fala diz que o que as pessoas veem é só a ponta (“você vê os 20 reais por mês, não vê os 4.800 que realmente custa”): entre na parte visível, a massa é revelada em “mas por baixo” e o número cai no valor real" }

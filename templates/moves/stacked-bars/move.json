@@ -1,5 +1,5 @@
-{ "id": "stacked-bars", "name": "Stacked glass bars", "oneLiner": "glass blocks drop onto 3 to 5 stacks and land with a squash, one tint per series and the chosen series in the accent, totals ride the top of each stack while the camera tracks the build; the last accent block slams down, rings out and its total pops",
+{ "id": "stacked-bars", "name": "Barras empilhadas em vidro", "oneLiner": "blocos de vidro caem em 3 a 5 pilhas e pousam com um achatamento, uma cor por série e a série escolhida na cor de destaque, os totais viajam no topo de cada pilha enquanto a câmera acompanha a construção; o último bloco de destaque bate, ecoa em anéis e o seu total estoura",
   "category": "data", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["chart", "stacked", "bars", "breakdown", "composition", "growth", "series", "segments", "data", "numbers", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.2, "alpha": true,
-  "say": "when the speaker breaks a total into parts that grow over time ('ideas, drafts and published posts, month by month'): cut in on the breakdown, the last accent block lands on the word that names the result" }
+  "say": "quando quem fala divide um total em partes que crescem com o tempo (“ideias, rascunhos e publicações, mês a mês”): entre na divisão, o último bloco de destaque cai na palavra que nomeia o resultado" }

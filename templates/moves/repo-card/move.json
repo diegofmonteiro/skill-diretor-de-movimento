@@ -1,5 +1,5 @@
-{ "id": "repo-card", "name": "Glass repo card", "oneLiner": "a code repository card (name, description, language dot, contributors) pops in tilted on glass, the star count races up and lands in a gold star burst, then a trending pill springs in under the light",
+{ "id": "repo-card", "name": "Cartão de repositório em vidro", "oneLiner": "um cartão de repositório de código (nome, descrição, ponto de linguagem, colaboradores) surge inclinado no vidro, a contagem de estrelas dispara e termina numa explosão de estrela dourada, e então uma cápsula de em alta salta sob a luz",
   "category": "dev", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["repo", "open source", "code", "stars", "developer", "trending", "launch", "proof", "viral", "3d", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.4, "alpha": true,
-  "say": "when the speaker mentions an open source project or a repo blowing up ('it has 24k stars', 'it was trending all week'): the burst lands on the star number, the pill on 'trending'" }
+  "say": "quando quem fala menciona um projeto de código aberto ou um repositório que estourou (“tem 24 mil estrelas”, “ficou em alta a semana toda”): a explosão cai no número de estrelas, a cápsula em “em alta”" }

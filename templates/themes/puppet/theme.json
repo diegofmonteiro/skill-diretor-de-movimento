@@ -1,14 +1,25 @@
 {
   "id": "puppet",
-  "name": "Puppet",
-  "oneLiner": "paper collage on twos: the brand's own faceless character hangs from a drawn hand's marionette strings over a mustard sun and grey scanned rocks, until the founder's real head bursts out and the strings drop",
-  "bestFor": "founder-led brands, personal brands and coaches, anything about taking back control; vertical reels and story ads with a one-line punchline",
-  "motion": "everything on twos (steps at 12 fps): rise, drop, a jerk every 0.5 s answered by a lagged dangle, strings re-aimed every frame, a burst, a let-go, words slapped in one by one",
+  "name": "Fantoche",
+  "oneLiner": "colagem de papel em dois quadros: o personagem sem rosto da própria marca pende dos fios de marionete de uma mão desenhada sobre um sol mostarda e rochas cinza escaneadas, até a cabeça real do fundador estourar e os fios caírem",
+  "bestFor": "marcas lideradas por fundadores, marcas pessoais e coaches, tudo sobre retomar o controle; reels verticais e anúncios de story com uma frase de efeito",
+  "motion": "tudo em dois quadros (passos a 12 fps): sobe, cai, um tranco a cada 0,5 s respondido por um balanço atrasado, fios reapontados a cada quadro, uma explosão, um soltar, palavras batidas uma a uma",
   "ground": "paper",
-  "format": "9:16 (1080x1920); 1:1 possible",
-  "length": "10s (8-14s)",
-  "stills": [3.0, 5.4, 9.5],
-  "sound": { "vibe": "playful", "bpm": [92, 100], "ui": "pop on each piece landing, a dry tick on every jerk of the strings, one hit on the founder's head bursting out, whoosh as the hand lets go, a pop per headline word, shimmer on the URL" },
+  "format": "9:16 (1080x1920); 1:1 possível",
+  "length": "10 s (8 a 14 s)",
+  "stills": [
+    3.0,
+    5.4,
+    9.5
+  ],
+  "sound": {
+    "vibe": "playful",
+    "bpm": [
+      92,
+      100
+    ],
+    "ui": "pop quando cada peça cai, um tick seco em cada tranco dos fios, um golpe quando a cabeça do fundador estoura, whoosh quando a mão solta, um pop por palavra da manchete, shimmer no endereço"
+  },
   "recipe": "RECIPE.md",
   "preview": "preview.jpg"
 }

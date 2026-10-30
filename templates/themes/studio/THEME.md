@@ -1,35 +1,32 @@
-# Studio
+# Estúdio
 
-Design-studio motion. One hero object on a glowing single-colour ground: a
-glass folder holding the brand's real screens, a lens orb with the mark, a
-retro poster object. Bold shapes, a designer's cursor and selection boxes,
-strokes drawing on, springy pops.
+Movimento de estúdio de design. Um objeto-herói sobre um fundo brilhante de uma só cor: uma pasta de vidro com as telas reais da marca, uma esfera-lente com a marca, um objeto de pôster retrô. Formas fortes, um cursor de designer e caixas de seleção, traços que se desenham, saltos com mola.
 
-## The look, in numbers
-- Ground: `.st-ground`, the accent lit from the centre (accent mixed 62% to white at 50% 42%, falling to the accent at 22% on black). `.is-mono` for a light grey dot-grid variant with black shapes.
-- Energy: a slow sunburst behind (`.st-burst`, 24 rays at 7.5% white, 10-12 deg/s), organic blobs at the corners (`.st-blob`, seeded with `MD.studio.blob`), thick white strokes (`.st-swoosh`).
-- Hero objects: `.st-folder` (back panel with a tab, real screens as `.st-card`s inside, a glass `.st-front` with the mark and name), `.st-orb` (a glass lens with the mark inside). The hero is 45-60% of the frame height and is the only thing in focus.
-- Tools: `.st-select` (dashed box with 4 handles) and `.st-cursor` act on the copy: select the word that matters, click a button, drag a card.
-- Type: the brand's display face in white, 72-150px, short lines; the selected word inverts (white box, dark text).
+## O visual, em números
+- Fundo: `.st-ground`, a cor de destaque acesa a partir do centro (destaque misturado a 62% com branco em 50% 42%, caindo para o destaque a 22% sobre preto). `.is-mono` para uma variante cinza clara com grade de pontos e formas pretas.
+- Energia: um raio de sol lento atrás (`.st-burst`, 24 raios a 7,5% de branco, 10 a 12 graus por segundo), manchas orgânicas nos cantos (`.st-blob`, geradas com `MD.studio.blob`), traços brancos grossos (`.st-swoosh`).
+- Objetos-herói: `.st-folder` (painel de trás com uma aba, telas reais como `.st-card` dentro, um `.st-front` de vidro com a marca e o nome), `.st-orb` (uma lente de vidro com a marca dentro). O herói ocupa de 45 a 60% da altura do quadro e é a única coisa em foco.
+- Ferramentas: `.st-select` (caixa tracejada com 4 alças) e `.st-cursor` agem sobre o texto: selecionar a palavra que importa, clicar num botão, arrastar um cartão.
+- Tipografia: a fonte de destaque da marca em branco, de 72 a 150 px, linhas curtas; a palavra selecionada se inverte (caixa branca, texto escuro).
 
-## Motion
-- Springy: pops land on `back.out(1.8)` in 0.4-0.55s (`MD.studio.pop`, `data-in="pop@B4"`); exits `back.in` in 0.2s (`unpop`).
-- The hero turns a few degrees across its shot (rotationY -14 to +10) so it reads as an object, never a flat card.
-- Strokes draw on and off with `power2.inOut` (`swoosh`); the selection box drags from its corner (`select`); the cursor glides and squashes on click (`cursor`).
-- The glass catches light once as it lands (`sheen`).
-- Transitions: the hero pops away while the next one pops in; or the camera dives into the selected word or into a card.
+## Movimento
+- Com mola: os saltos chegam em `back.out(1.8)` em 0,4 a 0,55 s (`MD.studio.pop`, `data-in="pop@B4"`); as saídas em `back.in` em 0,2 s (`unpop`).
+- O herói gira alguns graus ao longo do plano (rotationY de -14 a +10) para ser lido como objeto, nunca como cartão chapado.
+- Os traços se desenham e se apagam com `power2.inOut` (`swoosh`); a caixa de seleção é arrastada a partir do canto (`select`); o cursor desliza e se achata ao clicar (`cursor`).
+- O vidro pega a luz uma vez ao pousar (`sheen`).
+- Transições: o herói some com um salto enquanto o próximo entra com outro; ou a câmera mergulha na palavra selecionada ou num cartão.
 
-## Shot recipes
-- Hook: the claim pops in word by word, a swoosh draws under it, the cursor selects the key word.
-- Product: the glass folder pops in, three real screens rise and fan out of it, light runs across the glass.
-- Feature: one real card pulled out of the folder by the cursor, enlarged to 60% of the frame, a selection box around the part that matters.
-- Search / AI: a glass search bar, the query typed (`data-in="type@B4"`), the real result card pops up under it.
-- Number: the figure huge in the display face inside the orb, magnified.
-- End card: the mark inside the lens orb rolls in, the domain pops under it, the sunburst keeps turning.
+## Receitas de plano
+- Gancho: a afirmação salta palavra por palavra, um traço se desenha embaixo dela, o cursor seleciona a palavra-chave.
+- Produto: a pasta de vidro salta, três telas reais sobem e se abrem em leque, a luz corre pelo vidro.
+- Recurso: um cartão real puxado da pasta pelo cursor, ampliado a 60% do quadro, uma caixa de seleção em volta da parte que importa.
+- Busca / IA: uma barra de busca de vidro, a pergunta digitada (`data-in="type@B4"`), o cartão de resultado real salta embaixo dela.
+- Número: a cifra enorme na fonte de destaque dentro da esfera, ampliada.
+- Cartão final: a marca dentro da esfera-lente entra rolando, o endereço salta embaixo, o raio de sol continua girando.
 
-## Sound
-Warm, 100-120 BPM; a soft pop on each spring, a click with the cursor, a glass shimmer on the sheen.
+## Som
+Quente, de 100 a 120 BPM; um pop suave a cada mola, um clique com o cursor, um shimmer de vidro no brilho.
 
-## Banned
-- More than one hero object in focus. Stepped or stop-motion moves. Paper, tape, photo textures.
-- Text on the hero's glass that is not the brand's own name or mark.
+## Proibido
+- Mais de um objeto-herói em foco. Movimentos em degraus ou em stop-motion. Texturas de papel, fita ou foto.
+- Texto no vidro do herói que não seja o nome ou a marca da própria marca.

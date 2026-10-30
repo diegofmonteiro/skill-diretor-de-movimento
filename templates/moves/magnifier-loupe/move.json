@@ -1,5 +1,5 @@
-{ "id": "magnifier-loupe", "name": "Magnifier loupe", "oneLiner": "a screenshot floats in a window with slow 3D drift; a metal-rimmed magnifying glass glides in on an arc, sets down on one small detail and snaps it into focus, the page refracting bigger toward the rim, its shadow and a focused spot of light on the screen below",
+{ "id": "magnifier-loupe", "name": "Lupa", "oneLiner": "uma captura de tela flutua numa janela com deriva lenta em 3D; uma lupa de borda de metal desliza num arco, pousa sobre um pequeno detalhe e o põe em foco, a página refratando maior em direção à borda, com a sua sombra e um ponto de luz focado na tela abaixo",
   "category": "explain", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass", "studio"], "from": "new",
   "tags": ["magnifier", "loupe", "zoom", "detail", "fine print", "screenshot", "proof", "look closer", "annotation", "glass"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.0, "alpha": true,
-  "say": "when the speaker points at something small on a screen ('look at the fine print', 'see this number here'): the lens sets down and focuses on the word that names the detail. Set target to the detail in % of the image, zoom 2 to 3" }
+  "say": "quando quem fala aponta para algo pequeno numa tela (“olhe as letras miúdas”, “veja este número aqui”): a lente pousa e foca na palavra que nomeia o detalhe. Defina target com o detalhe em % da imagem, zoom de 2 a 3" }

@@ -1,5 +1,5 @@
-{ "id": "icon-trays", "name": "Icon trays", "oneLiner": "two recessed glass trays, each with a name, fill with app-icon tiles (glyph and label) that drop in one at a time; then the first tray drains to grey and falls back while the second lifts, gets a lit rim and its icons take the accent one by one",
+{ "id": "icon-trays", "name": "Bandejas de ícones", "oneLiner": "duas bandejas de vidro rebaixadas, cada uma com um nome, se enchem com blocos de ícones de apps (ícone e rótulo) que caem um de cada vez; então a primeira bandeja esvazia para o cinza e recua enquanto a segunda sobe, ganha uma borda acesa e seus ícones assumem a cor de destaque um a um",
   "category": "explain", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["apps", "icons", "tools", "categories", "groups", "old vs new", "shift", "stack", "agents", "compare", "trays", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": true,
-  "say": "when the speaker sorts tools into two groups and moves the viewer from one to the other (\"you know the chat apps... but the next wave is personal agents\"): cut in on the first group; the second tray lights on the word that names it" }
+  "say": "quando quem fala separa ferramentas em dois grupos e leva quem assiste de um para o outro (“você conhece os apps de conversa... mas a próxima onda são os agentes pessoais”): entre no primeiro grupo; a segunda bandeja acende na palavra que a nomeia" }

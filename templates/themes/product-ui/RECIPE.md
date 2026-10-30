@@ -1,85 +1,73 @@
-# Product UI: draw the mark, box the words, use the product, play it
+# Interface de produto: desenhe a marca, enquadre as palavras, use o produto, toque-o
 
-An 11 second 9:16 film on a monochrome dot grid with two giant soft black
-asterisks turning in the corners. The brand's real logo path is stroked on
-like a pen drawing and then fills. A designer's cursor drags two dashed
-selection boxes and the tagline appears inside them, tiny editorial over huge
-bold. The brand's real input bar springs in, a real query is typed, the cursor
-presses send. A huge dark disc sweeps diagonally across the frame and, under
-it, the scene becomes the brand's real product screen turning in 3D; it hands
-over to the brand's own product video, playing as a frame stack while the
-camera crops in. The board pops away into the mark and domain. The idea that
-makes it work: **a grey designer's canvas where the only rich thing is the
-real product**, and every beat is an act a user or designer does (draw,
-select, type, press, watch).
+Um filme 9:16 de 11 segundos sobre uma grade de pontos monocromática, com dois asteriscos pretos suaves e gigantes girando nos cantos. O caminho real da logo da marca é traçado como um desenho a caneta e depois se preenche. Um cursor de designer arrasta duas caixas de seleção tracejadas e o slogan aparece dentro delas, editorial minúsculo sobre enorme e em negrito. A barra de entrada real da marca salta com mola, uma pergunta real é digitada, o cursor aperta enviar. Um disco escuro enorme varre o quadro na diagonal e, por baixo dele, a cena vira a tela real do produto da marca girando em 3D; ela passa a vez ao vídeo do produto da própria marca, tocando como pilha de quadros enquanto a câmera recorta para dentro. O quadro salta para fora na marca e no domínio. A ideia que faz funcionar: **uma tela cinza de designer em que a única coisa rica é o produto real**, e cada batida é um ato que um usuário ou designer faz (desenhar, selecionar, digitar, apertar, assistir).
 
-## Format, length, pace
+## Formato, duração, ritmo
 
-- 1080x1920, 30 fps, 11.0s, four scenes at 120 BPM (one bar = 2.00s).
-- Scene windows (s): logo 0 to 2.6, words and ask 2.4 to 5.6, product 5.4 to 9.55, sign-off 9.4 to 11.0. Each overlaps the next by 0.15-0.2s.
-- Beats (s): stroke 0 to 1.0, fill 1.1, pulse 1.15, label 1.4, logo exits 2.25, box 1 at 2.75, box 2 at 3.38, ask bar 3.85, typing 4.3 to 5.04, press 5.12, band 4.98 to 5.78, scene swap under the band 5.36, card turns 5.36 to 7.65, video 7.2 to 9.2, crop-in 7.75 to 9.05, mark 9.45, domain 9.75.
-- Signature moment: the logo draws itself (frame 0 already shows 18% of its outline, so the first frame is never empty).
+- 1080x1920, 30 fps, 11,0 s, quatro cenas a 120 BPM (um compasso = 2,00 s).
+- Janelas das cenas (s): logo 0 a 2,6, palavras e pergunta 2,4 a 5,6, produto 5,4 a 9,55, assinatura 9,4 a 11,0. Cada uma se sobrepõe à seguinte em 0,15 a 0,2 s.
+- Batidas (s): traço 0 a 1,0, preenchimento 1,1, pulso 1,15, rótulo 1,4, a logo sai 2,25, caixa 1 em 2,75, caixa 2 em 3,38, barra de pergunta 3,85, digitação 4,3 a 5,04, toque 5,12, faixa 4,98 a 5,78, troca de cena sob a faixa 5,36, o cartão gira 5,36 a 7,65, vídeo 7,2 a 9,2, recorte para dentro 7,75 a 9,05, marca 9,45, domínio 9,75.
+- Momento-assinatura: a logo se desenha sozinha (o quadro 0 já mostra 18% do contorno, então o primeiro quadro nunca fica vazio).
 
-## The look in numbers
+## O visual em números
 
-**Ground (fixed)**
-- `#E8E8E8` with `radial-gradient(circle, rgba(0,0,0,.16) 1.6px, transparent 2px) 0 0 / 30px 30px`: a flat light grey with a 30px dot grid. No vignette, no grain.
+**Fundo (fixo)**
+- `#E8E8E8` com `radial-gradient(circle, rgba(0,0,0,.16) 1.6px, transparent 2px) 0 0 / 30px 30px`: um cinza claro chapado com grade de pontos de 30 px. Sem vinheta, sem granulação.
 
-**Palette**
-- Fixed: ink `#111`, kicker `#3A3A3A`, selection `#1A1A1A`, band `#1B1B1C`, white bar and cards `#fff`, placeholder `#9B9A97`, typed text `#191919`.
-- Blob fill: radial gradient `#2C2C2E` (0) to `#18181A` (.6) to `#0D0D0E` (1) at 38% 32%, plus an inner light (white at 18% along the top-left inner edge).
-- Brand accent appears in exactly one designed place: the send button (76px circle). Everything else that has colour is the real product (screens, video).
+**Paleta**
+- Fixas: tinta `#111`, chamada `#3A3A3A`, seleção `#1A1A1A`, faixa `#1B1B1C`, barra e cartões brancos `#fff`, texto de exemplo `#9B9A97`, texto digitado `#191919`.
+- Preenchimento da mancha: degradê radial `#2C2C2E` (0) a `#18181A` (.6) a `#0D0D0E` (1) em 38% 32%, mais uma luz interna (branco a 18% ao longo da borda interna superior esquerda).
+- A cor de destaque da marca aparece em exatamente um lugar desenhado: o botão de enviar (círculo de 76 px). Tudo o mais que tem cor é o produto real (telas, vídeo).
 
-**Type** (the brand's UI face)
-| role | weight | px | tracking | line-height | case | colour |
+**Tipografia** (a fonte de interface da marca)
+| função | peso | px | espaçamento | entrelinha | caixa | cor |
 |---|---|---|---|---|---|---|
-| `.small` editorial (kicker, logo label, domain under the video) | 500 | 34 | +0.06em | normal | upper | #3A3A3A |
-| `.huge` (the tagline's key words, the end domain) | 800 | 112 (88 for the end domain) | -0.025em | 1 | as written | #111 |
-| typed query / placeholder | 500 | 48 | 0 | normal | sentence | #191919 / #9B9A97 |
-- Tiny editorial or huge bold, nothing in between. Text is always centred on a measured box.
+| editorial `.small` (chamada, rótulo da logo, domínio sob o vídeo) | 500 | 34 | +0.06em | normal | maiúsculas | #3A3A3A |
+| `.huge` (as palavras-chave do slogan, o domínio final) | 800 | 112 (88 para o domínio final) | -0.025em | 1 | como escrito | #111 |
+| pergunta digitada / texto de exemplo | 500 | 48 | 0 | normal | frase | #191919 / #9B9A97 |
+- Editorial minúsculo ou enorme em negrito, nada no meio. O texto é sempre centralizado numa caixa medida.
 
-**Shapes and shadows**
-- Asterisks: two 1100px SVG blobs, A top-left (`left:-420 top:-480`, 5 petals), B bottom-right (`left:520 top:1340`, 3 petals), `drop-shadow(0 18px 24px rgba(0,0,0,.28))`, z-index 30.
-- Selection box: `border: 3px dashed #1a1a1a`, four 14px round handles offset -9px; box 1 780x84, box 2 860x150.
-- Cursor: 58px arrow (`M10 6 L10 52 L22 41 L31 60 L39 56 L30 38 L46 38 Z` in a 64 box), fill `#111`, stroke `#fff` 3.5, `drop-shadow(0 5px 8px rgba(0,0,0,.35))`.
-- Click ring: 120px, `border: 8px solid #fff`, `box-shadow: 0 0 0 2px rgba(0,0,0,.15)`; it expands and fades (scale .4 to 1.3).
-- Ask bar: 900x130 at (90,1050), radius 26px, `box-shadow: 0 30px 60px -24px rgba(0,0,0,.35), 0 0 0 1.5px rgba(0,0,0,.08)`; 64px mark at the left, 24px gap.
-- Product card: 900x600 at (90,560), radius 30px, `box-shadow: 0 50px 90px -30px rgba(0,0,0,.45)`, stage `perspective: 2200px`.
-- Video card: 800x500 at (140,560), same radius and shadow.
-- Band: a disc 3100x2900, `border-radius: 1450px`, `#1b1b1c`, `rotate(-38deg)`, `box-shadow: 0 0 80px rgba(0,0,0,.35)`, z-index 35.
-- Logo stroke: width 0.35 in a 24-unit viewBox at 400px (about 5.8px on screen), `#111`, butt caps.
+**Formas e sombras**
+- Asteriscos: duas manchas SVG de 1100 px, A no alto à esquerda (`left:-420 top:-480`, 5 pétalas), B embaixo à direita (`left:520 top:1340`, 3 pétalas), `drop-shadow(0 18px 24px rgba(0,0,0,.28))`, z-index 30.
+- Caixa de seleção: `border: 3px dashed #1a1a1a`, quatro alças redondas de 14 px deslocadas -9 px; caixa 1 780x84, caixa 2 860x150.
+- Cursor: seta de 58 px (`M10 6 L10 52 L22 41 L31 60 L39 56 L30 38 L46 38 Z` numa caixa de 64), preenchimento `#111`, contorno `#fff` 3,5, `drop-shadow(0 5px 8px rgba(0,0,0,.35))`.
+- Anel do clique: 120 px, `border: 8px solid #fff`, `box-shadow: 0 0 0 2px rgba(0,0,0,.15)`; ele se expande e desaparece (scale .4 a 1,3).
+- Barra de pergunta: 900x130 em (90,1050), raio de 26 px, `box-shadow: 0 30px 60px -24px rgba(0,0,0,.35), 0 0 0 1.5px rgba(0,0,0,.08)`; marca de 64 px à esquerda, espaço de 24 px.
+- Cartão do produto: 900x600 em (90,560), raio de 30 px, `box-shadow: 0 50px 90px -30px rgba(0,0,0,.45)`, palco com `perspective: 2200px`.
+- Cartão de vídeo: 800x500 em (140,560), mesmo raio e sombra.
+- Faixa: um disco de 3100x2900, `border-radius: 1450px`, `#1b1b1c`, `rotate(-38deg)`, `box-shadow: 0 0 80px rgba(0,0,0,.35)`, z-index 35.
+- Traço da logo: largura 0,35 numa viewBox de 24 unidades a 400 px (cerca de 5,8 px na tela), `#111`, pontas retas.
 
-## Shot list
+## Lista de planos
 
-| # | time (s) | on screen | what moves and how | static | out |
+| # | tempo (s) | na tela | o que se move e como | estático | saída |
 |---|---|---|---|---|---|
-| 0 | 0 to 11 | the two asterisks | A rolls in from x -500, y -400, rotation -60, 0.8s `back.out(1.2)` at 0; B from x 500, y 500, rotation 60 at 0.25; then A turns to 40 deg and B to -35 deg over 10s `none`; at the sign-off both shift in (A x 120 y 140, B x -120 y -160, 0.6s `back.out(1.4)`) | dot grid | stay |
-| 1 logo | 0 to 2.6 | the brand's logo path, 400px, centred at y 660; a `.small` label with the brand name under it at y 1130 | stroke draws `strokeDashoffset` L*0.82 to 0, 1.0s `power2.inOut`; fill-opacity 0 to 1, 0.2s at 1.1; pulse scale .9 to 1.06 0.18s `power2.out` at 1.15, settle to 1 0.4s `back.out(2)`; label springs at 1.4 (scale .6 to 1, 0.4s `back.out(1.9)`) | logo after it lands | logo flies up y -1200, scale .4, 0.45s `back.in(1.4)` at 2.25; label fades 0.15s |
-| 2 words | 2.4 to 5.36 | box 1 with the kicker, box 2 with the huge words, the ask bar under them | cursor in from (980,1300) to box 1's corner 0.35s `power3.inOut`; box 1 draws from top-left 0.3s `power3.out` at 2.75 as the cursor drags to its far corner; kicker rises y 14 to 0, 0.25s `back.out(2)` at 2.95; cursor to box 2 0.28s at 3.1; box 2 draws at 3.38; huge words scale .6 to 1, 0.42s `back.out(2.2)` at 3.55; both boxes fade 0.15s at 3.9; ask bar springs scale .3 to 1, 0.5s `back.out(1.9)` at 3.85 | words after they land | band |
-| 3 ask | 4.3 to 5.36 | the bar with placeholder, then the typed query | one character every 0.035s from 4.3 (21 characters, done at 5.04), caret on at 4.3, blinks off/on at 4.8/5.0 and 5.2/5.4; cursor glides to the send button 0.35s at 4.75; cursor squashes to .82 and back (0.07s yoyo) at 5.1; the white ring expands from the button, scale .4 to 1.3 and fades, 0.4s `power2.out` at 5.12 | the bar | under the band all of scene 2 is hidden in one frame at 5.36 |
-| band | 4.98 to 5.78 | the dark disc | x 1500, y 1900 to x -1600, y -2100, 0.8s `power2.inOut`; its centre crosses the frame centre at about 5.36 | | reveals scene 3 |
-| 4 product | 5.36 to 7.6 | the brand's real product screen as a card | rises: rotationY -38 to -12, rotationX 14 to 6, y 400 to 0, opacity 0 to 1, 0.7s `back.out(1.4)` at 5.36; turns on: rotationY -12 to 10, rotationX 6 to 2, 1.5s `sine.inOut` at 6.15 | | blurs out (filter blur 10px, opacity 0, 0.35s at 7.25) as the video card lands over it |
-| 5 video | 7.2 to 9.52 | the product video as a frame stack; the domain in `.small` under it | video card: opacity 0 to 1, scale .7 to 1.08, rotationY 20 to 0, y 80 to 0, 0.55s `back.out(1.5)` at 7.2; 66 frames shown one after another every 1/36s (1.83s); domain springs at 7.6; camera crops in: scale 1.75, x 120, y 90, 1.3s `power2.inOut` at 7.75 while the domain slides y +260 to stay under it | | pops away: scale .2, opacity 0, 0.32s `back.in(1.6)` at 9.2 |
-| 6 sign-off | 9.4 to 11 | the mark 300px at y 700, the domain in `.huge` 88px at y 1060 | mark scale 0 to 1, rotation -25 to 0, 0.55s `back.out(2)` at 9.45; domain y 40 to 0 and fades in, 0.4s `back.out(2)` at 9.75; asterisks lean in | hold | end |
+| 0 | 0 a 11 | os dois asteriscos | A entra rolando de x -500, y -400, rotação -60, 0,8 s `back.out(1.2)` em 0; B de x 500, y 500, rotação 60 em 0,25; depois A gira até 40 graus e B até -35 graus em 10 s `none`; na assinatura os dois se aproximam (A x 120 y 140, B x -120 y -160, 0,6 s `back.out(1.4)`) | grade de pontos | ficam |
+| 1 logo | 0 a 2,6 | o caminho da logo da marca, 400 px, centralizado em y 660; um rótulo `.small` com o nome da marca embaixo em y 1130 | o traço se desenha com `strokeDashoffset` L*0.82 a 0, 1,0 s `power2.inOut`; fill-opacity 0 a 1, 0,2 s em 1,1; pulso scale .9 a 1,06 0,18 s `power2.out` em 1,15, assenta em 1 em 0,4 s `back.out(2)`; o rótulo salta em 1,4 (scale .6 a 1, 0,4 s `back.out(1.9)`) | logo depois de pousar | a logo voa para cima y -1200, scale .4, 0,45 s `back.in(1.4)` em 2,25; o rótulo some em 0,15 s |
+| 2 palavras | 2,4 a 5,36 | caixa 1 com a chamada, caixa 2 com as palavras enormes, a barra de pergunta embaixo delas | o cursor entra de (980,1300) até o canto da caixa 1 em 0,35 s `power3.inOut`; a caixa 1 se desenha do canto superior esquerdo em 0,3 s `power3.out` em 2,75 enquanto o cursor arrasta até o canto oposto; a chamada sobe y 14 a 0, 0,25 s `back.out(2)` em 2,95; o cursor vai à caixa 2 em 0,28 s em 3,1; a caixa 2 se desenha em 3,38; as palavras enormes scale .6 a 1, 0,42 s `back.out(2.2)` em 3,55; as duas caixas somem em 0,15 s em 3,9; a barra de pergunta salta scale .3 a 1, 0,5 s `back.out(1.9)` em 3,85 | palavras depois de pousarem | faixa |
+| 3 pergunta | 4,3 a 5,36 | a barra com o texto de exemplo, depois a pergunta digitada | um caractere a cada 0,035 s a partir de 4,3 (21 caracteres, pronto em 5,04), cursor de texto ligado em 4,3, pisca apagado/aceso em 4,8/5,0 e 5,2/5,4; o cursor desliza até o botão de enviar em 0,35 s em 4,75; o cursor se achata a .82 e volta (0,07 s yoyo) em 5,1; o anel branco se expande do botão, scale .4 a 1,3, e some, 0,4 s `power2.out` em 5,12 | a barra | sob a faixa a cena 2 inteira some em um quadro em 5,36 |
+| faixa | 4,98 a 5,78 | o disco escuro | x 1500, y 1900 até x -1600, y -2100, 0,8 s `power2.inOut`; o seu centro cruza o centro do quadro por volta de 5,36 | | revela a cena 3 |
+| 4 produto | 5,36 a 7,6 | a tela real do produto da marca como cartão | sobe: rotationY -38 a -12, rotationX 14 a 6, y 400 a 0, opacity 0 a 1, 0,7 s `back.out(1.4)` em 5,36; gira: rotationY -12 a 10, rotationX 6 a 2, 1,5 s `sine.inOut` em 6,15 | | desfoca e some (filter blur 10px, opacity 0, 0,35 s em 7,25) enquanto o cartão de vídeo pousa sobre ele |
+| 5 vídeo | 7,2 a 9,52 | o vídeo do produto como pilha de quadros; o domínio em `.small` embaixo dele | cartão de vídeo: opacity 0 a 1, scale .7 a 1,08, rotationY 20 a 0, y 80 a 0, 0,55 s `back.out(1.5)` em 7,2; 66 quadros mostrados um após o outro a cada 1/36 s (1,83 s); o domínio salta em 7,6; a câmera recorta para dentro: scale 1,75, x 120, y 90, 1,3 s `power2.inOut` em 7,75 enquanto o domínio desliza y +260 para ficar embaixo dele | | sai com um salto: scale .2, opacity 0, 0,32 s `back.in(1.6)` em 9,2 |
+| 6 assinatura | 9,4 a 11 | a marca de 300 px em y 700, o domínio em `.huge` 88 px em y 1060 | marca scale 0 a 1, rotação -25 a 0, 0,55 s `back.out(2)` em 9,45; domínio y 40 a 0 e surge, 0,4 s `back.out(2)` em 9,75; os asteriscos se inclinam para dentro | parado | fim |
 
-## Materials, and where to get them for a new brand
+## Materiais, e onde obtê-los para uma marca nova
 
-| material | source |
+| material | fonte |
 |---|---|
-| logo as one SVG `<path>` | `brand-intake.mjs` (Simple Icons vector when one exists, else the site's inline SVG). The stroke-on needs a path; put it in the logo `<svg>` with an `id` and reuse it in the bar and the sign-off with `<use href="#id">`. A raster-only logo: trace it (potrace, at 1-2px tolerance) or skip the stroke and reveal the PNG through a growing `clip-path: circle()`. |
-| tagline | the brand's own hero line, split into a 3-5 word kicker (small) and a 2-3 word punch (huge, under 860px at 112px). |
-| input bar | the product's real input, rebuilt in HTML at hero size after a screenshot of it: its placeholder, its icon (the mark), its send button in the accent. Query = a real example prompt, about 20 characters. |
-| product screen | one real product screenshot picked in `brand-intake.mjs pick --shots` (here 3840x2400, shown 900x600 with `object-position: top`). The busiest, most recognisable screen. |
-| product video | the site's own product video, which brand-intake samples. Make the stack: `ffmpeg -i product.mp4 -ss <start> -t 5.5 -vf "fps=12,scale=1152:-1" -q:v 3 assets/devframes/f%03d.jpg` (66 frames). Playing 12 fps frames at 36 fps runs the clip 3x fast, which reads as "it works" in under 2s. Pick a stretch where the UI visibly changes. |
-| no product video | screen-record the product yourself or ask the user for a 5-10s capture; else replace shot 5 with a second real screenshot and a slow crop, no fake motion. |
-| font | the brand's UI face via `@font-face` in `assets/brand.css`; never by name only. |
+| logo como um único `<path>` SVG | `brand-intake.mjs` (vetor do Simple Icons quando existe, senão o SVG embutido do site). O traço precisa de um caminho; ponha-o no `<svg>` da logo com um `id` e reutilize-o na barra e na assinatura com `<use href="#id">`. Logo só em raster: vetorize-a (potrace, com tolerância de 1 a 2 px) ou pule o traço e revele o PNG com um `clip-path: circle()` que cresce. |
+| slogan | a linha principal da própria marca, dividida numa chamada de 3 a 5 palavras (pequena) e num golpe de 2 a 3 palavras (enorme, abaixo de 860 px a 112 px). |
+| barra de entrada | a entrada real do produto, refeita em HTML em tamanho de herói a partir de uma captura dela: seu texto de exemplo, seu ícone (a marca), seu botão de enviar na cor de destaque. Pergunta = um exemplo real de prompt, cerca de 20 caracteres. |
+| tela do produto | uma captura real do produto escolhida em `brand-intake.mjs pick --shots` (aqui 3840x2400, mostrada em 900x600 com `object-position: top`). A tela mais cheia e mais reconhecível. |
+| vídeo do produto | o próprio vídeo do produto do site, que o brand-intake amostra. Monte a pilha: `ffmpeg -i product.mp4 -ss <início> -t 5.5 -vf "fps=12,scale=1152:-1" -q:v 3 assets/devframes/f%03d.jpg` (66 quadros). Tocar quadros de 12 fps a 36 fps acelera o trecho 3 vezes, o que é lido como “funciona” em menos de 2 s. Escolha um trecho em que a interface mude visivelmente. |
+| sem vídeo do produto | grave a tela do produto você mesmo ou peça à pessoa uma captura de 5 a 10 s; senão, troque o plano 5 por uma segunda captura real e um recorte lento, sem movimento falso. |
+| fonte | a fonte de interface da marca via `@font-face` em `assets/brand.css`; nunca só pelo nome. |
 
-No free stock is needed: this theme runs on the brand's own logo, copy,
-screens and video.
+Não precisa de material gratuito de banco: este tema funciona com a logo, o texto, as telas e o vídeo da própria marca.
 
-## Mechanics
+## Mecânica
 
-The asterisk with an inner light (A with 5 petals, B with 3):
+O asterisco com luz interna (A com 5 pétalas, B com 3):
 
 ```js
 function blob(id, petals, phase) {
@@ -100,7 +88,7 @@ function blob(id, petals, phase) {
 blob("blobA", 5, 0.3); blob("blobB", 3, 1.1);
 ```
 
-Logo stroke-draw with `getTotalLength`, then fill and pulse:
+Traço da logo com `getTotalLength`, depois preenchimento e pulso:
 
 ```js
 // #logo path { fill: #111; stroke: #111; stroke-width: .35 }   (viewBox 0 0 24 24 at 400px)
@@ -113,11 +101,9 @@ tl.to("#logo", { scale: 1, duration: 0.4, ease: "back.out(2)" }, 1.33);
 tl.to("#logo", { y: -1200, scale: 0.4, duration: 0.45, ease: "back.in(1.4)" }, 2.25);
 ```
 
-A compound logo path (several subpaths) draws all its subpaths at once along
-one dash, which looks like a pen tracing every edge together; that is the
-look. For a logo made of separate `<path>`s, stagger them 0.08s.
+Um caminho composto de logo (vários subcaminhos) desenha todos os seus subcaminhos de uma vez ao longo de um único traço, o que parece uma caneta seguindo todas as bordas juntas; esse é o visual. Para uma logo feita de `<path>`s separados, defasá-los em 0,08 s.
 
-Cursor boxes the words (box and cursor share duration and ease):
+O cursor enquadra as palavras (caixa e cursor dividem duração e curva):
 
 ```js
 const C = "#cur";
@@ -129,7 +115,7 @@ tl.fromTo("#t1", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.25, ease
 // box 2 the same, 0.63s later; the huge words: scale .6 to 1, 0.42s back.out(2.2)
 ```
 
-Typing, caret, press and expanding ring:
+Digitação, cursor de texto, toque e anel que se expande:
 
 ```js
 const typed = document.getElementById("typed"), Q = "<a real query>";      // starts showing the placeholder span
@@ -141,7 +127,7 @@ tl.fromTo(C, { scale: 1 }, { scale: 0.82, duration: 0.07, yoyo: true, repeat: 1,
 tl.fromTo("#ring", { left: BX, top: BY, scale: 0.4, opacity: 1 }, { scale: 1.3, opacity: 0, duration: 0.4, ease: "power2.out", immediateRender: false }, P);
 ```
 
-The band wipe and the one-frame swap under it:
+A varredura da faixa e a troca de um quadro sob ela:
 
 ```js
 // <div id="band" style="position:absolute;left:-1000px;top:-500px;width:3100px;height:2900px;border-radius:1450px;
@@ -151,7 +137,7 @@ tl.set(["#t1", "#t2", "#ask", "#cur", "#ring"], { opacity: 0 }, W + 0.38);   // 
 // the next scene's first move starts on that same frame, so it is revealed by the band's trailing edge
 ```
 
-Real product card turning in 3D:
+Cartão real do produto girando em 3D:
 
 ```js
 // .stage { position:absolute; inset:0; perspective:2200px }
@@ -159,7 +145,7 @@ tl.fromTo("#card", { rotationY: -38, rotationX: 14, y: 400, opacity: 0 }, { rota
 tl.to("#card", { rotationY: 10, rotationX: 2, duration: 1.5, ease: "sine.inOut" }, S + 0.79);
 ```
 
-Product video as a frame stack (deterministic: no `<video>` element):
+Vídeo do produto como pilha de quadros (determinístico: sem elemento `<video>`):
 
 ```js
 const vid = document.getElementById("vid"), N = 66, FPS = 36;
@@ -173,55 +159,27 @@ tl.to("#vid", { scale: 1.75, x: 120, y: 90, duration: 1.3, ease: "power2.inOut" 
 tl.to("#vid", { scale: 0.2, opacity: 0, duration: 0.32, ease: "back.in(1.6)" }, V + 2.0);
 ```
 
-Choose the crop target (x, y) on the region of the video that moves most;
-measure it on the frames, do not guess.
+Escolha o alvo do recorte (x, y) na região do vídeo que mais se move; meça-o nos quadros, não adivinhe.
 
-## Adapting to a brand
+## Adaptar a uma marca
 
-- Takes the brand: the logo path (stroke-on, bar icon, sign-off), the name
-  label, the tagline, the UI face, the input bar's look and query, the send
-  button's accent, the product screen, the product video, the domain.
-- Stays fixed: the `#E8E8E8` dot grid, the black asterisks, the dashed
-  boxes, the black cursor and white ring, the dark disc wipe, tiny-or-huge
-  type, all timings and eases above.
-- A brand whose logo is a filled blob with no interior edges: the stroke-on
-  shows only an outline; that is fine, but let the fill come in at 0.9 not 1.1.
-- A very colourful logo: keep the stroke in `#111`, then fill with the real
-  colours at 1.1; it is the first colour on screen and it should feel earned.
-- 16:9: tagline on one line, input bar 1100px, product card 1280x800, the
-  disc 4400px, crop scale 1.5.
+- Vem da marca: o caminho da logo (traço, ícone da barra, assinatura), o rótulo do nome, o slogan, a fonte de interface, o visual da barra de entrada e a pergunta, a cor de destaque do botão de enviar, a tela do produto, o vídeo do produto, o domínio.
+- Fica fixo: a grade de pontos `#E8E8E8`, os asteriscos pretos, as caixas tracejadas, o cursor preto e o anel branco, a varredura do disco escuro, a tipografia minúscula ou enorme, todos os tempos e curvas acima.
+- Uma marca cuja logo é uma mancha cheia sem bordas internas: o traço mostra só um contorno; tudo bem, mas deixe o preenchimento entrar em 0,9 e não em 1,1.
+- Uma logo muito colorida: mantenha o traço em `#111` e então preencha com as cores reais em 1,1; é a primeira cor na tela e deve parecer merecida.
+- 16:9: slogan em uma linha, barra de entrada de 1100 px, cartão do produto 1280x800, o disco de 4400 px, escala de recorte 1,5.
 
-## Pitfalls found while building
+## Armadilhas encontradas durante a construção
 
-- The cursor and ring sit above the band (z-index 50 and 49 over 35), so at
-  the wipe they show on top of the black disc for 0.2s (visible in the film at
-  5.33). Hide them on the press frame + 0.15s, or give the band z-index 55.
-- The wipe must fully cover before the swap: the old scene is hidden in one
-  frame (`tl.set(... opacity 0)`) at the moment the oversized disc covers the
-  whole of its layout, never on a fade. Check frames W+0.3 to W+0.45 on a
-  sheet; if any old word pokes out at the disc's edge, make the disc larger or
-  move the swap 1-2 frames later.
-- Frame 0 with a stroke-on logo: starting `strokeDashoffset` at L*0.82 shows
-  18% of the outline at frame 0, so the film never opens on an empty frame.
-  A stroke with round caps would show dots at every subpath start before it
-  draws: keep `stroke-linecap: butt` or hide the path until its first frame.
-- The ring and any later `fromTo` must carry `immediateRender: false` or they
-  render their from-state (ring at full opacity) from frame 0.
-- The video card at scale 1.75 runs past the frame edges by design; keep the
-  domain line outside its box and check it with `scripts/frame-audit.mjs`
-  (text on text, text outside its box). The audit is also what keeps the
-  kicker and the huge words inside their dashed boxes with air.
-- The asterisks are z-index 30, above the product card: plan the card in the
-  middle band (y 560 to 1160) and check every 4th frame for a lobe across UI.
-- The font was set by name only (`"Inter"`): load the brand face with
-  `@font-face`, or the render depends on the machine.
+- O cursor e o anel ficam acima da faixa (z-index 50 e 49 sobre 35), então na varredura aparecem por cima do disco preto por 0,2 s (visível no filme em 5,33). Esconda-os no quadro do toque + 0,15 s, ou dê à faixa z-index 55.
+- A varredura precisa cobrir por completo antes da troca: a cena antiga some em um quadro (`tl.set(... opacity 0)`) no momento em que o disco grande cobre todo o seu layout, nunca num esmaecimento. Confira os quadros W+0,3 a W+0,45 numa folha; se alguma palavra antiga aparecer na borda do disco, aumente o disco ou atrase a troca de 1 a 2 quadros.
+- Quadro 0 com uma logo traçada: começar o `strokeDashoffset` em L*0.82 mostra 18% do contorno no quadro 0, então o filme nunca abre num quadro vazio. Um traço com pontas redondas mostraria pontos no início de cada subcaminho antes de se desenhar: mantenha `stroke-linecap: butt` ou esconda o caminho até o seu primeiro quadro.
+- O anel e qualquer `fromTo` posterior precisam levar `immediateRender: false`, ou renderizam o seu estado inicial (anel com opacidade total) desde o quadro 0.
+- O cartão de vídeo em scale 1,75 passa das bordas do quadro de propósito; mantenha a linha do domínio fora da sua caixa e confira com `scripts/frame-audit.mjs` (texto sobre texto, texto fora da caixa). A auditoria é também o que mantém a chamada e as palavras enormes dentro das caixas tracejadas com folga.
+- Os asteriscos têm z-index 30, acima do cartão do produto: planeje o cartão na faixa do meio (y 560 a 1160) e confira a cada 4 quadros se um lóbulo passa sobre a interface.
+- A fonte foi definida só pelo nome (`"Inter"`): carregue a fonte da marca com `@font-face`, ou a renderização depende da máquina.
 
-## Sound
+## Som
 
-- 120 BPM, vibe `minimal`, D major; riser from 2.0 into the drop at 6.0, logo
-  cue at 9.45. Mix -14 LUFS.
-- UI sounds on events: whoosh as the asterisks roll in (0.1), pop when the
-  logo fills (1.15), tick as each box is drawn (2.75, 3.38), pop as the bar
-  springs (3.6), a typing bed from 4.33 for the query, whoosh as the band
-  starts (5.05), click on the press (5.12), shimmer as the video lands (7.2),
-  whoosh as the board pops away (9.2), one hit on the mark (9.45).
+- 120 BPM, clima `minimal`, ré maior; subida de tensão de 2,0 até a queda em 6,0, sinal da logo em 9,45. Mixagem a -14 LUFS.
+- Sons de interface nos eventos: whoosh quando os asteriscos entram rolando (0,1), pop quando a logo se preenche (1,15), tick quando cada caixa é desenhada (2,75, 3,38), pop quando a barra salta (3,6), uma base de digitação a partir de 4,33 para a pergunta, whoosh quando a faixa começa (5,05), clique no toque (5,12), shimmer quando o vídeo pousa (7,2), whoosh quando o quadro sai com um salto (9,2), um golpe na marca (9,45).

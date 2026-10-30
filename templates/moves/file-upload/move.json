@@ -1,5 +1,5 @@
-{ "id": "file-upload", "name": "Glass file upload", "oneLiner": "a paper file swoops in out of depth over a glass drop zone, the dashed border lights up, the file drops in, a big progress ring fills to 100 and bursts into an Uploaded check",
+{ "id": "file-upload", "name": "Envio de arquivo em vidro", "oneLiner": "um arquivo de papel mergulha da profundidade sobre uma área de soltar em vidro, a borda tracejada acende, o arquivo cai, um grande anel de progresso se enche até 100 e estoura numa marca de “Enviado”",
   "category": "productivity", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["upload", "file", "drop", "drag and drop", "document", "pdf", "import", "progress", "ai tool", "input", "done", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.8, "alpha": true,
-  "say": "when the speaker hands a tool a file ('just drop your PDF in', 'upload the transcript'): the file lands on 'drop', the check bursts as they say it is ready" }
+  "say": "quando quem fala entrega um arquivo a uma ferramenta (“é só soltar o seu PDF aqui”, “envie a transcrição”): o arquivo cai em “soltar”, a marca estoura quando a pessoa diz que está pronto" }

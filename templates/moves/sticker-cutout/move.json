@@ -1,5 +1,5 @@
-{ "id": "sticker-cutout", "name": "Sticker cut-out", "oneLiner": "a person cut-out slaps on as a paper sticker with a torn white rim, two strips of real masking tape, and a marker arrow drawing on to a label on a torn scrap, all boiling on twos",
+{ "id": "sticker-cutout", "name": "Adesivo recortado", "oneLiner": "o recorte de uma pessoa é colado como um adesivo de papel com borda branca rasgada, duas tiras de fita crepe de verdade e uma seta de marcador que se desenha até um rótulo num pedaço de papel rasgado, tudo tremendo de dois em dois quadros",
   "category": "social", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["paper"], "from": "new",
   "tags": ["collage", "sticker", "person", "callout", "label", "arrow", "tape", "paper", "on twos", "handmade"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 3.2, "alpha": true,
-  "say": "when the speaker introduces someone or points at who did it ('this is the founder', 'meet my editor'): the sticker lands on the name" }
+  "say": "quando quem fala apresenta alguém ou aponta quem fez algo (“este é o fundador”, “conheça o meu editor”): o adesivo cai no nome" }

@@ -1,5 +1,5 @@
-{ "id": "money-flow-path", "name": "Money flow path", "oneLiner": "2 to 4 glass glyph tiles (bank, you, the thing) joined by glowing tracks: a spinning gold coin rides each arrow in turn and the tile it lands on rings with light; then an accent arc carries coin after coin back the other way and its label is stamped on",
+{ "id": "money-flow-path", "name": "Caminho do dinheiro", "oneLiner": "de 2 a 4 blocos de vidro com ícones (banco, você, a coisa) ligados por trilhas brilhantes: uma moeda de ouro girando percorre cada seta em vez e o bloco onde pousa se ilumina com um anel; então um arco na cor de destaque leva moeda após moeda de volta no outro sentido e o seu rótulo é carimbado",
   "category": "business", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["money", "flow", "loan", "payments", "pricing", "business model", "how it works", "explainer", "arrows", "coins", "cash flow", "finance", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.8, "alpha": true,
-  "say": "when the speaker explains where the money goes ('the bank lends you the money, you buy the car, then you pay them back every month'): each coin rides on its step, the arc and its stamp land on the payback" }
+  "say": "quando quem fala explica para onde o dinheiro vai (“o banco empresta o dinheiro, você compra o carro e depois paga de volta todo mês”): cada moeda percorre o seu passo, o arco e o seu carimbo caem na devolução" }

@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="pt-BR" data-composition-variables='[
-  {"id":"topic","type":"string","label":"The topic that climbs (empty: the brand name)","default":""},
-  {"id":"category","type":"string","label":"Its category line","default":"Trending now"},
-  {"id":"countFrom","type":"number","label":"Its post count before (thousands)","default":12.4},
-  {"id":"count","type":"number","label":"Its post count at number one (thousands)","default":98.1},
-  {"id":"topics","type":"string","label":"The other four topics, comma separated","default":"AI agents,Product launch,Morning routine,Remote work"},
-  {"id":"categories","type":"string","label":"Their category lines, comma separated","default":"Tecnologia,Negócios,Estilo de vida,Carreiras"},
-  {"id":"counts","type":"string","label":"Their post counts, comma separated","default":"86.1K,54.3K,31.9K,22.7K"},
-  {"id":"postsLabel","type":"string","label":"Word after a count","default":"posts"},
-  {"id":"search","type":"string","label":"Search field placeholder","default":"Buscar"},
-  {"id":"tabs","type":"string","label":"Tabs, comma separated (the second is active)","default":"Para você,Em alta,Notícias"}
+  {"id":"topic","type":"string","label":"O assunto que sobe (vazio: o nome da marca)","default":""},
+  {"id":"category","type":"string","label":"A sua linha de categoria","default":"Em alta agora"},
+  {"id":"countFrom","type":"number","label":"Sua contagem de publicações antes (milhares)","default":12.4},
+  {"id":"count","type":"number","label":"Sua contagem de publicações no número um (milhares)","default":98.1},
+  {"id":"topics","type":"string","label":"Os outros quatro assuntos, separados por vírgula","default":"Agentes de IA,Lançamento de produto,Rotina matinal,Trabalho remoto"},
+  {"id":"categories","type":"string","label":"As suas linhas de categoria, separadas por vírgula","default":"Tecnologia,Negócios,Estilo de vida,Carreiras"},
+  {"id":"counts","type":"string","label":"As suas contagens de publicações, separadas por vírgula","default":"86.1K,54.3K,31.9K,22.7K"},
+  {"id":"postsLabel","type":"string","label":"Palavra depois de uma contagem","default":"posts"},
+  {"id":"search","type":"string","label":"Texto de exemplo do campo de busca","default":"Buscar"},
+  {"id":"tabs","type":"string","label":"Abas, separadas por vírgula (a segunda está ativa)","default":"Para você,Em alta,Notícias"}
 ]'>
 <head>
 <meta charset="UTF-8" />
@@ -143,7 +143,7 @@
     r.querySelector(".cl").textContent = cat; r.querySelector(".tp").textContent = tp; r.querySelector(".ct").textContent = ct;
     rowsEl.appendChild(r); return r;
   };
-  for (let i = 0; i < 4; i++) rows.push(mk(cats[i] || "", others[i] || "", cnts[i] ? cnts[i] + " " + pl : "", null));
+  for (let i = 0; i < 4; i++) rows.push(mk(cats[i] || "", others[i] || "", cnts[i] ? cnts[i].replace(".", ",") + " " + pl : "", null));
   const me = mk(v.category || "", mine, "", "me"); rows.push(me);
   // the brand row carries a flame and, at the end, a green rank-up chip
   me.querySelector(".cat").insertAdjacentHTML("afterbegin", `<svg id="flame" viewBox="0 0 24 24"><path d="M12 22c-4.3 0-7.3-3-7.3-6.9 0-3.3 2.2-5.5 3.7-7.4.3 1.8 1.2 2.9 2.4 3.3-.6-3.6.8-6.4 3.4-8.2-.2 3 1.4 5 3 6.9 1.4 1.7 2.4 3.4 2.4 5.9 0 3.9-3.2 6.4-7.6 6.4z" fill="var(--al)"/></svg>`);

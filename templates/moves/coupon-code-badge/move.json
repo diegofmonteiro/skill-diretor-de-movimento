@@ -1,5 +1,5 @@
-{ "id": "coupon-code-badge", "name": "Coupon code badge", "oneLiner": "an enamel discount badge in the brand colour spins in and lands while its number counts up, a perforated glass ticket slides out from behind it, the code types in under a caret, a dashed frame snaps round it and the copy button turns green: Copied",
+{ "id": "coupon-code-badge", "name": "Selo de cupom", "oneLiner": "um selo de desconto esmaltado na cor da marca gira e pousa enquanto o seu número conta, um ingresso de vidro picotado desliza de trás dele, o código é digitado sob um cursor, uma moldura tracejada se fecha em volta e o botão de copiar fica verde: “Copiado”",
   "category": "business", "kind": "effect", "uses": ["overlay"], "looks": ["glass"], "from": "new",
   "tags": ["coupon", "discount", "promo code", "code", "sponsor", "sponsored", "deal", "offer", "sale", "percent off", "affiliate", "link in description", "ad read", "overlay", "talking head"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": true,
-  "say": "on a sponsor read or an offer ('use code SAVE30 for 30% off your first three months'): cut in on the discount, the code types as they spell it, the copy press lands on the end of the line; amount can be $20 or 2 months, detail what the deal covers" }
+  "say": "num anúncio de patrocinador ou oferta (“use o código ECONOMIA30 e ganhe 30% de desconto nos três primeiros meses”): entre no desconto, o código é digitado enquanto a pessoa o soletra, o toque de copiar cai no fim da frase; amount pode ser R$ 20 ou 2 meses, detail diz o que a oferta cobre" }

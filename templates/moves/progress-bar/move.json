@@ -1,5 +1,5 @@
-{ "id": "progress-bar", "name": "Glass progress bar", "oneLiner": "a thick glass tube fills with lit accent liquid while the camera rides its head, the percent rides inside the fill, milestone nodes light as it passes them and a check seal is pressed into the end",
+{ "id": "progress-bar", "name": "Barra de progresso em vidro", "oneLiner": "um tubo grosso de vidro se enche de líquido aceso na cor de destaque enquanto a câmera acompanha a ponta, a porcentagem viaja dentro do preenchimento, marcos acendem ao serem ultrapassados e um selo de verificação é pressionado no final",
   "category": "data", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["progress", "bar", "milestones", "roadmap", "journey", "percent", "loading", "goal", "complete", "data", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.4, "alpha": true,
-  "say": "when the speaker walks through stages toward a goal ('from idea to launch in 30 days'): each milestone lights as it is named, the check lands on the word that says it is done. Set value below 100 for 'we are 70% there'. On 9:16 the bar stands as a column; as an overlay it lies flat in the upper third" }
+  "say": "quando quem fala percorre etapas até um objetivo (“da ideia ao lançamento em 30 dias”): cada marco acende quando é nomeado, a marca cai na palavra que diz que está pronto. Defina value abaixo de 100 para “estamos 70% lá”. Em 9:16 a barra fica em pé como uma coluna; como sobreposição, fica deitada no terço de cima" }

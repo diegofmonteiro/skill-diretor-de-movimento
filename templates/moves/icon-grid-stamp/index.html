@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="pt-BR" data-composition-variables='[
-  {"id":"labels","type":"string","label":"The app tiles, comma separated (4 to 9)","default":"Editor,Writer,Designer,Scheduler,Analytics,Captions"},
-  {"id":"glyphs","type":"string","label":"Glyph per tile, comma separated (pen, image, calendar, chart, text, video, mail...; empty = guessed from each label)","default":""},
-  {"id":"prices","type":"string","label":"The price chip per tile, comma separated, reused in turn (empty = no chips)","default":"R$ 20/mês,R$ 15/mês,R$ 12/mês,R$ 30/mês,R$ 9/mês,R$ 25/mês,R$ 19/mês,R$ 49/mês,R$ 10/mês"},
-  {"id":"stamp","type":"string","label":"The word on the stamp","default":"GRÁTIS"},
-  {"id":"tone","type":"string","label":"Ink colour: green (free, done, approved), accent (a brand moment) or red (rejected, banned)","default":"green"},
-  {"id":"layout","type":"string","label":"9:16 only: full (the whole safe frame) or top (the top ~42%, the speaker below)","default":"full"}
+  {"id":"labels","type":"string","label":"Os blocos de apps, separados por vírgula (4 a 9)","default":"Editor,Redator,Designer,Agendador,Análises,Legendas"},
+  {"id":"glyphs","type":"string","label":"Ícone de cada bloco, separados por vírgula (pen, image, calendar, chart, text, video, mail...; vazio = deduzido de cada rótulo)","default":""},
+  {"id":"prices","type":"string","label":"A cápsula de preço de cada bloco, separadas por vírgula, repetidas em ciclo (vazio = sem cápsulas)","default":"R$ 20/mês,R$ 15/mês,R$ 12/mês,R$ 30/mês,R$ 9/mês,R$ 25/mês,R$ 19/mês,R$ 49/mês,R$ 10/mês"},
+  {"id":"stamp","type":"string","label":"A palavra no carimbo","default":"GRÁTIS"},
+  {"id":"tone","type":"string","label":"Cor da tinta: green (grátis, pronto, aprovado), accent (um momento da marca) ou red (rejeitado, proibido)","default":"green"},
+  {"id":"layout","type":"string","label":"Só em 9:16: full (toda a área segura) ou top (os ~42% de cima, com quem fala embaixo)","default":"full"}
 ]'>
 <head>
 <meta charset="UTF-8" />
@@ -81,7 +81,7 @@
   // paper tooth for the ink: speckled holes, more toward the edges of each patch
   root.style.setProperty("--tooth", `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' seed='11'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -7 0 0 0 5.6'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`);
   const P = MV.portrait, SQ = W === H, TOP = P && String(v.layout || "").toLowerCase() === "top";
-  const L = String(v.labels || "Editor,Writer,Designer,Scheduler,Analytics,Captions").split(",").map((s) => s.trim()).filter(Boolean).slice(0, 9);
+  const L = String(v.labels || "Editor,Redator,Designer,Agendador,Análises,Legendas").split(",").map((s) => s.trim()).filter(Boolean).slice(0, 9);
   while (L.length < 4) L.push(["Notas", "E-mail", "Arquivos", "Chat"][L.length]);
   const N = L.length, GL = String(v.glyphs || "").split(",").map((s) => s.trim());
   const PR = String(v.prices == null ? "" : v.prices).split(",").map((s) => s.trim()).filter(Boolean);

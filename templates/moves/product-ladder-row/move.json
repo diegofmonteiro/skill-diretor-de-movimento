@@ -1,5 +1,5 @@
-{ "id": "product-ladder-row", "name": "Product ladder", "oneLiner": "3 to 5 glass steps rise left to right, each carrying a floating glass glyph tile with its name and price on the step's face; a lit puck hops up the steps one by one, each one ringing with light as it lands, and the top tile floods with the accent",
+{ "id": "product-ladder-row", "name": "Escada de produtos", "oneLiner": "de 3 a 5 degraus de vidro sobem da esquerda para a direita, cada um com um bloco de ícone de vidro flutuante com o nome e o preço na face do degrau; um disco aceso salta pelos degraus um a um, cada um soando com luz quando ele pousa, e o bloco do topo se inunda com a cor de destaque",
   "category": "business", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["ladder", "upgrade", "levels", "tiers", "pricing", "plans", "value ladder", "products", "steps", "progression", "good better best", "3d", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": true,
-  "say": "when the speaker walks up a range of options from cheap to best ('instant coffee, then beans, then a grinder, then the espresso machine'): the puck lands on each as it is named, the top one lights on the final pick" }
+  "say": "quando quem fala sobe por uma gama de opções do mais barato ao melhor (“café solúvel, depois grãos, depois um moedor, depois a máquina de espresso”): o disco pousa em cada uma quando é nomeada, a do topo acende na escolha final" }

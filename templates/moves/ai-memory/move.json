@@ -1,5 +1,5 @@
-{ "id": "ai-memory", "name": "AI memory update", "oneLiner": "a glass chat: the user states a preference, the assistant answers and a Memory updated chip pops in under it, a pointer opens it and the memory panel rises out of the chip over the dimmed chat, the saved memories step down a slot and the new one drops in on top, lit with a New tag while the count ticks",
+{ "id": "ai-memory", "name": "Memória da IA atualizada", "oneLiner": "um chat em vidro: a pessoa conta uma preferência, o assistente responde e uma cápsula “Memória atualizada” surge embaixo, um ponteiro a abre e o painel de memória sobe da cápsula sobre o chat escurecido, as memórias salvas descem um lugar e a nova cai por cima, acesa com uma etiqueta “Nova” enquanto o contador avança",
   "category": "ai", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["ai", "memory", "personalisation", "remembers", "assistant", "chatbot", "preferences", "context", "llm", "settings", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.8, "alpha": true,
-  "say": "when the speaker says the AI remembers them ('tell it once and it remembers', 'it already knows how I like it'): the chip pops on 'remembers', the new memory drops in on the payoff" }
+  "say": "quando quem fala diz que a IA se lembra dele (“conto uma vez e ela lembra”, “ela já sabe como eu gosto”): a cápsula surge em “lembra”, a nova memória cai no desfecho" }

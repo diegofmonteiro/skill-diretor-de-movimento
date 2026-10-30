@@ -1,5 +1,5 @@
-{ "id": "live-chat", "name": "Live chat paid message", "oneLiner": "a glass live-stream chat scrolls fast beside the live player, then a paid message in the brand colour band posts at the bottom, lifts, rides up to the top and pins with a badge while the chat keeps racing underneath",
+{ "id": "live-chat", "name": "Mensagem paga em chat ao vivo", "oneLiner": "um chat de transmissão ao vivo em vidro rola rápido ao lado do player, e então uma mensagem paga numa faixa da cor da marca é postada embaixo, sobe, percorre até o topo e fixa com um selo enquanto o chat continua correndo por baixo",
   "category": "social", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["live", "livestream", "stream", "chat", "super chat", "donation", "tip", "paid message", "pinned", "community", "audience", "creator", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.4, "alpha": true,
-  "say": "when the speaker talks about going live or a viewer paying to be heard ('someone sent fifty dollars in chat', 'the live stream blew up'): the chat races under the setup, the paid message lands and pins on the money line" }
+  "say": "quando quem fala trata de entrar ao vivo ou de um espectador pagando para ser ouvido (“alguém mandou cinquenta reais no chat”, “a transmissão bombou”): o chat corre durante a preparação, a mensagem paga cai e fixa na frase do dinheiro" }

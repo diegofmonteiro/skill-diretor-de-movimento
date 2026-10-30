@@ -1,6 +1,6 @@
 # Manual completo do Diretor de Movimento
 
-Versão 0.2.1 · Conex Prime · uso interno
+Versão 0.3.0 · Conex Prime · uso interno
 
 ## Sumário
 
@@ -17,7 +17,7 @@ Versão 0.2.1 · Conex Prime · uso interno
 11. A marca
 12. Temas (estilos de filme)
 13. Formatos, tamanhos e onde postar
-14. Catálogo de efeitos (266)
+14. Catálogo de efeitos (269)
 15. Como pedir bem
 16. Como atualizar
 17. Como acrescentar efeitos, temas e recortes
@@ -29,6 +29,7 @@ Versão 0.2.1 · Conex Prime · uso interno
 23. Glossário
 24. Mapa das pastas
 25. Limitações e o que vem depois
+26. Fontes externas, modos e material próprio
 
 ---
 
@@ -49,7 +50,7 @@ Na Conex Prime ela serve a dois usos: trabalho interno e, como módulo do aplica
 
 ## 2. Que tipos de vídeo dá para fazer
 
-**Efeitos (266 prontos, em 10 categorias):** contadores e números gigantes, gráficos (linha, barras, corrida), posts e curtidas, comentários com palavra-chave, notificações, terminal e código, agente de IA executando passos, conversa com IA, listas de tarefas, agenda, recibos e carimbos, planos e preços, funil de vendas, antes e depois, listas numeradas, destaque numa tela real, legendas animadas.
+**Efeitos (269 prontos, em 10 categorias):** contadores e números gigantes, gráficos (linha, barras, corrida), posts e curtidas, comentários com palavra-chave, notificações, terminal e código, agente de IA executando passos, conversa com IA, listas de tarefas, agenda, recibos e carimbos, planos e preços, funil de vendas, antes e depois, listas numeradas, destaque numa tela real, legendas animadas.
 
 **Filmes:** anúncio de produto ou serviço, lançamento de oferta ou recurso, demonstração animada de interface com cursor e câmera, abertura de canal, vinheta com logo, explicativo curto, vídeo de prova (o número que cresce até a meta), versões do mesmo filme em vários formatos.
 
@@ -154,11 +155,13 @@ O Hermes lê skills de uma pasta, como o Claude Code. Para o servidor Oracle (AR
 1. Instale Node 22, FFmpeg e o Chromium do sistema: `sudo apt-get install -y ffmpeg chromium` (o nome do pacote muda conforme a distribuição: `chromium` ou `chromium-browser`).
 2. Clone a skill na pasta de skills do Hermes, com o nome `diretor-de-movimento`.
 3. Aponte o render para o Chromium: `export HYPERFRAMES_BROWSER_PATH=$(which chromium)`. Ponha a linha no ambiente do serviço do Hermes, não só na sua sessão.
-4. Rode `node scripts/check-setup.mjs`. Em ARM o HyperFrames não baixa o Chrome; é por isso que o passo 3 existe.
-5. Faça o teste da seção 8.
-6. Sem tela: tudo roda sem janela. As aprovações (grade de batidas) chegam como mensagem; o Hermes é só operacional e não decide nada pela pessoa.
+4. Se o serviço roda como `root` (comum em servidor), o Chrome recusa abrir sem `--no-sandbox`. Crie um arquivo de uma linha, por exemplo `/opt/dm/chrome-ns.sh` com `exec /caminho/do/chromium --no-sandbox "$@"`, torne-o executável (`chmod +x`) e aponte `HYPERFRAMES_BROWSER_PATH` para ele, em vez de apontar para o Chromium direto.
+5. Rode `node scripts/check-setup.mjs`. Em ARM o HyperFrames não baixa o Chrome; é por isso que o passo 3 existe. O `check-setup` também avisa quando faltam o `unzip` e quando você roda como `root`.
+6. Faça o teste da seção 8.
+7. Para trabalho de cliente em servidor, use o modo `travado` (seção 26), que faz o render sem depender de endereços da internet.
+8. Sem tela: tudo roda sem janela. As aprovações (grade de batidas) chegam como mensagem; o Hermes é só operacional e não decide nada pela pessoa.
 
-A prova de tempo e memória nesse servidor ainda está pendente (`BACKLOG.md`, item 5). Meça antes de oferecer a clientes.
+A prova de tempo e memória nesse servidor ainda está pendente (`BACKLOG.md`, item 4). Meça antes de oferecer a clientes.
 
 ## 8. O primeiro teste
 
@@ -245,7 +248,7 @@ O `theme-board.mjs` monta o quadro de escolha com a marca da pessoa. Cada tema �
 
 Em 9:16 o texto vive entre y=206 e y=1330 e à esquerda de x=918; fora disso é interface da plataforma.
 
-## 14. Catálogo de efeitos (266)
+## 14. Catálogo de efeitos (269)
 
 | Categoria | Qtd |
 |---|---|
@@ -264,7 +267,7 @@ O índice curto está em `templates/moves/CATALOG.md` e cada categoria em `templ
 
 Alguns efeitos têm variáveis (texto, número, cor): o agente as preenche com `--vars '{...}'`.
 
-**Idioma e números.** Os textos de exemplo e os padrões dos efeitos estão em português do Brasil, com `R$`, meses e dias em português e horas em 24 h. Ao preencher os campos, siga este padrão: listas separadas por vírgula (ou `|`, conforme o rótulo do campo) e decimais com ponto (`1.2 mi`); o efeito imprime o número com vírgula (`1,2 mi`) e milhar com ponto (`12.400`). A exceção é o cheque (`big-cheque`), que recebe o valor já no padrão brasileiro (`10.000` ou `1.250,50`). Os rótulos dos campos, que só aparecem a quem edita o efeito, ainda estão em inglês (`BACKLOG.md`).
+**Idioma e números.** Os textos de exemplo e os padrões dos efeitos estão em português do Brasil, com `R$`, meses e dias em português e horas em 24 h. Ao preencher os campos, siga este padrão: listas separadas por vírgula (ou `|`, conforme o rótulo do campo) e decimais com ponto (`1.2 mi`); o efeito imprime o número com vírgula (`1,2 mi`) e milhar com ponto (`12.400`). A exceção é o cheque (`big-cheque`), que recebe o valor já no padrão brasileiro (`10.000` ou `1.250,50`). Os rótulos dos campos e os valores padrão já estão em português. As prévias em vídeo (`preview.mp4`) ainda mostram os textos antigos até serem refeitas (`BACKLOG.md`).
 
 ## 15. Como pedir bem
 
@@ -285,7 +288,7 @@ git pull
 node scripts/check-setup.mjs
 ```
 
-Leia o `CHANGELOG.md` antes. A atualização só troca a skill; marcas e projetos em `~/diretor-de-movimento/` ficam intactos. O HyperFrames está fixado em 0.8.188: mudar de versão é decisão deliberada, testada antes em um efeito e um filme.
+Leia o `CHANGELOG.md` antes. A atualização só troca a skill; marcas, projetos, o cache e a sua escolha de fontes (`fontes.json`) em `~/diretor-de-movimento/` ficam intactos. O HyperFrames está fixado em 0.8.188: mudar de versão é decisão deliberada, testada antes em um efeito e um filme.
 
 ## 17. Como acrescentar efeitos, temas e recortes
 
@@ -309,6 +312,8 @@ node scripts/find-assets.mjs --ambientcg paper --out <pasta>
 ```
 
 Só busca fontes de domínio público e CC0 (Wikimedia, Openverse, Poly Haven, ambientCG) e grava `credits.json` com autor, licença e página: é o comprovante do direito de uso. Guarde-o com o material.
+
+**Material seu ou de outra fonte:** `node scripts/add-asset.mjs <arquivo> --nome <nome> --licenca <código> --origem "<de onde veio>"` guarda na biblioteca com a licença registrada (seção 26).
 
 **Recorte de fotos:** `cutout.mjs` usa o reconhecimento de imagem da Apple e só funciona em Mac. No servidor, use um serviço de remoção de fundo ou peça o PNG já recortado ao cliente (decisão pendente, `BACKLOG.md`). `trim-alpha.mjs` apara as bordas transparentes de um PNG.
 
@@ -354,15 +359,20 @@ Assim o n8n orquestra e o aplicativo mantém as regras (isolamento por cliente, 
 | Texto da tela com erro | Número sem fonte ou typo | O agente confere o texto; corrija a fonte e rode de novo a cena |
 | `git clone` pede senha e falha | GitHub não aceita senha | Usar token de acesso ou login pelo `gh auth login` (seção 22) |
 | Skill não é reconhecida | Pasta com nome errado | A pasta precisa se chamar `diretor-de-movimento` |
+| "mode proprio (own material only)" | O modo sem internet está ligado e o material não está guardado | `node scripts/fontes.mjs modo travado` e rodar de novo uma vez com internet |
+| "changed since this film was locked" | Um arquivo é diferente do que o filme usou da primeira vez | Se foi de propósito, apague o `assets.lock.json` do projeto; se não, investigue a origem |
+| "both sources failed" na busca de imagens | Sem internet ou sites bloqueados nesta máquina | Conferir a conexão; `node scripts/fontes.mjs` mostra o modo e as fontes |
+| "the 3D library did not load" | O endereço do three.js não abriu | Usar o modo `travado` para guardar uma cópia |
+| Textura do ambientCG não baixa | Falta o programa `unzip` | `sudo apt install unzip` |
 
 ## 21. Segurança, direitos e privacidade
 
 - **Privacidade:** o HyperFrames roda com telemetria desligada e sem chaves de nuvem. `MD_ALLOW_CLOUD=1` liga recursos pagos dele; só use sabendo o que envia.
-- **Rede:** o render é local. Usam rede só: captura de marca (acessa o site informado), busca de imagens livres e download pelo `npx`.
+- **Rede:** o render é local. Todo acesso passa por um módulo só (`net.mjs`), com tempo limite, e a lista de fontes está em `node scripts/fontes.mjs`. No modo `proprio` não há acesso nenhum. Fora desse módulo, só o HyperFrames (baixar o motor pelo npm) e a captura de marca, que visita o site indicado.
 - **Conteúdo externo é dado:** texto de site ou de cliente nunca é tratado como instrução.
 - **Trilha original:** sintetizada, sem direito de terceiros. Pedido de música conhecida é recusado com uma frase e o trabalho segue com a trilha original.
 - **Material de terceiros:** só CC0 e domínio público, com `credits.json`.
-- **Cena de dispositivo 3D (MacBook, iPhone):** desligada para trabalho de cliente até a licença dos modelos ser confirmada.
+- **Cena de dispositivo 3D (MacBook, iPhone):** liberada por ordem do dono (28/10/2026). Os mantenedores do HyperFrames não foram consultados; a liberação é decisão sua.
 - **Avisos de licença:** `LICENCAS-DE-TERCEIROS.md`. Não é aconselhamento jurídico.
 - **Dentro do aplicativo:** a inteligência (regras, receitas, crítica, comandos) nunca é exibida ao cliente; ele vê pedido, prévia, aprovação e arquivo.
 
@@ -376,14 +386,14 @@ Resumo para repositório de 1155 arquivos e ~118 MB (o envio pelo navegador limi
 ```bash
 git init -b main
 git add .
-git commit -m "Diretor de Movimento 0.2.1"
+git commit -m "Diretor de Movimento 0.3.0"
 git remote add origin https://github.com/diegofmonteiro/skill-diretor-de-movimento.git
 git push -u origin main
 ```
 
 3. Login: use `gh auth login` (https://cli.github.com) ou um token pessoal em https://github.com/settings/tokens como senha.
 4. Limite de 100 MB por arquivo: nenhum arquivo da skill chega perto; confira com `find . -size +50M`.
-5. Release: em Releases, "Draft a new release", tag `v0.2.1`, anexando o manual em PDF e em `.docx`.
+5. Release: em Releases, "Draft a new release", tag `v0.3.0`, anexando o manual em PDF e em `.docx`.
 6. Para o Google Docs: envie o `.docx` ao Google Drive, clique com o botão direito e "Abrir com > Google Docs".
 
 ## 23. Glossário
@@ -408,9 +418,9 @@ git push -u origin main
 ```
 diretor-de-movimento/
 ├── SKILL.md · README.md · CHANGELOG.md · BACKLOG.md · LICENCAS-DE-TERCEIROS.md
-├── references/     10 guias lidos sob demanda
+├── references/     11 guias lidos sob demanda (inclui fontes-externas)
 ├── scripts/        programas em Node (sem dependências)
-├── templates/      moves (266) · themes (9) · hyperframes · demo-brand · remotion
+├── templates/      moves (269) · themes (9) · hyperframes · demo-brand · remotion
 ├── gallery.html
 ├── docs/           este manual (fora da skill)
 ├── evals/          testes de resultado e de gatilho (fora da skill)
@@ -419,9 +429,58 @@ diretor-de-movimento/
 
 ## 25. Limitações e o que vem depois
 
-- Licença dos modelos 3D de dispositivo a confirmar.
-- three.js e Draco ainda vêm de CDN na cena de dispositivo.
+- Modelos 3D de dispositivo: uso liberado por ordem do dono; sem autorização dos mantenedores.
+- three.js e Draco vêm de CDN no modo `automatico`; no modo `travado` ficam em cópia local (seção 26).
+- 13 arquivos de 4 efeitos (bond-coupon-drip, glass-whiteboard-write, product-halo, rate-dial-knob) com origem não documentada, liberados por ordem do dono; `node scripts/auditar-creditos.mjs` mostra a lista.
 - Recorte de fotos só em Mac por enquanto.
 - Tempo e memória no servidor ARM ainda não medidos.
 - Tradução dos catálogos e das receitas dos temas pendente.
 - Construção do módulo do aplicativo: `modulo-laravel/07-plano-de-construcao.md`.
+
+## 26. Fontes externas, modos e material próprio
+
+**O que é.** A skill às vezes precisa de material que não está dentro dela: fotos, texturas e modelos 3D de bancos livres, as bibliotecas que desenham o celular e o notebook em 3D, os dados do site do cliente e vídeos de referência. Tudo isso passa por um módulo só, e você escolhe como ele se comporta.
+
+**Os três modos.**
+
+| Modo | Como se comporta | Quando usar |
+|---|---|---|
+| `automatico` (padrão) | Busca na internet nas fontes que estão ligadas. É o jeito de sempre. | Dia a dia |
+| `travado` | Guarda uma cópia local de tudo, com uma impressão digital de cada arquivo. Nas vezes seguintes usa a cópia e confere a impressão. Se algo mudou, para e avisa. | Vídeo de cliente; quando o filme precisa refazer igual |
+| `proprio` | Não usa a internet. Só os efeitos da skill, a sua biblioteca e o que já está guardado. | Trabalho sensível; servidor sem rede |
+
+```bash
+node scripts/fontes.mjs                    # mostra o modo, as fontes e o cache
+node scripts/fontes.mjs modo travado       # troca o modo (fica salvo)
+MD_FONTES=proprio node scripts/render.mjs ...   # troca só para um comando
+```
+
+**Escolher as fontes.** `node scripts/fontes.mjs desativar openverse` desliga uma fonte; `ativar` liga de novo. Para registrar um site seu (por exemplo, o banco de fotos da empresa):
+
+```bash
+node scripts/fontes.mjs adicionar fotos-conex --nome "Fotos da Conex" --host fotos.exemplo.com.br --licencas PROPRIO
+```
+
+Sem licença declarada a fonte não entra. Sem adaptador, uma fonte registrada serve para baixar arquivos escolhidos à mão. Para buscar automaticamente em outro site, a fonte precisa de um adaptador: `node scripts/fontes.mjs adaptador <id>` cria o arquivo em `<pasta de dados>/adaptadores/<id>.mjs`, e você edita só a função `buscar`. O adaptador acessa o site pelo módulo de rede (modo, tempo limite e lista de sites valem), e todo resultado cuja licença não esteja entre as que você declarou, ou cuja imagem venha de outro site, é descartado. `find-assets.mjs` passa a buscar nessa fonte junto com as outras; `--so <id>` busca só nela.
+
+**Colocar material seu.**
+
+```bash
+node scripts/add-asset.mjs minha-foto.jpg --nome sala-reuniao --licenca PROPRIO --origem "foto da própria Conex Prime"
+node scripts/add-asset.mjs --listar
+```
+
+Licenças aceitas: `CC0`, `PD` (domínio público), `OFL-1.1`, `APACHE-2.0`, `MIT`, `PROPRIO` (feito por você) e `AUTORIZADO` (o dono permitiu; exige `--autorizacao` dizendo onde isso está escrito). Sem licença o material não entra. Material `PROPRIO` e `AUTORIZADO` fica na biblioteca e nunca vai para um efeito compartilhado.
+
+**A trava de cada filme.** Nos modos `travado` e `proprio`, o projeto ganha um `assets.lock.json` com a impressão digital de cada arquivo usado, mais a versão do HyperFrames e do Node. Daqui a meses o filme refaz com as mesmas entradas. A trava garante entradas iguais, não pixels idênticos: computadores com Chrome ou placa de vídeo diferentes podem mudar um detalhe do fundo.
+
+**Onde ficam os arquivos.** Escolhas em `~/diretor-de-movimento/fontes.json`; cópias em `~/diretor-de-movimento/cache/` (`node scripts/fontes.mjs cache limpar` apaga); biblioteca em `~/diretor-de-movimento/biblioteca/`.
+
+**Buscar efeitos novos.** `node scripts/buscar-efeitos.mjs "<palavras>"` pesquisa o catálogo do HyperFrames (210 blocos, 238 componentes, 8 exemplos). `--ver <nome>` mostra a licença e os arquivos; `--trazer <nome> --para <pasta>` baixa o item com um `credits.json`. Por decisão sua, todos podem ser trazidos: se o item declara licença, ela é registrada; se não declara, registra-se "Apache-2.0 (licença do repositório, não do bloco)" com um aviso. Esse aviso importa: a licença do repositório pode não cobrir fonte, imagem ou marca de terceiro dentro do item (o bloco `ios26-liquid-glass`, por exemplo, traz ícones de Instagram, Gmail e ChatGPT). Os arquivos ficam na pasta indicada; nada entra sozinho nos efeitos da skill.
+
+**Transformar um bloco trazido em efeito.** `node scripts/converter-bloco.mjs --de <pasta do bloco> --id <id> --categoria <data|explain|...> --nome "Nome" --resumo "uma frase" --quando "quando usar"` cria `templates/moves/<id>/` com o bloco, os créditos, a ficha (`move.json`) e troca o gsap da internet pela cópia embutida. Ele não traduz nem aplica a marca: o bloco mantém as próprias cores (`"tema": "proprio"`). Depois: traduzir os textos que aparecem no vídeo, rodar `node scripts/gallery.mjs --only <id>` para a prévia e `node scripts/auditar-creditos.mjs`. Já convertidos: `data-chart` (gráfico de barras com linha), `flowchart-vertical` (fluxograma de decisão em 9:16) e `bar-chart-race` (corrida de barras).
+
+**Modelos 3D de dispositivo.** No modo `automatico` vêm da ramificação `main` do registro do HyperFrames, que muda quando eles publicam; nos outros modos vêm de um commit fixo. Pesam cerca de 3,5 MB. A logo da Apple, que vem como peça separada nos modelos, fica escondida por padrão (`--show-logo` a mostra). Uso liberado por ordem do dono (28/10/2026); a autorização dos mantenedores não foi pedida.
+
+Detalhes técnicos: `references/fontes-externas.md`.
+

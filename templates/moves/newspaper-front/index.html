@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="pt-BR" data-composition-variables='[
-  {"id":"title","type":"string","label":"The front page headline (empty uses the brand headline)","default":""},
-  {"id":"deck","type":"string","label":"Line under the headline (empty uses the brand tagline)","default":""},
-  {"id":"masthead","type":"string","label":"Newspaper name ({brand} becomes the brand name)","default":"O Diário da {brand}"},
-  {"id":"edition","type":"string","label":"Middle of the date bar","default":"Edição da noite"},
-  {"id":"story2","type":"string","label":"Second story headline, beside the photo","default":"How the whole thing was built"},
-  {"id":"story3","type":"string","label":"Third story headline, under the photo","default":"What happens next"},
-  {"id":"caption","type":"string","label":"Photo caption (empty uses the brand name)","default":""},
-  {"id":"centre","type":"string","label":"Keep the authored framing on 9:16 (off)","default":"off"}
+  {"id":"title","type":"string","label":"A manchete da primeira página (vazio usa a manchete da marca)","default":""},
+  {"id":"deck","type":"string","label":"Linha embaixo da manchete (vazio usa o slogan da marca)","default":""},
+  {"id":"masthead","type":"string","label":"Nome do jornal ({brand} vira o nome da marca)","default":"O Diário da {brand}"},
+  {"id":"edition","type":"string","label":"Meio da barra de data","default":"Edição da noite"},
+  {"id":"story2","type":"string","label":"Manchete da segunda matéria, ao lado da foto","default":"Como tudo foi construído"},
+  {"id":"story3","type":"string","label":"Manchete da terceira matéria, embaixo da foto","default":"O que acontece a seguir"},
+  {"id":"caption","type":"string","label":"Legenda da foto (vazio usa o nome da marca)","default":""},
+  {"id":"centre","type":"string","label":"Manter o enquadramento original no 9:16 (desligado)","default":"off"}
 ]'>
 <head>
 <meta charset="UTF-8" />
@@ -133,7 +133,7 @@
   // the set copy is one scan of five short items; a column starts on an item, never mid-paragraph
   const IMH = cw * 1019 / 800, PARA = [0.004, 0.222, 0.366, 0.592, 0.815];
   const para = (i) => -PARA[i % 5] * IMH - Math.floor(i / 5) * IMH;
-  const by = el("t serif", brand ? "By " + brand : "", pad, y, cw); Object.assign(by.style, { fontSize: S(30), fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase" }); fitTo(by, cw, 14);
+  const by = el("t serif", brand ? "Por " + brand : "", pad, y, cw); Object.assign(by.style, { fontSize: S(30), fontWeight: 700, letterSpacing: ".06em", textTransform: "uppercase" }); fitTo(by, cw, 14);
   for (let k = 0; k < 3; k++) {
     const x = pad + k * (cw + 28), y0 = k === 0 ? y + 46 : y;
     const c = el("col", null, x, y0, cw, PH - 60 - y0); c.style.backgroundPosition = `0 ${S(para(k * 2) )}`;

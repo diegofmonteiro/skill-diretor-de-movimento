@@ -13,6 +13,7 @@
 import fs from "node:fs";
 import os from "node:os";
 import { HF_VERSION, HOME, hf, run } from "./lib.mjs";
+import { modo } from "./net.mjs";
 
 const fix = process.argv.includes("--fix");
 const mac = process.platform === "darwin";
@@ -50,6 +51,17 @@ add(!(freeGB < 2), "Free disk (2 GB+)", isNaN(freeGB) ? "unknown" : `${freeGB.to
 
 const yt = run("yt-dlp", ["--version"]);
 add(yt.code === 0 ? true : null, "yt-dlp (optional)", yt.code === 0 ? yt.out.trim() : "not found: only needed to download a reference video from a URL", mac ? "brew install yt-dlp" : "pipx install yt-dlp");
+
+const uz = run("unzip", ["-v"]);
+add(uz.code === 127 ? null : true, "unzip (optional)", uz.code === 127 ? "not found: only needed for ambientCG textures in find-assets.mjs" : "found", mac ? "comes with macOS" : "sudo apt install unzip");
+
+// A server (Linux, often ARM, often root) needs two things the desktop does not
+if (process.platform === "linux") {
+  const root = typeof process.getuid === "function" && process.getuid() === 0;
+  add(root ? null : true, "Running as root", root ? "Chrome refuses to start as root without --no-sandbox" : "no", root ? "create a wrapper script that runs your Chrome with --no-sandbox and point HYPERFRAMES_BROWSER_PATH at it (see docs/manual.md, section 7)" : "");
+  add(process.arch === "x64" ? true : null, `CPU ${process.arch}`, process.arch === "x64" ? "HyperFrames can download its own Chrome" : "no Chrome download for this CPU: install the system Chromium and set HYPERFRAMES_BROWSER_PATH", "see docs/manual.md, section 7");
+}
+add(null, "Sources mode", `${modo()}  (automatico = live internet, travado = fingerprinted copies, proprio = no internet)`, "node scripts/fontes.mjs");
 
 const rem = fs.existsSync("package.json") && /"remotion"/.test(fs.readFileSync("package.json", "utf8"));
 add(null, "Remotion (fallback, optional)", rem ? "found in this folder: pass --remotion . to new-project.mjs to use it" : "not used: HyperFrames is the default", "never required");

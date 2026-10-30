@@ -1,5 +1,5 @@
-{ "id": "document-scroll", "name": "Document scroll", "oneLiner": "real paper pages of a long document tilt in 3D and get flicked: they fly past in motion blur while a page counter races, settle on a long tail on one page, and a highlighter sweeps the line that matters as the camera pushes in",
+{ "id": "document-scroll", "name": "Rolagem de documento", "oneLiner": "páginas de papel de verdade de um documento longo se inclinam em 3D e são folheadas: passam voando em desfoque de movimento enquanto um contador de páginas dispara, param com uma cauda longa numa página, e um marcador passa pela linha que importa enquanto a câmera avança",
   "category": "paper", "kind": "effect", "uses": ["broll"], "looks": ["paper"], "from": "new",
   "tags": ["document", "terms", "fine print", "contract", "report", "pdf", "policy", "scroll", "highlight", "buried", "page", "paper", "3d"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": false,
-  "say": "when the speaker says 'buried on page 14 of the terms...', 'I read the whole report' or 'it says right here': the pages fly while they set it up, the highlighter lands on the quoted line" }
+  "say": "quando quem fala diz “escondido na página 14 dos termos...”, “li o relatório inteiro” ou “está escrito bem aqui”: as páginas voam durante a preparação, o marcador cai na linha citada" }

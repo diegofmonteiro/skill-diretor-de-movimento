@@ -1,5 +1,5 @@
-{ "id": "pricing-toggle", "name": "Pricing toggle", "oneLiner": "a three-plan glass pricing table rises in, a pointer flips the billing toggle from monthly to yearly, every price rolls down its digits like a counter, a green save chip pops beside the toggle, then the middle plan lifts forward with a lit ring and a Most popular badge while the others step back",
+{ "id": "pricing-toggle", "name": "Alternância de preços", "oneLiner": "uma tabela de preços de vidro com três planos sobe, um ponteiro vira a alternância de cobrança de mensal para anual, cada preço gira os seus dígitos como um contador, uma cápsula verde de economia surge ao lado da alternância, e então o plano do meio avança com um anel aceso e um selo de Mais popular enquanto os outros recuam",
   "category": "business", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["pricing", "plans", "tiers", "yearly", "annual", "monthly", "discount", "subscription", "saas", "offer", "most popular", "toggle", "3d", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": true,
-  "say": "when the speaker says go yearly, talks about plans or names the tier most people pick ('switch to annual and it drops to 23', 'most people go for Pro'): the toggle flips on 'yearly', the plan lifts on its name" }
+  "say": "quando quem fala manda ir para o anual, trata de planos ou nomeia o nível que a maioria escolhe (“mude para o anual e cai para 23”, “a maioria vai de Pro”): a alternância vira em “anual”, o plano avança quando a pessoa o nomeia" }

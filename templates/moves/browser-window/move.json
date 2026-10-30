@@ -1,5 +1,5 @@
-{ "id": "browser-window", "name": "Browser window", "oneLiner": "a floating browser window tilts in out of depth, the brand's domain types into the address bar, a progress line runs and the page loads as the brand's real screen, then the window drifts in 3D while a cursor glides over and clicks the call to action",
+{ "id": "browser-window", "name": "Janela de navegador", "oneLiner": "uma janela de navegador flutuante gira para fora da profundidade, o domínio da marca é digitado na barra de endereço, uma linha de progresso corre e a página carrega como a tela real da marca, e então a janela desliza em 3D enquanto um cursor passa e clica na chamada para ação",
   "category": "dev", "kind": "effect", "uses": ["broll"], "looks": ["glass", "studio"], "from": "new",
   "tags": ["website", "browser", "url", "domain", "landing page", "product", "screen", "demo", "click", "cta", "3d", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.2, "alpha": false,
-  "say": "when the speaker says where to go or names the site ('just go to...', 'it's at...'): the address types under the name, the page loads as they describe it, the click lands on 'sign up' or 'try it'" }
+  "say": "quando quem fala diz aonde ir ou nomeia o site (“é só entrar em...”, “está em...”): o endereço é digitado sob o nome, a página carrega enquanto a pessoa a descreve, o clique cai em “cadastre-se” ou “experimente”" }

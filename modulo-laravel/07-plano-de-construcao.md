@@ -17,6 +17,7 @@ A ordem é pensada para entregar valor cedo: ao fim da Fase 3 já se vende o pro
 - [ ] Máquina do trabalhador decidida (Oracle para laboratório, Vultr para produção) e o render de teste rodou nela
 - [ ] Tempo e memória de um efeito medidos e anotados
 - [ ] Solução de recorte de fotos escolhida (`06-integracoes.md`)
+- [ ] Modos de fontes (`automatico`, `travado`, `proprio`) provados no trabalhador: um render de cena de dispositivo no modo `travado`, com cópias locais, sem acesso à internet
 - [ ] Nenhuma regra de `02` ficou impossível na base atual (ou está anotado)
 
 ## Fase 1 — Banco de dados e modelos
@@ -40,11 +41,11 @@ A ordem é pensada para entregar valor cedo: ao fim da Fase 3 já se vende o pro
 
 **Aceite:**
 
-- [ ] Sincronização lê os efeitos e as variáveis; itens novos entram desligados (RN-19)
+- [ ] Sincronização lê os efeitos e as variáveis; itens novos entram desligados até a camada 1 ligar
 - [ ] Tarefa idempotente: mesma entrada não duplica arquivo nem entrega (RN-18)
 - [ ] Tempo estourado encerra a tarefa e libera a fila
 - [ ] Nenhum comando é montado em texto único a partir de dado do usuário
-- [ ] Download só para quem é da equipe (RN-01)
+- [ ] Arquivo final fora do alcance das camadas 2 e 3; visualização em baixa resolução com marca d'água por endereço temporário (RN-01 e RN-25)
 - [ ] Um efeito real renderizou de ponta a ponta no servidor escolhido
 
 ## Fase 3 — Regras de negócio no servidor
@@ -56,6 +57,7 @@ A ordem é pensada para entregar valor cedo: ao fim da Fase 3 já se vende o pro
 **Aceite:**
 
 - [ ] RN-01, RN-02 e RN-05 isolamento, inteligência protegida e níveis de acesso
+- [ ] RN-28 camada 1 sem limites de plano, catálogo e fila, com a marca de "uso interno" para licença pendente (T20)
 - [ ] RN-03 e RN-04 exclusão com autorização e registro de tudo
 - [ ] RN-06 e RN-07 aprovação e validação da grade
 - [ ] RN-08 número com fonte
@@ -66,16 +68,18 @@ A ordem é pensada para entregar valor cedo: ao fim da Fase 3 já se vende o pro
 - [ ] RN-14 e RN-15 dado pessoal em tela e autorização da marca
 - [ ] RN-16 trilha sem direito de terceiros
 - [ ] RN-17 e RN-18 plano, fila e idempotência
-- [ ] RN-19 e RN-20 recursos sem licença desligados e rascunho antes do final
+- [ ] RN-19 e RN-20 liberação registrada com chave por equipe, e rascunho antes do final
 - [ ] RN-21 e RN-22 redundância de IA e código antes de IA
 - [ ] RN-23 ações governadas (completo na Fase 5)
+- [ ] RN-25 cliente não baixa nada (teste em todas as rotas, API, webhooks e endereço do armazenamento)
+- [ ] RN-26 e RN-27 redes conectadas, plano e publicação idempotente (completos na Fase 5)
 - [ ] RN-24 idioma e formatos
 
 ## Fase 4 — Telas
 
 **Pedido para o agente:**
 
-> Construa a Fase 4: as telas T1 a T14 de 04-telas.md, uma de cada vez, com os estados vazio, carregando e erro, separando o que é da camada 1 do que é do cliente. Pare e me mostre o checklist.
+> Construa a Fase 4: as telas T1 a T14, T17, T18 e T19 de 04-telas.md, uma de cada vez, com os estados vazio, carregando e erro, separando o que é da camada 1 do que é do cliente. Pare e me mostre o checklist.
 
 **Aceite:**
 
@@ -83,7 +87,9 @@ A ordem é pensada para entregar valor cedo: ao fim da Fase 3 já se vende o pro
 - [ ] T2 e T3 Marcas
 - [ ] T4 e T5 Vitrine e pedido de efeito (com estimativa e saldo do plano)
 - [ ] T6 e T7 Filmes
-- [ ] T8 Fila e T9 Biblioteca
+- [ ] T8 Fila e T9 Biblioteca (sem botão de baixar)
+- [ ] T17 Redes sociais e publicações
+- [ ] T18 Configuração da skill e T19 Cliente (configuração), telas da Conex Prime
 - [ ] T10 Importar projeto
 - [ ] T11 a T14 telas da Conex Prime, invisíveis para o cliente
 - [ ] Todas as telas em português do Brasil
@@ -92,13 +98,15 @@ A ordem é pensada para entregar valor cedo: ao fim da Fase 3 já se vende o pro
 
 **Pedido para o agente:**
 
-> Construa a Fase 5: registre o módulo na camada de LGPD do núcleo conforme 06-integracoes.md, transforme em ações governadas as ações listadas, crie a API e os webhooks para o n8n, a ligação com tickets e a consulta ao módulo de conformidade (se existir). Depois rode todos os testes e me mostre uma tabela regra por regra com onde ela está garantida e qual teste a cobre.
+> Construa a Fase 5: registre o módulo na camada de LGPD do núcleo conforme 06-integracoes.md, transforme em ações governadas as ações listadas, construa a conexão com as redes sociais do plano (adaptadores por rede, chaves criptografadas) e a publicação direta, crie a API e os webhooks para o n8n, a ligação com tickets e a consulta ao módulo de conformidade (se existir). Depois rode todos os testes e me mostre uma tabela regra por regra com onde ela está garantida e qual teste a cobre.
 
 **Aceite:**
 
 - [ ] Dados pessoais declarados no núcleo de LGPD, com o comportamento de exclusão do titular
 - [ ] Ações sensíveis passam pelo guard (teste com bloqueio)
-- [ ] API e webhooks com as mesmas regras do restante
+- [ ] Conexão de pelo menos uma rede real de teste e publicação ponta a ponta, sem duplicar (RN-26 e RN-27)
+- [ ] Aprovação do aplicativo nas redes escolhidas confirmada
+- [ ] API e webhooks com as mesmas regras do restante e sem entregar arquivo (RN-25)
 - [ ] Falha de render abre ticket
 - [ ] Importador só lê JSON e copia arquivos, e lista o que falhou
 
@@ -119,7 +127,7 @@ A ordem é pensada para entregar valor cedo: ao fim da Fase 3 já se vende o pro
 
 **Pedido para o agente:**
 
-> Rode todos os testes e me mostre uma tabela com as 24 regras de 02-regras-de-negocio.md: onde cada uma está garantida e qual teste a cobre. Aponte o que ficou sem cobertura.
+> Rode todos os testes e me mostre uma tabela com as 28 regras de 02-regras-de-negocio.md: onde cada uma está garantida e qual teste a cobre. Aponte o que ficou sem cobertura.
 
 ## Definição de pronto
 

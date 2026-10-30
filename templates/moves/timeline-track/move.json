@@ -1,7 +1,7 @@
 {
  "id": "timeline-track",
- "name": "Timeline track",
- "oneLiner": "a glowing line draws while the camera rides its head and four dated glass signs pop as it passes, then the camera pulls back to the whole track and the last node, now, glows in the accent; 16:9 runs left to right across a glossy 3D floor, 9:16 and 1:1 run top to bottom",
+ "name": "Linha do tempo",
+ "oneLiner": "uma linha brilhante se desenha enquanto a câmera acompanha a ponta e quatro placas de vidro com datas surgem quando ela passa, e então a câmera recua para a trilha inteira e o último nó, agora, acende na cor de destaque; o 16:9 corre da esquerda para a direita sobre um piso 3D brilhante, o 9:16 e o 1:1 correm de cima para baixo",
  "category": "explain", "kind": "effect",
  "uses": [
   "broll"
@@ -31,5 +31,5 @@
  ],
  "duration": 5.4,
  "alpha": false,
- "say": "when the speaker tells how they got here in a few steps ('in 2019 we..., by 2023..., and now...'): cut in on the first date, the last node lands on 'now' or 'today'"
+ "say": "quando quem fala conta como chegou até aqui em poucas etapas (“em 2019 nós..., em 2023..., e agora...”): entre na primeira data, o último nó cai em “agora” ou “hoje”"
 }

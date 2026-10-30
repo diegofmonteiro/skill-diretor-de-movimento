@@ -1,5 +1,5 @@
-{ "id": "terminal-run", "name": "Glass terminal run", "oneLiner": "a dark glass terminal tilts in, a command types at the prompt, output lines stream in one by one with a spinner that turns into a check, and a green success line stamps in with a flash before the cursor blinks on a fresh prompt",
+{ "id": "terminal-run", "name": "Execução em terminal de vidro", "oneLiner": "um terminal escuro de vidro se inclina para dentro, um comando é digitado no prompt, linhas de saída entram uma a uma com um indicador de carregamento que vira uma marca, e uma linha verde de sucesso é carimbada com um clarão antes de o cursor piscar num novo prompt",
   "category": "dev", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass", "mono"], "from": "new",
   "tags": ["terminal", "code", "command", "deploy", "build", "install", "developer", "cli", "ship", "success", "mono", "3d", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.0, "alpha": true,
-  "say": "when the speaker says it takes one command, or that they shipped, installed or deployed something ('one command and it's live'): the command types under the words, the green line lands on 'done' or 'live'" }
+  "say": "quando quem fala diz que basta um comando, ou que publicou, instalou ou colocou algo no ar (“um comando e está no ar”): o comando é digitado sob as palavras, a linha verde cai em “pronto” ou “no ar”" }

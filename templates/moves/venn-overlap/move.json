@@ -1,5 +1,5 @@
-{ "id": "venn-overlap", "name": "Venn overlap", "oneLiner": "two or three glass circles glide in from their own sides with their names, their shared edges lighting faintly as they meet; they close the last gap with a soft snap, the part all of them share floods with the accent under a glow, a ring goes out and a pill names the sweet spot",
+{ "id": "venn-overlap", "name": "Interseção de diagrama de Venn", "oneLiner": "dois ou três círculos de vidro deslizam cada um do seu lado com seus nomes, as bordas compartilhadas acendendo de leve quando se encontram; eles fecham o último vão com um encaixe suave, a parte que todos compartilham se inunda de cor de destaque sob um brilho, um anel se expande e uma cápsula nomeia o ponto ideal",
   "category": "data", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["venn", "overlap", "sweet spot", "intersection", "where they meet", "framework", "ikigai", "fit", "combine", "strategy", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.4, "alpha": true,
-  "say": "when the speaker says the answer sits where a few things meet ('what you are good at, what you enjoy, and what people pay for'): cut in on the first one, the overlap lights on the word that names the sweet spot" }
+  "say": "quando quem fala diz que a resposta está onde algumas coisas se encontram (“no que você é bom, no que gosta e no que as pessoas pagam”): entre no primeiro, a interseção acende na palavra que nomeia o ponto ideal" }

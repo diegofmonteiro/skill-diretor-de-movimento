@@ -1,5 +1,5 @@
-{ "id": "pros-cons", "name": "Pros and cons", "oneLiner": "two glass cards stand up off a lit floor, a green check badge over the pros and a red cross over the cons; rows land alternately with each mark drawn and the counts ticking, then the winning card steps forward in its colour while the other falls back",
+{ "id": "pros-cons", "name": "Prós e contras", "oneLiner": "dois cartões de vidro se erguem de um piso iluminado, um selo verde de verificação sobre os prós e uma cruz vermelha sobre os contras; as linhas caem alternadamente com cada marca desenhada e as contagens subindo, e então o cartão vencedor avança na sua cor enquanto o outro recua",
   "category": "explain", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["pros", "cons", "tradeoffs", "decision", "upsides", "downsides", "review", "honest", "worth it", "list", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": true,
-  "say": "when the speaker weighs something up ('the good: it saves hours... the catch: a day to set up'): one row per point as it is said, the winning side steps forward on the verdict ('still worth it'). winner auto picks the longer list; set none for a neutral list" }
+  "say": "quando quem fala pesa algo (“o bom: economiza horas... o porém: um dia para configurar”): uma linha por ponto conforme é dito, o lado vencedor avança no veredito (“ainda vale a pena”). winner auto escolhe a lista maior; use none para uma lista neutra" }

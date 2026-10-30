@@ -1,5 +1,5 @@
-{ "id": "slack-message", "name": "Glass team chat message", "oneLiner": "a team channel on a glass pane: a message posts with a highlight flash, reactions pile on underneath with their counts climbing, your own fire reaction bursts, then the thread link stacks its avatars and the reply count rolls up",
+{ "id": "slack-message", "name": "Mensagem de chat de equipe em vidro", "oneLiner": "um canal de equipe numa placa de vidro: uma mensagem é postada com um clarão de destaque, reações se acumulam embaixo com as contagens subindo, a sua própria reação de fogo estoura, e então o link da conversa empilha seus avatares e a contagem de respostas sobe",
   "category": "social", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["team", "chat", "channel", "workspace", "announcement", "reactions", "celebration", "milestone", "company", "coworkers", "thread", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.2, "alpha": true,
-  "say": "when the speaker shares news with their team or a win landing at work ('I posted it in the team channel', 'everyone went crazy'): the message posts on the news, the reactions pile on as they describe the response" }
+  "say": "quando quem fala compartilha uma novidade com a equipe ou uma vitória no trabalho (“postei no canal da equipe”, “todo mundo enlouqueceu”): a mensagem é postada na novidade, as reações se acumulam conforme a pessoa descreve a resposta" }

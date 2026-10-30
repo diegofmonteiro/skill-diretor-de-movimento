@@ -1,5 +1,5 @@
-{ "id": "sparkline-list", "name": "Sparkline list", "oneLiner": "a glass watchlist panel stands up with a pulsing live tag; each row has a name, a value that ticks and a live sparkline that scrolls left as new points arrive, with a change chip; one row bends up hard, lifts out of the list and flips green, line, glow and chip",
+{ "id": "sparkline-list", "name": "Lista com minigráficos", "oneLiner": "um painel de acompanhamento em vidro se ergue com uma etiqueta pulsante de ao vivo; cada linha tem um nome, um valor que oscila e um minigráfico ao vivo que rola para a esquerda conforme chegam novos pontos, com uma cápsula de variação; uma linha se curva forte para cima, sai da lista e fica verde, linha, brilho e cápsula",
   "category": "data", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["sparkline", "watchlist", "live", "dashboard", "metrics", "trend", "growth", "winner", "analytics", "data", "numbers", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.6, "alpha": true,
-  "say": "when the speaker compares a few channels or products and one is taking off ('everything else was flat, but the long videos went up 61 percent'): cut in on the list, the row lifts green on the word that names the winner" }
+  "say": "quando quem fala compara alguns canais ou produtos e um decola (“todo o resto estava parado, mas os vídeos longos subiram 61 por cento”): entre na lista, a linha se levanta verde na palavra que nomeia o vencedor" }

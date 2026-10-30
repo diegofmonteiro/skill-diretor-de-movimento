@@ -1,5 +1,5 @@
-{ "id": "price-tag", "name": "Price drop card", "oneLiner": "a glass pricing card turns in 3D, the old price is struck through, the big price counts down to the new one and slams, a Save pill stamps onto the corner and the features tick in one by one",
+{ "id": "price-tag", "name": "Cartão de queda de preço", "oneLiner": "um cartão de preços em vidro gira em 3D, o preço antigo é riscado, o preço grande desce contando até o novo e bate, uma pílula de Economize é carimbada no canto e as vantagens vão marcando uma a uma",
   "category": "business", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["price", "pricing", "discount", "sale", "offer", "deal", "save", "plan", "subscription", "checkout", "launch offer", "3d", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.4, "alpha": true,
-  "say": "when the speaker reveals the price or the deal ('it used to be 49, now it's 19'): the strike lands on the old price, the count stops on the new one, the pill stamps on 'save'" }
+  "say": "quando quem fala revela o preço ou a oferta (“custava 49, agora é 19”): o risco cai no preço antigo, a contagem para no novo, a pílula é carimbada em “economize”" }

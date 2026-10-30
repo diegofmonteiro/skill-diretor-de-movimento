@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="pt-BR" data-composition-variables='[
-  {"id":"store","type":"string","label":"Store name in the header (empty: the brand name)","default":""},
-  {"id":"product","type":"string","label":"Product name","default":"Brass vase"},
-  {"id":"price","type":"string","label":"Price, digits only","default":"89"},
-  {"id":"currency","type":"string","label":"Currency sign","default":"R$ "},
-  {"id":"units","type":"string","label":"Units left at the start (counts down to 0)","default":"12"},
-  {"id":"leftWord","type":"string","label":"Word after the count","default":"restantes"},
-  {"id":"hot","type":"string","label":"Amber chip in the header","default":"Selling fast"},
-  {"id":"soldOut","type":"string","label":"The stamp and the dead button","default":"Esgotado"},
-  {"id":"cta","type":"string","label":"Button before it sells out","default":"Adicionar ao carrinho"},
-  {"id":"img","type":"string","label":"Your own product cut-out (transparent PNG under assets/brand/); empty = the bundled brass vase","default":""}
+  {"id":"store","type":"string","label":"Nome da loja no cabeçalho (vazio: o nome da marca)","default":""},
+  {"id":"product","type":"string","label":"Nome do produto","default":"Vaso de latão"},
+  {"id":"price","type":"string","label":"Preço, só dígitos","default":"89"},
+  {"id":"currency","type":"string","label":"Símbolo da moeda","default":"R$ "},
+  {"id":"units","type":"string","label":"Unidades restantes no início (conta até 0)","default":"12"},
+  {"id":"leftWord","type":"string","label":"Palavra depois da contagem","default":"restantes"},
+  {"id":"hot","type":"string","label":"Cápsula âmbar no cabeçalho","default":"Vendendo rápido"},
+  {"id":"soldOut","type":"string","label":"O carimbo e o botão morto","default":"Esgotado"},
+  {"id":"cta","type":"string","label":"Botão antes de esgotar","default":"Adicionar ao carrinho"},
+  {"id":"img","type":"string","label":"O recorte do seu próprio produto (PNG transparente em assets/brand/); vazio = o vaso de latão incluído","default":""}
 ]'>
 <head>
 <meta charset="UTF-8" />
@@ -135,7 +135,7 @@
   Object.assign($("#wrap").style, { left: cL + "px", top: cT + "px", width: cw + "px", height: ch + "px" });
   const S = (n) => n * s + "px", box = (el, x, y, w, h) => Object.assign(el.style, { left: S(x), top: S(y), width: S(w), height: S(h) });
 
-  // ---- header: store, a Selling fast chip
+  // ---- header: store, a Vendendo rápido chip
   box($("#tile"), pad, hdY, 84, 84); if (v.mark) $("#tile").appendChild(MV.img(v.mark));
   $("#chipt").textContent = v.hot || ""; MV.fitText($("#chipt"), 250 * s, 14);
   if (!v.hot) $("#chip").style.display = "none";

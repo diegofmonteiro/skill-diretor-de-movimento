@@ -1,5 +1,5 @@
-{ "id": "voice-memo", "name": "Glass voice memo", "oneLiner": "a voice recorder on a glass pane: a red playhead sweeps and the waveform springs up bar by bar while the timer runs, the live transcript writes itself underneath, a marker sweeps the key phrase, then stop is pressed and a green Saved chip lands",
+{ "id": "voice-memo", "name": "Nota de voz em vidro", "oneLiner": "um gravador de voz numa placa de vidro: um cursor vermelho varre e a forma de onda salta barra a barra enquanto o cronômetro corre, a transcrição ao vivo se escreve embaixo, um marcador varre a frase-chave, e então parar é apertado e uma cápsula verde de Salvo cai",
   "category": "creator", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["voice", "voice memo", "recording", "audio", "transcript", "dictation", "speech to text", "podcast", "notes", "idea", "waveform", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.4, "alpha": true,
-  "say": "when the speaker talks about recording a quick voice note or the AI transcribing them ('I just talk into my phone', 'it writes down everything I say'): the wave runs while they talk, the marker lands on the phrase they stress" }
+  "say": "quando quem fala trata de gravar uma nota de voz rápida ou da IA transcrevendo o que diz (“eu só falo no celular”, “ela escreve tudo o que eu digo”): a onda corre enquanto a pessoa fala, o marcador cai na frase que ela destaca" }

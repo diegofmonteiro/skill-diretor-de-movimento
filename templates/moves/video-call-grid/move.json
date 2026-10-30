@@ -1,5 +1,5 @@
-{ "id": "video-call-grid", "name": "Glass video call grid", "oneLiner": "a video call window on glass: empty slots fill as people join one by one (the brand photo tile, then initials tiles), the participant count ticks, then the speaker tile lifts with a green talking ring and live voice bars while the others settle back",
+{ "id": "video-call-grid", "name": "Grade de chamada de vídeo em vidro", "oneLiner": "uma janela de chamada de vídeo em vidro: espaços vazios se enchem conforme as pessoas entram uma a uma (o bloco da foto da marca, depois blocos de iniciais), a contagem de participantes sobe, e então o bloco de quem fala se levanta com um anel verde de fala e barras de voz ao vivo enquanto os outros recuam",
   "category": "productivity", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["video call", "meeting", "call", "team", "remote", "standup", "clients", "people", "join", "speaker", "productivity", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.0, "alpha": true,
-  "say": "when the speaker talks about getting on a call ('I jumped on a call with the team', 'four of us got on a call and I pitched it'): tiles join as they set the scene, the green ring lands on whoever did the talking" }
+  "say": "quando quem fala trata de entrar numa chamada (“entrei numa chamada com a equipe”, “quatro de nós entramos numa chamada e eu apresentei”): os blocos entram conforme a pessoa monta a cena, o anel verde cai em quem falou" }

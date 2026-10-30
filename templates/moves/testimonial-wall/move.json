@@ -1,5 +1,5 @@
-{ "id": "testimonial-wall", "name": "Testimonial wall", "oneLiner": "a wall of glass review cards tilted in 3D cascades in around one card, the camera drifting across it; that card lights up and lifts off the wall to face the camera as the rest fall out of focus, its five stars fill one by one and the quote lands",
+{ "id": "testimonial-wall", "name": "Mural de depoimentos", "oneLiner": "um mural de cartões de avaliação em vidro, inclinado em 3D, cai em cascata em volta de um cartão, com a câmera derivando por ele; esse cartão acende e se levanta do mural para encarar a câmera enquanto o resto sai de foco, as suas cinco estrelas se enchem uma a uma e a citação cai",
   "category": "social", "kind": "effect", "uses": ["broll"], "looks": ["glass"], "from": "new",
   "tags": ["testimonials", "reviews", "wall of love", "customers", "social proof", "stars", "feedback", "trust", "quote", "3d", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.8, "alpha": false,
-  "say": "when the speaker says how many people love it, or 'here is what people are saying': the wall fills on the number, the card lifts as they read one review out" }
+  "say": "quando quem fala diz quantas pessoas amam ou “veja o que as pessoas estão dizendo”: o mural se enche no número, o cartão se levanta quando a pessoa lê uma avaliação em voz alta" }

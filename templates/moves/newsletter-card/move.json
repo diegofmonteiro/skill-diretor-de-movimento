@@ -1,5 +1,5 @@
-{ "id": "newsletter-card", "name": "Glass newsletter signup", "oneLiner": "a newsletter signup card pops in tilted on glass (the latest issue cover, the brand mark, name and reader count), an address types into the field, a cursor presses the button, it turns into a green Subscribed check with a burst and the reader count ticks up by one",
+{ "id": "newsletter-card", "name": "Cadastro de newsletter em vidro", "oneLiner": "um cartão de cadastro de newsletter surge inclinado em vidro (a capa da última edição, o símbolo da marca, nome e número de leitores), um endereço é digitado no campo, um cursor aperta o botão, que vira uma marca verde de “Inscrito” com uma explosão, e o número de leitores sobe de um em um",
   "category": "social", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["newsletter", "subscribe", "email", "signup", "list", "lead magnet", "cta", "readers", "letter", "3d", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.4, "alpha": true,
-  "say": "when the speaker plugs the newsletter or the free resource ('it is all in my free letter', 'link below to get it'): the press lands on 'subscribe' or 'free', the count ticks as they say who else reads it" }
+  "say": "quando quem fala divulga a newsletter ou o material gratuito (“está tudo na minha carta gratuita”, “o link abaixo é para receber”): o toque cai em “inscrever” ou “gratuito”, a contagem sobe enquanto a pessoa diz quem mais lê" }

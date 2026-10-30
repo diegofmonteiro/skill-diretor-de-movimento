@@ -1,5 +1,5 @@
-{ "id": "report-card", "name": "Report card", "oneLiner": "a cream card-stock report card is laid on an open manila folder on a leather desk, its rules and crest printed in the brand colour; grades are written in blue pen ink row by row, the pen lying beside it, the final grade lands big, then a green double ring is stamped round it and the card gives under the stamp as the camera drifts",
+{ "id": "report-card", "name": "Boletim escolar", "oneLiner": "um boletim de cartolina creme é posto sobre uma pasta aberta numa mesa de couro, com as linhas e o brasão impressos na cor da marca; as notas são escritas a caneta azul linha a linha, com a caneta ao lado, a nota final cai grande, e então um anel duplo verde é carimbado em volta dela e o cartão cede sob o carimbo enquanto a câmera deriva",
   "category": "paper", "kind": "effect", "uses": ["broll"], "looks": ["paper", "editorial"], "from": "new",
   "tags": ["report card", "grades", "score", "review", "rating", "verdict", "results", "school", "test", "pass", "paper", "desk", "3d"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.0, "alpha": false,
-  "say": "when the speaker grades or scores something ('I gave each tool a grade', 'here is how it scored', 'it gets an A from me'): the grades write in as they go through them and the ring lands on the final verdict" }
+  "say": "quando quem fala dá nota ou pontuação a algo (“dei uma nota para cada ferramenta”, “veja como ela pontuou”, “ganha um A de mim”): as notas são escritas conforme a pessoa passa por elas e o anel cai no veredito final" }

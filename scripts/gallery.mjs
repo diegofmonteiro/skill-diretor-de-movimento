@@ -22,7 +22,7 @@ const opt = (k, d) => (argv.includes(k) ? argv[argv.indexOf(k) + 1] : d);
 const only = opt("--only") ? opt("--only").split(",") : null;
 const force = argv.includes("--force"), noRender = argv.includes("--no-render");
 const MOVES = path.join(SKILL, "templates", "moves"), THEMES = path.join(SKILL, "templates", "themes");
-if (run("ffmpeg", ["-version"]).code) die("ffmpeg is needed for previews (see check-setup.mjs)");
+if (run("ffmpeg", ["-version"]).code) die("o ffmpeg é necessário para as amostras (veja check-setup.mjs)");
 
 // the example brand can carry per-move example copy ("examples": {"<move id>": {vars}}) so previews read right
 const BRAND = path.join(SKILL, "templates", "demo-brand", "brand.json");
@@ -45,7 +45,7 @@ for (const id of dirs(MOVES)) {
   const tmp = path.join(fs.mkdtempSync(path.join(os.tmpdir(), "md-gallery-")), `${id}.mp4`);
   process.stdout.write(`${id} (${aspect}) ... `);
   const r = run("node", [path.join(SKILL, "scripts", "move-render.mjs"), "--move", id, "--aspect", aspect, "--quality", opt("--quality", "draft"), "--out", tmp, ...(EXAMPLES[id] ? ["--vars", JSON.stringify(EXAMPLES[id])] : [])], { timeout: 1800000 });
-  if (r.code || !fs.existsSync(tmp)) { console.log("FAILED\n" + (r.err || r.out).split("\n").slice(-6).join("\n")); continue; }
+  if (r.code || !fs.existsSync(tmp)) { console.log("FALHOU\n" + (r.err || r.out).split("\n").slice(-6).join("\n")); continue; }
   run("ffmpeg", ["-y", "-v", "error", "-i", tmp, "-vf", "scale=540:-2:flags=lanczos", "-c:v", "libx264", "-crf", "24", "-preset", "slow", "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-an", mp4]);
   run("ffmpeg", ["-y", "-v", "error", "-i", tmp, "-vf", "fps=15,scale=270:-2:flags=lanczos,split[a][b];[a]palettegen=max_colors=128:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4", gif]);
   fs.rmSync(path.dirname(tmp), { recursive: true, force: true });
@@ -65,29 +65,29 @@ const card = (o) => `
       <h3>${esc(o.name)} <span class="id">${esc(o.id)}</span></h3>
       <p>${esc(o.oneLiner)}</p>
       ${o.say ? `<p class="say">${esc(o.say)}</p>` : ""}
-      <div class="chips">${o.uses.map((x) => `<b>${esc(x)}</b>`).join("")}${o.looks.map((x) => `<i>${esc(x)}</i>`).join("")}${o.alpha ? "<b class=a>transparent</b>" : ""}${(o.formats || []).map((x) => `<i>${esc(x)}</i>`).join("")}</div>
+      <div class="chips">${o.uses.map((x) => `<b>${esc(x)}</b>`).join("")}${o.looks.map((x) => `<i>${esc(x)}</i>`).join("")}${o.alpha ? "<b class=a>transparente</b>" : ""}${(o.formats || []).map((x) => `<i>${esc(x)}</i>`).join("")}</div>
       <code>${esc(o.cmd)}</code>
     </div>
   </article>`;
 const cards = [
   ...themes.map((t) => {
     const img = t.preview && fs.existsSync(path.join(THEMES, t.id, t.preview)) ? rel(path.join(THEMES, t.id, t.preview)) : null;
-    return card({ kind: "theme", id: t.id, name: t.name, oneLiner: t.oneLiner || "", say: t.bestFor ? `Best for: ${t.bestFor}` : "", uses: ["film"], looks: [t.ground || ""].filter(Boolean), tags: [], formats: [t.format].filter(Boolean), tall: false,
-      media: img ? `<img src="${img}" loading="lazy" alt="">` : `<div class="none">preview strip not bundled</div>`, cmd: `film-init.mjs --theme ${t.id}` });
+    return card({ kind: "theme", id: t.id, name: t.name, oneLiner: t.oneLiner || "", say: t.bestFor ? `Melhor para: ${t.bestFor}` : "", uses: ["film"], looks: [t.ground || ""].filter(Boolean), tags: [], formats: [t.format].filter(Boolean), tall: false,
+      media: img ? `<img src="${img}" loading="lazy" alt="">` : `<div class="none">faixa de amostra não incluída</div>`, cmd: `film-init.mjs --theme ${t.id}` });
   }),
   ...moves.map((m) => {
     const mp4 = path.join(MOVES, m.id, "preview.mp4");
     const tall = (m.formats || ["9:16"]).includes("9:16");
-    return card({ kind: "move", id: m.id, name: m.name || m.id, oneLiner: m.oneLiner || "", say: m.say ? `Use it ${m.say}` : "", uses: m.uses || [], looks: m.looks || [], tags: m.tags || [], formats: m.formats, alpha: m.alpha, tall,
-      media: fs.existsSync(mp4) ? `<video src="${rel(mp4)}" autoplay loop muted playsinline preload="metadata"></video>` : `<div class="none">no preview yet: node scripts/gallery.mjs --only ${esc(m.id)}</div>`,
+    return card({ kind: "move", id: m.id, name: m.name || m.id, oneLiner: m.oneLiner || "", say: m.say ? `Use ${m.say}` : "", uses: m.uses || [], looks: m.looks || [], tags: m.tags || [], formats: m.formats, alpha: m.alpha, tall,
+      media: fs.existsSync(mp4) ? `<video src="${rel(mp4)}" autoplay loop muted playsinline preload="metadata"></video>` : `<div class="none">ainda sem amostra: node scripts/gallery.mjs --only ${esc(m.id)}</div>`,
       cmd: `move-render.mjs --move ${m.id}${m.alpha ? " --bg none --format mov" : ""}` });
   }),
 ];
 const uses = [...new Set(["film", ...moves.flatMap((m) => m.uses || [])])];
 const looks = [...new Set(moves.flatMap((m) => m.looks || []))].sort();
 const html = `<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Motion library</title>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Biblioteca de movimento</title>
 <style>
   :root { --bg:#0f0f12; --card:#18181d; --line:#2a2a31; --ink:#f2f1ee; --mute:#9a98a3; --acc:#ff6a3d; }
   * { box-sizing: border-box; } body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 -apple-system, system-ui, sans-serif; }
@@ -111,10 +111,10 @@ const html = `<!doctype html>
   .hide { display: none; }
   @media (max-width: 600px) { header, main { padding-left: 16px; padding-right: 16px; } }
 </style></head><body>
-<header><h1>Motion library <small>${themes.length} themes, ${moves.length} moves, shown in the example brand</small></h1>
-<div class="bar"><span>use</span><button class="on" data-f="use" data-v="">all</button>${uses.map((u) => `<button data-f="use" data-v="${esc(u)}">${esc(u)}</button>`).join("")}
-<span>look</span><button class="on" data-f="look" data-v="">all</button>${looks.map((l) => `<button data-f="look" data-v="${esc(l)}">${esc(l)}</button>`).join("")}
-<input id="q" placeholder="search: number, logo, transition, quote..."></div></header>
+<header><h1>Biblioteca de movimento <small>${themes.length} temas, ${moves.length} efeitos, mostrados na marca de exemplo</small></h1>
+<div class="bar"><span>uso</span><button class="on" data-f="use" data-v="">todos</button>${uses.map((u) => `<button data-f="use" data-v="${esc(u)}">${esc(u)}</button>`).join("")}
+<span>visual</span><button class="on" data-f="look" data-v="">todos</button>${looks.map((l) => `<button data-f="look" data-v="${esc(l)}">${esc(l)}</button>`).join("")}
+<input id="q" placeholder="buscar: número, logo, transição, citação..."></div></header>
 <main>${cards.join("")}</main>
 <script>
   const f = { use: "", look: "" }, q = document.getElementById("q");
@@ -132,44 +132,44 @@ fs.writeFileSync(path.join(SKILL, "gallery.html"), html);
 // line per move. Choosing moves reads the index plus the one or two sections a beat needs (~1-2k tokens
 // each) instead of every move.json (~60k) or gallery.html (~100k). Each move.json names its "category".
 const CATEGORIES = {
-  social: "posts, comments, DMs, follows, stories, polls, reactions, testimonials",
-  creator: "videos, channels, editing tools, captions, thumbnails, chapters, podcasts, list numbers",
-  ai: "agents, prompts, models, AI answers, memory, automations, connectors",
-  dev: "code, terminal, pull requests, deploys, APIs, logs, status pages, sites and domains",
-  productivity: "docs, email, calendar, tasks, files, meetings, search, timers",
-  business: "deals, invoices, payments, pricing, carts and orders, hiring, bookings, products",
-  data: "charts, stats, rankings, growth, comparisons by number, maps",
-  paper: "physical documents: clippings, letters, receipts, stamps, certificates, print, books",
-  system: "phone and desktop OS: notifications, dialogs, codes, windows, settings, shortcuts",
-  explain: "breaking an idea down: parts, steps, lists, frameworks, pros and cons, verdicts, pointing at things",
+  social: "publicações, comentários, mensagens diretas, seguidores, stories, enquetes, reações, depoimentos",
+  creator: "vídeos, canais, ferramentas de edição, legendas, miniaturas, capítulos, podcasts, números de lista",
+  ai: "agentes, prompts, modelos, respostas de IA, memória, automações, conectores",
+  dev: "código, terminal, pull requests, publicações no ar, APIs, registros, páginas de status, sites e domínios",
+  productivity: "documentos, e-mail, agenda, tarefas, arquivos, reuniões, busca, cronômetros",
+  business: "negócios, notas, pagamentos, preços, carrinhos e pedidos, contratações, reservas, produtos",
+  data: "gráficos, estatísticas, classificações, crescimento, comparações por número, mapas",
+  paper: "documentos físicos: recortes, cartas, recibos, carimbos, certificados, impressos, livros",
+  system: "sistema do celular e do computador: notificações, janelas de aviso, códigos, janelas, configurações, atalhos",
+  explain: "decompor uma ideia: partes, etapas, listas, métodos, prós e contras, vereditos, apontar coisas",
 };
 const clip = (s, n) => { s = String(s || "").replace(/\s+/g, " ").trim(); if (s.length <= n) return s; const c = s.slice(0, n); return c.slice(0, c.lastIndexOf(" ")) + "..."; };
 const groups = {};
 for (const m of moves.sort((a, b) => a.id.localeCompare(b.id))) {
   const c = CATEGORIES[m.category] ? m.category : "other";
-  if (c === "other") console.warn(`! ${m.id}: move.json has no known "category" (one of ${Object.keys(CATEGORIES).join(", ")})`);
+  if (c === "other") console.warn(`! ${m.id}: o move.json não tem uma "category" conhecida (uma entre ${Object.keys(CATEGORIES).join(", ")})`);
   (groups[c] ||= []).push(m);
 }
 const CATDIR = path.join(MOVES, "catalog");
 fs.mkdirSync(CATDIR, { recursive: true });
 for (const [c, ms] of Object.entries(groups)) fs.writeFileSync(path.join(CATDIR, `${c}.md`), [
-  `# ${c} moves (generated by scripts/gallery.mjs, do not edit)`,
+  `# Efeitos: ${c} (gerado por scripts/gallery.mjs, não edite)`,
   "",
-  "Each line: id | uses | t = can render transparent | when to use it.",
+  "Cada linha: id | usos | t = pode renderizar transparente | quando usar.",
   "",
   ...ms.map((m) => `- ${m.id} | ${(m.uses || []).join(",")}${m.alpha ? " | t" : ""} | ${clip(m.say || m.oneLiner, 100)}`),
   "",
 ].join("\n"));
 const cat = [
-  "# Moves catalogue (generated by scripts/gallery.mjs, do not edit)",
+  "# Catálogo de efeitos (gerado por scripts/gallery.mjs, não edite)",
   "",
-  "Pick a category for what the speaker is saying, then read only that file in catalog/ (two at most",
-  "per beat). Open a move's own files only for the 1-2 moves being rendered. Never read gallery.html",
-  "or every move.json.",
+  "Escolha uma categoria para o que a pessoa está dizendo e leia só esse arquivo em catalog/ (dois no",
+  "máximo por batida). Abra os arquivos de um efeito só para o 1 ou 2 efeitos que vão ser renderizados.",
+  "Nunca leia o gallery.html nem todos os move.json.",
   "",
-  ...Object.keys(CATEGORIES).concat("other").filter((c) => groups[c]).map((c) => `- catalog/${c}.md | ${groups[c].length} moves | ${CATEGORIES[c] || "moves with no category yet"}`),
+  ...Object.keys(CATEGORIES).concat("other").filter((c) => groups[c]).map((c) => `- catalog/${c}.md | ${groups[c].length} efeitos | ${CATEGORIES[c] || "efeitos ainda sem categoria"}`),
   "",
-  "## Themes (whole films)",
+  "## Temas (filmes inteiros)",
   "",
   ...themes.map((t) => `- ${t.id} | ${clip(t.bestFor || t.oneLiner, 100)}`),
   "",
@@ -185,5 +185,5 @@ if (frames.length) {
   run("ffmpeg", ["-y", "-v", "error", "-framerate", "1", "-i", path.join(td, "f%03d.png"), "-vf", `tile=${cols}x${rows}:padding=8:margin=8:color=0x0f0f12`, "-frames:v", "1", "-q:v", "3", path.join(SKILL, "gallery.jpg")]);
   fs.rmSync(td, { recursive: true, force: true });
 }
-console.log(`\n${path.join(SKILL, "gallery.html")}  (${themes.length} themes, ${moves.length} moves)${frames.length ? `\n${path.join(SKILL, "gallery.jpg")}  contact sheet` : ""}`);
-if (argv.includes("--open")) run("open", [path.join(SKILL, "gallery.html")]);
+console.log(`\n${path.join(SKILL, "gallery.html")}  (${themes.length} temas, ${moves.length} efeitos)${frames.length ? `\n${path.join(SKILL, "gallery.jpg")}  folha de contato` : ""}`);
+if (argv.includes("--open")) run(process.platform === "darwin" ? "open" : process.platform === "win32" ? "explorer" : "xdg-open", [path.join(SKILL, "gallery.html")]);

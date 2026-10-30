@@ -1,0 +1,18 @@
+{
+ "sources": [
+  {
+   "file": [
+    "flowchart-vertical.html"
+   ],
+   "from": "HyperFrames registry, blocks/flowchart-vertical, commit main",
+   "page": "https://github.com/heygen-com/hyperframes/tree/main/registry/blocks/flowchart-vertical",
+   "license": "Apache-2.0 (licença do repositório, não do bloco)",
+   "licenseSource": "repositorio",
+   "atencao": [
+    "o item não declara licença: vale só a licença do repositório (Apache-2.0), que pode não cobrir material de terceiros dentro dele"
+   ],
+   "added": "2026-10-29",
+   "efeito": "flowchart-vertical"
+  }
+ ]
+}

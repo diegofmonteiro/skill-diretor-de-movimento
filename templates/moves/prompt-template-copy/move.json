@@ -1,5 +1,5 @@
-{ "id": "prompt-template-copy", "name": "Prompt template copy", "oneLiner": "a glass prompt template card: each blank field types in its value and turns solid, the counter ticks to all filled, a cursor presses Copy and the button flips to a green Copied with a pulse",
+{ "id": "prompt-template-copy", "name": "Cópia de modelo de prompt", "oneLiner": "um cartão de modelo de prompt em vidro: cada campo em branco digita o seu valor e fica sólido, o contador sobe até tudo preenchido, um cursor aperta Copiar e o botão vira um Copiado verde com um pulso",
   "category": "ai", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["prompt", "template", "copy", "clipboard", "ai", "chatgpt", "claude", "fill in", "fields", "free resource", "prompt pack", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.8, "alpha": true,
-  "say": "when the speaker gives a prompt or template to steal ('here is the exact prompt', 'just swap in your topic and copy it'): the blanks fill as they name them, Copied lands on 'copy it' or 'steal this'" }
+  "say": "quando quem fala entrega um prompt ou modelo para levar (“aqui está o prompt exato”, “é só trocar pelo seu assunto e copiar”): os campos se preenchem quando a pessoa os nomeia, o Copiado cai em “copie” ou “roube isto”" }

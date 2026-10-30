@@ -1,1 +1,3 @@
-{"sources":[{"file":"assets (crowd silhouette)","from":"Wikimedia Commons, Leiria sunset crowd silhouette","license":"CC0"}]}
+{ "sources": [
+  {"file": "assets/crowd.png", "from": "Wikimedia Commons, Leiria sunset crowd silhouette (Per the credits of the base project)", "license": "CC0"}
+] }

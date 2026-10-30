@@ -1,8 +1,8 @@
 # Diretor de Movimento
 
-Skill que cria vídeos de motion graphics com a marca da empresa: filmes de 10 a 30 segundos e 266 efeitos prontos para encaixar em qualquer edição, com trilha original, tudo renderizado na própria máquina.
+Skill que cria vídeos de motion graphics com a marca da empresa: filmes de 10 a 30 segundos e 269 efeitos prontos para encaixar em qualquer edição, com trilha original, tudo renderizado na própria máquina.
 
-Repositório `skill-diretor-de-movimento` · skill `diretor-de-movimento` · versão 0.2.1 · uso interno da Conex Prime
+Repositório `skill-diretor-de-movimento` · skill `diretor-de-movimento` · versão 0.3.0 · uso interno da Conex Prime
 
 ## Do que se trata
 
@@ -19,9 +19,9 @@ Instruções para o agente: [SKILL.md](SKILL.md). Manual para pessoas: [docs/man
 
 ## O que vem dentro
 
-- **266 efeitos** em 10 categorias: dados (35), negócios (30), papel (29), redes sociais (28), criador de conteúdo (27), produtividade (27), explicação (26), IA (23), sistema (22) e programação (19). O catálogo está em `templates/moves/CATALOG.md` e as prévias em `gallery.html`.
+- **269 efeitos** em 10 categorias: dados (37), negócios (30), papel (29), redes sociais (28), criador de conteúdo (27), produtividade (27), explicação (27), IA (23), sistema (22) e programação (19). O catálogo está em `templates/moves/CATALOG.md` e as prévias em `gallery.html`.
 - **9 temas** de filme inteiro: vidro, pasta de vidro, estúdio, interface de produto, construção de logo, monocromático, impresso retrô, marionete e colagem.
-- **Cena de dispositivo em 3D** (MacBook e iPhone com a tela real da marca). Fica desligada para trabalho de cliente até a licença dos modelos ser conferida (ver `LICENCAS-DE-TERCEIROS.md`).
+- **Cena de dispositivo em 3D** (MacBook e iPhone com a tela real da marca). Uso liberado por ordem do dono; os mantenedores dos modelos não foram consultados (ver `LICENCAS-DE-TERCEIROS.md`).
 - **Captura de marca**, **busca de imagens livres de direitos**, **crítica automática**, **trilha sintetizada** e **verificação de regras** antes do render.
 - **Módulo do aplicativo**: o caderno `modulo-laravel/` descreve como transformar a skill em módulo do aplicativo da Conex Prime.
 
@@ -37,7 +37,7 @@ skill-diretor-de-movimento/
 ├── references/              guias lidos só quando o SKILL.md manda
 ├── scripts/                 programas em Node, sem dependências
 ├── templates/
-│   ├── moves/               os 266 efeitos (+ CATALOG.md e catalog/)
+│   ├── moves/               os 269 efeitos (+ CATALOG.md e catalog/)
 │   ├── themes/              os 9 temas, cada um com a sua receita
 │   ├── hyperframes/         motor do filme (md.js, GSAP embutido)
 │   ├── demo-brand/          marca fictícia de exemplo
@@ -97,6 +97,18 @@ Ele faz até cinco perguntas curtas, mostra a grade de batidas (cada cena, seu t
 ```
 
 Para ajustar à mão, abra `film/` com `npx hyperframes preview`.
+
+## Fontes externas e modos de rede
+
+A skill busca material fora dela (bancos de imagem livres, bibliotecas 3D, o site do cliente). Você escolhe como:
+
+```bash
+node scripts/fontes.mjs                  # mostra o modo, as fontes e o cache
+node scripts/fontes.mjs modo travado     # automatico (padrão) | travado | proprio
+node scripts/add-asset.mjs foto.jpg --nome sala --licenca PROPRIO --origem "foto da Conex Prime"
+```
+
+`automatico` busca na internet; `travado` guarda cópias com impressão digital para o filme refazer igual; `proprio` não usa a internet. Detalhes na seção 26 do `docs/manual.md`.
 
 ## Como atualizar
 

@@ -1,5 +1,5 @@
-{ "id": "spotlight-search", "name": "Launcher search", "oneLiner": "a glass launcher bar drops in, the brand's name types into it letter by letter, the results grow down with the brand's app as the top hit under an accent selection bar, Return is pressed and the icon pops with a ring of light",
+{ "id": "spotlight-search", "name": "Busca de lançador", "oneLiner": "uma barra de lançador em vidro cai, o nome da marca é digitado nela letra a letra, os resultados crescem para baixo com o app da marca como o primeiro resultado sob uma barra de seleção na cor de destaque, o Enter é apertado e o ícone salta com um anel de luz",
   "category": "productivity", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["search", "launcher", "spotlight", "command bar", "type", "find", "app", "open", "desktop", "keyboard", "product", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 3.8, "alpha": true,
-  "say": "when the speaker says 'just search for it' or names the tool to open: the name types as they say it, Return lands on 'and open it'" }
+  "say": "quando quem fala diz “é só buscar por ele” ou nomeia a ferramenta a abrir: o nome é digitado conforme a pessoa o diz, o Enter cai em “e abra”" }

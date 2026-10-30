@@ -1,6 +1,7 @@
-{"sources":[
- {"file":"assets (camera)","from":"Wikimedia Commons, Adapted Lens on Mirrorless Camera (side view)","license":"CC0"},
- {"file":"assets (headphones)","from":"Wikimedia Commons, Headphone-dynamic-clay.png","license":"CC0"},
- {"file":"assets (microphone)","from":"Wikimedia Commons, LATE NIGHT (Unsplash upload)","license":"CC0"},
- {"file":"assets (keyboard)","from":"Wikimedia Commons, Black Computer keyboard","license":"CC0"},
- {"file":"assets/paper","from":"ambientCG via evidence-doc-stack","license":"CC0"}]}
+{ "sources": [
+  {"file": "assets/gear-camera.png", "from": "Wikimedia Commons, Adapted Lens on Mirrorless Camera (side view), subject cut out (Per the credits of the base project)", "license": "CC0"},
+  {"file": "assets/gear-headphones.png", "from": "Wikimedia Commons, Headphone-dynamic-clay.png. Same file as price-drop-alert/assets/gear-headphones.png (identical SHA-256, checked)", "license": "CC0"},
+  {"file": "assets/gear-mic.png", "from": "Wikimedia Commons, LATE NIGHT (Unsplash upload), subject cut out (Per the credits of the base project)", "license": "CC0"},
+  {"file": "assets/gear-keyboard.png", "from": "Wikimedia Commons, Black Computer keyboard, subject cut out (Per the credits of the base project)", "license": "CC0"},
+  {"file": "assets/paper-white.jpg", "from": "ambientCG Paper001 (scanned white paper). Same file as sticker-cutout/assets/paper-white.jpg (identical SHA-256, checked)", "license": "CC0", "page": "https://ambientcg.com/view?id=Paper001"}
+] }

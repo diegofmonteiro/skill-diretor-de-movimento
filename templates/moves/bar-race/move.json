@@ -1,5 +1,5 @@
-{ "id": "bar-race", "name": "Glass bar race", "oneLiner": "3 to 5 glass bars grow from a lit baseline on long-tail eases, values ride the tips, the winner glows in the accent and gets stamped",
+{ "id": "bar-race", "name": "Corrida de barras em vidro", "oneLiner": "de 3 a 5 barras de vidro crescem de uma linha de base iluminada com desacelerações longas, os valores acompanham as pontas, e o vencedor brilha na cor de destaque e recebe um carimbo",
   "category": "data", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "glass",
   "tags": ["chart", "bars", "comparison", "data", "winner", "ranking", "numbers", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.2, "alpha": true,
-  "say": "when the speaker compares a few options by one number: cut in on the comparison, the stamp lands on the word that names the winner" }
+  "say": "quando quem fala compara algumas opções por um número: entre na comparação, o carimbo cai na palavra que nomeia o vencedor" }

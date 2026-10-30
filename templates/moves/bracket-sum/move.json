@@ -1,5 +1,5 @@
-{ "id": "bracket-sum", "name": "Bracket sum", "oneLiner": "2 to 4 glass tiles (glyph, label, a value that counts up) build in a row; a bracket draws under them into a big glass total pill, a glowing dot runs from each tile down the bracket and the total ticks up as each one arrives, then fills with the accent and punches",
+{ "id": "bracket-sum", "name": "Soma com chave", "oneLiner": "de 2 a 4 blocos de vidro (ícone, rótulo, um valor que conta) se montam em fila; uma chave se desenha embaixo deles até uma grande cápsula de vidro com o total, um ponto brilhante corre de cada bloco pela chave e o total sobe a cada chegada, e então se enche com a cor de destaque e dá um soco",
   "category": "data", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["sum", "total", "add up", "revenue streams", "income", "combined", "math", "stack", "bracket", "money", "results", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.4, "alpha": true,
-  "say": "when the speaker adds a few numbers into one (\"ads, sponsors and products: together that's $10,200 a month\"): cut in on the first source; the total lands on the number they say. Set values, prefix and suffix to the real figures" }
+  "say": "quando quem fala soma alguns números num só (“anúncios, patrocínios e produtos: juntos dão 10.200 por mês”): entre na primeira fonte; o total cai no número que a pessoa diz. Ajuste values, prefix e suffix para os valores reais" }

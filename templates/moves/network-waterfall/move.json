@@ -1,5 +1,5 @@
-{ "id": "network-waterfall", "name": "Network waterfall", "oneLiner": "a dark glass network panel draws a slow request waterfall in real time with the long bars ringed red and a big load time counting up, then a fix slides every bar into a tight parallel stack, the load line jumps left and the number rolls down, goes green and a faster chip stamps in",
+{ "id": "network-waterfall", "name": "Cascata de rede", "oneLiner": "um painel de rede de vidro escuro desenha em tempo real uma lenta cascata de requisições com as barras longas circuladas de vermelho e um grande tempo de carregamento subindo, e então uma correção desliza todas as barras para uma pilha paralela apertada, a linha de carregamento salta para a esquerda e o número desce, fica verde e uma cápsula de “mais rápido” carimba",
   "category": "dev", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass", "mono"], "from": "new",
   "tags": ["performance", "speed", "load time", "network", "waterfall", "optimise", "website", "developer", "fast", "data", "dark", "3d"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.2, "alpha": true,
-  "say": "when the speaker says they made something load faster ('it took almost five seconds, now it is under one'): the slow bars draw on the problem, the stack snaps tight and the number goes green on the result" }
+  "say": "quando quem fala diz que fez algo carregar mais rápido (“levava quase cinco segundos, agora leva menos de um”): as barras lentas se desenham no problema, a pilha se aperta e o número fica verde no resultado" }

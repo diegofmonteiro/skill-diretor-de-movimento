@@ -1,5 +1,5 @@
-{ "id": "community-poll", "name": "Community poll result", "oneLiner": "a glass community poll post turns in, the votes pour in and the bars race with the runner-up leading early, then the winner overtakes, flips green with a check, lifts with its percent while the rest dim and the footer turns to Final results",
+{ "id": "community-poll", "name": "Resultado de enquete da comunidade", "oneLiner": "um post de enquete da comunidade em vidro gira, os votos chegam e as barras disputam com a segunda colocada na frente no começo, então a vencedora ultrapassa, fica verde com uma marca, sobe com a sua porcentagem enquanto as outras escurecem e o rodapé vira “Resultado final”",
   "category": "social", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["poll", "vote", "community", "audience", "survey", "results", "winner", "percent", "feedback", "creator", "social", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.2, "alpha": true,
-  "say": "when the speaker says they asked their audience ('I ran a poll', 'you voted and the answer was...'): the bars race under the question and the winner flips green on the answer" }
+  "say": "quando quem fala diz que perguntou à audiência (“fiz uma enquete”, “vocês votaram e a resposta foi...”): as barras disputam sob a pergunta e a vencedora fica verde na resposta" }

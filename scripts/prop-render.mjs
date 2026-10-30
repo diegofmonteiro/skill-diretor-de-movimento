@@ -14,6 +14,7 @@ import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { die, run, withPage } from "./lib.mjs";
+import { bibliotecas3d, modo } from "./net.mjs";
 
 const argv = process.argv.slice(2);
 const opt = (k, d) => (argv.includes(k) ? argv[argv.indexOf(k) + 1] : d);
@@ -28,15 +29,23 @@ const http = await import("node:http");
 const parts = [mdir, hdri ? path.dirname(path.resolve(hdri)) : mdir, screen ? path.dirname(path.resolve(screen)) : mdir].map((p) => p.split(path.sep));
 let k = 0; while (parts.every((p) => p[k] === parts[0][k]) && k < parts[0].length) k++;
 const ROOT = parts[0].slice(0, k).join(path.sep) || "/";
-const MIME = { ".gltf": "model/gltf+json", ".bin": "application/octet-stream", ".jpg": "image/jpeg", ".png": "image/png", ".hdr": "application/octet-stream", ".html": "text/html" };
+const MIME = { ".js": "text/javascript", ".wasm": "application/wasm", ".gltf": "model/gltf+json", ".bin": "application/octet-stream", ".jpg": "image/jpeg", ".png": "image/png", ".hdr": "application/octet-stream", ".html": "text/html" };
 const server = http.createServer((q, w) => { const f = path.join(ROOT, decodeURIComponent(q.url.split("?")[0])); if (!f.startsWith(ROOT) || !fs.existsSync(f)) { w.writeHead(404); return w.end(); } w.writeHead(200, { "Content-Type": MIME[path.extname(f)] || "application/octet-stream" }); fs.createReadStream(f).pipe(w); });
 await new Promise((r) => server.listen(0, "127.0.0.1", r));
 const BASE = `http://127.0.0.1:${server.address().port}`;
 const url = (f) => BASE + "/" + path.relative(ROOT, path.resolve(f)).split(path.sep).map(encodeURIComponent).join("/");
+// three.js: the public CDN in "automatico"; in "travado" / "proprio" the same files from the fingerprinted cache
+const vendorDir = path.join(mdir, `.vendor-${process.pid}`);
+let LIBS;
+try {
+  LIBS = await bibliotecas3d({ quais: ["three", "gltf", "rgbe"], dest: vendorDir, base: ROOT });
+  if (modo() !== "automatico") for (const k of Object.keys(LIBS)) LIBS[k] = BASE + "/" + LIBS[k].split("/").map(encodeURIComponent).join("/");
+} catch (e) { server.close(); die(e.message); }
 const html = `<!doctype html><html><body style="margin:0;background:transparent">
-<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/loaders/GLTFLoader.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/examples/js/loaders/RGBELoader.js"></script>
+<script src="${LIBS.three}"></script>
+<script src="${LIBS.gltf}"></script>
+<script src="${LIBS.rgbe}"></script>
+<script>if (typeof THREE === "undefined" || !THREE.GLTFLoader) { document.title = "ERR the 3D library did not load from its address. Check the connection, or use MD_FONTES=travado to keep a copy."; window.__ready = true; }</script>
 <script>
 const C = ${JSON.stringify(cfg)}, S = ${size}; const SCREEN = ${JSON.stringify(screen ? "SCREENURL" : "")}; const m0 = (o, f) => o.traverse(f);
 const r = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true });
@@ -71,7 +80,7 @@ const err = await withPage(url(page), { width: size, height: size, gl: true }, a
   await screenshot(raw, true);
   return title.startsWith("ERR") ? title : "";
 });
-fs.rmSync(page, { force: true }); server.close();
+fs.rmSync(page, { force: true }); fs.rmSync(vendorDir, { recursive: true, force: true }); server.close();
 if (err) die(err);
 if (!fs.existsSync(raw)) die("render failed");
 // trim to the prop's own alpha, keep a small margin

@@ -24,7 +24,7 @@ Exceção: as tabelas da camada 1 (`motion_catalog_items`, `motion_themes`, `mot
 | preview_path | string | não | prévia em vídeo ou imagem para a vitrine |
 | est_seconds | unsignedSmallInteger | não | tempo de máquina típico, medido (RN-17) |
 | enabled | boolean | sim | aparece na vitrine |
-| license_cleared | boolean | sim | licença dos materiais conferida (RN-19) |
+| license_cleared | boolean | sim | liberação dos materiais registrada (RN-19) |
 | skill_version | string | sim | versão da skill de onde veio |
 
 ### motion_themes — temas
@@ -50,6 +50,8 @@ Exceção: as tabelas da camada 1 (`motion_catalog_items`, `motion_themes`, `mot
 | draft_threshold_seconds | unsignedSmallInteger | sim | acima disso, rascunho antes do final (RN-20) |
 | allowed_formats | json | sim | formatos de saída |
 | features | json | sim | recursos permitidos (por exemplo `film`, `alpha`) |
+| allowed_networks | json | sim | redes sociais em que o plano permite publicar (RN-26), por exemplo `youtube`, `instagram`, `tiktok` |
+| publications_month | unsignedSmallInteger | sim | publicações por mês (RN-26) |
 
 ### motion_flags — recursos ligados por equipe
 
@@ -58,7 +60,7 @@ Exceção: as tabelas da camada 1 (`motion_catalog_items`, `motion_themes`, `mot
 | team_id | foreignId | sim | equipe |
 | key | string | sim | `device_scene`, `theme:<slug>`, `item:<slug>` etc. |
 | enabled | boolean | sim | ligado |
-| cleared_by | foreignId | não | quem confirmou a licença (RN-19) |
+| cleared_by | foreignId | não | quem liberou o recurso (RN-19) |
 | note | string | não | referência da licença conferida |
 
 Cada equipe tem um plano (`team_motion_settings`: `team_id`, `plan_id`, `approval_policy` com `cliente`, `conex_prime` ou `ambos`, `sector`).
@@ -175,7 +177,39 @@ Cada equipe tem um plano (`team_motion_settings`: `team_id`, `plan_id`, `approva
 | duration_seconds | decimal(6,2) | sim | duração |
 | has_audio | boolean | sim | RN-11 |
 | pending_axes | json | não | eixos abaixo de 8 se entregue na rodada 3 |
-| log_path | string | sim | o `LOG.md` da skill |
+| log_path | string | sim | o `LOG.md` da skill (só a camada 1 acessa, RN-25) |
+| preview_path | string | sim | versão de visualização em baixa resolução, com marca d'água, para o reprodutor da plataforma (RN-25) |
+| approved_by / approved_at | foreignId / timestamp | não | aprovação para publicar (RN-27) |
+
+O arquivo final (`file_path`) nunca é entregue às camadas 2 e 3: só sai do servidor pela publicação (RN-27) ou por download da camada 1.
+### motion_social_accounts — redes sociais conectadas
+
+| Campo | Tipo | Obrig. | Descrição |
+|---|---|---|---|
+| team_id | foreignId | sim | equipe dona da conta |
+| network | string | sim | `youtube`, `instagram`, `facebook`, `tiktok`, `linkedin` |
+| account_name | string | sim | nome da conta, para mostrar |
+| external_id | string | sim | identificador da conta na rede |
+| access_token / refresh_token | text (criptografado) | sim | chaves da autorização (RN-26); nunca saem em resposta nem em log |
+| scopes | json | sim | permissões concedidas |
+| expires_at | timestamp | não | validade da chave |
+| status | enum | sim | `connected`, `expired`, `revoked` |
+| connected_by | foreignId | sim | quem conectou |
+
+### motion_publications — publicações
+
+| Campo | Tipo | Obrig. | Descrição |
+|---|---|---|---|
+| delivery_id | foreignId | sim | entrega publicada (aprovada, RN-27) |
+| social_account_id | foreignId | sim | conta de destino |
+| request_key | string | sim | chave única que impede duplicar (RN-27) |
+| caption | text | não | legenda escrita pelo cliente (dado, RN-13) |
+| scheduled_at | timestamp | não | vazio = publicar agora |
+| status | enum | sim | `PublicationStatus` |
+| external_post_id / external_url | string | não | onde ficou na rede |
+| attempts | unsignedTinyInteger | sim | tentativas feitas |
+| error | text | não | motivo da falha |
+| requested_by | foreignId | sim | quem pediu |
 
 ### motion_deletion_requests — pedidos de exclusão
 
@@ -194,7 +228,7 @@ Cada equipe tem um plano (`team_motion_settings`: `team_id`, `plan_id`, `approva
 |---|---|---|---|
 | team_id | foreignId | não | equipe (vazio em ações da camada 1) |
 | actor_id | foreignId | não | quem |
-| action | string | sim | por exemplo `clip.requested`, `delivery.downloaded`, `deletion.requested` |
+| action | string | sim | por exemplo `clip.requested`, `delivery.publish_requested`, `delivery.download_blocked`, `deletion.requested` |
 | target_type / target_id | morphs | não | alvo |
 | result | string | sim | `ok`, `blocked`, `failed` |
 | context | json | não | detalhes (sem dado pessoal desnecessário) |
@@ -204,11 +238,12 @@ Sem `updated_at` nem `deleted_at`: o registro só recebe inclusão (RN-04).
 
 ## Enums
 
-`BrandStatus`, `AssetKind`, `Aspect`, `Background`, `OutputFormat`, `ClipStatus`, `ProjectStatus`, `CatalogCategory`, `RenderKind`, `RenderStatus`, `ApprovalPolicy`, `DeletionStatus`: um enum de PHP para cada lista acima, com rótulo em português.
+`BrandStatus`, `AssetKind`, `Aspect`, `Background`, `OutputFormat`, `ClipStatus`, `ProjectStatus`, `CatalogCategory`, `RenderKind`, `RenderStatus`, `ApprovalPolicy`, `DeletionStatus`, `PublicationStatus`, `SocialNetwork`: um enum de PHP para cada lista acima, com rótulo em português.
 
 ## Relações
 
 - `Brand` tem muitos `BrandAsset`, `Clip` e `Project`.
 - `Project` tem uma `BeatGrid` atual (e histórico por versão), muitas `Critique` (até 3), muitas `RenderJob` e uma `Delivery`.
 - `Clip` tem muitas `RenderJob` e uma `Delivery`, e pertence a um `CatalogItem`.
+- `Team` tem muitas `SocialAccount`; `Delivery` tem muitas `Publication`, cada uma numa `SocialAccount`.
 - `Team` tem um plano, muitos `Flag` e todo o resto acima.

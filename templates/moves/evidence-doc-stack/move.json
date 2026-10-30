@@ -1,5 +1,5 @@
-{ "id": "evidence-doc-stack", "name": "Evidence doc stack", "oneLiner": "printed pages on real scanned paper are dealt one per beat onto a pile beside the speaker, each landing a little askew while the ones under it fall into shadow and a glass counter ticks the page count, then a yellow highlighter swipes the key line on the top page",
+{ "id": "evidence-doc-stack", "name": "Pilha de documentos como prova", "oneLiner": "páginas impressas em papel escaneado de verdade são distribuídas, uma por batida, numa pilha ao lado de quem fala, cada uma pousando um pouco torta enquanto as de baixo caem na sombra e um contador de vidro marca o número de páginas, e então um marcador amarelo passa pela linha-chave da página de cima",
   "category": "paper", "kind": "effect", "uses": ["overlay"], "looks": ["paper", "glass"], "from": "new",
   "tags": ["document", "pdf", "report", "pages", "evidence", "proof", "receipts", "paper", "printout", "highlight", "research", "audit", "overlay", "talking head"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.0, "alpha": true,
-  "say": "when the speaker shows the paper trail ('it produced a 7-page report with timestamps', 'I read every filing'): one page lands per section they name, the highlighter lands on the finding they quote; set highlight to that line" }
+  "say": "quando quem fala mostra o rastro de papel (“gerou um relatório de 7 páginas com marcações de tempo”, “li todos os processos”): uma página cai por seção que a pessoa nomeia, o marcador cai na descoberta que ela cita; defina highlight com essa linha" }

@@ -46,8 +46,8 @@ await send("Emulation.setDeviceMetricsOverride", { width: W, height: H, deviceSc
 await send("Page.enable");
 await send("Page.navigate", { url: "file://" + html });
 let dur = 0;
-for (let i = 0; i < 100; i++) { await new Promise((r) => setTimeout(r, 200)); dur = await evaluate(`(window.__timelines && window.__timelines.main && document.fonts.status === "loaded") ? window.__timelines.main.duration() : 0`).catch(() => 0); if (dur) break; }
-if (!dur) die("the page never registered window.__timelines.main");
+for (let i = 0; i < 100; i++) { await new Promise((r) => setTimeout(r, 200)); dur = await evaluate(`(window.__tlMain = window.__tlMain || (window.__timelines && (window.__timelines.main || Object.values(window.__timelines)[0]))) && document.fonts.status === "loaded" ? window.__tlMain.duration() : 0`).catch(() => 0); if (dur) break; }
+if (!dur) die("the page never registered a timeline in window.__timelines");
 await new Promise((r) => setTimeout(r, 400));
 
 // the probe runs inside the page at every step
@@ -112,7 +112,7 @@ const PROBE = `(() => {
 const found = new Map();
 for (let t = 0; t <= dur - 0.001; t += STEP) {
   const tt = +t.toFixed(3);
-  await evaluate(`window.__timelines.main.seek(${tt}, false); document.querySelectorAll("[data-start][data-duration]").forEach(e => { if (e.id === "root") return; const a = +e.dataset.start, d = +e.dataset.duration; e.style.visibility = (${tt} >= a && ${tt} < a + d) ? "" : "hidden"; }); 0`);
+  await evaluate(`(window.__tlMain || window.__timelines.main).seek(${tt}, false); document.querySelectorAll("[data-start][data-duration]").forEach(e => { if (e.id === "root") return; const a = +e.dataset.start, d = +e.dataset.duration; e.style.visibility = (${tt} >= a && ${tt} < a + d) ? "" : "hidden"; }); 0`);
   for (const p of await evaluate(PROBE)) { if (!found.has(p)) found.set(p, []); found.get(p).push(tt); }
 }
 ws.close(); kill();

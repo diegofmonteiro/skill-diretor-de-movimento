@@ -17,6 +17,7 @@ import path from "node:path";
 import {
   HOME, die, dims, hf, lastJSON, logEvent, project, readJSON, run, sheet, slugify, writeJSON,
 } from "./lib.mjs";
+import { baixarPara, baixarTexto, modo } from "./net.mjs";
 
 const argv = process.argv.slice(2);
 const opt = (k, d) => (argv.includes(k) ? argv[argv.indexOf(k) + 1] : d);
@@ -123,6 +124,7 @@ async function intake(url) {
     console.log(`reused existing brand: ${lib}/brand.md (pass --refresh to capture again)`);
     return;
   }
+  if (modo() === "proprio") die(`mode "proprio" (own material only): ${domain} is not in the brand library and the site cannot be captured. Put its logo, colours and screenshots in ${lib} yourself, or switch the mode (MD_FONTES=automatico).`);
   const t0 = Date.now();
   fs.mkdirSync(lib, { recursive: true });
   const cap = path.join(lib, "capture");
@@ -185,10 +187,8 @@ async function intake(url) {
   for (const id of [...new Set([...html.matchAll(/i\.ytimg\.com\/vi\/([A-Za-z0-9_-]{11})\//g)].map((m) => m[1]))].slice(0, 8)) {
     for (const q of ["maxresdefault", "hqdefault"]) {
       try {
-        const res = await fetch(`https://i.ytimg.com/vi/${id}/${q}.jpg`);
-        if (!res.ok) continue;
         const dst = path.join(cand, `yt-${id}.jpg`);
-        fs.writeFileSync(dst, Buffer.from(await res.arrayBuffer()));
+        await baixarPara(`https://i.ytimg.com/vi/${id}/${q}.jpg`, dst, { fonte: "marca", cache: false, tentativas: 1 });
         const d = dims(dst);
         items.push({ src: dst, label: `yt-${id}.jpg ${d ? `${d.w}x${d.h}` : ""} (video thumbnail)` });
         break;
@@ -215,9 +215,7 @@ async function intake(url) {
   const guesses = [...new Set([domain.split("-")[0], (tokens.title || "").split(/[|:\u2013\u2014-]/).pop().trim().toLowerCase().replace(/[^a-z0-9]/g, "")])].filter(Boolean);
   for (const g of guesses) {
     try {
-      const res = await fetch(`https://cdn.jsdelivr.net/npm/simple-icons@13/icons/${g}.svg`);
-      if (!res.ok) continue;
-      const svg = (await res.text()).replace("<svg ", '<svg fill="#000000" width="512" height="512" ');
+      const svg = (await baixarTexto(`https://cdn.jsdelivr.net/npm/simple-icons@13/icons/${g}.svg`, { fonte: "marca", tentativas: 1 })).replace("<svg ", '<svg fill="#000000" width="512" height="512" ');
       const f = path.join(lc, `simpleicons-${g}.svg`);
       fs.writeFileSync(f, svg);
       logoItems.unshift({ src: f, label: `simpleicons-${g}.svg (vector)` });
@@ -304,7 +302,7 @@ async function youtube(cap, dest) {
   if (!ch) return [];
   const got = [];
   try {
-    const html = await (await fetch(ch, { headers: { "accept-language": "en" } })).text();
+    const html = await baixarTexto(ch, { fonte: "marca", cache: false, headers: { "accept-language": "en" } });
     // group the yt3 URLs by image id: the avatar is requested at small sizes, the
     // banner or a post image at large ones (look before using it)
     const ids = {};
@@ -319,10 +317,8 @@ async function youtube(cap, dest) {
     for (const [name, u] of [["youtube-avatar", avatar], ["youtube-large-image", banner]]) {
       if (!u) continue;
       const full = `${u}=s0`;
-      const res = await fetch(full);
-      if (!res.ok) continue;
       const f = path.join(dest, `${name}.jpg`);
-      fs.writeFileSync(f, Buffer.from(await res.arrayBuffer()));
+      await baixarPara(full, f, { fonte: "marca", cache: false, tentativas: 1 });
       const d = dims(f);
       got.push({ src: f, label: `${name}.jpg ${d ? `${d.w}x${d.h}` : ""} (${ch.replace(/^https?:\/\/(www\.)?/, "")})` });
     }

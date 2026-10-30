@@ -1,5 +1,5 @@
-{ "id": "radar-chart", "name": "Radar chart", "oneLiner": "a frosted glass disc opens with a five-spoke web etched into it and the skills around its edge, a grey shape grows to its values, then the brand shape ripples outward spoke by spoke past it in the accent, springs into place with its corner dots popping and a pulse going out, while the plate tilts slowly",
+{ "id": "radar-chart", "name": "Gráfico de radar", "oneLiner": "um disco de vidro fosco se abre com uma teia de cinco raios gravada nele e as habilidades na borda, uma forma cinza cresce até os seus valores, e então a forma da marca se expande raio a raio passando por ela na cor de destaque, encaixa com mola com os pontos dos vértices saltando e um pulso saindo, enquanto a placa inclina devagar",
   "category": "data", "kind": "effect", "uses": ["broll", "overlay"], "looks": ["glass"], "from": "new",
   "tags": ["radar chart", "spider chart", "skills", "strengths", "all-rounder", "comparison", "scorecard", "profile", "data", "numbers", "premium", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.4, "alpha": true,
-  "say": "when the speaker says one option beats another on every count ('faster, cheaper, better on all five', 'it wins on every skill that matters'): cut in on the list, the brand shape pushes past on the word that names the win" }
+  "say": "quando quem fala diz que uma opção vence a outra em todos os quesitos (“mais rápido, mais barato, melhor nos cinco”, “vence em toda habilidade que importa”): entre na lista, a forma da marca avança na palavra que nomeia a vitória" }

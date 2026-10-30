@@ -1,5 +1,5 @@
-{ "id": "sql-query", "name": "Glass SQL query run", "oneLiner": "a query editor on glass: a SQL query types itself line by line behind a caret, Run is clicked, a results panel opens below and rows stream into the table while the row count ticks up, then the count chip lands green with the time it took",
+{ "id": "sql-query", "name": "Consulta SQL em vidro", "oneLiner": "um editor de consultas em vidro: uma consulta SQL é digitada sozinha linha a linha atrás de um cursor, Executar é clicado, um painel de resultados se abre embaixo e linhas entram na tabela enquanto a contagem de linhas sobe, e então a cápsula da contagem cai verde com o tempo que levou",
   "category": "dev", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["sql", "query", "database", "data", "table", "results", "analytics", "developer", "rows", "ai coding", "agent", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.8, "alpha": true,
-  "say": "when the speaker says they asked the data a question and got the answer back ('one query and I had every customer who upgraded', 'it pulls the numbers straight from the database'): the query types under the question, the rows stream in on 'and there it is'" }
+  "say": "quando quem fala diz que fez uma pergunta aos dados e recebeu a resposta (“uma consulta e eu tinha todos os clientes que fizeram upgrade”, “ele puxa os números direto do banco de dados”): a consulta é digitada sob a pergunta, as linhas entram em “e aí está”" }

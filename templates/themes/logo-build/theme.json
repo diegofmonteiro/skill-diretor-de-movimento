@@ -1,17 +1,24 @@
 {
   "id": "logo-build",
-  "name": "Logo build",
-  "oneLiner": "one continuous shot: dots whip into the real logo, real pages fly past in 3D, a real query is typed and sent, a 3D carousel of real pages turns, accent strokes resolve back into the logo",
-  "bestFor": "software and AI products with a strong mark and a real input (search, ask, prompt, command bar); feature launches and app intros; short 9:16 teasers",
-  "motion": "dots pop and slide into a row, bend onto an arc and whip 3 turns into the mark (back.out(2.2)); cards fly through z with tumbling rotation (power1.in); a bar grows from a pill (back.out(1.6)); carousel turns on the beat (power3.inOut); strokes draw on and off with getTotalLength",
-  "ground": "warm paper #F4F3EF with two soft brand-accent light pools and one warm pool, slowly drifting, multiply grain",
-  "format": "9:16 1080x1920, 30fps",
-  "length": "12s (7 beats, no hard cuts)",
-  "stills": [2.5, 6.9, 9.6],
+  "name": "Construção de logo",
+  "oneLiner": "uma cena contínua: pontos são chicoteados até formar a logo real, páginas reais passam voando em 3D, uma pergunta real é digitada e enviada, um carrossel 3D de páginas reais gira, traços de destaque voltam a se resolver na logo",
+  "bestFor": "produtos de software e IA com uma marca forte e uma entrada real (busca, pergunta, prompt, barra de comando); lançamentos de recursos e aberturas de app; teasers curtos em 9:16",
+  "motion": "pontos surgem e deslizam numa fileira, se curvam num arco e são chicoteados em 3 voltas até a marca (back.out(2.2)); cartões voam pelo eixo z com rotação em queda (power1.in); uma barra cresce de uma cápsula (back.out(1.6)); o carrossel gira na batida (power3.inOut); traços se desenham e se apagam com getTotalLength",
+  "ground": "papel quente #F4F3EF com duas manchas suaves de luz na cor de destaque da marca e uma quente, derivando devagar, com granulação multiply",
+  "format": "9:16 1080x1920, 30 fps",
+  "length": "12 s (7 batidas, sem cortes secos)",
+  "stills": [
+    2.5,
+    6.9,
+    9.6
+  ],
   "sound": {
     "vibe": "minimal",
-    "bpm": [108, 116],
-    "ui": "one tick per dot, a whoosh on the whip and the fly-past, a pop as the mark and the bar land, typing under the query, a click on the press, a tick per carousel turn, one hit on the final mark"
+    "bpm": [
+      108,
+      116
+    ],
+    "ui": "um tick por ponto, whoosh na chicotada e na passagem, pop quando a marca e a barra caem, digitação sob a pergunta, clique no toque, um tick por volta do carrossel, um golpe na marca final"
   },
   "recipe": "RECIPE.md",
   "preview": "preview.jpg"

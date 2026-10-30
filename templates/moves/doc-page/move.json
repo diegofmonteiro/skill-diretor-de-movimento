@@ -1,5 +1,5 @@
-{ "id": "doc-page", "name": "Paper doc page writes itself", "oneLiner": "a sheet of real paper with a doc editor bar lands out of depth, the heading types letter by letter behind a caret, three bullets write themselves word by word, then a highlighter sweeps one line and the page answers with a small punch",
+{ "id": "doc-page", "name": "Documento de papel que se escreve sozinho", "oneLiner": "uma folha de papel de verdade com uma barra de editor de documento pousa vinda da profundidade, o título é digitado letra a letra atrás de um cursor, três tópicos se escrevem palavra por palavra, e então um marcador passa sobre uma linha e a página responde com um pequeno soco",
   "category": "productivity", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["paper"], "from": "new",
   "tags": ["doc", "document", "notes", "plan", "writing", "outline", "bullets", "highlight", "ai writing", "brief", "strategy", "paper", "light"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.4, "alpha": true,
-  "say": "when the speaker talks about writing the plan, an outline, or an AI drafting a document ('it wrote the whole plan', 'step one, step two'): one bullet per step they name, the highlighter lands on the step that matters" }
+  "say": "quando quem fala trata de escrever o plano, um roteiro ou uma IA redigindo um documento (“ela escreveu o plano inteiro”, “passo um, passo dois”): um tópico por passo que a pessoa nomeia, o marcador cai no passo que importa" }

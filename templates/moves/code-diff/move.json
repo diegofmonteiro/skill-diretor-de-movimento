@@ -1,5 +1,5 @@
-{ "id": "code-diff", "name": "Glass code diff", "oneLiner": "a code editor on a glass pane: the old lines flush red and fold away, the new lines open in green and type themselves in, then the +12 -4 change chip stamps onto the tab with its diffstat squares",
+{ "id": "code-diff", "name": "Diferença de código em vidro", "oneLiner": "um editor de código numa lâmina de vidro: as linhas antigas ficam vermelhas e se dobram, as novas se abrem em verde e se escrevem sozinhas, e então a cápsula de mudança +12 -4 carimba na aba com seus quadradinhos de resumo",
   "category": "dev", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["code", "diff", "commit", "pull request", "developer", "refactor", "fix", "ai coding", "agent", "editor", "programming", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.8, "alpha": true,
-  "say": "when the speaker says the code changed or an agent rewrote something ('it rewrote the function', 'one small change'): the red folds away on 'removed', the green types in on 'added', the chip stamps on the size of the change" }
+  "say": "quando quem fala diz que o código mudou ou que um agente reescreveu algo (“ele reescreveu a função”, “uma pequena mudança”): o vermelho se dobra em “removido”, o verde é escrito em “adicionado”, a cápsula carimba o tamanho da mudança" }

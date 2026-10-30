@@ -1,5 +1,5 @@
-{ "id": "notify-stack", "name": "Glass notification stack", "oneLiner": "three glass notifications carrying the brand mark drop in from the top, one per beat, on a springy overshoot; each new one pushes the last down and the oldest tucks in behind",
+{ "id": "notify-stack", "name": "Pilha de notificações em vidro", "oneLiner": "três notificações de vidro com o símbolo da marca caem do topo, uma por batida, com um salto elástico; cada nova empurra a anterior para baixo e a mais antiga se esconde atrás",
   "category": "system", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "glass",
   "tags": ["notification", "alert", "ping", "lock screen", "sales", "signups", "momentum", "social proof", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 4.0, "alpha": true,
-  "say": "when the speaker lists three things that happened (sign-ups, sales, messages): each notification lands on its item, roughly one per second" }
+  "say": "quando quem fala lista três coisas que aconteceram (inscrições, vendas, mensagens): cada notificação cai no seu item, cerca de uma por segundo" }

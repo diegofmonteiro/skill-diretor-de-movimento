@@ -1,5 +1,5 @@
-{ "id": "email-send", "name": "Glass email send", "oneLiner": "a compose window on glass: the recipient chip pops, the subject types and the body writes itself behind a caret, a cursor presses Send, the window winds up and flies off, and a Message sent toast lands green in its place with the tick drawing",
+{ "id": "email-send", "name": "Envio de e-mail em vidro", "oneLiner": "uma janela de redação em vidro: a cápsula do destinatário surge, o assunto é digitado e o corpo se escreve sozinho atrás de um cursor, um cursor aperta “Enviar”, a janela se enrola e sai voando, e um aviso verde “Mensagem enviada” cai no lugar com a marca sendo desenhada",
   "category": "productivity", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["email", "send", "compose", "outreach", "cold email", "reply", "message", "pitch", "sent", "ai writing", "productivity", "dark"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 5.4, "alpha": true,
-  "say": "when the speaker says they sent it or the AI wrote and sent the email ('it wrote the email and hit send', 'I sent the pitch that night'): the body writes as they describe it, the window flies off and the green Sent toast lands on 'sent'" }
+  "say": "quando quem fala diz que enviou ou que a IA escreveu e enviou o e-mail (“ela escreveu o e-mail e apertou enviar”, “enviei a proposta naquela noite”): o corpo se escreve enquanto a pessoa descreve, a janela sai voando e o aviso verde de enviado cai em “enviei”" }

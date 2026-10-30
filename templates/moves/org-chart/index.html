@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="pt-BR" data-composition-variables='[
-  {"id":"lead","type":"string","label":"Top node name (empty: the brand name)","default":""},
-  {"id":"leadRole","type":"string","label":"Top node role","default":"Founder"},
-  {"id":"teams","type":"string","label":"Team nodes, comma separated (2 or 3)","default":"Content,Product,Growth"},
-  {"id":"under","type":"number","label":"Which team the new hire joins, 1-based","default":1},
-  {"id":"hire","type":"string","label":"The new hire card title","default":"Video editor"},
-  {"id":"hireTag","type":"string","label":"Green chip on the new hire","default":"New hire"}
+  {"id":"lead","type":"string","label":"Nome do nó do topo (vazio: o nome da marca)","default":""},
+  {"id":"leadRole","type":"string","label":"Cargo do nó do topo","default":"Fundador"},
+  {"id":"teams","type":"string","label":"Nós das equipes, separados por vírgula (2 ou 3)","default":"Conteúdo,Produto,Crescimento"},
+  {"id":"under","type":"number","label":"Em qual equipe o novo contratado entra, contando de 1","default":1},
+  {"id":"hire","type":"string","label":"Título do cartão do novo contratado","default":"Editor de vídeo"},
+  {"id":"hireTag","type":"string","label":"Cápsula verde no novo contratado","default":"Novo contratado"}
 ]'>
 <head>
 <meta charset="UTF-8" />
@@ -106,7 +106,7 @@
   const D = +root.dataset.duration, $ = (q) => document.querySelector(q), NS = "http://www.w3.org/2000/svg";
   const P = MV.portrait, SQ = W === H, A = MV.alpha;
   const teams = String(v.teams || "").split(",").map((x) => x.trim()).filter(Boolean).slice(0, 3);
-  while (teams.length < 2) teams.push(["Conteúdo", "Growth"][teams.length]);
+  while (teams.length < 2) teams.push(["Conteúdo", "Crescimento"][teams.length]);
   const N = teams.length, HI = Math.max(0, Math.min(N - 1, Math.round(+v.under || 1) - 1));
 
   // ---- design grid (units), one scale s

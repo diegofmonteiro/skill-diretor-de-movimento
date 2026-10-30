@@ -1,5 +1,5 @@
-{ "id": "verdict-card", "name": "Verdict card", "oneLiner": "a glowing glass app window whips in from the side with motion blur (or blooms out of a dot) and settles at chest height between the hands, then a red X draws in two strokes or a green check pops on it, and it drops out of frame in a blur",
+{ "id": "verdict-card", "name": "Cartão de veredito", "oneLiner": "uma janela de app em vidro brilhante entra veloz pelo lado com desfoque de movimento (ou desabrocha de um ponto) e se assenta na altura do peito entre as mãos, e então um X vermelho é desenhado em dois traços ou uma marca verde salta sobre ela, e ela sai do quadro num borrão",
   "category": "explain", "kind": "effect", "uses": ["overlay", "broll"], "looks": ["glass"], "from": "new",
   "tags": ["verdict", "x", "check", "wrong", "right", "yes", "no", "approve", "reject", "screenshot", "app", "proof", "overlay", "chest"],
   "formats": ["9:16", "16:9", "1:1"], "duration": 3.0, "alpha": true,
-  "say": "when the speaker judges a tool, a method or a result: 'this doesn't work' (stamp x) or 'this is the one' (stamp check); cut in on the thing's name, the stamp lands on the verdict word" }
+  "say": "quando quem fala julga uma ferramenta, um método ou um resultado: “isto não funciona” (carimbo x) ou “este é o certo” (carimbo check); entre no nome da coisa, o carimbo cai na palavra do veredito" }

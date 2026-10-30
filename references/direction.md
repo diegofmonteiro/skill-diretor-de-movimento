@@ -90,6 +90,10 @@ Depois de cada render, nomeie todo padrão que os quadros mostram, acrescente-o 
 
 > Para uso comercial, confira antes a licença de cada bloco e dos modelos 3D (ver `LICENCAS-DE-TERCEIROS.md`).
 
+### Como montar a tela do dispositivo
+
+Coloque a tela em `<pasta>/device/`: `laptop.html` (1440x900), `phone.html` (390x844), `screen.css` e `screen.js` definindo `window.MD_SCREEN_dev(p, t)`. Preencha com material REAL: o site ao vivo capturado nessa largura (Chrome sem janela, página inteira, `--window-size=1440,5200` ou `390,7000` com `--force-device-scale-factor=2`) rolado em paradas suavizadas escolhidas para cair na própria manchete, nos números e na prova; ou o vídeo do produto como pilha de quadros (`ffmpeg -vf fps=12`, uma `<img>` por quadro, trocada conforme `t`). Monte a linha de host impressa ACIMA da seda; dê à cena o seu próprio `<section id="<id da cena>">` para qualquer linha sobre ela, posicionada acima ou ao lado do dispositivo, nunca sobre o teclado. `macbook` para um produto, `duo` (notebook e celular) para um site que funciona nos dois, `iphone` para 9:16 e marcas mobile-first. De 3 a 5 s bastam.
+
 ## 6. Padrões de pedido que elevam a qualidade de forma medida
 
 1. "Escreva três roteiros que sejam três filmes diferentes (dispositivo x forma), faça de um o ousado e recomende um."

@@ -1,14 +1,25 @@
 {
   "id": "glass",
-  "name": "Glass",
-  "oneLiner": "the brand's colours as moving silk light under frosted glass panes, one 3D camera per shot, depth of field, the real numbers on glass plates and the real site on a 3D laptop and phone",
-  "bestFor": "SaaS and AI launches, services with real proof numbers and client logos, channel intros, dark or premium brands; the default when nothing else fits",
-  "motion": "panes fly in from depth on expo.out and catch one light sweep, beat punches, a tracked camera with rack focus, dives and whips between whole-bar shots, the mark landing on the hit",
+  "name": "Vidro",
+  "oneLiner": "as cores da marca como luz de seda em movimento sob painéis de vidro fosco, uma câmera 3D por cena, profundidade de campo, os números reais em placas de vidro e o site real num notebook e num celular em 3D",
+  "bestFor": "lançamentos de SaaS e IA, serviços com números de prova reais e logos de clientes, aberturas de canal, marcas escuras ou premium; o padrão quando nada mais serve",
+  "motion": "painéis voam da profundidade com expo.out e pegam uma varredura de luz, golpes na batida, uma câmera acompanhada com foco que se desloca, mergulhos e chicotadas entre planos de compasso inteiro, a marca caindo na batida forte",
   "ground": "dark",
-  "format": "16:9 or 9:16",
-  "length": "20-25s",
-  "stills": [1.5, 10.0, 18.0],
-  "sound": { "vibe": "driving", "bpm": [120, 128], "ui": "tick on the counts, whoosh on every fly-in and dive, pop on each burst, stamp and row, one hit on the mark, shimmer on the wordmark and CTA" },
+  "format": "16:9 ou 9:16",
+  "length": "20 a 25 s",
+  "stills": [
+    1.5,
+    10.0,
+    18.0
+  ],
+  "sound": {
+    "vibe": "driving",
+    "bpm": [
+      120,
+      128
+    ],
+    "ui": "tick nas contagens, whoosh em cada entrada voando e mergulho, pop em cada explosão, carimbo e linha, um golpe na marca, shimmer no nome da marca e no chamado para ação"
+  },
   "recipe": "RECIPE.md",
   "preview": "preview.jpg",
   "previewTall": "preview-9x16.jpg"

@@ -1,86 +1,66 @@
-# Studio: recipe
+# Estúdio: receita
 
-A 5.4 second design-studio piece in three beats on one glowing colour ground:
-the brand's own line pops in word by word while a white stroke draws under it
-and a designer's cursor drags a selection box around the last word, which
-inverts; a glass folder pops up, turns, and three real product screens rise
-and fan out of it behind a frosted front with the brand's name, light running
-across the glass; a glass lens orb rolls in with the mark inside and the
-domain pops under it. It works because there is only ever ONE thing to look
-at, the object is treated like a product shot (it turns, it catches light),
-every arrival springs, and the ground itself is energy (a lit radial, a
-turning sunburst, two organic blobs drifting at the corners) so no frame is
-static. Extend it to a 15-25s film by repeating the same three-part grammar
-(claim + tool, hero object, mark) with more hero objects, one per bar.
+Uma peça de estúdio de design de 5,4 segundos em três batidas sobre um fundo brilhante de uma só cor: a frase da própria marca salta palavra por palavra enquanto um traço branco se desenha embaixo e um cursor de designer arrasta uma caixa de seleção em volta da última palavra, que se inverte; uma pasta de vidro sobe, gira, e três telas reais do produto sobem e se abrem em leque saindo dela, atrás de uma frente fosca com o nome da marca, com a luz correndo pelo vidro; uma esfera-lente de vidro entra rolando com a marca dentro e o domínio salta embaixo. Funciona porque só existe UMA coisa para olhar de cada vez, o objeto é tratado como foto de produto (gira, pega luz), toda chegada tem mola, e o próprio fundo é energia (um radial aceso, um raio de sol girando, duas manchas orgânicas derivando nos cantos), então nenhum quadro é estático. Estenda para um filme de 15 a 25 s repetindo a mesma gramática de três partes (afirmação + ferramenta, objeto-herói, marca) com mais objetos-herói, um por compasso.
 
-## Format, length, pace
+## Formato, duração, ritmo
 
-- 1920x1080, 30 fps, 5.4s. (9:16 works: same objects at 60% frame width, title 96-110px.)
-- Three scenes that overlap by 0.15-0.2s so one exit and the next entrance share frames (no empty frame between):
-  - s1 claim: 0.00-1.95s
-  - s2 hero folder: 1.75-4.05s
-  - s3 orb end card: 3.90-5.40s
-- Beats measured from the source: title pops 0.15-0.66s, stroke draws 0.05-0.75s, cursor glides 0.62-1.07s, selection drags 1.10-1.42s, word inverts at 1.12s, tools leave 1.72s, title zooms out 1.75s, folder pops 1.80s, front swings 2.05s, cards fan 2.25-2.85s, sheen 2.80-3.70s, folder unpops 3.85s, orb rolls 3.90-4.65s, stamp 4.65s, domain pops 4.25s.
-- Pace for a longer film: one hero object per 2-4s, held as one continuous shot that keeps moving; transitions are pop-away / pop-in, never a hard cut.
+- 1920x1080, 30 fps, 5,4 s. (O 9:16 funciona: os mesmos objetos a 60% da largura do quadro, título de 96 a 110 px.)
+- Três cenas que se sobrepõem em 0,15 a 0,2 s para a saída de uma e a entrada da seguinte dividirem quadros (sem quadro vazio no meio):
+  - c1 afirmação: 0,00-1,95 s
+  - c2 pasta-herói: 1,75-4,05 s
+  - c3 cartão final com esfera: 3,90-5,40 s
+- Batidas medidas na fonte: o título salta 0,15-0,66 s, o traço se desenha 0,05-0,75 s, o cursor desliza 0,62-1,07 s, a seleção é arrastada 1,10-1,42 s, a palavra se inverte em 1,12 s, as ferramentas saem em 1,72 s, o título se afasta em 1,75 s, a pasta salta em 1,80 s, a frente balança em 2,05 s, os cartões abrem em leque 2,25-2,85 s, o brilho 2,80-3,70 s, a pasta some em 3,85 s, a esfera rola 3,90-4,65 s, o carimbo em 4,65 s, o domínio salta em 4,25 s.
+- Ritmo para um filme mais longo: um objeto-herói a cada 2 a 4 s, mantido como um plano contínuo que continua se movendo; as transições são sair com um salto e entrar com um salto, nunca um corte seco.
 
-## The look, in numbers
+## O visual, em números
 
-**Ground** (`.st-ground`, `theme.css`): `radial-gradient(75% 85% at 50% 42%, --st-hi 0%, --st-mid 30%, --st-deep 78%)` where `--st-hi` = accent mixed 62% with white, `--st-mid` = accent, `--st-deep` = accent 22% on `#050506`. On screen: a bright salmon centre, the accent ring, a near-black red at the corners. Mono variant `.is-mono`: `#ECECEC` with a 28px dot grid (1.4px dots at 13% black), ink `#141414`.
+**Fundo** (`.st-ground`, `theme.css`): `radial-gradient(75% 85% at 50% 42%, --st-hi 0%, --st-mid 30%, --st-deep 78%)`, onde `--st-hi` = destaque misturado a 62% com branco, `--st-mid` = destaque, `--st-deep` = destaque a 22% sobre `#050506`. Na tela: um centro salmão brilhante, o anel da cor de destaque, um vermelho quase preto nos cantos. Variante monocromática `.is-mono`: `#ECECEC` com uma grade de pontos de 28 px (pontos de 1,4 px a 13% de preto), tinta `#141414`.
 
-**Sunburst** (`.st-burst`): 3000px disc centred at 50% 44%, `repeating-conic-gradient` of 24 rays (7.5deg white at 7.5%, 7.5deg clear), masked by a radial fade to 62%. Turns 10deg/s for the whole film.
+**Raio de sol** (`.st-burst`): disco de 3000 px centralizado em 50% 44%, `repeating-conic-gradient` de 24 raios (7,5 graus de branco a 7,5%, 7,5 graus transparentes), mascarado por um esmaecimento radial até 62%. Gira 10 graus/s durante o filme todo.
 
-**Blobs** (`.st-blob`, `MD.studio.blob`): seeded flower shapes in an SVG, r 0.42, petal depth 0.38. Top-left: 980px, 5 petals, seed 4, fill `--st-deep`, at left -300 top -340. Bottom-right: 760px, 6 petals, seed 9, white at 90%, at left 1440 top 600. Both end up 30-50% off frame.
+**Manchas** (`.st-blob`, `MD.studio.blob`): formas de flor com semente num SVG, r 0,42, profundidade das pétalas 0,38. No alto à esquerda: 980 px, 5 pétalas, semente 4, preenchimento `--st-deep`, em left -300 top -340. Embaixo à direita: 760 px, 6 pétalas, semente 9, branco a 90%, em left 1440 top 600. As duas terminam de 30 a 50% fora do quadro.
 
-**Stroke** (`.st-swoosh`): one white path, stroke 16px at 92%, round caps, across the lower third: `M-60 860 C 400 700, 760 980, 1180 780 S 1760 560, 1990 640`.
+**Traço** (`.st-swoosh`): um caminho branco, traço de 16 px a 92%, pontas redondas, pelo terço de baixo: `M-60 860 C 400 700, 760 980, 1180 780 S 1760 560, 1990 640`.
 
-**Type** (`.st-title`): brand display face, weight 800, tracking -0.02em, line-height 0.98, white, `text-shadow 0 10px 40px` in `--st-deep` at 60%, nowrap. Sizes: claim 128px on 2 lines centred at top 360 (theme-board fits `HEAD_SIZE` to 1500px); domain 72px centred at top 760. Sentence case. The selected word: white box, text in `--st-deep`. Rule: type is either huge or tiny editorial, never medium.
+**Tipografia** (`.st-title`): fonte de destaque da marca, peso 800, espaçamento -0.02em, entrelinha 0.98, branco, `text-shadow 0 10px 40px` em `--st-deep` a 60%, sem quebra. Tamanhos: afirmação 128 px em 2 linhas centralizadas em top 360 (o theme-board ajusta `HEAD_SIZE` a 1500 px); domínio 72 px centralizado em top 760. Maiúsculas e minúsculas de frase. A palavra selecionada: caixa branca, texto em `--st-deep`. Regra: a tipografia é ou enorme ou minúscula e editorial, nunca média.
 
-**Selection and cursor**: `.st-select` 3px dashed white at 95%, four 16px white handles with a 3px `--st-deep` border at the corners (offset -10px); padding 18px around the word's measured rect. `.st-cursor` 64px SVG arrow, white fill, `#111` 3px stroke, drop-shadow `0 6px 10px` 35% black.
+**Seleção e cursor**: `.st-select` tracejado branco de 3 px a 95%, quatro alças brancas de 16 px com borda de 3 px `--st-deep` nos cantos (deslocadas -10 px); folga de 18 px em volta da caixa medida da palavra. `.st-cursor` seta SVG de 64 px, preenchimento branco, contorno `#111` de 3 px, sombra `0 6px 10px` a 35% de preto.
 
-**Glass folder** (`.st-folder`, 800x640 at left 560 top 150, `transform-style: preserve-3d` in a 1800px perspective stage):
-- back: radius 40px, `linear-gradient(170deg, --st-hi 85%, --st-mid 80% on black)`, a tab cut by `clip-path: polygon(0 9%, 3% 0, 34% 0, 39% 9%, 100% 9%, 100% 100%, 0 100%)`, inner top highlight 2px at 50% white.
-- cards: 76% x 74% at left 12% top 12%, radius 22px, white, `object-fit: cover; object-position: top center`, shadow `0 20px 40px -14px` 50% black, origin bottom centre.
-- front: 104% wide, 62% high, bottom -2%, radius 40px, `linear-gradient(160deg, white 34%, white 7% at 55%, --st-hi 22%)`, `backdrop-filter: blur(14px) saturate(170%)`, rim `inset 0 1.5px 0` 75% white + `inset 0 0 0 1.5px` 28% white, drop `0 40px 80px -30px` 55% black, glow `0 0 60px -10px --st-hi` at 50%. Label bottom-left at 7%/12%: the mark 56px tall (radius 12px) + the brand name, 700 40px, white.
-- sheen: a 105deg band, white 45%, 32% wide, screen blend, driven by `--sheen` -40% to 140%.
+**Pasta de vidro** (`.st-folder`, 800x640 em left 560 top 150, `transform-style: preserve-3d` num palco com perspectiva de 1800 px):
+- fundo: raio de 40 px, `linear-gradient(170deg, --st-hi 85%, --st-mid 80% on black)`, uma aba recortada por `clip-path: polygon(0 9%, 3% 0, 34% 0, 39% 9%, 100% 9%, 100% 100%, 0 100%)`, realce interno superior de 2 px a 50% de branco.
+- cartões: 76% x 74% em left 12% top 12%, raio de 22 px, brancos, `object-fit: cover; object-position: top center`, sombra `0 20px 40px -14px` a 50% de preto, origem embaixo no centro.
+- frente: 104% de largura, 62% de altura, bottom -2%, raio de 40 px, `linear-gradient(160deg, white 34%, white 7% at 55%, --st-hi 22%)`, `backdrop-filter: blur(14px) saturate(170%)`, borda `inset 0 1.5px 0` a 75% de branco + `inset 0 0 0 1.5px` a 28% de branco, sombra `0 40px 80px -30px` a 55% de preto, brilho `0 0 60px -10px --st-hi` a 50%. Rótulo embaixo à esquerda em 7%/12%: a marca com 56 px de altura (raio de 12 px) + o nome da marca, 700 40 px, branco.
+- brilho: uma faixa de 105 graus, branco a 45%, 32% de largura, mistura screen, controlada por `--sheen` de -40% a 140%.
 
-**Glass orb** (`.st-orb`, 520px at left 700 top 170): `radial-gradient` clear to 58%, 22% white ring at 72%, `backdrop-filter: blur(3px) saturate(180%)`, `inset 0 0 0 2px` 80% white, `inset 0 0 50px` 35% white, outer glow `0 0 70px --st-hi` 70%, drop `0 50px 90px -30px` 60%; a specular highlight ellipse (46% x 26% at 14%/8%, rotated -24deg). The mark inside at 56%, radius 18%, drop-shadow `0 8px 18px` 35%.
+**Esfera de vidro** (`.st-orb`, 520 px em left 700 top 170): `radial-gradient` transparente até 58%, anel de branco a 22% em 72%, `backdrop-filter: blur(3px) saturate(180%)`, `inset 0 0 0 2px` a 80% de branco, `inset 0 0 50px` a 35% de branco, brilho externo `0 0 70px --st-hi` a 70%, sombra `0 50px 90px -30px` a 60%; uma elipse de brilho especular (46% x 26% em 14%/8%, girada -24 graus). A marca dentro a 56%, raio de 18%, sombra `0 8px 18px` a 35%.
 
-No grain, no vignette in this theme: the ground's radial does the vignetting.
+Sem granulação nem vinheta neste tema: o radial do fundo faz a vinheta.
 
-## Shot list
+## Lista de planos
 
-| time | on screen | what moves and how | static | out |
+| tempo | na tela | o que se move e como | estático | saída |
 |---|---|---|---|---|
-| 0-1.95 claim | ground, burst, two blobs; the brand's tagline (2 lines, 128px, last word wrapped in `.st-hl`); the white stroke; the cursor; the selection box | blobs: `scale 0.3 to 1, rotation -40 to 0, opacity 0 to .9, 1.1s expo.out`, stagger 0.15 from 0, then they rotate +35 / -30deg and slide x +40 / -50 linearly to the end; title `pop@0.15` (per word: scale 0.2 to 1, y 50 to 0, 0.42s back.out(2), 0.06s apart); stroke draws 0.05-0.75s power2.inOut and undraws from its start at 1.35s; cursor appears at 1500,900 at 0.6s and glides to the word's bottom-right corner (+6, -6) in 0.45s power3.inOut; selection box drags from its top-left 0.32s power3.out at 1.1s; word inverts at 1.12s (background white in 0.12s, text to `--st-deep`) | the burst turning, the title once landed | cursor + box fade 0.15s at 1.72s; title `zoom` out (scale 1.7, blur 14, 0.25s) at 1.75s |
-| 1.75-4.05 hero | the glass folder, 3 real screens inside it | folder pops at 1.8s: `scale 0.4 to 1, rotation -10 to 0, y 120 to 0, opacity 0 to 1, 0.55s back.out(1.8)`; the folder turns `rotationY -14 to +10` over 2.2s power1.inOut; front swings up `rotationX -55 to -8` 0.6s back.out(1.5) at 2.05s; cards rise and fan, 0.09s apart from 2.25s, 0.6s back.out(1.6): left `y -160, xPercent -32, rotation -9`, centre `y -220`, right `y -160, xPercent +32, rotation 9`; sheen across the front 2.8s, 0.9s power2.inOut | the ground | folder `unpop` (scale 0, back.in(1.6), 0.25s) at 3.85s |
-| 3.9-5.4 end | the orb with the mark; the domain under it | orb rolls in from the right: `x 1100 to 0, rotation 220 to 0, scale 0.6 to 1, 0.75s back.out(1.3)`; stamp 1.06 to 1 at 4.65s; domain `pop@4.25` | burst keeps turning, blobs keep drifting | holds to the end |
+| 0-1,95 afirmação | fundo, raio de sol, duas manchas; o slogan da marca (2 linhas, 128 px, a última palavra envolvida em `.st-hl`); o traço branco; o cursor; a caixa de seleção | manchas: `scale 0.3 para 1, rotation -40 para 0, opacity 0 para .9, 1,1 s expo.out`, defasagem de 0,15 a partir de 0, depois giram +35 / -30 graus e deslizam x +40 / -50 linearmente até o fim; título `pop@0.15` (por palavra: scale 0,2 a 1, y 50 a 0, 0,42 s back.out(2), 0,06 s de intervalo); o traço se desenha de 0,05 a 0,75 s power2.inOut e se apaga a partir do início em 1,35 s; o cursor aparece em 1500,900 em 0,6 s e desliza até o canto inferior direito da palavra (+6, -6) em 0,45 s power3.inOut; a caixa de seleção é arrastada do canto superior esquerdo em 0,32 s power3.out em 1,1 s; a palavra se inverte em 1,12 s (fundo branco em 0,12 s, texto para `--st-deep`) | o raio de sol girando, o título depois de pousar | cursor + caixa somem em 0,15 s em 1,72 s; o título faz `zoom` para fora (scale 1,7, blur 14, 0,25 s) em 1,75 s |
+| 1,75-4,05 herói | a pasta de vidro, 3 telas reais dentro | a pasta salta em 1,8 s: `scale 0.4 para 1, rotation -10 para 0, y 120 para 0, opacity 0 para 1, 0,55 s back.out(1.8)`; a pasta gira `rotationY -14 para +10` em 2,2 s power1.inOut; a frente balança para cima `rotationX -55 para -8` 0,6 s back.out(1.5) em 2,05 s; os cartões sobem e abrem em leque, com 0,09 s de intervalo a partir de 2,25 s, 0,6 s back.out(1.6): esquerda `y -160, xPercent -32, rotation -9`, centro `y -220`, direita `y -160, xPercent +32, rotation 9`; brilho pela frente em 2,8 s, 0,9 s power2.inOut | o fundo | a pasta faz `unpop` (scale 0, back.in(1.6), 0,25 s) em 3,85 s |
+| 3,9-5,4 final | a esfera com a marca; o domínio embaixo dela | a esfera entra rolando pela direita: `x 1100 para 0, rotation 220 para 0, scale 0.6 para 1, 0,75 s back.out(1.3)`; carimbo 1,06 para 1 em 4,65 s; domínio `pop@4.25` | o raio de sol continua girando, as manchas continuam derivando | parado até o fim |
 
-## Materials and where to get them for a new brand
+## Materiais e onde obtê-los para uma marca nova
 
-| material | source | how |
+| material | fonte | como |
 |---|---|---|
-| accent, display face, mark, name, domain | the brand's site | `node scripts/brand-intake.mjs <url> --project <dir>` then `pick --logo --mark --shots` |
-| tagline | the site's hero headline, verbatim, split so the last word is the one selected | theme-board fills `HEAD_L1`, `HEAD_L2`, `LAST` |
-| 3 screens for the folder | the product's own UI (brand-intake `--shots`), portrait-ish crops of real pages; sections of the site captured at 1440 wide work when the UI is behind a login | crop each to ~4:3 from the top so the headline of each shows above the glass front |
-| the mark for the orb and label | the brand's square mark; crop to its ink with `node scripts/trim-alpha.mjs mark.png mark.png --pad 8` so it fills the 56% box | a mark that is a wordmark only: put the wordmark inside at 70% width |
-| everything else | code (`theme.css`, `theme.js`) | nothing downloaded |
+| cor de destaque, fonte de destaque, marca, nome, domínio | o site da marca | `node scripts/brand-intake.mjs <url> --project <dir>` e depois `pick --logo --mark --shots` |
+| slogan | a manchete principal do site, literal, dividida de modo que a última palavra seja a selecionada | o theme-board preenche `HEAD_L1`, `HEAD_L2`, `LAST` |
+| 3 telas para a pasta | a própria interface do produto (brand-intake `--shots`), recortes quase em retrato de páginas reais; seções do site capturadas com 1440 de largura servem quando a interface está atrás de um login | corte cada uma em cerca de 4:3 a partir do alto, para a manchete de cada uma aparecer acima da frente de vidro |
+| a marca para a esfera e o rótulo | a marca quadrada da empresa; corte até a tinta com `node scripts/trim-alpha.mjs mark.png mark.png --pad 8` para ela preencher a caixa de 56% | uma marca que é só um nome escrito: ponha o nome escrito dentro, com 70% da largura |
+| todo o resto | código (`theme.css`, `theme.js`) | nada é baixado |
 
-If the brand has no product screens: put three real things the brand makes in
-the folder (YouTube thumbnails cropped 4:3, client logos on white cards,
-article covers). If it has no square mark: use the orb for a number (the
-figure huge inside the lens) and end on the wordmark popped in under it. A
-light brand: keep the colour ground (it is the brand's own accent lit), or use
-`.is-mono` with black blobs and ink.
+Se a marca não tem telas de produto: ponha na pasta três coisas reais que a marca faz (miniaturas do YouTube cortadas em 4:3, logos de clientes em cartões brancos, capas de artigos). Se não tem marca quadrada: use a esfera para um número (a cifra enorme dentro da lente) e termine no nome escrito saltando embaixo dela. Uma marca clara: mantenha o fundo colorido (é a própria cor de destaque da marca, acesa), ou use `.is-mono` com manchas pretas e tinta.
 
-For a longer film, more hero objects from free sources:
-`node scripts/find-assets.mjs --polyhaven model <id> --out <dir>` then
-`node scripts/prop-render.mjs <model.gltf> prop.png --rx -15 --ry 30 --fill 0.8`
-(a real 3D object at the angle the shot needs; `--screen shot.png` puts a real
-screenshot on a device model). Treat it as the hero: pop, turn, sheen.
+Para um filme mais longo, mais objetos-herói de fontes gratuitas: `node scripts/find-assets.mjs --polyhaven model <id> --out <dir>` e depois `node scripts/prop-render.mjs <model.gltf> prop.png --rx -15 --ry 30 --fill 0.8` (um objeto 3D real no ângulo que o plano pede; `--screen shot.png` põe uma captura real num modelo de aparelho). Trate-o como o herói: salto, giro, brilho.
 
-## Mechanics
+## Mecânica
 
-The moves are in `theme.js` (`MD.studio`), the materials in `theme.css`. The essential build:
+Os movimentos estão em `theme.js` (`MD.studio`), os materiais em `theme.css`. A montagem essencial:
 
 ```html
 <div class="st-ground"></div>
@@ -156,7 +136,7 @@ window.__timelines = window.__timelines || {};
 window.__timelines["main"] = tl;
 ```
 
-The moves themselves (from `theme.js`):
+Os movimentos em si (de `theme.js`):
 
 ```js
 // pop: springy arrival; unpop: back.in exit
@@ -173,32 +153,21 @@ tl.fromTo(el, { scale: 1 }, { scale: 0.82, duration: 0.07, yoyo: true, repeat: 1
 // line entrance pop@t: per word, scale 0.2, y 50, 0.42s back.out(2), 0.06s apart
 ```
 
-## Adapting to a brand
+## Adaptar a uma marca
 
-Takes the brand: the accent (it IS the ground, the folder back and the glow),
-the display face, the tagline and its key word, three real screens, the mark,
-the name on the glass front, the domain. Keep fixed: one hero at a time,
-centred, 45-60% of frame height; springy eases (`back.out` 1.3-2 on every
-arrival, `back.in` on exits); the turning burst and the drifting blobs; the
-selection box measured, never eyeballed; one sheen per object; the orb end.
-A very dark accent (navy, black): the ground reads as a dark radial, so raise
-`--st-hi` to 75% white for the centre. A very light accent (yellow, mint):
-switch title ink to `--st-deep` and the stroke to `--st-deep`, or use `.is-mono`.
+Vem da marca: a cor de destaque (ela É o fundo, o fundo da pasta e o brilho), a fonte de destaque, o slogan e a sua palavra-chave, três telas reais, a marca, o nome na frente de vidro, o domínio. Fica fixo: um herói de cada vez, centralizado, com 45 a 60% da altura do quadro; curvas com mola (`back.out` 1,3 a 2 em toda chegada, `back.in` nas saídas); o raio de sol girando e as manchas derivando; a caixa de seleção medida, nunca no olho; um brilho por objeto; o final com a esfera. Uma cor de destaque muito escura (azul-marinho, preto): o fundo é lido como um radial escuro, então aumente `--st-hi` para 75% de branco no centro. Uma cor de destaque muito clara (amarelo, menta): troque a tinta do título por `--st-deep` e o traço por `--st-deep`, ou use `.is-mono`.
 
-## Pitfalls found while building
+## Armadilhas encontradas durante a construção
 
-- Frame 0 is empty ground in the sample (the title pops at 0.15s, the blobs start at scale 0.3). In a film the critique's frame-0 check wants ink: start the first pop at 0 or carry the previous shot's object in.
-- Measure the selection box from `getBoundingClientRect()` of the word BEFORE `MD.lines(tl)` splits the line and before any transform; after the split the rect is per word and after the pop it is scaled.
-- The inverted word changes background and colour at the same frame (1.12s); fading the colour reads as a glitch. Keep the 0.01s colour set.
-- `st-hl` must be `display: inline-block` so the white box hugs the word and the selection rect is one box, not a line fragment.
-- The front glass blurs whatever is behind it (`backdrop-filter`), so the cards show sharp only above the front; fan them high enough (y -160 to -220) that each screen's headline clears the glass. A PNG front would hide them completely.
-- Title lines must fit 1500px at the chosen size (theme-board computes `HEAD_SIZE`); run `node scripts/frame-audit.mjs <film>` so no word leaves the frame while the folder or orb overlaps.
-- Overlap the scenes by 0.15-0.2s (1.75 / 1.95, 3.85 / 3.9) so an unpop and the next pop share frames.
-- The cursor must never be an emoji or a system icon: it is the drawn 64px SVG.
+- O quadro 0 é fundo vazio na amostra (o título salta em 0,15 s, as manchas começam em scale 0,3). Num filme, a verificação do quadro 0 da crítica quer tinta: comece o primeiro salto em 0 ou traga o objeto do plano anterior.
+- Meça a caixa de seleção a partir de `getBoundingClientRect()` da palavra ANTES de `MD.lines(tl)` dividir a linha e antes de qualquer transformação; depois da divisão o retângulo é por palavra, e depois do salto ele está escalado.
+- A palavra invertida muda fundo e cor no mesmo quadro (1,12 s); esmaecer a cor é lido como falha. Mantenha a definição de cor de 0,01 s.
+- `st-hl` precisa ser `display: inline-block` para a caixa branca abraçar a palavra e o retângulo da seleção ser uma caixa só, não um fragmento de linha.
+- O vidro da frente desfoca o que está atrás dele (`backdrop-filter`), então os cartões só aparecem nítidos acima da frente; abra-os alto o bastante (y -160 a -220) para a manchete de cada tela ficar livre do vidro. Uma frente em PNG os esconderia por completo.
+- As linhas do título precisam caber em 1500 px no tamanho escolhido (o theme-board calcula `HEAD_SIZE`); rode `node scripts/frame-audit.mjs <filme>` para nenhuma palavra sair do quadro enquanto a pasta ou a esfera se sobrepõe.
+- Sobreponha as cenas em 0,15 a 0,2 s (1,75 / 1,95, 3,85 / 3,9) para um `unpop` e o salto seguinte dividirem quadros.
+- O cursor nunca pode ser um emoji ou um ícone do sistema: é o SVG desenhado de 64 px.
 
-## Sound
+## Som
 
-Not measured on the sample. Designed: warm, 100-120 BPM; a soft pop on each
-word and on the folder and orb landing, a click where the cursor stops on the
-word (1.07s), a whoosh as the stroke draws, a glass shimmer on the sheen
-(2.8s), one soft hit on the orb stamp (4.65s).
+Não medido na amostra. Planejado: quente, de 100 a 120 BPM; um pop suave em cada palavra e na chegada da pasta e da esfera, um clique onde o cursor para na palavra (1,07 s), um whoosh quando o traço se desenha, um shimmer de vidro no brilho (2,8 s), um golpe suave no carimbo da esfera (4,65 s).
